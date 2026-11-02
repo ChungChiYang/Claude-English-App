@@ -10,7 +10,7 @@
  {  "id": "w009",  "word": "genuine",  "pos": "adj.",  "meaning": "真正的",  "example": "This is a genuine leather bag.",  "example_zh": "這是真皮包。",  "topic": "生活" },
  {  "id": "w010",  "word": "hesitate",  "pos": "v.",  "meaning": "猶豫",  "example": "Do not hesitate to ask questions.",  "example_zh": "有問題請別猶豫，儘管問。",  "topic": "生活" },
  {  "id": "w011",  "word": "ambiguous",  "pos": "adj.",  "meaning": "模稜兩可的",  "example": "The answer was ambiguous.",  "example_zh": "這個答案模稜兩可。",  "topic": "社會" },
- {  "id": "w012",  "word": "inevitable",  "pos": "adj.",  "meaning": "不可避免的",  "example": "Change is inevitable.",  "example_zh": "改變是無可避免的。",  "topic": "社會" }
+ {  "id": "w012",  "word": "inevitable",  "pos": "adj.",  "meaning": "不可避免的",  "example": "Change is inevitable.",  "example_zh": "改變是無可避免的。",  "topic": "社會" },
 
   { "id": "w013", "word": "schedule", "pos": "n.", "meaning": "行程、排程", "example": "Please check your schedule for next week's meeting.", "example_zh": "請確認你下周開會的行程。", "topic": "職場" },
   { "id": "w014", "word": "confirm", "pos": "v.", "meaning": "確認", "example": "I need to confirm the flight reservation.", "example_zh": "我需要確認航班預訂。", "topic": "日常對話" },

@@ -1,0 +1,18 @@
+[
+{"id":"un","type":"prefix","name":"Un-","meaning":"不、相反","words":[
+{"word":"unhappy","meaning":"不快樂的","syn":["sad","miserable"],"der":["unhappiness","unhappily"],"ant":["happy","glad"],"example":"He felt unhappy about the result.","example_zh":"他對結果感到不開心。"},
+{"word":"unusual","meaning":"不尋常的","syn":["strange","rare"],"der":["unusually"],"ant":["usual","common"],"example":"It is unusual to see snow here.","example_zh":"在這裡看到雪很不尋常。"},
+{"word":"unable","meaning":"無法的","syn":["incapable"],"der":["inability"],"ant":["able","capable"],"example":"She was unable to attend the meeting.","example_zh":"她無法出席會議。"}]},
+{"id":"dis","type":"prefix","name":"Dis-","meaning":"否定、分離","words":[
+{"word":"disagree","meaning":"不同意","syn":["differ","object"],"der":["disagreement"],"ant":["agree"],"example":"I disagree with your opinion.","example_zh":"我不同意你的看法。"},
+{"word":"disappear","meaning":"消失","syn":["vanish"],"der":["disappearance"],"ant":["appear"],"example":"The sun disappeared behind the clouds.","example_zh":"太陽消失在雲層後面。"},
+{"word":"dislike","meaning":"不喜歡","syn":["hate"],"der":[],"ant":["like","love"],"example":"I dislike getting up early.","example_zh":"我不喜歡早起。"}]},
+{"id":"re","type":"prefix","name":"Re-","meaning":"再、重新","words":[
+{"word":"rebuild","meaning":"重建","syn":["reconstruct"],"der":["rebuilding"],"ant":["destroy"],"example":"They plan to rebuild the bridge.","example_zh":"他們打算重建那座橋。"},
+{"word":"review","meaning":"複習、檢討","syn":["revise","examine"],"der":["reviewer"],"ant":[],"example":"I need to review my notes before the exam.","example_zh":"我考試前需要複習筆記。"},
+{"word":"return","meaning":"返回、歸還","syn":["go back"],"der":["returnable"],"ant":["depart"],"example":"He will return to Taipei tomorrow.","example_zh":"他明天會回到台北。"}]},
+{"id":"pre","type":"prefix","name":"Pre-","meaning":"在前、預先","words":[
+{"word":"preview","meaning":"預覽、預告","syn":["sneak peek"],"der":["previews"],"ant":[],"example":"Watch the preview before you buy a ticket.","example_zh":"買票前先看預告片。"},
+{"word":"predict","meaning":"預測","syn":["forecast"],"der":["prediction","predictable"],"ant":[],"example":"Nobody can predict the future.","example_zh":"沒有人能預測未來。"},
+{"word":"prepare","meaning":"準備","syn":["get ready"],"der":["preparation"],"ant":[],"example":"Please prepare your passport.","example_zh":"請準備好你的護照。"}]}
+]

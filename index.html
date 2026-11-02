@@ -1,11 +1,44 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#4B57D1"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<meta name="theme-color" content="#2563EB"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
 <title>隨手學英文</title>
 <style>
-:root{--bg:#F5F7FB;--card:#fff;--ink:#1B2440;--mut:#5B6480;--acc:#4B57D1;--onacc:#fff;--chip:#E8EBF8;--line:#E4E7F2;--ok:#1B7F5C;--okbg:#E3F5EC;--bad:#B3261E;--badbg:#FDECEA;--star:#B7791F}
-@media(prefers-color-scheme:dark){:root{--bg:#12162A;--card:#1C2140;--ink:#E8EBF8;--mut:#A3ABC8;--acc:#8E98FF;--onacc:#12162A;--chip:#2A3160;--line:#2D3463;--ok:#6FE0B2;--okbg:#17382C;--bad:#FF9A92;--badbg:#44201E;--star:#F2C14E}}
+:root {
+  /* 淺色模式：乾淨純白 + 鮮明湛藍 */
+  --bg: #F0F4F9;          /* 明亮清爽的淺藍白背景 */
+  --card: #FFFFFF;        /* 純白卡片 */
+  --ink: #1E293B;         /* 深藍灰文字（比純黑更自然舒適） */
+  --mut: #64748B;         /* 柔和次要文字 */
+  --acc: #2563EB;         /* 亮麗活力藍（主視覺色） */
+  --onacc: #FFFFFF;       /* 主視覺按鈕上的白字 */
+  --chip: #E2E8F0;        /* 清爽淺灰藍標籤與小按鈕 */
+  --line: #E2E8F0;        /* 淡雅分隔線 */
+  --ok: #059669;          /* 亮綠色（正確） */
+  --okbg: #D1FAE5;
+  --bad: #DC2626;         /* 鮮紅色（錯誤） */
+  --badbg: #FEE2E2;
+  --star: #F59E0B;        /* 收藏星星黃 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 深色模式：深邃夜藍（依然保持藍色系調性，不顯沉悶） */
+    --bg: #0F172A;
+    --card: #1E293B;
+    --ink: #F1F5F9;
+    --mut: #94A3B8;
+    --acc: #3B82F6;
+    --onacc: #FFFFFF;
+    --chip: #334155;
+    --line: #334155;
+    --ok: #34D399;
+    --okbg: #064E3B;
+    --bad: #F87171;
+    --badbg: #7F1D1D;
+    --star: #FBBF24;
+  }
+}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
 #app{max-width:520px;margin:0 auto;min-height:100dvh;padding:calc(16px + env(safe-area-inset-top)) 16px 104px;display:flex;flex-direction:column;gap:14px}
 h1{margin:0;font-size:28px}.m{color:var(--mut);font-size:14px}.big{font-size:38px;font-weight:700;margin-top:6px}

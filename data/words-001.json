@@ -1,14 +1,110 @@
 [
-{"id":"w001","word":"reluctant","pos":"adj.","meaning":"不情願的","example":"She was reluctant to speak in public.","example_zh":"她不願意在公開場合發言。"},
-{"id":"w002","word":"abandon","pos":"v.","meaning":"放棄、拋棄","example":"They had to abandon the car.","example_zh":"他們不得不棄車。"},
-{"id":"w003","word":"accurate","pos":"adj.","meaning":"精確的","example":"The report is accurate.","example_zh":"這份報告很精確。"},
-{"id":"w004","word":"benefit","pos":"n.","meaning":"益處","example":"Exercise has many health benefits.","example_zh":"運動對健康有許多益處。"},
-{"id":"w005","word":"conclude","pos":"v.","meaning":"下結論","example":"We concluded that the plan was risky.","example_zh":"我們認為這個計畫有風險。"},
-{"id":"w006","word":"diminish","pos":"v.","meaning":"減少、縮小","example":"The pain began to diminish.","example_zh":"疼痛開始減輕。"},
-{"id":"w007","word":"eliminate","pos":"v.","meaning":"消除","example":"We must eliminate waste.","example_zh":"我們必須消除浪費。"},
-{"id":"w008","word":"fluctuate","pos":"v.","meaning":"波動","example":"Prices fluctuate throughout the year.","example_zh":"價格全年都在波動。"},
-{"id":"w009","word":"genuine","pos":"adj.","meaning":"真正的","example":"This is a genuine leather bag.","example_zh":"這是真皮包。"},
-{"id":"w010","word":"hesitate","pos":"v.","meaning":"猶豫","example":"Do not hesitate to ask questions.","example_zh":"有問題請別猶豫，儘管問。"},
-{"id":"w011","word":"ambiguous","pos":"adj.","meaning":"模稜兩可的","example":"The answer was ambiguous.","example_zh":"這個答案模稜兩可。"},
-{"id":"w012","word":"inevitable","pos":"adj.","meaning":"不可避免的","example":"Change is inevitable.","example_zh":"改變是無可避免的。"}
+ {
+  "id": "w001",
+  "word": "reluctant",
+  "pos": "adj.",
+  "meaning": "不情願的",
+  "example": "She was reluctant to speak in public.",
+  "example_zh": "她不願意在公開場合發言。",
+  "topic": "生活"
+ },
+ {
+  "id": "w002",
+  "word": "abandon",
+  "pos": "v.",
+  "meaning": "放棄、拋棄",
+  "example": "They had to abandon the car.",
+  "example_zh": "他們不得不棄車。",
+  "topic": "生活"
+ },
+ {
+  "id": "w003",
+  "word": "accurate",
+  "pos": "adj.",
+  "meaning": "精確的",
+  "example": "The report is accurate.",
+  "example_zh": "這份報告很精確。",
+  "topic": "商業"
+ },
+ {
+  "id": "w004",
+  "word": "benefit",
+  "pos": "n.",
+  "meaning": "益處",
+  "example": "Exercise has many health benefits.",
+  "example_zh": "運動對健康有許多益處。",
+  "topic": "商業"
+ },
+ {
+  "id": "w005",
+  "word": "conclude",
+  "pos": "v.",
+  "meaning": "下結論",
+  "example": "We concluded that the plan was risky.",
+  "example_zh": "我們認為這個計畫有風險。",
+  "topic": "社會"
+ },
+ {
+  "id": "w006",
+  "word": "diminish",
+  "pos": "v.",
+  "meaning": "減少、縮小",
+  "example": "The pain began to diminish.",
+  "example_zh": "疼痛開始減輕。",
+  "topic": "生活"
+ },
+ {
+  "id": "w007",
+  "word": "eliminate",
+  "pos": "v.",
+  "meaning": "消除",
+  "example": "We must eliminate waste.",
+  "example_zh": "我們必須消除浪費。",
+  "topic": "商業"
+ },
+ {
+  "id": "w008",
+  "word": "fluctuate",
+  "pos": "v.",
+  "meaning": "波動",
+  "example": "Prices fluctuate throughout the year.",
+  "example_zh": "價格全年都在波動。",
+  "topic": "商業"
+ },
+ {
+  "id": "w009",
+  "word": "genuine",
+  "pos": "adj.",
+  "meaning": "真正的",
+  "example": "This is a genuine leather bag.",
+  "example_zh": "這是真皮包。",
+  "topic": "生活"
+ },
+ {
+  "id": "w010",
+  "word": "hesitate",
+  "pos": "v.",
+  "meaning": "猶豫",
+  "example": "Do not hesitate to ask questions.",
+  "example_zh": "有問題請別猶豫，儘管問。",
+  "topic": "生活"
+ },
+ {
+  "id": "w011",
+  "word": "ambiguous",
+  "pos": "adj.",
+  "meaning": "模稜兩可的",
+  "example": "The answer was ambiguous.",
+  "example_zh": "這個答案模稜兩可。",
+  "topic": "社會"
+ },
+ {
+  "id": "w012",
+  "word": "inevitable",
+  "pos": "adj.",
+  "meaning": "不可避免的",
+  "example": "Change is inevitable.",
+  "example_zh": "改變是無可避免的。",
+  "topic": "社會"
+ }
 ]

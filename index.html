@@ -1,44 +1,11 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#2563EB"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<meta name="theme-color" content="#4B57D1"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
 <title>隨手學英文</title>
 <style>
-:root {
-  /* 淺色模式：乾淨純白 + 鮮明湛藍 */
-  --bg: #F0F4F9;          /* 明亮清爽的淺藍白背景 */
-  --card: #FFFFFF;        /* 純白卡片 */
-  --ink: #1E293B;         /* 深藍灰文字（比純黑更自然舒適） */
-  --mut: #64748B;         /* 柔和次要文字 */
-  --acc: #2563EB;         /* 亮麗活力藍（主視覺色） */
-  --onacc: #FFFFFF;       /* 主視覺按鈕上的白字 */
-  --chip: #E2E8F0;        /* 清爽淺灰藍標籤與小按鈕 */
-  --line: #E2E8F0;        /* 淡雅分隔線 */
-  --ok: #059669;          /* 亮綠色（正確） */
-  --okbg: #D1FAE5;
-  --bad: #DC2626;         /* 鮮紅色（錯誤） */
-  --badbg: #FEE2E2;
-  --star: #F59E0B;        /* 收藏星星黃 */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* 深色模式：深邃夜藍（依然保持藍色系調性，不顯沉悶） */
-    --bg: #0F172A;
-    --card: #1E293B;
-    --ink: #F1F5F9;
-    --mut: #94A3B8;
-    --acc: #3B82F6;
-    --onacc: #FFFFFF;
-    --chip: #334155;
-    --line: #334155;
-    --ok: #34D399;
-    --okbg: #064E3B;
-    --bad: #F87171;
-    --badbg: #7F1D1D;
-    --star: #FBBF24;
-  }
-}
+:root{--bg:#F5F7FB;--card:#fff;--ink:#1B2440;--mut:#5B6480;--acc:#4B57D1;--onacc:#fff;--chip:#E8EBF8;--line:#E4E7F2;--ok:#1B7F5C;--okbg:#E3F5EC;--bad:#B3261E;--badbg:#FDECEA;--star:#B7791F}
+@media(prefers-color-scheme:dark){:root{--bg:#12162A;--card:#1C2140;--ink:#E8EBF8;--mut:#A3ABC8;--acc:#8E98FF;--onacc:#12162A;--chip:#2A3160;--line:#2D3463;--ok:#6FE0B2;--okbg:#17382C;--bad:#FF9A92;--badbg:#44201E;--star:#F2C14E}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
 #app{max-width:520px;margin:0 auto;min-height:100dvh;padding:calc(16px + env(safe-area-inset-top)) 16px 104px;display:flex;flex-direction:column;gap:14px}
 h1{margin:0;font-size:28px}.m{color:var(--mut);font-size:14px}.big{font-size:38px;font-weight:700;margin-top:6px}
@@ -88,9 +55,9 @@ const exb=(e,z)=>e?`<div class="ex"><div class="et">${esc(e)}</div><div class="r
 
 function home(){const n=today(),w=words();show(`<div><p class="m" style="margin:0">學習</p><h1>今天學什麼？</h1></div>
 <div class="c"><div class="hd"><b>今日進度</b><span class="m">${n} / ${GOAL}</span></div><div class="bar"><i style="width:${Math.min(100,n/GOAL*100)}%"></i></div></div>
-<div class="c f"><div><b style="font-size:20px">單字題庫</b><div class="m">共 ${w.length} 字　翻卡・例句・語音・測驗</div></div><div class="r"><a class="b p" href="#/card">開始翻卡</a><a class="b" href="#/list">單字列表</a></div><a class="b" href="#/quiz/all">隨機測驗 10 題</a></div>
+<div class="c f"><div><b style="font-size:20px">單字題庫</b><div class="m">共 ${w.length} 字　翻卡・例句・語音・測驗</div></div><div class="r"><a class="b p" href="#/card">開始翻卡</a><a class="b" href="#/list">單字列表</a></div><a class="b" href="#/quiz/all">隨機測驗・無限練習</a></div>
 <div class="c f"><b style="font-size:20px">依主題學習</b><div class="grp">${topics().map(t=>`<a class="t" style="text-decoration:none" href="#/card/t~${encodeURIComponent(t[0])}">${esc(t[0])} ${t[1]}</a>`).join('')}</div></div>
-<div class="c f"><div><b style="font-size:20px">字首字尾庫</b><div class="m">共 ${AA().length} 個詞綴　衍生字・反義字・測驗</div></div><a class="b p" href="#/affix">瀏覽詞綴分類</a></div>
+<div class="c f"><div><b style="font-size:20px">字首字尾庫</b><div class="m">共 ${AA().length} 個詞綴　衍生字・反義字・測驗</div></div><div class="r"><a class="b p" href="#/affix">瀏覽詞綴分類</a><a class="b" href="#/aq/all">測驗詞綴（全部）</a></div></div>
 <div class="r"><button class="b" data-a="gofav">我的收藏 ${fav.size}</button><a class="b" href="#/add">新增單字</a></div>`)}
 
 function list(){const all=words(),T=topics(),L={topic:'依主題',abc:'A–Z',new:'加入順序'};let w=all.filter(x=>(flt==='all'||fav.has(x.id))&&(tp==='all'||TP(x)===tp));if(srt==='abc')w=[...w].sort((a,b)=>a.word.localeCompare(b.word));
@@ -106,16 +73,18 @@ ${mode==='hide'?'<div class="m">點選單字即可顯示中文，再點一次收
 function card(a){const all=words(),tpc=a&&a.startsWith('t~')?decodeURIComponent(a.slice(2)):null;dt=tpc||'';deck=a==='fav'?all.filter(x=>fav.has(x.id)):tpc?all.filter(x=>TP(x)===tpc):all;const k=deck.findIndex(x=>x.id===a);if(k>=0)ci=k;else if(tpc)ci=0;ci=Math.min(ci,Math.max(0,deck.length-1));flip=false;cv()}
 function cv(){const w=deck[ci];if(!w)return show(hd('單字翻卡')+'<div class="c m">這裡還沒有單字。到「新增」加入單字，或收藏幾個單字。</div>');
 show(`${hd(`${dt||'單字翻卡'} · ${ci+1} / ${deck.length}`,fb(w.id))}<div class="c fc" data-a="flip" tabindex="0" role="button" aria-label="點卡片翻面">${flip?`<div class="mean">${esc(w.meaning)}</div><div class="m">${esc(w.word)} ${esc(w.pos)} · ${esc(TP(w))}</div>${exb(w.example,w.example_zh)}`:`<div class="m">點卡片翻面</div><div class="w">${esc(w.word)}</div><div class="m">${esc(w.pos)}</div>${sp(w.word)}`}</div>
-<div class="r"><button class="b" data-a="pv">上一個</button><a class="b p" style="flex:2" href="#/quiz/${esc(w.id)}">測驗這個字</a><button class="b" data-a="nx">下一個</button></div>`)}
+<div class="r"><button class="b" data-a="pv">上一個</button><button class="b p" data-a="nx">下一個</button></div>`)}
 
-const mq=(w,pool)=>({p:w.word,s:'這個單字的意思是？',say:w.word,o:shuf([w.meaning,...[...new Set(pool.filter(x=>x!==w&&x.meaning!==w.meaning).map(x=>x.meaning))].slice(0,3)]),a:w.meaning,n:w.example});
-function quiz(a){const tpc=a&&a.startsWith('t~')?decodeURIComponent(a.slice(2)):null,all=words(),w=all.find(x=>x.id===a);const mk=()=>w?[mq(w,[...shuf(all.filter(x=>x.pos===w.pos)),...shuf(all.filter(x=>x.pos!==w.pos))])]:shuf(tpc?all.filter(x=>TP(x)===tpc):all).slice(0,10).map(x=>mq(x,shuf(all)));Q={mk,l:mk(),i:0,s:0};qv()}
-function aq(id){const a=AA().find(x=>x.id===id);if(!a)return home();const aw=AA().flatMap(x=>x.words);const mk=()=>{const L=[{p:a.name,s:'這個詞綴的意思是？',o:shuf([a.meaning,...shuf(AA().filter(x=>x!==a)).slice(0,3).map(x=>x.meaning)]),a:a.meaning}];a.words.forEach(w=>{L.push(mq(w,shuf(aw)));if(w.ant?.length)L.push({p:w.word,s:'下列何者是它的反義字？',say:w.word,o:shuf([w.ant[0],...shuf(aw.filter(x=>x.word!==w.word&&!w.ant.includes(x.word)).map(x=>x.word)).slice(0,3)]),a:w.ant[0],n:w.example})});return shuf(L).slice(0,8)};Q={mk,l:mk(),i:0,s:0};qv()}
+const mq=(w,pool)=>({p:w.word,s:'這個單字的意思是？',say:w.word,o:shuf([w.meaning,...[...new Set(pool.filter(x=>x!==w&&x.meaning!==w.meaning).map(x=>x.meaning))].slice(0,3)]),a:w.meaning,n:w.example,id:w.id});
+function quiz(a){const tpc=a&&a.startsWith('t~')?decodeURIComponent(a.slice(2)):null,all=words(),w=all.find(x=>x.id===a),pool=tpc?all.filter(x=>TP(x)===tpc):all;const mk=()=>w?[mq(w,[...shuf(all.filter(x=>x.pos===w.pos)),...shuf(all.filter(x=>x.pos!==w.pos))])]:shuf(pool).slice(0,20).map(x=>mq(x,shuf(all)));Q={mk,l:mk(),i:0,s:0,k:0,inf:!w};qv()}
+function aq(id){const all=id==='all',ab=AA(),a=ab.find(x=>x.id===id);if(!all&&!a)return home();const aw=ab.flatMap(x=>x.words);
+const one=a=>{const L=[{p:a.name,s:'這個詞綴的意思是？',o:shuf([a.meaning,...shuf(ab.filter(x=>x!==a)).slice(0,3).map(x=>x.meaning)]),a:a.meaning}];a.words.forEach(w=>{L.push(mq(w,shuf(aw)));if(w.ant?.length)L.push({p:w.word,s:'下列何者是它的反義字？',say:w.word,o:shuf([w.ant[0],...shuf(aw.filter(x=>x.word!==w.word&&!w.ant.includes(x.word)).map(x=>x.word)).slice(0,3)]),a:w.ant[0],n:w.example})});return L};
+const mk=()=>all?shuf(ab.flatMap(x=>one(x))).slice(0,20):shuf(one(a)).slice(0,8);Q={mk,l:mk(),i:0,s:0,k:0,inf:all};qv()}
 function qv(){const q=Q.l[Q.i];if(!q)return show(`${hd('測驗結果')}<div class="c ctr"><div class="m">你的成績</div><div class="big">${Q.s} / ${Q.l.length}</div></div><div class="r"><button class="b p" data-a="again">再測一次</button><button class="b" data-a="back">返回</button></div>`);
-const d=q.pick!=null;show(`${hd(`測驗 · 第 ${Q.i+1} / ${Q.l.length} 題`)}<div class="c ctr"><div class="m">${esc(q.s)}</div><div class="big">${esc(q.p)}</div>${q.say?sp(q.say):''}</div>`+q.o.map((o,i)=>{const c=!d?'':o===q.a?'ok':i===q.pick?'bad':'';return`<button class="opt ${c}" data-a="ans" data-v="${i}" ${d?'disabled':''}><span>${esc(o)}</span>${c==='ok'?'<small>正確答案</small>':c==='bad'?'<small>你的答案</small>':''}</button>`}).join('')+(d?(q.n?`<div class="c m">例句：${esc(q.n)}</div>`:'')+`<button class="b p" data-a="qn">${Q.i+1<Q.l.length?'下一題':'看結果'}</button>`:''))}
+const d=q.pick!=null;show(`${hd(`測驗 · 第 ${Q.i+1}${Q.inf?'':' / '+Q.l.length} 題`,q.id?fb(q.id):undefined)}<div class='m' style='text-align:center'>答對 ${Q.s} / 已答 ${Q.k}</div><div class="c ctr"><div class="m">${esc(q.s)}</div><div class="big">${esc(q.p)}</div>${q.say?sp(q.say):''}</div>`+q.o.map((o,i)=>{const c=!d?'':o===q.a?'ok':i===q.pick?'bad':'';return`<button class="opt ${c}" data-a="ans" data-v="${i}" ${d?'disabled':''}><span>${esc(o)}</span>${c==='ok'?'<small>正確答案</small>':c==='bad'?'<small>你的答案</small>':''}</button>`}).join('')+(d&&q.n?`<div class="c m">例句：${esc(q.n)}</div>`:'')+`<div class="r">${Q.i>0?'<button class="b" data-a="qp">上一題</button>':''}<button class="b p" data-a="qn">${!d?'跳過':Q.inf||Q.i+1<Q.l.length?'下一題':'看結果'}</button></div>`)}
 
 function affix(id){if(id){const a=AA().find(x=>x.id===id);if(!a)return affix();return show(`${hd(a.name+' 詞綴')}<div class="c ctr"><span class="t" style="background:var(--acc);color:var(--onacc);font-size:20px">${esc(a.name)}</span><div class="big" style="font-size:24px">${esc(a.meaning)}</div></div>`+a.words.map(w=>`<div class="c f"><div class="hd"><div><b style="font-size:22px">${esc(w.word)}</b><div style="color:var(--acc)">${esc(w.meaning)}</div></div>${sp(w.word)}</div>${[['同義字',w.syn],['衍生字',w.der],['反義字',w.ant]].filter(g=>g[1]?.length).map(g=>`<div class="grp"><span class="m">${g[0]}</span>${g[1].map(x=>`<span class="t">${esc(x)}</span>`).join('')}</div>`).join('')}${exb(w.example,w.example_zh)}</div>`).join('')+`<a class="b p" href="#/aq/${a.id}">測驗詞綴 ${esc(a.name)}</a>`)}
-const T={prefix:'字首',suffix:'字尾',root:'字根'};show(`<h1>字首字尾庫</h1>${seg(Object.entries(T),atype,'atype')}`+(AA().filter(x=>x.type===atype).map(a=>`<a class="cat" href="#/affix/${a.id}"><span class="tile">${esc(a.name)}</span><span style="flex:1;min-width:0"><b>${esc(a.meaning)}</b><span class="m" style="display:block">${a.words.slice(0,3).map(w=>esc(w.word)).join(' · ')}</span></span><span class="m">${a.words.length} 字</span>${ic.chev}</a>`).join('')||'<div class="c m">這個分類還沒有詞綴。把資料加進 data/affixes.json 就會出現在這裡。</div>'))}
+const T={prefix:'字首',suffix:'字尾',root:'字根'};show(`<h1>字首字尾庫</h1>${seg(Object.entries(T),atype,'atype')}<a class="b p" href="#/aq/all">測驗詞綴（全部）</a>`+(AA().filter(x=>x.type===atype).map(a=>`<a class="cat" href="#/affix/${a.id}"><span class="tile">${esc(a.name)}</span><span style="flex:1;min-width:0"><b>${esc(a.meaning)}</b><span class="m" style="display:block">${a.words.slice(0,3).map(w=>esc(w.word)).join(' · ')}</span></span><span class="m">${a.words.length} 字</span>${ic.chev}</a>`).join('')||'<div class="c m">這個分類還沒有詞綴。把資料加進 data/affixes.json 就會出現在這裡。</div>'))}
 
 const bt=(a,l,at,bad)=>`<button class="b" style="min-height:40px${bad?';color:var(--bad)':''}" data-a="${a}" ${at}>${l}</button>`;
 const rowM=(t,m,b)=>`<div class="row"><div style="flex:1;min-width:0"><b>${esc(t)}</b><span class="mn" style="color:var(--mut)">${esc(m)}</span></div>${b}</div>`;
@@ -143,7 +112,7 @@ fav:(d,t)=>{fav.has(d.id)?fav.delete(d.id):fav.add(d.id);ST.set('fav',[...fav]);
 rev:(d,t)=>mode==='hide'?t.closest('.row').classList.toggle('open'):say(d.t),
 tr:(d,t)=>d.z?t.closest('.ex').querySelector('.zh').classList.toggle('on'):open('https://translate.google.com/?sl=en&tl=zh-TW&op=translate&text='+encodeURIComponent(d.t),'_blank','noopener'),
 flip:()=>{flip=!flip;cv()},nx:()=>{ci=(ci+1)%deck.length;flip=false;bump();cv()},pv:()=>{ci=(ci-1+deck.length)%deck.length;flip=false;cv()},
-ans:d=>{const q=Q.l[Q.i];q.pick=+d.v;if(q.o[q.pick]===q.a)Q.s++;bump();qv()},qn:()=>{Q.i++;qv()},again:()=>{Q.l=Q.mk();Q.i=0;Q.s=0;qv()},gofav:()=>{flt='fav';location.hash='#/list'},
+ans:d=>{const q=Q.l[Q.i];if(q.pick!=null)return;q.pick=+d.v;Q.k++;if(q.o[q.pick]===q.a)Q.s++;bump();qv()},qn:()=>{Q.i++;if(Q.inf&&Q.i>=Q.l.length)Q.l.push(...Q.mk());qv()},qp:()=>{if(Q.i>0)Q.i--;qv()},again:()=>{Q.l=Q.mk();Q.i=0;Q.s=0;Q.k=0;qv()},gofav:()=>{flt='fav';location.hash='#/list'},
 imp:()=>{try{const t=$('#imp').value.trim();let r=t[0]==='['?JSON.parse(t):t.split('\n').filter(Boolean).map(l=>{const[a,b,c,d,e,f]=l.split(',').map(s=>s.trim());return{word:a,pos:b,meaning:c,example:d,example_zh:e,topic:f}});r=r.filter(x=>x.word&&x.meaning);addW(r);$('#imp').value='';toast(`已匯入 ${r.length} 字`)}catch{toast('格式錯誤，請檢查內容')}},
 exp:()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({words:ST.get('uw',[]),affixes:ST.get('ua',[]),fav:[...fav]},null,1)],{type:'application/json'}));a.download='my-words.json';a.click()}};
 document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(t)ACT[t.dataset.a]?.(t.dataset,t)});

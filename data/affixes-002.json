@@ -1,0 +1,974 @@
+[
+ {
+  "id": "sym-syn",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Sym-/Syn-",
+  "meaning": "共同、相同",
+  "words": [
+   {
+    "word": "sympathy",
+    "meaning": "同情",
+    "syn": [
+     "compassion",
+     "pity"
+    ],
+    "der": [
+     "sympathetic",
+     "sympathize"
+    ],
+    "ant": [
+     "apathy",
+     "indifference"
+    ],
+    "example": "She expressed her sympathy for the victims.",
+    "example_zh": "她向受害者表達同情。"
+   },
+   {
+    "word": "symmetry",
+    "meaning": "對稱",
+    "syn": [
+     "balance"
+    ],
+    "der": [
+     "symmetrical"
+    ],
+    "ant": [
+     "asymmetry"
+    ],
+    "example": "The building is admired for its symmetry.",
+    "example_zh": "這棟建築因對稱之美而受到讚賞。"
+   },
+   {
+    "word": "synonym",
+    "meaning": "同義字",
+    "syn": [],
+    "der": [
+     "synonymous"
+    ],
+    "ant": [
+     "antonym"
+    ],
+    "example": "Big is a synonym of large.",
+    "example_zh": "big 是 large 的同義字。"
+   },
+   {
+    "word": "synchronize",
+    "meaning": "使同步",
+    "syn": [
+     "coordinate"
+    ],
+    "der": [
+     "synchronization"
+    ],
+    "ant": [],
+    "example": "The dancers synchronize their steps.",
+    "example_zh": "舞者們讓步伐同步。"
+   }
+  ]
+ },
+ {
+  "id": "homo",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Homo-",
+  "meaning": "相同",
+  "words": [
+   {
+    "word": "homogeneous",
+    "meaning": "同質的",
+    "syn": [
+     "uniform",
+     "identical"
+    ],
+    "der": [
+     "homogeneity"
+    ],
+    "ant": [
+     "heterogeneous"
+    ],
+    "example": "The village has a homogeneous population.",
+    "example_zh": "這個村莊的人口組成很單一。"
+   },
+   {
+    "word": "homonym",
+    "meaning": "同形異義字",
+    "syn": [],
+    "der": [
+     "homonymous"
+    ],
+    "ant": [],
+    "example": "Bear is a homonym: it is an animal and a verb.",
+    "example_zh": "bear 是同形異義字：既是動物也是動詞。"
+   },
+   {
+    "word": "homophone",
+    "meaning": "同音異義字",
+    "syn": [],
+    "der": [
+     "homophonic"
+    ],
+    "ant": [],
+    "example": "Write and right are homophones.",
+    "example_zh": "write 和 right 是同音異義字。"
+   },
+   {
+    "word": "homogenize",
+    "meaning": "使均質；使一致",
+    "syn": [
+     "blend"
+    ],
+    "der": [
+     "homogenization"
+    ],
+    "ant": [
+     "differentiate"
+    ],
+    "example": "The dairy homogenizes milk before bottling.",
+    "example_zh": "乳品廠在裝瓶前先將牛奶均質化。"
+   }
+  ]
+ },
+ {
+  "id": "co",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Co-",
+  "meaning": "共同",
+  "words": [
+   {
+    "word": "cooperate",
+    "meaning": "合作",
+    "syn": [
+     "collaborate"
+    ],
+    "der": [
+     "cooperation",
+     "cooperative"
+    ],
+    "ant": [
+     "compete",
+     "oppose"
+    ],
+    "example": "The two teams agreed to cooperate.",
+    "example_zh": "兩個團隊同意合作。"
+   },
+   {
+    "word": "coexist",
+    "meaning": "共存",
+    "syn": [
+     "live together"
+    ],
+    "der": [
+     "coexistence"
+    ],
+    "ant": [],
+    "example": "Different cultures can coexist peacefully.",
+    "example_zh": "不同文化可以和平共存。"
+   },
+   {
+    "word": "coworker",
+    "meaning": "同事",
+    "syn": [
+     "colleague",
+     "associate"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "My coworker brought lunch for everyone.",
+    "example_zh": "我的同事幫大家帶了午餐。"
+   },
+   {
+    "word": "coincide",
+    "meaning": "同時發生；相符",
+    "syn": [
+     "concur",
+     "match"
+    ],
+    "der": [
+     "coincidence",
+     "coincidental"
+    ],
+    "ant": [
+     "differ"
+    ],
+    "example": "The holiday coincides with my birthday.",
+    "example_zh": "這個假期正好和我的生日同一天。"
+   }
+  ]
+ },
+ {
+  "id": "col",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Col-",
+  "meaning": "共同",
+  "words": [
+   {
+    "word": "collaborate",
+    "meaning": "合作",
+    "syn": [
+     "cooperate",
+     "team up"
+    ],
+    "der": [
+     "collaboration",
+     "collaborator"
+    ],
+    "ant": [
+     "compete"
+    ],
+    "example": "Scientists collaborated on the project.",
+    "example_zh": "科學家們共同合作這項計畫。"
+   },
+   {
+    "word": "collect",
+    "meaning": "收集",
+    "syn": [
+     "gather",
+     "accumulate"
+    ],
+    "der": [
+     "collection",
+     "collector"
+    ],
+    "ant": [
+     "scatter",
+     "disperse"
+    ],
+    "example": "She likes to collect old coins.",
+    "example_zh": "她喜歡收集舊硬幣。"
+   },
+   {
+    "word": "collide",
+    "meaning": "碰撞",
+    "syn": [
+     "crash"
+    ],
+    "der": [
+     "collision"
+    ],
+    "ant": [],
+    "example": "The two cars collided at the corner.",
+    "example_zh": "兩輛車在轉角相撞。"
+   },
+   {
+    "word": "colleague",
+    "meaning": "同事",
+    "syn": [
+     "coworker",
+     "associate"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "I discussed the issue with a colleague.",
+    "example_zh": "我和一位同事討論了這個問題。"
+   }
+  ]
+ },
+ {
+  "id": "com",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Com-",
+  "meaning": "共同",
+  "words": [
+   {
+    "word": "combine",
+    "meaning": "結合",
+    "syn": [
+     "merge",
+     "unite"
+    ],
+    "der": [
+     "combination"
+    ],
+    "ant": [
+     "separate",
+     "divide"
+    ],
+    "example": "Combine the flour and sugar in a bowl.",
+    "example_zh": "把麵粉和糖在碗裡混合。"
+   },
+   {
+    "word": "compare",
+    "meaning": "比較",
+    "syn": [
+     "contrast"
+    ],
+    "der": [
+     "comparison",
+     "comparative"
+    ],
+    "ant": [],
+    "example": "It is unfair to compare the two cities.",
+    "example_zh": "拿這兩座城市比較並不公平。"
+   },
+   {
+    "word": "communicate",
+    "meaning": "溝通",
+    "syn": [
+     "convey",
+     "express"
+    ],
+    "der": [
+     "communication",
+     "communicative"
+    ],
+    "ant": [],
+    "example": "We communicate by email every day.",
+    "example_zh": "我們每天用電子郵件溝通。"
+   },
+   {
+    "word": "companion",
+    "meaning": "同伴",
+    "syn": [
+     "partner",
+     "comrade"
+    ],
+    "der": [
+     "companionship"
+    ],
+    "ant": [],
+    "example": "The dog was her constant companion.",
+    "example_zh": "那隻狗是她形影不離的同伴。"
+   }
+  ]
+ },
+ {
+  "id": "con",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Con-",
+  "meaning": "共同",
+  "words": [
+   {
+    "word": "connect",
+    "meaning": "連接",
+    "syn": [
+     "link",
+     "join"
+    ],
+    "der": [
+     "connection",
+     "connector"
+    ],
+    "ant": [
+     "disconnect"
+    ],
+    "example": "Connect the cable to the router.",
+    "example_zh": "把網路線接到路由器上。"
+   },
+   {
+    "word": "conference",
+    "meaning": "會議",
+    "syn": [
+     "meeting",
+     "convention"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She spoke at an international conference.",
+    "example_zh": "她在一場國際會議上發表演說。"
+   },
+   {
+    "word": "consensus",
+    "meaning": "共識",
+    "syn": [
+     "agreement"
+    ],
+    "der": [
+     "consensual"
+    ],
+    "ant": [
+     "disagreement",
+     "dispute"
+    ],
+    "example": "The committee reached a consensus.",
+    "example_zh": "委員會達成了共識。"
+   },
+   {
+    "word": "congregate",
+    "meaning": "聚集",
+    "syn": [
+     "gather",
+     "assemble"
+    ],
+    "der": [
+     "congregation"
+    ],
+    "ant": [
+     "disperse"
+    ],
+    "example": "Fans congregated outside the stadium.",
+    "example_zh": "球迷們聚集在體育場外。"
+   }
+  ]
+ },
+ {
+  "id": "equi",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Equi-",
+  "meaning": "相等",
+  "words": [
+   {
+    "word": "equal",
+    "meaning": "相等的；平等的",
+    "syn": [
+     "identical",
+     "equivalent"
+    ],
+    "der": [
+     "equality",
+     "equally"
+    ],
+    "ant": [
+     "unequal"
+    ],
+    "example": "All citizens are equal before the law.",
+    "example_zh": "在法律面前，所有公民一律平等。"
+   },
+   {
+    "word": "equivalent",
+    "meaning": "相等的；等值物",
+    "syn": [
+     "equal",
+     "comparable"
+    ],
+    "der": [
+     "equivalence"
+    ],
+    "ant": [
+     "different"
+    ],
+    "example": "A kilometer is not equivalent to a mile.",
+    "example_zh": "一公里不等於一英里。"
+   },
+   {
+    "word": "equilibrium",
+    "meaning": "平衡",
+    "syn": [
+     "balance",
+     "stability"
+    ],
+    "der": [],
+    "ant": [
+     "imbalance"
+    ],
+    "example": "The market returned to equilibrium.",
+    "example_zh": "市場恢復了平衡。"
+   },
+   {
+    "word": "equity",
+    "meaning": "公平；股權",
+    "syn": [
+     "fairness",
+     "justice"
+    ],
+    "der": [
+     "equitable"
+    ],
+    "ant": [
+     "inequity"
+    ],
+    "example": "The policy aims to promote equity in education.",
+    "example_zh": "這項政策旨在促進教育公平。"
+   }
+  ]
+ },
+ {
+  "id": "cor",
+  "type": "prefix",
+  "group": "相同共同",
+  "name": "Cor-",
+  "meaning": "共同",
+  "words": [
+   {
+    "word": "correspond",
+    "meaning": "符合；通信",
+    "syn": [
+     "match",
+     "agree"
+    ],
+    "der": [
+     "correspondence",
+     "correspondent"
+    ],
+    "ant": [
+     "differ"
+    ],
+    "example": "The description does not correspond to the photo.",
+    "example_zh": "這段描述和照片不符。"
+   },
+   {
+    "word": "correlate",
+    "meaning": "相互關聯",
+    "syn": [
+     "connect",
+     "relate"
+    ],
+    "der": [
+     "correlation"
+    ],
+    "ant": [],
+    "example": "Sleep and mood are closely correlated.",
+    "example_zh": "睡眠與情緒密切相關。"
+   },
+   {
+    "word": "corroborate",
+    "meaning": "證實",
+    "syn": [
+     "confirm",
+     "verify"
+    ],
+    "der": [
+     "corroboration"
+    ],
+    "ant": [
+     "contradict",
+     "refute"
+    ],
+    "example": "Witnesses corroborated his story.",
+    "example_zh": "目擊者證實了他的說法。"
+   },
+   {
+    "word": "corrupt",
+    "meaning": "腐敗的；使腐化",
+    "syn": [
+     "dishonest",
+     "rotten"
+    ],
+    "der": [
+     "corruption"
+    ],
+    "ant": [
+     "honest"
+    ],
+    "example": "The corrupt official took bribes.",
+    "example_zh": "那位貪腐的官員收受賄賂。"
+   }
+  ]
+ },
+ {
+  "id": "uni",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Uni-",
+  "meaning": "一",
+  "words": [
+   {
+    "word": "unit",
+    "meaning": "單位",
+    "syn": [
+     "component",
+     "element"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Each unit of the course lasts two weeks.",
+    "example_zh": "這門課每個單元為期兩週。"
+   },
+   {
+    "word": "unique",
+    "meaning": "獨特的",
+    "syn": [
+     "distinctive",
+     "one-of-a-kind"
+    ],
+    "der": [
+     "uniquely",
+     "uniqueness"
+    ],
+    "ant": [
+     "common",
+     "ordinary"
+    ],
+    "example": "Every snowflake is unique.",
+    "example_zh": "每片雪花都是獨一無二的。"
+   },
+   {
+    "word": "uniform",
+    "meaning": "制服；一致的",
+    "syn": [
+     "consistent",
+     "even"
+    ],
+    "der": [
+     "uniformity"
+    ],
+    "ant": [
+     "varied",
+     "irregular"
+    ],
+    "example": "Students must wear a uniform.",
+    "example_zh": "學生必須穿制服。"
+   },
+   {
+    "word": "unite",
+    "meaning": "聯合",
+    "syn": [
+     "join",
+     "combine"
+    ],
+    "der": [
+     "union",
+     "unity"
+    ],
+    "ant": [
+     "divide",
+     "separate"
+    ],
+    "example": "The two parties united to win the election.",
+    "example_zh": "兩個政黨聯合起來贏得選舉。"
+   }
+  ]
+ },
+ {
+  "id": "bi",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Bi-",
+  "meaning": "二",
+  "words": [
+   {
+    "word": "bicycle",
+    "meaning": "腳踏車",
+    "syn": [
+     "bike"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He rides a bicycle to work.",
+    "example_zh": "他騎腳踏車上班。"
+   },
+   {
+    "word": "bilingual",
+    "meaning": "雙語的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "monolingual"
+    ],
+    "example": "She grew up in a bilingual family.",
+    "example_zh": "她在雙語家庭中長大。"
+   },
+   {
+    "word": "binary",
+    "meaning": "二進位的；二元的",
+    "syn": [
+     "dual"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Computers store data in binary code.",
+    "example_zh": "電腦用二進位碼儲存資料。"
+   },
+   {
+    "word": "bilateral",
+    "meaning": "雙邊的",
+    "syn": [
+     "two-sided"
+    ],
+    "der": [],
+    "ant": [
+     "unilateral"
+    ],
+    "example": "The two countries signed a bilateral agreement.",
+    "example_zh": "兩國簽署了雙邊協議。"
+   }
+  ]
+ },
+ {
+  "id": "tri",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Tri-",
+  "meaning": "三",
+  "words": [
+   {
+    "word": "triangle",
+    "meaning": "三角形",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The roof is shaped like a triangle.",
+    "example_zh": "屋頂的形狀像三角形。"
+   },
+   {
+    "word": "tricycle",
+    "meaning": "三輪車",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The toddler pedaled his tricycle across the yard.",
+    "example_zh": "小男孩踩著三輪車穿過院子。"
+   },
+   {
+    "word": "triple",
+    "meaning": "三倍的；使成三倍",
+    "syn": [
+     "threefold"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The company plans to triple its output.",
+    "example_zh": "公司計畫把產量增加為三倍。"
+   },
+   {
+    "word": "trilogy",
+    "meaning": "三部曲",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "She is writing a fantasy trilogy.",
+    "example_zh": "她正在寫一部奇幻三部曲。"
+   }
+  ]
+ },
+ {
+  "id": "demi",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Demi-",
+  "meaning": "半",
+  "words": [
+   {
+    "word": "demigod",
+    "meaning": "半神",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Hercules was a demigod in Greek myth.",
+    "example_zh": "海克力斯是希臘神話中的半神。"
+   },
+   {
+    "word": "demitasse",
+    "meaning": "小咖啡杯（半杯）",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He sipped espresso from a demitasse.",
+    "example_zh": "他用小咖啡杯啜飲濃縮咖啡。"
+   },
+   {
+    "word": "demimonde",
+    "meaning": "名聲不佳的社交圈",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The novel explores the Parisian demimonde.",
+    "example_zh": "這部小說描寫巴黎的邊緣社交圈。"
+   }
+  ]
+ },
+ {
+  "id": "mono",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Mono-",
+  "meaning": "單一",
+  "words": [
+   {
+    "word": "monotone",
+    "meaning": "單調（的聲音）",
+    "syn": [
+     "dull"
+    ],
+    "der": [
+     "monotonous"
+    ],
+    "ant": [
+     "varied"
+    ],
+    "example": "He read the speech in a monotone.",
+    "example_zh": "他用單調的語調念完講稿。"
+   },
+   {
+    "word": "monopoly",
+    "meaning": "壟斷",
+    "syn": [
+     "exclusive control"
+    ],
+    "der": [
+     "monopolize"
+    ],
+    "ant": [
+     "competition"
+    ],
+    "example": "The company held a monopoly on the market.",
+    "example_zh": "這家公司壟斷了市場。"
+   },
+   {
+    "word": "monologue",
+    "meaning": "獨白",
+    "syn": [],
+    "der": [
+     "monologist"
+    ],
+    "ant": [
+     "dialogue"
+    ],
+    "example": "The actor delivered a long monologue.",
+    "example_zh": "演員說了一段長長的獨白。"
+   },
+   {
+    "word": "monorail",
+    "meaning": "單軌鐵路",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The monorail connects the airport to downtown.",
+    "example_zh": "單軌電車連接機場與市中心。"
+   }
+  ]
+ },
+ {
+  "id": "deca",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Deca-",
+  "meaning": "十",
+  "words": [
+   {
+    "word": "decade",
+    "meaning": "十年",
+    "syn": [
+     "ten years"
+    ],
+    "der": [
+     "decadal"
+    ],
+    "ant": [],
+    "example": "Prices have doubled in a decade.",
+    "example_zh": "物價在十年內翻了一倍。"
+   },
+   {
+    "word": "decagon",
+    "meaning": "十邊形",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "A decagon has ten sides.",
+    "example_zh": "十邊形有十條邊。"
+   },
+   {
+    "word": "decathlon",
+    "meaning": "十項全能運動",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He trained for years to compete in the decathlon.",
+    "example_zh": "他多年來訓練，只為參加十項全能比賽。"
+   },
+   {
+    "word": "decalogue",
+    "meaning": "十誡",
+    "syn": [
+     "Ten Commandments"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The Decalogue is a set of ten rules in the Bible.",
+    "example_zh": "十誡是聖經中的十條戒律。"
+   }
+  ]
+ },
+ {
+  "id": "multi",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Multi-",
+  "meaning": "多",
+  "words": [
+   {
+    "word": "multiple",
+    "meaning": "多重的；多個的",
+    "syn": [
+     "many",
+     "numerous"
+    ],
+    "der": [
+     "multiply"
+    ],
+    "ant": [],
+    "example": "He has multiple jobs.",
+    "example_zh": "他同時做好幾份工作。"
+   },
+   {
+    "word": "multimedia",
+    "meaning": "多媒體",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The museum uses multimedia displays.",
+    "example_zh": "博物館使用多媒體展示。"
+   },
+   {
+    "word": "multinational",
+    "meaning": "跨國的",
+    "syn": [
+     "international"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She works for a multinational company.",
+    "example_zh": "她在一家跨國公司工作。"
+   },
+   {
+    "word": "multitask",
+    "meaning": "同時處理多件事",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "I can't multitask when I'm tired.",
+    "example_zh": "我累的時候沒辦法一心多用。"
+   }
+  ]
+ },
+ {
+  "id": "cent",
+  "type": "prefix",
+  "group": "數量",
+  "name": "Cent-/Centi-",
+  "meaning": "百",
+  "words": [
+   {
+    "word": "century",
+    "meaning": "世紀；一百年",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The castle was built in the 12th century.",
+    "example_zh": "這座城堡建於十二世紀。"
+   },
+   {
+    "word": "centimeter",
+    "meaning": "公分",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The table is 80 centimeters wide.",
+    "example_zh": "這張桌子寬 80 公分。"
+   },
+   {
+    "word": "centipede",
+    "meaning": "蜈蚣",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "A centipede crawled across the floor.",
+    "example_zh": "一隻蜈蚣爬過地板。"
+   },
+   {
+    "word": "centennial",
+    "meaning": "百年的；百年紀念",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The school held a centennial celebration.",
+    "example_zh": "學校舉辦了百年校慶。"
+   }
+  ]
+ }
+]

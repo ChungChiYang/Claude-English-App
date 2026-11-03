@@ -1,18 +1,625 @@
 [
-{"id":"un","type":"prefix","name":"Un-","meaning":"不、相反","words":[
-{"word":"unhappy","meaning":"不快樂的","syn":["sad","miserable"],"der":["unhappiness","unhappily"],"ant":["happy","glad"],"example":"He felt unhappy about the result.","example_zh":"他對結果感到不開心。"},
-{"word":"unusual","meaning":"不尋常的","syn":["strange","rare"],"der":["unusually"],"ant":["usual","common"],"example":"It is unusual to see snow here.","example_zh":"在這裡看到雪很不尋常。"},
-{"word":"unable","meaning":"無法的","syn":["incapable"],"der":["inability"],"ant":["able","capable"],"example":"She was unable to attend the meeting.","example_zh":"她無法出席會議。"}]},
-{"id":"dis","type":"prefix","name":"Dis-","meaning":"否定、分離","words":[
-{"word":"disagree","meaning":"不同意","syn":["differ","object"],"der":["disagreement"],"ant":["agree"],"example":"I disagree with your opinion.","example_zh":"我不同意你的看法。"},
-{"word":"disappear","meaning":"消失","syn":["vanish"],"der":["disappearance"],"ant":["appear"],"example":"The sun disappeared behind the clouds.","example_zh":"太陽消失在雲層後面。"},
-{"word":"dislike","meaning":"不喜歡","syn":["hate"],"der":[],"ant":["like","love"],"example":"I dislike getting up early.","example_zh":"我不喜歡早起。"}]},
-{"id":"re","type":"prefix","name":"Re-","meaning":"再、重新","words":[
-{"word":"rebuild","meaning":"重建","syn":["reconstruct"],"der":["rebuilding"],"ant":["destroy"],"example":"They plan to rebuild the bridge.","example_zh":"他們打算重建那座橋。"},
-{"word":"review","meaning":"複習、檢討","syn":["revise","examine"],"der":["reviewer"],"ant":[],"example":"I need to review my notes before the exam.","example_zh":"我考試前需要複習筆記。"},
-{"word":"return","meaning":"返回、歸還","syn":["go back"],"der":["returnable"],"ant":["depart"],"example":"He will return to Taipei tomorrow.","example_zh":"他明天會回到台北。"}]},
-{"id":"pre","type":"prefix","name":"Pre-","meaning":"在前、預先","words":[
-{"word":"preview","meaning":"預覽、預告","syn":["sneak peek"],"der":["previews"],"ant":[],"example":"Watch the preview before you buy a ticket.","example_zh":"買票前先看預告片。"},
-{"word":"predict","meaning":"預測","syn":["forecast"],"der":["prediction","predictable"],"ant":[],"example":"Nobody can predict the future.","example_zh":"沒有人能預測未來。"},
-{"word":"prepare","meaning":"準備","syn":["get ready"],"der":["preparation"],"ant":[],"example":"Please prepare your passport.","example_zh":"請準備好你的護照。"}]}
+ {
+  "id": "un",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Un-",
+  "meaning": "無、非",
+  "words": [
+   {
+    "word": "unable",
+    "meaning": "不能的",
+    "syn": [
+     "incapable"
+    ],
+    "der": [
+     "inability"
+    ],
+    "ant": [
+     "able",
+     "capable"
+    ],
+    "example": "She was unable to attend the meeting.",
+    "example_zh": "她無法出席會議。"
+   },
+   {
+    "word": "unwilling",
+    "meaning": "不願意的",
+    "syn": [
+     "reluctant",
+     "loath",
+     "averse"
+    ],
+    "der": [
+     "unwillingly",
+     "unwillingness"
+    ],
+    "ant": [
+     "willing",
+     "eager"
+    ],
+    "example": "He was unwilling to share his plan.",
+    "example_zh": "他不願意分享他的計畫。"
+   },
+   {
+    "word": "unbelievable",
+    "meaning": "難以置信的",
+    "syn": [
+     "incredible",
+     "inconceivable",
+     "unthinkable"
+    ],
+    "der": [
+     "unbelievably"
+    ],
+    "ant": [
+     "believable",
+     "credible"
+    ],
+    "example": "The view from the top was unbelievable.",
+    "example_zh": "山頂的景色美得令人難以置信。"
+   },
+   {
+    "word": "unhappy",
+    "meaning": "不快樂的",
+    "syn": [
+     "sad",
+     "upset",
+     "depressed"
+    ],
+    "der": [
+     "unhappiness",
+     "unhappily"
+    ],
+    "ant": [
+     "happy",
+     "glad"
+    ],
+    "example": "He felt unhappy about the result.",
+    "example_zh": "他對結果感到不開心。"
+   },
+   {
+    "word": "unlikely",
+    "meaning": "不太可能的",
+    "syn": [
+     "improbable",
+     "implausible",
+     "doubtful"
+    ],
+    "der": [
+     "unlikelihood"
+    ],
+    "ant": [
+     "likely",
+     "probable",
+     "possible"
+    ],
+    "example": "It is unlikely that it will rain today.",
+    "example_zh": "今天不太可能下雨。"
+   },
+   {
+    "word": "unfit",
+    "meaning": "不合適的",
+    "syn": [
+     "unsuitable"
+    ],
+    "der": [],
+    "ant": [
+     "fit",
+     "suitable"
+    ],
+    "example": "The food was unfit to eat.",
+    "example_zh": "這食物不適合食用。"
+   }
+  ]
+ },
+ {
+  "id": "in-neg",
+  "type": "prefix",
+  "group": "否定",
+  "name": "In-",
+  "meaning": "否定",
+  "words": [
+   {
+    "word": "invisible",
+    "meaning": "看不見的",
+    "syn": [
+     "unseen",
+     "hidden"
+    ],
+    "der": [
+     "invisibly",
+     "invisibility"
+    ],
+    "ant": [
+     "visible"
+    ],
+    "example": "The stars are invisible in the city.",
+    "example_zh": "在城市裡看不到星星。"
+   },
+   {
+    "word": "incorrect",
+    "meaning": "不正確的",
+    "syn": [
+     "wrong",
+     "inaccurate"
+    ],
+    "der": [
+     "incorrectly"
+    ],
+    "ant": [
+     "correct"
+    ],
+    "example": "Your answer is incorrect.",
+    "example_zh": "你的答案不正確。"
+   },
+   {
+    "word": "informal",
+    "meaning": "非正式的",
+    "syn": [
+     "casual"
+    ],
+    "der": [
+     "informally",
+     "informality"
+    ],
+    "ant": [
+     "formal"
+    ],
+    "example": "It was an informal meeting.",
+    "example_zh": "那是一場非正式的會議。"
+   },
+   {
+    "word": "incapable",
+    "meaning": "無能力的",
+    "syn": [
+     "unable"
+    ],
+    "der": [
+     "incapability"
+    ],
+    "ant": [
+     "capable"
+    ],
+    "example": "He is incapable of telling a lie.",
+    "example_zh": "他不會說謊。"
+   }
+  ]
+ },
+ {
+  "id": "dis",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Dis-",
+  "meaning": "相反、除外",
+  "words": [
+   {
+    "word": "disappear",
+    "meaning": "消失",
+    "syn": [
+     "vanish"
+    ],
+    "der": [
+     "disappearance"
+    ],
+    "ant": [
+     "appear"
+    ],
+    "example": "The sun disappeared behind the clouds.",
+    "example_zh": "太陽消失在雲層後面。"
+   },
+   {
+    "word": "disagree",
+    "meaning": "不同意",
+    "syn": [
+     "differ",
+     "object"
+    ],
+    "der": [
+     "disagreement"
+    ],
+    "ant": [
+     "agree"
+    ],
+    "example": "I disagree with your opinion.",
+    "example_zh": "我不同意你的看法。"
+   },
+   {
+    "word": "dislike",
+    "meaning": "不喜歡",
+    "syn": [
+     "hate"
+    ],
+    "der": [],
+    "ant": [
+     "like",
+     "love"
+    ],
+    "example": "I dislike getting up early.",
+    "example_zh": "我不喜歡早起。"
+   },
+   {
+    "word": "dissimilar",
+    "meaning": "不相似的",
+    "syn": [
+     "different",
+     "unlike"
+    ],
+    "der": [
+     "dissimilarity"
+    ],
+    "ant": [
+     "similar",
+     "alike"
+    ],
+    "example": "The two brothers are quite dissimilar.",
+    "example_zh": "這兩兄弟很不一樣。"
+   }
+  ]
+ },
+ {
+  "id": "ir",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Ir-",
+  "meaning": "無、不",
+  "words": [
+   {
+    "word": "irrelevant",
+    "meaning": "不相關的",
+    "syn": [
+     "unrelated"
+    ],
+    "der": [
+     "irrelevance"
+    ],
+    "ant": [
+     "relevant"
+    ],
+    "example": "Please ignore the irrelevant details.",
+    "example_zh": "請忽略不相關的細節。"
+   },
+   {
+    "word": "irrational",
+    "meaning": "不理智的",
+    "syn": [
+     "illogical",
+     "unreasonable"
+    ],
+    "der": [
+     "irrationally",
+     "irrationality"
+    ],
+    "ant": [
+     "rational",
+     "reasonable"
+    ],
+    "example": "His fear of flying is irrational.",
+    "example_zh": "他對搭飛機的恐懼是不理性的。"
+   },
+   {
+    "word": "irreplaceable",
+    "meaning": "不可替代的",
+    "syn": [
+     "indispensable",
+     "unique"
+    ],
+    "der": [],
+    "ant": [
+     "replaceable"
+    ],
+    "example": "She is an irreplaceable member of the team.",
+    "example_zh": "她是團隊中不可或缺的一員。"
+   },
+   {
+    "word": "irregular",
+    "meaning": "不規則的",
+    "syn": [
+     "uneven",
+     "abnormal"
+    ],
+    "der": [
+     "irregularly",
+     "irregularity"
+    ],
+    "ant": [
+     "regular"
+    ],
+    "example": "The bus runs at irregular intervals.",
+    "example_zh": "公車的班次間隔不固定。"
+   }
+  ]
+ },
+ {
+  "id": "im-neg",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Im-",
+  "meaning": "否定",
+  "words": [
+   {
+    "word": "impossible",
+    "meaning": "不可能的",
+    "syn": [
+     "unachievable"
+    ],
+    "der": [
+     "impossibility",
+     "impossibly"
+    ],
+    "ant": [
+     "possible"
+    ],
+    "example": "It is impossible to finish this by noon.",
+    "example_zh": "中午前不可能完成這件事。"
+   },
+   {
+    "word": "impatient",
+    "meaning": "不耐煩的",
+    "syn": [
+     "restless",
+     "irritable"
+    ],
+    "der": [
+     "impatience",
+     "impatiently"
+    ],
+    "ant": [
+     "patient"
+    ],
+    "example": "Don't be so impatient with the children.",
+    "example_zh": "別對孩子這麼不耐煩。"
+   },
+   {
+    "word": "immortal",
+    "meaning": "不朽的",
+    "syn": [
+     "eternal",
+     "undying"
+    ],
+    "der": [
+     "immortality"
+    ],
+    "ant": [
+     "mortal"
+    ],
+    "example": "Great art can make a name immortal.",
+    "example_zh": "偉大的藝術能讓名字流傳不朽。"
+   },
+   {
+    "word": "impolite",
+    "meaning": "不禮貌的",
+    "syn": [
+     "rude"
+    ],
+    "der": [
+     "impoliteness"
+    ],
+    "ant": [
+     "polite"
+    ],
+    "example": "It is impolite to interrupt others.",
+    "example_zh": "打斷別人說話是不禮貌的。"
+   }
+  ]
+ },
+ {
+  "id": "il",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Il-",
+  "meaning": "否定",
+  "words": [
+   {
+    "word": "illegal",
+    "meaning": "非法的",
+    "syn": [
+     "unlawful",
+     "illicit"
+    ],
+    "der": [
+     "illegally"
+    ],
+    "ant": [
+     "legal",
+     "lawful"
+    ],
+    "example": "Parking here is illegal.",
+    "example_zh": "在這裡停車是違法的。"
+   },
+   {
+    "word": "illogical",
+    "meaning": "不合邏輯的",
+    "syn": [
+     "irrational"
+    ],
+    "der": [
+     "illogically"
+    ],
+    "ant": [
+     "logical"
+    ],
+    "example": "His argument is completely illogical.",
+    "example_zh": "他的論點完全不合邏輯。"
+   },
+   {
+    "word": "illiberal",
+    "meaning": "偏狹的；不寬容的",
+    "syn": [
+     "intolerant",
+     "narrow-minded"
+    ],
+    "der": [
+     "illiberality"
+    ],
+    "ant": [
+     "liberal",
+     "tolerant"
+    ],
+    "example": "His illiberal views made open debate impossible.",
+    "example_zh": "他偏狹的觀點讓公開討論無法進行。"
+   },
+   {
+    "word": "illiterate",
+    "meaning": "不識字的",
+    "syn": [
+     "unlettered"
+    ],
+    "der": [
+     "illiteracy"
+    ],
+    "ant": [
+     "literate"
+    ],
+    "example": "Many adults in the region were illiterate.",
+    "example_zh": "該地區有許多成年人不識字。"
+   },
+   {
+    "word": "illegible",
+    "meaning": "難以辨認的",
+    "syn": [
+     "unreadable"
+    ],
+    "der": [
+     "illegibly"
+    ],
+    "ant": [
+     "legible"
+    ],
+    "example": "His handwriting is illegible.",
+    "example_zh": "他的字跡難以辨認。"
+   }
+  ]
+ },
+ {
+  "id": "non",
+  "type": "prefix",
+  "group": "否定",
+  "name": "Non-",
+  "meaning": "非、無",
+  "words": [
+   {
+    "word": "nonsense",
+    "meaning": "胡說、無意義",
+    "syn": [
+     "rubbish"
+    ],
+    "der": [
+     "nonsensical"
+    ],
+    "ant": [
+     "sense"
+    ],
+    "example": "Stop talking nonsense.",
+    "example_zh": "別再胡說八道了。"
+   },
+   {
+    "word": "nonstop",
+    "meaning": "不間斷的",
+    "syn": [
+     "continuous"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "We took a nonstop flight to Tokyo.",
+    "example_zh": "我們搭直飛班機去東京。"
+   },
+   {
+    "word": "nonfiction",
+    "meaning": "非小說類作品",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "fiction"
+    ],
+    "example": "She mostly reads nonfiction books.",
+    "example_zh": "她大多讀非小說類書籍。"
+   },
+   {
+    "word": "nonprofit",
+    "meaning": "非營利的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "profit-making"
+    ],
+    "example": "He works for a nonprofit organization.",
+    "example_zh": "他在非營利組織工作。"
+   }
+  ]
+ },
+ {
+  "id": "a-an",
+  "type": "prefix",
+  "group": "否定",
+  "name": "A-/An-",
+  "meaning": "無、非",
+  "words": [
+   {
+    "word": "anonymous",
+    "meaning": "匿名的",
+    "syn": [
+     "unnamed",
+     "nameless"
+    ],
+    "der": [
+     "anonymously",
+     "anonymity"
+    ],
+    "ant": [
+     "named"
+    ],
+    "example": "The donor wished to remain anonymous.",
+    "example_zh": "捐款人希望保持匿名。"
+   },
+   {
+    "word": "atypical",
+    "meaning": "非典型的",
+    "syn": [
+     "unusual",
+     "abnormal"
+    ],
+    "der": [],
+    "ant": [
+     "typical"
+    ],
+    "example": "Such weather is atypical for May.",
+    "example_zh": "這種天氣在五月很不尋常。"
+   },
+   {
+    "word": "apathetic",
+    "meaning": "冷漠的",
+    "syn": [
+     "indifferent"
+    ],
+    "der": [
+     "apathy",
+     "apathetically"
+    ],
+    "ant": [
+     "enthusiastic",
+     "concerned"
+    ],
+    "example": "Many voters are apathetic about politics.",
+    "example_zh": "許多選民對政治很冷漠。"
+   },
+   {
+    "word": "asymmetric",
+    "meaning": "不對稱的",
+    "syn": [
+     "uneven",
+     "lopsided"
+    ],
+    "der": [
+     "asymmetry"
+    ],
+    "ant": [
+     "symmetric",
+     "symmetrical"
+    ],
+    "example": "The two wings of the building are asymmetric.",
+    "example_zh": "這棟建築的兩翼不對稱。"
+   }
+  ]
+ }
 ]

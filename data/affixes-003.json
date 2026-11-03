@@ -1,0 +1,1001 @@
+[
+ {
+  "id": "up",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Up-",
+  "meaning": "向上",
+  "words": [
+   {
+    "word": "upgrade",
+    "meaning": "升級",
+    "syn": [
+     "improve",
+     "enhance"
+    ],
+    "der": [],
+    "ant": [
+     "downgrade"
+    ],
+    "example": "I upgraded my phone last month.",
+    "example_zh": "我上個月升級了手機。"
+   },
+   {
+    "word": "upload",
+    "meaning": "上傳",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "download"
+    ],
+    "example": "Please upload the file to the website.",
+    "example_zh": "請把檔案上傳到網站。"
+   },
+   {
+    "word": "uplift",
+    "meaning": "提升；鼓舞",
+    "syn": [
+     "raise",
+     "elevate"
+    ],
+    "der": [],
+    "ant": [
+     "depress"
+    ],
+    "example": "The music uplifted everyone's spirits.",
+    "example_zh": "這首音樂振奮了大家的精神。"
+   },
+   {
+    "word": "upstairs",
+    "meaning": "在樓上",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "downstairs"
+    ],
+    "example": "The bedrooms are upstairs.",
+    "example_zh": "臥室在樓上。"
+   }
+  ]
+ },
+ {
+  "id": "down",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Down-",
+  "meaning": "向下",
+  "words": [
+   {
+    "word": "download",
+    "meaning": "下載",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "upload"
+    ],
+    "example": "You can download the app for free.",
+    "example_zh": "你可以免費下載這個應用程式。"
+   },
+   {
+    "word": "downturn",
+    "meaning": "衰退",
+    "syn": [
+     "decline",
+     "slump"
+    ],
+    "der": [],
+    "ant": [
+     "upturn",
+     "boom"
+    ],
+    "example": "The economy suffered a sharp downturn.",
+    "example_zh": "經濟出現急遽衰退。"
+   },
+   {
+    "word": "downtown",
+    "meaning": "市中心",
+    "syn": [
+     "city center"
+    ],
+    "der": [],
+    "ant": [
+     "uptown"
+    ],
+    "example": "We had lunch downtown.",
+    "example_zh": "我們在市中心吃午餐。"
+   },
+   {
+    "word": "downgrade",
+    "meaning": "降級",
+    "syn": [
+     "demote",
+     "lower"
+    ],
+    "der": [],
+    "ant": [
+     "upgrade"
+    ],
+    "example": "The agency downgraded the country's credit rating.",
+    "example_zh": "評等機構調降了該國的信用評等。"
+   }
+  ]
+ },
+ {
+  "id": "in-dir",
+  "type": "prefix",
+  "group": "方向",
+  "name": "In-",
+  "meaning": "向內",
+  "words": [
+   {
+    "word": "intake",
+    "meaning": "攝取（量）",
+    "syn": [
+     "consumption"
+    ],
+    "der": [],
+    "ant": [
+     "output"
+    ],
+    "example": "Limit your daily salt intake.",
+    "example_zh": "限制你每日的鹽分攝取量。"
+   },
+   {
+    "word": "include",
+    "meaning": "包含",
+    "syn": [
+     "contain",
+     "involve"
+    ],
+    "der": [
+     "inclusion",
+     "including"
+    ],
+    "ant": [
+     "exclude"
+    ],
+    "example": "The price includes breakfast.",
+    "example_zh": "價格包含早餐。"
+   },
+   {
+    "word": "inland",
+    "meaning": "內陸的",
+    "syn": [
+     "interior"
+    ],
+    "der": [],
+    "ant": [
+     "coastal"
+    ],
+    "example": "The village lies inland, far from the sea.",
+    "example_zh": "這個村莊位於內陸，離海很遠。"
+   },
+   {
+    "word": "inside",
+    "meaning": "內部；在裡面",
+    "syn": [
+     "interior"
+    ],
+    "der": [],
+    "ant": [
+     "outside"
+    ],
+    "example": "It is warm inside the house.",
+    "example_zh": "屋子裡很溫暖。"
+   },
+   {
+    "word": "income",
+    "meaning": "收入",
+    "syn": [
+     "earnings",
+     "revenue"
+    ],
+    "der": [],
+    "ant": [
+     "expense"
+    ],
+    "example": "Her monthly income has doubled.",
+    "example_zh": "她的月收入翻了一倍。"
+   }
+  ]
+ },
+ {
+  "id": "im-dir",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Im-",
+  "meaning": "向內",
+  "words": [
+   {
+    "word": "import",
+    "meaning": "進口",
+    "syn": [
+     "bring in"
+    ],
+    "der": [
+     "importer",
+     "importation"
+    ],
+    "ant": [
+     "export"
+    ],
+    "example": "Taiwan imports oil from many countries.",
+    "example_zh": "台灣從許多國家進口石油。"
+   },
+   {
+    "word": "immanence",
+    "meaning": "內在性",
+    "syn": [
+     "inherence"
+    ],
+    "der": [
+     "immanent"
+    ],
+    "ant": [
+     "transcendence"
+    ],
+    "example": "The poem shows the immanence of nature in daily life.",
+    "example_zh": "這首詩呈現自然內在於日常生活。"
+   },
+   {
+    "word": "imbue",
+    "meaning": "灌輸；使充滿",
+    "syn": [
+     "instill",
+     "infuse"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The teacher imbued her students with a love of reading.",
+    "example_zh": "老師讓學生對閱讀充滿熱愛。"
+   },
+   {
+    "word": "imbed",
+    "meaning": "嵌入（embed 的變體）",
+    "syn": [
+     "embed",
+     "implant"
+    ],
+    "der": [],
+    "ant": [
+     "extract"
+    ],
+    "example": "The engineer imbedded a sensor in the wall.",
+    "example_zh": "工程師在牆內嵌入了一個感測器。"
+   },
+   {
+    "word": "immigrate",
+    "meaning": "移入（移民入境）",
+    "syn": [
+     "settle"
+    ],
+    "der": [
+     "immigrant",
+     "immigration"
+    ],
+    "ant": [
+     "emigrate"
+    ],
+    "example": "Her family immigrated to Canada in 2010.",
+    "example_zh": "她的家人在 2010 年移民到加拿大。"
+   }
+  ]
+ },
+ {
+  "id": "out",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Out-",
+  "meaning": "向外、超過",
+  "words": [
+   {
+    "word": "outgoing",
+    "meaning": "外向的；向外的",
+    "syn": [
+     "sociable",
+     "friendly"
+    ],
+    "der": [],
+    "ant": [
+     "shy",
+     "reserved"
+    ],
+    "example": "He is an outgoing person who loves parties.",
+    "example_zh": "他個性外向，愛參加派對。"
+   },
+   {
+    "word": "outbreak",
+    "meaning": "爆發",
+    "syn": [
+     "eruption",
+     "outburst"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "An outbreak of flu closed the school.",
+    "example_zh": "流感爆發使學校停課。"
+   },
+   {
+    "word": "outcome",
+    "meaning": "結果",
+    "syn": [
+     "result",
+     "consequence"
+    ],
+    "der": [],
+    "ant": [
+     "cause"
+    ],
+    "example": "We are pleased with the outcome.",
+    "example_zh": "我們對結果很滿意。"
+   },
+   {
+    "word": "output",
+    "meaning": "產出；輸出",
+    "syn": [
+     "production"
+    ],
+    "der": [],
+    "ant": [
+     "input"
+    ],
+    "example": "The factory doubled its output.",
+    "example_zh": "這間工廠把產量提高了一倍。"
+   }
+  ]
+ },
+ {
+  "id": "pro",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Pro-",
+  "meaning": "向前",
+  "words": [
+   {
+    "word": "progress",
+    "meaning": "進步；前進",
+    "syn": [
+     "advance"
+    ],
+    "der": [
+     "progressive",
+     "progression"
+    ],
+    "ant": [
+     "regress"
+    ],
+    "example": "She is making good progress in English.",
+    "example_zh": "她的英文進步很多。"
+   },
+   {
+    "word": "proceed",
+    "meaning": "繼續進行",
+    "syn": [
+     "continue",
+     "go ahead"
+    ],
+    "der": [
+     "procedure",
+     "process"
+    ],
+    "ant": [
+     "stop",
+     "retreat"
+    ],
+    "example": "Please proceed to gate 5.",
+    "example_zh": "請前往五號登機門。"
+   },
+   {
+    "word": "promote",
+    "meaning": "促進；晉升",
+    "syn": [
+     "advance",
+     "boost"
+    ],
+    "der": [
+     "promotion"
+    ],
+    "ant": [
+     "demote"
+    ],
+    "example": "He was promoted to manager.",
+    "example_zh": "他被升為經理。"
+   },
+   {
+    "word": "propel",
+    "meaning": "推進",
+    "syn": [
+     "drive",
+     "push"
+    ],
+    "der": [
+     "propeller",
+     "propulsion"
+    ],
+    "ant": [
+     "hinder"
+    ],
+    "example": "The engine propels the boat forward.",
+    "example_zh": "引擎推動船向前行駛。"
+   }
+  ]
+ },
+ {
+  "id": "re",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Re-",
+  "meaning": "向後、返回",
+  "words": [
+   {
+    "word": "return",
+    "meaning": "返回；歸還",
+    "syn": [
+     "go back"
+    ],
+    "der": [
+     "returnable"
+    ],
+    "ant": [
+     "depart",
+     "leave"
+    ],
+    "example": "He will return to Taipei tomorrow.",
+    "example_zh": "他明天會回台北。"
+   },
+   {
+    "word": "retreat",
+    "meaning": "撤退",
+    "syn": [
+     "withdraw",
+     "fall back"
+    ],
+    "der": [],
+    "ant": [
+     "advance"
+    ],
+    "example": "The army was forced to retreat.",
+    "example_zh": "軍隊被迫撤退。"
+   },
+   {
+    "word": "recede",
+    "meaning": "後退；減退",
+    "syn": [
+     "retreat",
+     "ebb"
+    ],
+    "der": [],
+    "ant": [
+     "advance"
+    ],
+    "example": "The floodwater began to recede.",
+    "example_zh": "洪水開始退去。"
+   },
+   {
+    "word": "reflect",
+    "meaning": "反射；反思",
+    "syn": [
+     "mirror",
+     "ponder"
+    ],
+    "der": [
+     "reflection",
+     "reflective"
+    ],
+    "ant": [],
+    "example": "The lake reflects the mountains.",
+    "example_zh": "湖面倒映著群山。"
+   }
+  ]
+ },
+ {
+  "id": "retro",
+  "type": "prefix",
+  "group": "方向",
+  "name": "Retro-",
+  "meaning": "向後、倒退",
+  "words": [
+   {
+    "word": "retrospect",
+    "meaning": "回顧",
+    "syn": [
+     "hindsight",
+     "review"
+    ],
+    "der": [
+     "retrospective"
+    ],
+    "ant": [
+     "prospect",
+     "foresight"
+    ],
+    "example": "In retrospect, we should have left earlier.",
+    "example_zh": "回頭來看，我們當初應該早點出發。"
+   },
+   {
+    "word": "retrograde",
+    "meaning": "倒退的",
+    "syn": [
+     "backward",
+     "declining"
+    ],
+    "der": [],
+    "ant": [
+     "progressive"
+    ],
+    "example": "Cutting the budget would be a retrograde step.",
+    "example_zh": "削減預算會是倒退的一步。"
+   },
+   {
+    "word": "retrocede",
+    "meaning": "後退；歸還（領土）",
+    "syn": [
+     "return",
+     "give back"
+    ],
+    "der": [
+     "retrocession"
+    ],
+    "ant": [],
+    "example": "The country agreed to retrocede the territory.",
+    "example_zh": "該國同意歸還這片領土。"
+   },
+   {
+    "word": "retroflexion",
+    "meaning": "後屈；捲舌",
+    "syn": [
+     "retroflex"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Retroflexion means the tongue tip curls backward.",
+    "example_zh": "捲舌指舌尖向後捲曲。"
+   },
+   {
+    "word": "retroject",
+    "meaning": "向後投射（較少用）",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Some critics retroject modern values onto the past.",
+    "example_zh": "有些評論者把現代價值觀投射到過去。"
+   }
+  ]
+ },
+ {
+  "id": "post",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Post-",
+  "meaning": "在…之後",
+  "words": [
+   {
+    "word": "postpone",
+    "meaning": "延後",
+    "syn": [
+     "delay",
+     "defer"
+    ],
+    "der": [
+     "postponement"
+    ],
+    "ant": [
+     "advance",
+     "bring forward"
+    ],
+    "example": "The match was postponed because of rain.",
+    "example_zh": "比賽因雨延期。"
+   },
+   {
+    "word": "postwar",
+    "meaning": "戰後的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "prewar"
+    ],
+    "example": "The postwar years brought rapid growth.",
+    "example_zh": "戰後那幾年帶來快速成長。"
+   },
+   {
+    "word": "postgraduate",
+    "meaning": "研究所的；研究生",
+    "syn": [
+     "graduate"
+    ],
+    "der": [],
+    "ant": [
+     "undergraduate"
+    ],
+    "example": "She is a postgraduate student in physics.",
+    "example_zh": "她是物理系的研究生。"
+   },
+   {
+    "word": "postscript",
+    "meaning": "附筆（P.S.）",
+    "syn": [
+     "addendum"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He added a postscript to the letter.",
+    "example_zh": "他在信末加了一行附筆。"
+   }
+  ]
+ },
+ {
+  "id": "pre",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Pre-",
+  "meaning": "在…之前",
+  "words": [
+   {
+    "word": "preview",
+    "meaning": "預覽；預告",
+    "syn": [
+     "sneak peek"
+    ],
+    "der": [],
+    "ant": [
+     "review"
+    ],
+    "example": "Watch the preview before you buy a ticket.",
+    "example_zh": "買票前先看預告片。"
+   },
+   {
+    "word": "predict",
+    "meaning": "預測",
+    "syn": [
+     "forecast"
+    ],
+    "der": [
+     "prediction",
+     "predictable"
+    ],
+    "ant": [],
+    "example": "Nobody can predict the future.",
+    "example_zh": "沒有人能預測未來。"
+   },
+   {
+    "word": "prepare",
+    "meaning": "準備",
+    "syn": [
+     "get ready"
+    ],
+    "der": [
+     "preparation"
+    ],
+    "ant": [],
+    "example": "Please prepare your passport.",
+    "example_zh": "請準備好你的護照。"
+   },
+   {
+    "word": "prehistoric",
+    "meaning": "史前的",
+    "syn": [
+     "ancient"
+    ],
+    "der": [],
+    "ant": [
+     "modern"
+    ],
+    "example": "Prehistoric people lived in caves.",
+    "example_zh": "史前時代的人住在洞穴裡。"
+   }
+  ]
+ },
+ {
+  "id": "mid",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Mid-",
+  "meaning": "在中間",
+  "words": [
+   {
+    "word": "midnight",
+    "meaning": "午夜",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "noon",
+     "midday"
+    ],
+    "example": "The party ended at midnight.",
+    "example_zh": "派對在午夜結束。"
+   },
+   {
+    "word": "midwinter",
+    "meaning": "隆冬",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "midsummer"
+    ],
+    "example": "Snow covers the village in midwinter.",
+    "example_zh": "隆冬時節，積雪覆蓋整個村莊。"
+   },
+   {
+    "word": "midsummer",
+    "meaning": "仲夏",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "midwinter"
+    ],
+    "example": "Midsummer nights are short in the north.",
+    "example_zh": "北方的仲夏夜很短。"
+   },
+   {
+    "word": "middleman",
+    "meaning": "中間人；中間商",
+    "syn": [
+     "intermediary",
+     "broker"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "We cut out the middleman to lower prices.",
+    "example_zh": "我們省去中間商以降低價格。"
+   },
+   {
+    "word": "midterm",
+    "meaning": "期中考；期中的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "final"
+    ],
+    "example": "The midterm exam is next Monday.",
+    "example_zh": "期中考在下週一。"
+   },
+   {
+    "word": "midlife",
+    "meaning": "中年",
+    "syn": [
+     "middle age"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Many people rethink their goals in midlife.",
+    "example_zh": "許多人在中年時重新思考自己的目標。"
+   }
+  ]
+ },
+ {
+  "id": "chrono",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Chrono-",
+  "meaning": "時間",
+  "words": [
+   {
+    "word": "chronology",
+    "meaning": "年代順序",
+    "syn": [
+     "timeline"
+    ],
+    "der": [
+     "chronological"
+    ],
+    "ant": [],
+    "example": "The chronology of the events is still unclear.",
+    "example_zh": "事件發生的先後順序仍不清楚。"
+   },
+   {
+    "word": "chronic",
+    "meaning": "慢性的；長期的",
+    "syn": [
+     "long-term",
+     "persistent"
+    ],
+    "der": [
+     "chronically"
+    ],
+    "ant": [
+     "acute",
+     "temporary"
+    ],
+    "example": "The city has a chronic shortage of housing.",
+    "example_zh": "這座城市長期缺乏住房。"
+   },
+   {
+    "word": "chronicle",
+    "meaning": "編年史；按時間記述",
+    "syn": [
+     "record",
+     "account"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The book chronicles the history of the town.",
+    "example_zh": "這本書記述了小鎮的歷史。"
+   },
+   {
+    "word": "anachronism",
+    "meaning": "時代錯誤",
+    "syn": [],
+    "der": [
+     "anachronistic"
+    ],
+    "ant": [],
+    "example": "A phone in a medieval film would be an anachronism.",
+    "example_zh": "中世紀電影裡出現手機會是時代錯誤。"
+   }
+  ]
+ },
+ {
+  "id": "fore",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Fore-",
+  "meaning": "前面、預先",
+  "words": [
+   {
+    "word": "forecast",
+    "meaning": "預報；預測",
+    "syn": [
+     "predict"
+    ],
+    "der": [
+     "forecaster"
+    ],
+    "ant": [],
+    "example": "The forecast says it will rain tomorrow.",
+    "example_zh": "天氣預報說明天會下雨。"
+   },
+   {
+    "word": "foresee",
+    "meaning": "預見",
+    "syn": [
+     "anticipate",
+     "predict"
+    ],
+    "der": [
+     "foreseeable"
+    ],
+    "ant": [],
+    "example": "No one could foresee the problem.",
+    "example_zh": "沒有人能預見這個問題。"
+   },
+   {
+    "word": "forehead",
+    "meaning": "前額",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "She wiped the sweat from her forehead.",
+    "example_zh": "她擦掉額頭上的汗。"
+   },
+   {
+    "word": "foreword",
+    "meaning": "前言",
+    "syn": [
+     "preface"
+    ],
+    "der": [],
+    "ant": [
+     "afterword"
+    ],
+    "example": "The author wrote a short foreword.",
+    "example_zh": "作者寫了一篇簡短的前言。"
+   }
+  ]
+ },
+ {
+  "id": "paleo",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Paleo-",
+  "meaning": "古老",
+  "words": [
+   {
+    "word": "paleontology",
+    "meaning": "古生物學",
+    "syn": [],
+    "der": [
+     "paleontologist"
+    ],
+    "ant": [],
+    "example": "Paleontology studies fossils.",
+    "example_zh": "古生物學研究化石。"
+   },
+   {
+    "word": "Paleolithic",
+    "meaning": "舊石器時代的",
+    "syn": [
+     "Old Stone Age"
+    ],
+    "der": [],
+    "ant": [
+     "Neolithic"
+    ],
+    "example": "Paleolithic tools were made of stone.",
+    "example_zh": "舊石器時代的工具是用石頭製成的。"
+   },
+   {
+    "word": "paleography",
+    "meaning": "古文書學",
+    "syn": [],
+    "der": [
+     "paleographer"
+    ],
+    "ant": [],
+    "example": "Paleography helps scholars read ancient manuscripts.",
+    "example_zh": "古文書學幫助學者解讀古代手稿。"
+   },
+   {
+    "word": "paleoclimate",
+    "meaning": "古氣候",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Ice cores reveal the paleoclimate of the Earth.",
+    "example_zh": "冰芯能揭露地球的古氣候。"
+   }
+  ]
+ },
+ {
+  "id": "ante",
+  "type": "prefix",
+  "group": "時間",
+  "name": "Ante-",
+  "meaning": "在…之前",
+  "words": [
+   {
+    "word": "antecedent",
+    "meaning": "先行事件；前例",
+    "syn": [
+     "precursor",
+     "predecessor"
+    ],
+    "der": [],
+    "ant": [
+     "consequence",
+     "descendant"
+    ],
+    "example": "The treaty has several antecedents in earlier agreements.",
+    "example_zh": "這項條約在先前的協議中有好幾個前例。"
+   },
+   {
+    "word": "antedate",
+    "meaning": "早於（某日期）",
+    "syn": [
+     "predate",
+     "precede"
+    ],
+    "der": [],
+    "ant": [
+     "postdate"
+    ],
+    "example": "The letter antedates the war by two years.",
+    "example_zh": "這封信比戰爭早了兩年。"
+   },
+   {
+    "word": "anteroom",
+    "meaning": "前廳",
+    "syn": [
+     "lobby",
+     "waiting room"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "We waited in the anteroom before the meeting.",
+    "example_zh": "會議前我們在前廳等候。"
+   },
+   {
+    "word": "antebellum",
+    "meaning": "戰前的（尤指美國南北戰爭前）",
+    "syn": [
+     "prewar"
+    ],
+    "der": [],
+    "ant": [
+     "postwar"
+    ],
+    "example": "The antebellum mansion is now a museum.",
+    "example_zh": "這棟戰前的大宅現在是博物館。"
+   }
+  ]
+ }
+]

@@ -1,0 +1,1666 @@
+[
+ {
+  "id": "ment-suf",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ment",
+  "meaning": "行為、結果",
+  "words": [
+   {
+    "word": "development",
+    "meaning": "發展",
+    "syn": [
+     "growth",
+     "progress"
+    ],
+    "der": [
+     "develop",
+     "developer"
+    ],
+    "ant": [
+     "decline"
+    ],
+    "example": "The development of the city was rapid.",
+    "example_zh": "這座城市的發展非常迅速。"
+   },
+   {
+    "word": "government",
+    "meaning": "政府",
+    "syn": [
+     "administration"
+    ],
+    "der": [
+     "govern",
+     "governor"
+    ],
+    "ant": [],
+    "example": "The government announced a new policy.",
+    "example_zh": "政府宣布了一項新政策。"
+   },
+   {
+    "word": "achievement",
+    "meaning": "成就",
+    "syn": [
+     "accomplishment"
+    ],
+    "der": [
+     "achieve"
+    ],
+    "ant": [
+     "failure"
+    ],
+    "example": "Winning the prize was a great achievement.",
+    "example_zh": "贏得這個獎是很大的成就。"
+   },
+   {
+    "word": "management",
+    "meaning": "管理；管理階層",
+    "syn": [
+     "administration",
+     "control"
+    ],
+    "der": [
+     "manage",
+     "manager"
+    ],
+    "ant": [],
+    "example": "Good management saves time.",
+    "example_zh": "良好的管理能節省時間。"
+   },
+   {
+    "word": "agreement",
+    "meaning": "協議；同意",
+    "syn": [
+     "deal",
+     "consensus"
+    ],
+    "der": [
+     "agree"
+    ],
+    "ant": [
+     "disagreement"
+    ],
+    "example": "They signed a trade agreement.",
+    "example_zh": "他們簽了一份貿易協議。"
+   },
+   {
+    "word": "movement",
+    "meaning": "運動；移動",
+    "syn": [
+     "motion",
+     "campaign"
+    ],
+    "der": [
+     "move"
+    ],
+    "ant": [
+     "stillness"
+    ],
+    "example": "The movement began in the 1960s.",
+    "example_zh": "這場運動始於一九六〇年代。"
+   },
+   {
+    "word": "payment",
+    "meaning": "付款",
+    "syn": [
+     "settlement"
+    ],
+    "der": [
+     "pay",
+     "payer"
+    ],
+    "ant": [],
+    "example": "Payment is due on Friday.",
+    "example_zh": "款項須在週五付清。"
+   }
+  ]
+ },
+ {
+  "id": "ation",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ation",
+  "meaning": "行為、結果",
+  "words": [
+   {
+    "word": "information",
+    "meaning": "資訊",
+    "syn": [
+     "data",
+     "knowledge"
+    ],
+    "der": [
+     "inform",
+     "informative"
+    ],
+    "ant": [],
+    "example": "I need more information.",
+    "example_zh": "我需要更多資訊。"
+   },
+   {
+    "word": "education",
+    "meaning": "教育",
+    "syn": [
+     "schooling",
+     "teaching"
+    ],
+    "der": [
+     "educate",
+     "educator"
+    ],
+    "ant": [],
+    "example": "Education opens many doors.",
+    "example_zh": "教育能開啟許多機會。"
+   },
+   {
+    "word": "organization",
+    "meaning": "組織；機構",
+    "syn": [
+     "group",
+     "institution"
+    ],
+    "der": [
+     "organize",
+     "organizer"
+    ],
+    "ant": [],
+    "example": "She works for a non-profit organization.",
+    "example_zh": "她在一個非營利組織工作。"
+   },
+   {
+    "word": "communication",
+    "meaning": "溝通；通訊",
+    "syn": [
+     "contact",
+     "exchange"
+    ],
+    "der": [
+     "communicate"
+    ],
+    "ant": [],
+    "example": "Good communication prevents mistakes.",
+    "example_zh": "良好的溝通可以避免失誤。"
+   },
+   {
+    "word": "invitation",
+    "meaning": "邀請",
+    "syn": [
+     "summons"
+    ],
+    "der": [
+     "invite"
+    ],
+    "ant": [
+     "rejection"
+    ],
+    "example": "I received an invitation to the wedding.",
+    "example_zh": "我收到了婚禮的邀請。"
+   },
+   {
+    "word": "explanation",
+    "meaning": "解釋",
+    "syn": [
+     "clarification"
+    ],
+    "der": [
+     "explain",
+     "explanatory"
+    ],
+    "ant": [],
+    "example": "Her explanation was easy to follow.",
+    "example_zh": "她的解釋很容易理解。"
+   },
+   {
+    "word": "decoration",
+    "meaning": "裝飾",
+    "syn": [
+     "ornament"
+    ],
+    "der": [
+     "decorate",
+     "decorative"
+    ],
+    "ant": [],
+    "example": "The decorations made the room cheerful.",
+    "example_zh": "這些裝飾讓房間充滿喜氣。"
+   }
+  ]
+ },
+ {
+  "id": "ion",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ion",
+  "meaning": "行為、結果",
+  "words": [
+   {
+    "word": "decision",
+    "meaning": "決定",
+    "syn": [
+     "choice",
+     "verdict"
+    ],
+    "der": [
+     "decide"
+    ],
+    "ant": [
+     "indecision"
+    ],
+    "example": "It was a difficult decision.",
+    "example_zh": "這是個艱難的決定。"
+   },
+   {
+    "word": "discussion",
+    "meaning": "討論",
+    "syn": [
+     "debate",
+     "conversation"
+    ],
+    "der": [
+     "discuss"
+    ],
+    "ant": [],
+    "example": "The discussion lasted two hours.",
+    "example_zh": "討論進行了兩個小時。"
+   },
+   {
+    "word": "impression",
+    "meaning": "印象",
+    "syn": [
+     "feeling",
+     "effect"
+    ],
+    "der": [
+     "impress",
+     "impressive"
+    ],
+    "ant": [],
+    "example": "She made a good impression.",
+    "example_zh": "她留下了良好的印象。"
+   },
+   {
+    "word": "expression",
+    "meaning": "表達；表情",
+    "syn": [
+     "statement",
+     "look"
+    ],
+    "der": [
+     "express",
+     "expressive"
+    ],
+    "ant": [],
+    "example": "His expression showed surprise.",
+    "example_zh": "他的表情流露出驚訝。"
+   },
+   {
+    "word": "explosion",
+    "meaning": "爆炸",
+    "syn": [
+     "blast",
+     "burst"
+    ],
+    "der": [
+     "explode",
+     "explosive"
+    ],
+    "ant": [
+     "implosion"
+    ],
+    "example": "The explosion shook the building.",
+    "example_zh": "爆炸震動了整棟大樓。"
+   },
+   {
+    "word": "confusion",
+    "meaning": "困惑；混亂",
+    "syn": [
+     "bewilderment",
+     "chaos"
+    ],
+    "der": [
+     "confuse",
+     "confusing"
+    ],
+    "ant": [
+     "clarity"
+    ],
+    "example": "There was confusion at the gate.",
+    "example_zh": "登機門前一片混亂。"
+   }
+  ]
+ },
+ {
+  "id": "sure",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-sure",
+  "meaning": "行為、結果",
+  "words": [
+   {
+    "word": "measure",
+    "meaning": "測量；措施",
+    "syn": [
+     "gauge",
+     "step"
+    ],
+    "der": [
+     "measurement"
+    ],
+    "ant": [],
+    "example": "We need stronger safety measures.",
+    "example_zh": "我們需要更嚴格的安全措施。"
+   },
+   {
+    "word": "pleasure",
+    "meaning": "愉快；樂事",
+    "syn": [
+     "joy",
+     "delight"
+    ],
+    "der": [
+     "please",
+     "pleasant"
+    ],
+    "ant": [
+     "displeasure"
+    ],
+    "example": "It was a pleasure to meet you.",
+    "example_zh": "很高興認識你。"
+   },
+   {
+    "word": "pressure",
+    "meaning": "壓力",
+    "syn": [
+     "stress",
+     "force"
+    ],
+    "der": [
+     "pressurize"
+    ],
+    "ant": [
+     "relief"
+    ],
+    "example": "She works well under pressure.",
+    "example_zh": "她在壓力下表現很好。"
+   },
+   {
+    "word": "treasure",
+    "meaning": "寶藏；珍視",
+    "syn": [
+     "riches",
+     "valuables"
+    ],
+    "der": [
+     "treasury"
+    ],
+    "ant": [],
+    "example": "The pirates buried their treasure.",
+    "example_zh": "海盜把寶藏埋了起來。"
+   },
+   {
+    "word": "closure",
+    "meaning": "關閉；結束",
+    "syn": [
+     "ending",
+     "shutdown"
+    ],
+    "der": [
+     "close"
+    ],
+    "ant": [
+     "opening"
+    ],
+    "example": "The closure of the road caused delays.",
+    "example_zh": "道路封閉造成了延誤。"
+   },
+   {
+    "word": "exposure",
+    "meaning": "暴露；曝光",
+    "syn": [
+     "disclosure",
+     "revelation"
+    ],
+    "der": [
+     "expose"
+    ],
+    "ant": [
+     "concealment"
+    ],
+    "example": "Too much exposure to sun is harmful.",
+    "example_zh": "過度曝曬在陽光下有害。"
+   }
+  ]
+ },
+ {
+  "id": "ition",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ition",
+  "meaning": "行為、結果",
+  "words": [
+   {
+    "word": "competition",
+    "meaning": "競爭；比賽",
+    "syn": [
+     "contest",
+     "rivalry"
+    ],
+    "der": [
+     "compete",
+     "competitive"
+    ],
+    "ant": [],
+    "example": "The competition was fierce.",
+    "example_zh": "比賽競爭激烈。"
+   },
+   {
+    "word": "position",
+    "meaning": "位置；職位",
+    "syn": [
+     "place",
+     "post"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He applied for a new position.",
+    "example_zh": "他申請了一個新職位。"
+   },
+   {
+    "word": "condition",
+    "meaning": "狀況；條件",
+    "syn": [
+     "state",
+     "requirement"
+    ],
+    "der": [
+     "conditional"
+    ],
+    "ant": [],
+    "example": "The car is in good condition.",
+    "example_zh": "這輛車狀況良好。"
+   },
+   {
+    "word": "tradition",
+    "meaning": "傳統",
+    "syn": [
+     "custom",
+     "convention"
+    ],
+    "der": [
+     "traditional"
+    ],
+    "ant": [
+     "innovation"
+    ],
+    "example": "It is a tradition to eat dumplings.",
+    "example_zh": "吃餃子是一項傳統。"
+   },
+   {
+    "word": "definition",
+    "meaning": "定義",
+    "syn": [
+     "meaning",
+     "explanation"
+    ],
+    "der": [
+     "define"
+    ],
+    "ant": [],
+    "example": "Look up the definition in a dictionary.",
+    "example_zh": "查一下字典裡的定義。"
+   },
+   {
+    "word": "addition",
+    "meaning": "增加；附加物",
+    "syn": [
+     "supplement",
+     "extra"
+    ],
+    "der": [
+     "add",
+     "additional"
+    ],
+    "ant": [
+     "subtraction"
+    ],
+    "example": "In addition, the hotel offers free breakfast.",
+    "example_zh": "此外，飯店還提供免費早餐。"
+   },
+   {
+    "word": "ambition",
+    "meaning": "野心；抱負",
+    "syn": [
+     "aspiration",
+     "goal"
+    ],
+    "der": [
+     "ambitious"
+    ],
+    "ant": [],
+    "example": "Her ambition is to become a doctor.",
+    "example_zh": "她的抱負是成為醫生。"
+   }
+  ]
+ },
+ {
+  "id": "ism-act",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ism",
+  "meaning": "主義、行為",
+  "words": [
+   {
+    "word": "tourism",
+    "meaning": "觀光業",
+    "syn": [
+     "travel industry"
+    ],
+    "der": [
+     "tourist"
+    ],
+    "ant": [],
+    "example": "Tourism is vital to the island.",
+    "example_zh": "觀光業對這座島至關重要。"
+   },
+   {
+    "word": "criticism",
+    "meaning": "批評",
+    "syn": [
+     "disapproval",
+     "critique"
+    ],
+    "der": [
+     "critic",
+     "critical"
+    ],
+    "ant": [
+     "praise"
+    ],
+    "example": "He accepted the criticism calmly.",
+    "example_zh": "他平靜地接受了批評。"
+   },
+   {
+    "word": "optimism",
+    "meaning": "樂觀",
+    "syn": [
+     "hopefulness"
+    ],
+    "der": [],
+    "ant": [
+     "pessimism"
+    ],
+    "example": "Her optimism cheered everyone up.",
+    "example_zh": "她的樂觀讓大家振作起來。"
+   },
+   {
+    "word": "realism",
+    "meaning": "現實主義；務實",
+    "syn": [
+     "practicality"
+    ],
+    "der": [
+     "realistic",
+     "realist"
+    ],
+    "ant": [
+     "idealism"
+    ],
+    "example": "Realism is important in business.",
+    "example_zh": "務實在商業上很重要。"
+   },
+   {
+    "word": "capitalism",
+    "meaning": "資本主義",
+    "syn": [],
+    "der": [
+     "capitalist"
+    ],
+    "ant": [
+     "socialism"
+    ],
+    "example": "Capitalism relies on free markets.",
+    "example_zh": "資本主義仰賴自由市場。"
+   },
+   {
+    "word": "heroism",
+    "meaning": "英雄行為",
+    "syn": [
+     "bravery",
+     "valor"
+    ],
+    "der": [
+     "hero",
+     "heroic"
+    ],
+    "ant": [
+     "cowardice"
+    ],
+    "example": "The firefighter was praised for his heroism.",
+    "example_zh": "這位消防員因英勇行為受到讚揚。"
+   }
+  ]
+ },
+ {
+  "id": "ery",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ery",
+  "meaning": "行為、狀態",
+  "words": [
+   {
+    "word": "bravery",
+    "meaning": "勇敢",
+    "syn": [
+     "courage",
+     "valor"
+    ],
+    "der": [
+     "brave"
+    ],
+    "ant": [
+     "cowardice"
+    ],
+    "example": "The soldiers were honored for their bravery.",
+    "example_zh": "士兵們因勇敢而受到表揚。"
+   },
+   {
+    "word": "robbery",
+    "meaning": "搶劫",
+    "syn": [
+     "theft",
+     "burglary"
+    ],
+    "der": [
+     "rob",
+     "robber"
+    ],
+    "ant": [],
+    "example": "The bank robbery took five minutes.",
+    "example_zh": "銀行搶案只花了五分鐘。"
+   },
+   {
+    "word": "delivery",
+    "meaning": "遞送；交貨",
+    "syn": [
+     "shipment",
+     "distribution"
+    ],
+    "der": [
+     "deliver"
+    ],
+    "ant": [],
+    "example": "The delivery arrives tomorrow.",
+    "example_zh": "貨品明天送到。"
+   },
+   {
+    "word": "discovery",
+    "meaning": "發現",
+    "syn": [
+     "finding",
+     "breakthrough"
+    ],
+    "der": [
+     "discover"
+    ],
+    "ant": [
+     "concealment"
+    ],
+    "example": "The discovery changed medicine.",
+    "example_zh": "這項發現改變了醫學。"
+   },
+   {
+    "word": "recovery",
+    "meaning": "恢復；復甦",
+    "syn": [
+     "revival",
+     "rebound"
+    ],
+    "der": [
+     "recover"
+    ],
+    "ant": [
+     "decline"
+    ],
+    "example": "The economy is showing signs of recovery.",
+    "example_zh": "經濟出現復甦的跡象。"
+   },
+   {
+    "word": "machinery",
+    "meaning": "機器；機械設備",
+    "syn": [
+     "equipment"
+    ],
+    "der": [
+     "machine"
+    ],
+    "ant": [],
+    "example": "The factory bought new machinery.",
+    "example_zh": "工廠買了新的機械設備。"
+   }
+  ]
+ },
+ {
+  "id": "ture",
+  "type": "suffix",
+  "group": "名詞字尾：行為",
+  "name": "-ture",
+  "meaning": "行為、結果、性質",
+  "words": [
+   {
+    "word": "culture",
+    "meaning": "文化",
+    "syn": [
+     "civilization",
+     "customs"
+    ],
+    "der": [
+     "cultural"
+    ],
+    "ant": [],
+    "example": "Every culture has its own festivals.",
+    "example_zh": "每種文化都有自己的節慶。"
+   },
+   {
+    "word": "adventure",
+    "meaning": "冒險",
+    "syn": [
+     "exploit",
+     "journey"
+    ],
+    "der": [
+     "adventurous"
+    ],
+    "ant": [],
+    "example": "They went on an adventure in the jungle.",
+    "example_zh": "他們到叢林裡展開一場冒險。"
+   },
+   {
+    "word": "signature",
+    "meaning": "簽名",
+    "syn": [
+     "autograph"
+    ],
+    "der": [
+     "sign"
+    ],
+    "ant": [],
+    "example": "Please add your signature here.",
+    "example_zh": "請在這裡簽名。"
+   },
+   {
+    "word": "temperature",
+    "meaning": "溫度",
+    "syn": [
+     "heat level"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The temperature dropped at night.",
+    "example_zh": "夜裡氣溫下降。"
+   },
+   {
+    "word": "structure",
+    "meaning": "結構",
+    "syn": [
+     "framework",
+     "design"
+    ],
+    "der": [
+     "structural"
+    ],
+    "ant": [],
+    "example": "The structure of the bridge is strong.",
+    "example_zh": "這座橋的結構很堅固。"
+   },
+   {
+    "word": "furniture",
+    "meaning": "傢俱",
+    "syn": [
+     "furnishings"
+    ],
+    "der": [
+     "furnish"
+    ],
+    "ant": [],
+    "example": "We bought new furniture for the living room.",
+    "example_zh": "我們為客廳買了新傢俱。"
+   },
+   {
+    "word": "feature",
+    "meaning": "特色；特徵",
+    "syn": [
+     "characteristic",
+     "trait"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The phone has many new features.",
+    "example_zh": "這支手機有許多新功能。"
+   }
+  ]
+ },
+ {
+  "id": "th",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-th",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "growth",
+    "meaning": "成長",
+    "syn": [
+     "development",
+     "increase"
+    ],
+    "der": [
+     "grow"
+    ],
+    "ant": [
+     "decline"
+    ],
+    "example": "The company reported strong growth.",
+    "example_zh": "公司公布了強勁的成長。"
+   },
+   {
+    "word": "strength",
+    "meaning": "力量；優勢",
+    "syn": [
+     "power",
+     "force"
+    ],
+    "der": [
+     "strong",
+     "strengthen"
+    ],
+    "ant": [
+     "weakness"
+    ],
+    "example": "Teamwork is our greatest strength.",
+    "example_zh": "團隊合作是我們最大的優勢。"
+   },
+   {
+    "word": "length",
+    "meaning": "長度",
+    "syn": [
+     "distance",
+     "extent"
+    ],
+    "der": [
+     "long",
+     "lengthen"
+    ],
+    "ant": [],
+    "example": "The length of the table is two meters.",
+    "example_zh": "這張桌子長兩公尺。"
+   },
+   {
+    "word": "width",
+    "meaning": "寬度",
+    "syn": [
+     "breadth"
+    ],
+    "der": [
+     "wide",
+     "widen"
+    ],
+    "ant": [
+     "length"
+    ],
+    "example": "Measure the width of the door.",
+    "example_zh": "量一下門的寬度。"
+   },
+   {
+    "word": "depth",
+    "meaning": "深度",
+    "syn": [
+     "profundity"
+    ],
+    "der": [
+     "deep",
+     "deepen"
+    ],
+    "ant": [
+     "shallowness"
+    ],
+    "example": "The depth of the lake is ten meters.",
+    "example_zh": "這座湖深十公尺。"
+   },
+   {
+    "word": "truth",
+    "meaning": "真相；真理",
+    "syn": [
+     "fact",
+     "reality"
+    ],
+    "der": [
+     "true",
+     "truthful"
+    ],
+    "ant": [
+     "falsehood",
+     "lie"
+    ],
+    "example": "Tell me the truth.",
+    "example_zh": "請告訴我真相。"
+   },
+   {
+    "word": "warmth",
+    "meaning": "溫暖",
+    "syn": [
+     "heat",
+     "friendliness"
+    ],
+    "der": [
+     "warm"
+    ],
+    "ant": [
+     "coldness"
+    ],
+    "example": "I felt the warmth of the fire.",
+    "example_zh": "我感受到火堆的溫暖。"
+   }
+  ]
+ },
+ {
+  "id": "ality",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-ality",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "reality",
+    "meaning": "現實",
+    "syn": [
+     "actuality"
+    ],
+    "der": [
+     "real",
+     "realize"
+    ],
+    "ant": [
+     "fantasy"
+    ],
+    "example": "Reality is different from the movies.",
+    "example_zh": "現實和電影不同。"
+   },
+   {
+    "word": "personality",
+    "meaning": "個性",
+    "syn": [
+     "character",
+     "nature"
+    ],
+    "der": [
+     "person",
+     "personal"
+    ],
+    "ant": [],
+    "example": "She has a warm personality.",
+    "example_zh": "她個性溫暖。"
+   },
+   {
+    "word": "quality",
+    "meaning": "品質",
+    "syn": [
+     "standard",
+     "grade"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The quality of the service is excellent.",
+    "example_zh": "服務品質很好。"
+   },
+   {
+    "word": "nationality",
+    "meaning": "國籍",
+    "syn": [
+     "citizenship"
+    ],
+    "der": [
+     "nation",
+     "national"
+    ],
+    "ant": [],
+    "example": "What is your nationality?",
+    "example_zh": "你的國籍是什麼？"
+   },
+   {
+    "word": "hospitality",
+    "meaning": "款待",
+    "syn": [
+     "welcome",
+     "generosity"
+    ],
+    "der": [
+     "hospitable"
+    ],
+    "ant": [
+     "inhospitality"
+    ],
+    "example": "We appreciated their hospitality.",
+    "example_zh": "我們很感激他們的款待。"
+   },
+   {
+    "word": "morality",
+    "meaning": "道德",
+    "syn": [
+     "ethics",
+     "virtue"
+    ],
+    "der": [
+     "moral",
+     "morally"
+    ],
+    "ant": [
+     "immorality"
+    ],
+    "example": "The story raises questions of morality.",
+    "example_zh": "這個故事引發了關於道德的問題。"
+   },
+   {
+    "word": "originality",
+    "meaning": "獨創性",
+    "syn": [
+     "creativity",
+     "novelty"
+    ],
+    "der": [
+     "original"
+    ],
+    "ant": [
+     "imitation"
+    ],
+    "example": "The designer is praised for her originality.",
+    "example_zh": "這位設計師因獨創性而受到稱讚。"
+   }
+  ]
+ },
+ {
+  "id": "ness-qual",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-ness",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "kindness",
+    "meaning": "善良",
+    "syn": [
+     "generosity",
+     "goodness"
+    ],
+    "der": [
+     "kind"
+    ],
+    "ant": [
+     "cruelty"
+    ],
+    "example": "Thank you for your kindness.",
+    "example_zh": "謝謝你的好意。"
+   },
+   {
+    "word": "happiness",
+    "meaning": "快樂",
+    "syn": [
+     "joy",
+     "delight"
+    ],
+    "der": [
+     "happy"
+    ],
+    "ant": [
+     "sadness"
+    ],
+    "example": "Money cannot buy happiness.",
+    "example_zh": "金錢買不到快樂。"
+   },
+   {
+    "word": "darkness",
+    "meaning": "黑暗",
+    "syn": [
+     "gloom",
+     "shadow"
+    ],
+    "der": [
+     "dark",
+     "darken"
+    ],
+    "ant": [
+     "light"
+    ],
+    "example": "The room was filled with darkness.",
+    "example_zh": "房間裡一片漆黑。"
+   },
+   {
+    "word": "awareness",
+    "meaning": "意識；認識",
+    "syn": [
+     "consciousness",
+     "knowledge"
+    ],
+    "der": [
+     "aware"
+    ],
+    "ant": [
+     "ignorance"
+    ],
+    "example": "The campaign raises awareness of recycling.",
+    "example_zh": "這項活動提升了人們對回收的意識。"
+   },
+   {
+    "word": "weakness",
+    "meaning": "弱點",
+    "syn": [
+     "flaw",
+     "frailty"
+    ],
+    "der": [
+     "weak",
+     "weaken"
+    ],
+    "ant": [
+     "strength"
+    ],
+    "example": "Sweet food is his weakness.",
+    "example_zh": "甜食是他的弱點。"
+   },
+   {
+    "word": "sadness",
+    "meaning": "悲傷",
+    "syn": [
+     "sorrow",
+     "grief"
+    ],
+    "der": [
+     "sad",
+     "sadden"
+    ],
+    "ant": [
+     "happiness"
+    ],
+    "example": "She felt a deep sadness.",
+    "example_zh": "她感到深深的悲傷。"
+   },
+   {
+    "word": "loneliness",
+    "meaning": "孤獨",
+    "syn": [
+     "solitude",
+     "isolation"
+    ],
+    "der": [
+     "lonely"
+    ],
+    "ant": [
+     "company"
+    ],
+    "example": "Loneliness can affect anyone.",
+    "example_zh": "孤獨可能影響任何人。"
+   }
+  ]
+ },
+ {
+  "id": "ry",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-ry",
+  "meaning": "性質、集合",
+  "words": [
+   {
+    "word": "poetry",
+    "meaning": "詩歌",
+    "syn": [
+     "verse"
+    ],
+    "der": [
+     "poet",
+     "poem"
+    ],
+    "ant": [],
+    "example": "She reads poetry before bed.",
+    "example_zh": "她睡前讀詩。"
+   },
+   {
+    "word": "jewelry",
+    "meaning": "珠寶",
+    "syn": [
+     "gems",
+     "ornaments"
+    ],
+    "der": [
+     "jewel",
+     "jeweler"
+    ],
+    "ant": [],
+    "example": "She wore silver jewelry.",
+    "example_zh": "她戴著銀飾。"
+   },
+   {
+    "word": "rivalry",
+    "meaning": "競爭；對抗",
+    "syn": [
+     "competition",
+     "feud"
+    ],
+    "der": [
+     "rival"
+    ],
+    "ant": [],
+    "example": "The rivalry between the schools is old.",
+    "example_zh": "這兩所學校之間的對抗由來已久。"
+   },
+   {
+    "word": "forestry",
+    "meaning": "林業",
+    "syn": [
+     "woodland management"
+    ],
+    "der": [
+     "forest",
+     "forester"
+    ],
+    "ant": [],
+    "example": "He studies forestry at university.",
+    "example_zh": "他在大學研讀林業。"
+   },
+   {
+    "word": "carpentry",
+    "meaning": "木工",
+    "syn": [
+     "woodworking"
+    ],
+    "der": [
+     "carpenter"
+    ],
+    "ant": [],
+    "example": "Carpentry takes patience and skill.",
+    "example_zh": "木工需要耐心和技術。"
+   }
+  ]
+ },
+ {
+  "id": "acy-qual",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-acy",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "privacy",
+    "meaning": "隱私",
+    "syn": [
+     "solitude",
+     "secrecy"
+    ],
+    "der": [
+     "private"
+    ],
+    "ant": [
+     "publicity"
+    ],
+    "example": "Respect other people's privacy.",
+    "example_zh": "請尊重他人的隱私。"
+   },
+   {
+    "word": "accuracy",
+    "meaning": "準確",
+    "syn": [
+     "precision",
+     "correctness"
+    ],
+    "der": [
+     "accurate"
+    ],
+    "ant": [
+     "inaccuracy"
+    ],
+    "example": "The accuracy of the report was checked.",
+    "example_zh": "報告的準確性經過查證。"
+   },
+   {
+    "word": "literacy",
+    "meaning": "讀寫能力",
+    "syn": [
+     "education"
+    ],
+    "der": [
+     "literate"
+    ],
+    "ant": [
+     "illiteracy"
+    ],
+    "example": "The country raised its literacy rate.",
+    "example_zh": "這個國家提高了識字率。"
+   },
+   {
+    "word": "advocacy",
+    "meaning": "倡導；擁護",
+    "syn": [
+     "support",
+     "promotion"
+    ],
+    "der": [
+     "advocate"
+    ],
+    "ant": [
+     "opposition"
+    ],
+    "example": "Her advocacy helped change the law.",
+    "example_zh": "她的倡議促成了法律修改。"
+   },
+   {
+    "word": "legacy",
+    "meaning": "遺產；遺留物",
+    "syn": [
+     "inheritance",
+     "heritage"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The festival is a legacy of the past.",
+    "example_zh": "這個節慶是過去留下的傳承。"
+   },
+   {
+    "word": "delicacy",
+    "meaning": "美味佳餚；精緻",
+    "syn": [
+     "treat",
+     "fineness"
+    ],
+    "der": [
+     "delicate"
+    ],
+    "ant": [
+     "coarseness"
+    ],
+    "example": "Fresh oysters are a local delicacy.",
+    "example_zh": "新鮮牡蠣是當地的美味佳餚。"
+   }
+  ]
+ },
+ {
+  "id": "ence-qual",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-ency/-ence",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "patience",
+    "meaning": "耐心",
+    "syn": [
+     "tolerance",
+     "calm"
+    ],
+    "der": [
+     "patient"
+    ],
+    "ant": [
+     "impatience"
+    ],
+    "example": "Learning a language takes patience.",
+    "example_zh": "學語言需要耐心。"
+   },
+   {
+    "word": "absence",
+    "meaning": "缺席",
+    "syn": [
+     "nonattendance"
+    ],
+    "der": [
+     "absent"
+    ],
+    "ant": [
+     "presence"
+    ],
+    "example": "His absence was noticed.",
+    "example_zh": "大家注意到他缺席了。"
+   },
+   {
+    "word": "presence",
+    "meaning": "出席；存在",
+    "syn": [
+     "attendance",
+     "existence"
+    ],
+    "der": [
+     "present"
+    ],
+    "ant": [
+     "absence"
+    ],
+    "example": "Your presence is requested at the meeting.",
+    "example_zh": "請您出席會議。"
+   },
+   {
+    "word": "silence",
+    "meaning": "沉默；寂靜",
+    "syn": [
+     "quiet",
+     "stillness"
+    ],
+    "der": [
+     "silent"
+    ],
+    "ant": [
+     "noise"
+    ],
+    "example": "The room fell into silence.",
+    "example_zh": "房間陷入沉默。"
+   },
+   {
+    "word": "emergency",
+    "meaning": "緊急情況",
+    "syn": [
+     "crisis",
+     "urgency"
+    ],
+    "der": [
+     "emergent"
+    ],
+    "ant": [],
+    "example": "Call this number in an emergency.",
+    "example_zh": "遇到緊急情況請撥這個號碼。"
+   },
+   {
+    "word": "efficiency",
+    "meaning": "效率",
+    "syn": [
+     "productivity"
+    ],
+    "der": [
+     "efficient"
+    ],
+    "ant": [
+     "inefficiency"
+    ],
+    "example": "The new system improves efficiency.",
+    "example_zh": "新系統提高了效率。"
+   },
+   {
+    "word": "frequency",
+    "meaning": "頻率",
+    "syn": [
+     "rate"
+    ],
+    "der": [
+     "frequent",
+     "frequently"
+    ],
+    "ant": [
+     "rarity"
+    ],
+    "example": "The frequency of the buses has increased.",
+    "example_zh": "公車的班次頻率增加了。"
+   }
+  ]
+ },
+ {
+  "id": "tude",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-tude",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "attitude",
+    "meaning": "態度",
+    "syn": [
+     "outlook",
+     "mindset"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "A positive attitude helps in school.",
+    "example_zh": "積極的態度對學習有幫助。"
+   },
+   {
+    "word": "altitude",
+    "meaning": "海拔；高度",
+    "syn": [
+     "height"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The plane flew at high altitude.",
+    "example_zh": "飛機在高空飛行。"
+   },
+   {
+    "word": "latitude",
+    "meaning": "緯度；自由度",
+    "syn": [
+     "breadth",
+     "freedom"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Taipei lies at about 25 degrees north latitude.",
+    "example_zh": "台北位於北緯約二十五度。"
+   },
+   {
+    "word": "solitude",
+    "meaning": "孤獨；獨處",
+    "syn": [
+     "isolation",
+     "seclusion"
+    ],
+    "der": [],
+    "ant": [
+     "company"
+    ],
+    "example": "He enjoys solitude in the mountains.",
+    "example_zh": "他喜歡在山中獨處。"
+   },
+   {
+    "word": "multitude",
+    "meaning": "大量；群眾",
+    "syn": [
+     "crowd",
+     "mass"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "A multitude of fans filled the street.",
+    "example_zh": "大批球迷擠滿街頭。"
+   },
+   {
+    "word": "aptitude",
+    "meaning": "天資；性向",
+    "syn": [
+     "talent",
+     "ability"
+    ],
+    "der": [],
+    "ant": [
+     "inability"
+    ],
+    "example": "She has an aptitude for languages.",
+    "example_zh": "她有語言天分。"
+   }
+  ]
+ },
+ {
+  "id": "osity",
+  "type": "suffix",
+  "group": "名詞字尾：性質",
+  "name": "-osity",
+  "meaning": "性質、狀態",
+  "words": [
+   {
+    "word": "curiosity",
+    "meaning": "好奇心",
+    "syn": [
+     "interest",
+     "inquisitiveness"
+    ],
+    "der": [
+     "curious"
+    ],
+    "ant": [
+     "indifference"
+    ],
+    "example": "Curiosity drives children to learn.",
+    "example_zh": "好奇心驅使孩子學習。"
+   },
+   {
+    "word": "generosity",
+    "meaning": "慷慨",
+    "syn": [
+     "kindness",
+     "charity"
+    ],
+    "der": [
+     "generous"
+    ],
+    "ant": [
+     "stinginess"
+    ],
+    "example": "We thank them for their generosity.",
+    "example_zh": "我們感謝他們的慷慨。"
+   },
+   {
+    "word": "verbosity",
+    "meaning": "冗長；囉嗦",
+    "syn": [
+     "wordiness"
+    ],
+    "der": [
+     "verbose"
+    ],
+    "ant": [
+     "brevity"
+    ],
+    "example": "The report suffers from verbosity.",
+    "example_zh": "這份報告太冗長。"
+   },
+   {
+    "word": "viscosity",
+    "meaning": "黏度",
+    "syn": [
+     "thickness"
+    ],
+    "der": [
+     "viscous"
+    ],
+    "ant": [],
+    "example": "Honey has high viscosity.",
+    "example_zh": "蜂蜜的黏度很高。"
+   },
+   {
+    "word": "monstrosity",
+    "meaning": "怪物；醜陋的龐然大物",
+    "syn": [
+     "eyesore"
+    ],
+    "der": [
+     "monstrous"
+    ],
+    "ant": [],
+    "example": "The new tower is a monstrosity.",
+    "example_zh": "這座新塔是個難看的龐然大物。"
+   }
+  ]
+ }
+]

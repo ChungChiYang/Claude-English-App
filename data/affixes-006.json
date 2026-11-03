@@ -1,0 +1,1069 @@
+[
+ {
+  "id": "ev",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Ev-",
+  "meaning": "年代、時代",
+  "words": [
+   {
+    "word": "longevity",
+    "meaning": "長壽；壽命",
+    "syn": [
+     "long life"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Good habits can lead to longevity.",
+    "example_zh": "良好的習慣可以帶來長壽。"
+   },
+   {
+    "word": "medieval",
+    "meaning": "中世紀的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "modern"
+    ],
+    "example": "The town has a medieval castle.",
+    "example_zh": "這座小鎮有一座中世紀城堡。"
+   },
+   {
+    "word": "primeval",
+    "meaning": "太古的；原始的",
+    "syn": [
+     "ancient",
+     "primitive"
+    ],
+    "der": [],
+    "ant": [
+     "modern"
+    ],
+    "example": "The hikers walked through primeval forest.",
+    "example_zh": "登山客穿過原始森林。"
+   },
+   {
+    "word": "coeval",
+    "meaning": "同時代的；同時期的",
+    "syn": [
+     "contemporary"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The two poets were coeval.",
+    "example_zh": "這兩位詩人是同時代的人。"
+   }
+  ]
+ },
+ {
+  "id": "jour",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Jour-",
+  "meaning": "日",
+  "words": [
+   {
+    "word": "journal",
+    "meaning": "日誌；期刊",
+    "syn": [
+     "diary",
+     "periodical"
+    ],
+    "der": [
+     "journalism",
+     "journalist"
+    ],
+    "ant": [],
+    "example": "She keeps a travel journal.",
+    "example_zh": "她寫旅行日誌。"
+   },
+   {
+    "word": "journey",
+    "meaning": "旅程",
+    "syn": [
+     "trip",
+     "voyage"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The journey took three days.",
+    "example_zh": "這趟旅程花了三天。"
+   },
+   {
+    "word": "journalist",
+    "meaning": "記者",
+    "syn": [
+     "reporter"
+    ],
+    "der": [
+     "journalism"
+    ],
+    "ant": [],
+    "example": "The journalist interviewed the mayor.",
+    "example_zh": "記者採訪了市長。"
+   },
+   {
+    "word": "adjourn",
+    "meaning": "休會；延期",
+    "syn": [
+     "suspend",
+     "postpone"
+    ],
+    "der": [
+     "adjournment"
+    ],
+    "ant": [
+     "convene"
+    ],
+    "example": "The meeting was adjourned until Monday.",
+    "example_zh": "會議休會到星期一。"
+   },
+   {
+    "word": "sojourn",
+    "meaning": "短暫停留",
+    "syn": [
+     "stay",
+     "visit"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He enjoyed a brief sojourn in Kyoto.",
+    "example_zh": "他在京都短暫停留，過得很愉快。"
+   }
+  ]
+ },
+ {
+  "id": "juven",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Juven-",
+  "meaning": "年輕",
+  "words": [
+   {
+    "word": "juvenile",
+    "meaning": "青少年的；幼稚的",
+    "syn": [
+     "young",
+     "youthful"
+    ],
+    "der": [],
+    "ant": [
+     "adult",
+     "mature"
+    ],
+    "example": "The film is not suitable for juvenile audiences.",
+    "example_zh": "這部電影不適合青少年觀眾。"
+   },
+   {
+    "word": "rejuvenate",
+    "meaning": "使恢復活力",
+    "syn": [
+     "refresh",
+     "revive"
+    ],
+    "der": [
+     "rejuvenation"
+    ],
+    "ant": [
+     "age"
+    ],
+    "example": "A short holiday will rejuvenate you.",
+    "example_zh": "短暫的假期會讓你恢復活力。"
+   }
+  ]
+ },
+ {
+  "id": "ann",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Ann-/Enn-",
+  "meaning": "年",
+  "words": [
+   {
+    "word": "annual",
+    "meaning": "每年的",
+    "syn": [
+     "yearly"
+    ],
+    "der": [
+     "annually"
+    ],
+    "ant": [],
+    "example": "The annual meeting is held in May.",
+    "example_zh": "年會在五月舉行。"
+   },
+   {
+    "word": "anniversary",
+    "meaning": "週年紀念",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "They celebrated their tenth anniversary.",
+    "example_zh": "他們慶祝結婚十週年。"
+   },
+   {
+    "word": "annals",
+    "meaning": "年鑑；編年史",
+    "syn": [
+     "chronicle",
+     "records"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The event is recorded in the annals of history.",
+    "example_zh": "這件事被記載在歷史年鑑中。"
+   },
+   {
+    "word": "biennial",
+    "meaning": "兩年一次的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "annual"
+    ],
+    "example": "The biennial festival attracts many visitors.",
+    "example_zh": "這個兩年一度的節慶吸引許多遊客。"
+   },
+   {
+    "word": "millennium",
+    "meaning": "千年",
+    "syn": [
+     "thousand years"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The city is over a millennium old.",
+    "example_zh": "這座城市已有一千多年歷史。"
+   },
+   {
+    "word": "perennial",
+    "meaning": "常年的；長期的",
+    "syn": [
+     "lasting",
+     "enduring"
+    ],
+    "der": [],
+    "ant": [
+     "temporary"
+    ],
+    "example": "Traffic jams are a perennial problem.",
+    "example_zh": "塞車是長期存在的問題。"
+   }
+  ]
+ },
+ {
+  "id": "noct",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Noct-",
+  "meaning": "夜",
+  "words": [
+   {
+    "word": "nocturnal",
+    "meaning": "夜行性的；夜間的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "diurnal"
+    ],
+    "example": "Owls are nocturnal birds.",
+    "example_zh": "貓頭鷹是夜行性鳥類。"
+   },
+   {
+    "word": "nocturne",
+    "meaning": "夜曲",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Chopin wrote many nocturnes.",
+    "example_zh": "蕭邦寫了許多夜曲。"
+   },
+   {
+    "word": "equinox",
+    "meaning": "晝夜平分點",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The spring equinox falls in March.",
+    "example_zh": "春分在三月。"
+   }
+  ]
+ },
+ {
+  "id": "sen",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Sen-",
+  "meaning": "老",
+  "words": [
+   {
+    "word": "senior",
+    "meaning": "年長的；資深的",
+    "syn": [
+     "older",
+     "veteran"
+    ],
+    "der": [
+     "seniority"
+    ],
+    "ant": [
+     "junior"
+    ],
+    "example": "She is a senior manager.",
+    "example_zh": "她是資深經理。"
+   },
+   {
+    "word": "senate",
+    "meaning": "參議院；評議會",
+    "syn": [],
+    "der": [
+     "senator"
+    ],
+    "ant": [],
+    "example": "The Senate passed the bill.",
+    "example_zh": "參議院通過了這項法案。"
+   },
+   {
+    "word": "senator",
+    "meaning": "參議員",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The senator gave a speech.",
+    "example_zh": "參議員發表了演說。"
+   },
+   {
+    "word": "seniority",
+    "meaning": "資歷；年資",
+    "syn": [],
+    "der": [
+     "senior"
+    ],
+    "ant": [],
+    "example": "Promotions depend on seniority.",
+    "example_zh": "晉升取決於資歷。"
+   }
+  ]
+ },
+ {
+  "id": "di",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Di-",
+  "meaning": "日",
+  "words": [
+   {
+    "word": "diary",
+    "meaning": "日記",
+    "syn": [
+     "journal"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She writes in her diary every night.",
+    "example_zh": "她每晚寫日記。"
+   },
+   {
+    "word": "diurnal",
+    "meaning": "日行性的；每日的",
+    "syn": [
+     "daily"
+    ],
+    "der": [],
+    "ant": [
+     "nocturnal"
+    ],
+    "example": "Butterflies are diurnal insects.",
+    "example_zh": "蝴蝶是日行性昆蟲。"
+   },
+   {
+    "word": "meridian",
+    "meaning": "子午線；正午",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The prime meridian passes through Greenwich.",
+    "example_zh": "本初子午線經過格林威治。"
+   }
+  ]
+ },
+ {
+  "id": "tempor",
+  "type": "root",
+  "group": "時間（日、年）",
+  "name": "Tempor-",
+  "meaning": "時間",
+  "words": [
+   {
+    "word": "temporary",
+    "meaning": "暫時的",
+    "syn": [
+     "short-term",
+     "interim"
+    ],
+    "der": [
+     "temporarily"
+    ],
+    "ant": [
+     "permanent"
+    ],
+    "example": "This is only a temporary solution.",
+    "example_zh": "這只是暫時的解決辦法。"
+   },
+   {
+    "word": "contemporary",
+    "meaning": "當代的；同時代的",
+    "syn": [
+     "modern",
+     "current"
+    ],
+    "der": [],
+    "ant": [
+     "ancient"
+    ],
+    "example": "She admires contemporary art.",
+    "example_zh": "她欣賞當代藝術。"
+   },
+   {
+    "word": "temporal",
+    "meaning": "時間的；世俗的",
+    "syn": [
+     "chronological"
+    ],
+    "der": [],
+    "ant": [
+     "spiritual"
+    ],
+    "example": "Temporal order matters in this story.",
+    "example_zh": "在這個故事裡，時間順序很重要。"
+   },
+   {
+    "word": "tempo",
+    "meaning": "速度；節奏",
+    "syn": [
+     "pace",
+     "rhythm"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The band picked up the tempo.",
+    "example_zh": "樂團加快了節奏。"
+   },
+   {
+    "word": "extemporaneous",
+    "meaning": "即席的；臨場的",
+    "syn": [
+     "impromptu",
+     "improvised"
+    ],
+    "der": [
+     "extemporaneously"
+    ],
+    "ant": [
+     "prepared"
+    ],
+    "example": "He gave an extemporaneous speech.",
+    "example_zh": "他發表了一場即席演說。"
+   }
+  ]
+ },
+ {
+  "id": "aer",
+  "type": "root",
+  "group": "空間",
+  "name": "Aer-",
+  "meaning": "空氣",
+  "words": [
+   {
+    "word": "aerial",
+    "meaning": "空中的；空氣的",
+    "syn": [
+     "overhead",
+     "airborne"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The film includes aerial views of the city.",
+    "example_zh": "影片包含這座城市的空拍畫面。"
+   },
+   {
+    "word": "aerobic",
+    "meaning": "有氧的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "anaerobic"
+    ],
+    "example": "Swimming is a good aerobic exercise.",
+    "example_zh": "游泳是很好的有氧運動。"
+   },
+   {
+    "word": "aerospace",
+    "meaning": "航太",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He works in the aerospace industry.",
+    "example_zh": "他在航太業工作。"
+   },
+   {
+    "word": "aerodynamic",
+    "meaning": "空氣動力的；流線型的",
+    "syn": [
+     "streamlined"
+    ],
+    "der": [
+     "aerodynamics"
+    ],
+    "ant": [],
+    "example": "The car has an aerodynamic design.",
+    "example_zh": "這輛車採流線型設計。"
+   },
+   {
+    "word": "aerosol",
+    "meaning": "氣霧劑；噴霧罐",
+    "syn": [
+     "spray"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Do not puncture the aerosol can.",
+    "example_zh": "不要刺穿噴霧罐。"
+   }
+  ]
+ },
+ {
+  "id": "cosm",
+  "type": "root",
+  "group": "空間",
+  "name": "Cosm-",
+  "meaning": "宇宙、秩序",
+  "words": [
+   {
+    "word": "cosmos",
+    "meaning": "宇宙",
+    "syn": [
+     "universe"
+    ],
+    "der": [
+     "cosmic"
+    ],
+    "ant": [
+     "chaos"
+    ],
+    "example": "Astronomers study the cosmos.",
+    "example_zh": "天文學家研究宇宙。"
+   },
+   {
+    "word": "cosmic",
+    "meaning": "宇宙的",
+    "syn": [
+     "universal"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Cosmic rays come from outer space.",
+    "example_zh": "宇宙射線來自外太空。"
+   },
+   {
+    "word": "cosmopolitan",
+    "meaning": "世界性的；國際化的",
+    "syn": [
+     "worldly",
+     "international"
+    ],
+    "der": [],
+    "ant": [
+     "provincial"
+    ],
+    "example": "Taipei is a cosmopolitan city.",
+    "example_zh": "台北是一座國際化的城市。"
+   },
+   {
+    "word": "cosmetic",
+    "meaning": "化妝品；表面的",
+    "syn": [
+     "makeup"
+    ],
+    "der": [],
+    "ant": [
+     "substantial"
+    ],
+    "example": "She bought some cosmetic products.",
+    "example_zh": "她買了一些化妝品。"
+   },
+   {
+    "word": "microcosm",
+    "meaning": "縮影",
+    "syn": [
+     "miniature"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The school is a microcosm of society.",
+    "example_zh": "學校是社會的縮影。"
+   }
+  ]
+ },
+ {
+  "id": "dom",
+  "type": "root",
+  "group": "空間",
+  "name": "Dom-",
+  "meaning": "房子、家",
+  "words": [
+   {
+    "word": "domestic",
+    "meaning": "國內的；家庭的",
+    "syn": [
+     "household",
+     "national"
+    ],
+    "der": [],
+    "ant": [
+     "foreign",
+     "international"
+    ],
+    "example": "Domestic flights are cheaper.",
+    "example_zh": "國內班機比較便宜。"
+   },
+   {
+    "word": "domain",
+    "meaning": "領域；網域",
+    "syn": [
+     "field",
+     "realm"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "This question is outside my domain.",
+    "example_zh": "這個問題不在我的專業領域內。"
+   },
+   {
+    "word": "dominate",
+    "meaning": "支配；主宰",
+    "syn": [
+     "control",
+     "rule"
+    ],
+    "der": [
+     "domination",
+     "dominant"
+    ],
+    "ant": [
+     "submit"
+    ],
+    "example": "One company dominates the market.",
+    "example_zh": "一家公司主宰了市場。"
+   },
+   {
+    "word": "domicile",
+    "meaning": "住所；居所",
+    "syn": [
+     "residence",
+     "home"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "His legal domicile is in Taipei.",
+    "example_zh": "他的法定住所在台北。"
+   },
+   {
+    "word": "domesticate",
+    "meaning": "馴養；馴化",
+    "syn": [
+     "tame"
+    ],
+    "der": [
+     "domestication"
+    ],
+    "ant": [
+     "wild"
+    ],
+    "example": "People domesticated wolves into dogs.",
+    "example_zh": "人類把狼馴化成了狗。"
+   }
+  ]
+ },
+ {
+  "id": "eco",
+  "type": "root",
+  "group": "空間",
+  "name": "Eco-",
+  "meaning": "家、環境",
+  "words": [
+   {
+    "word": "ecology",
+    "meaning": "生態學",
+    "syn": [
+     "environmental science"
+    ],
+    "der": [
+     "ecological",
+     "ecologist"
+    ],
+    "ant": [],
+    "example": "She studies marine ecology.",
+    "example_zh": "她研究海洋生態學。"
+   },
+   {
+    "word": "economy",
+    "meaning": "經濟",
+    "syn": [],
+    "der": [
+     "economic",
+     "economical"
+    ],
+    "ant": [],
+    "example": "The economy grew by three percent.",
+    "example_zh": "經濟成長了百分之三。"
+   },
+   {
+    "word": "economics",
+    "meaning": "經濟學",
+    "syn": [],
+    "der": [
+     "economist"
+    ],
+    "ant": [],
+    "example": "He majored in economics.",
+    "example_zh": "他主修經濟學。"
+   },
+   {
+    "word": "ecosystem",
+    "meaning": "生態系",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The coral reef is a fragile ecosystem.",
+    "example_zh": "珊瑚礁是脆弱的生態系統。"
+   },
+   {
+    "word": "ecotourism",
+    "meaning": "生態旅遊",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Ecotourism helps protect wildlife.",
+    "example_zh": "生態旅遊有助於保護野生動物。"
+   }
+  ]
+ },
+ {
+  "id": "face-front",
+  "type": "root",
+  "group": "空間",
+  "name": "Face-/Front-",
+  "meaning": "臉、前面",
+  "words": [
+   {
+    "word": "surface",
+    "meaning": "表面",
+    "syn": [
+     "exterior"
+    ],
+    "der": [],
+    "ant": [
+     "depth"
+    ],
+    "example": "The surface of the lake was calm.",
+    "example_zh": "湖面很平靜。"
+   },
+   {
+    "word": "facial",
+    "meaning": "臉部的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "A facial scan unlocked the phone.",
+    "example_zh": "臉部掃描解鎖了手機。"
+   },
+   {
+    "word": "facade",
+    "meaning": "（建築）正面；外表",
+    "syn": [
+     "front",
+     "appearance"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The facade of the old theater was restored.",
+    "example_zh": "老劇院的外牆正面被修復了。"
+   },
+   {
+    "word": "confront",
+    "meaning": "面對；對抗",
+    "syn": [
+     "face",
+     "challenge"
+    ],
+    "der": [
+     "confrontation"
+    ],
+    "ant": [
+     "avoid"
+    ],
+    "example": "She decided to confront her fear.",
+    "example_zh": "她決定面對自己的恐懼。"
+   },
+   {
+    "word": "frontier",
+    "meaning": "邊界；前沿",
+    "syn": [
+     "border",
+     "boundary"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Scientists are exploring the frontier of AI.",
+    "example_zh": "科學家正在探索人工智慧的前沿。"
+   }
+  ]
+ },
+ {
+  "id": "loc",
+  "type": "root",
+  "group": "空間",
+  "name": "Loc-",
+  "meaning": "地方",
+  "words": [
+   {
+    "word": "locate",
+    "meaning": "找出；位於",
+    "syn": [
+     "find",
+     "situate"
+    ],
+    "der": [
+     "location"
+    ],
+    "ant": [],
+    "example": "The hotel is located near the station.",
+    "example_zh": "飯店位於車站附近。"
+   },
+   {
+    "word": "location",
+    "meaning": "地點；位置",
+    "syn": [
+     "place",
+     "site"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The location is perfect for a cafe.",
+    "example_zh": "這個地點很適合開咖啡店。"
+   },
+   {
+    "word": "local",
+    "meaning": "當地的",
+    "syn": [
+     "regional"
+    ],
+    "der": [
+     "locally"
+    ],
+    "ant": [
+     "foreign",
+     "global"
+    ],
+    "example": "The local food is delicious.",
+    "example_zh": "當地的食物很美味。"
+   },
+   {
+    "word": "relocate",
+    "meaning": "搬遷",
+    "syn": [
+     "move"
+    ],
+    "der": [
+     "relocation"
+    ],
+    "ant": [],
+    "example": "The company will relocate to Taichung.",
+    "example_zh": "公司將搬遷到台中。"
+   },
+   {
+    "word": "allocate",
+    "meaning": "分配",
+    "syn": [
+     "assign",
+     "distribute"
+    ],
+    "der": [
+     "allocation"
+    ],
+    "ant": [
+     "withhold"
+    ],
+    "example": "We allocate funds to each project.",
+    "example_zh": "我們為每個專案分配經費。"
+   },
+   {
+    "word": "locomotive",
+    "meaning": "火車頭；機車",
+    "syn": [
+     "engine"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The locomotive pulled twenty cars.",
+    "example_zh": "火車頭拉著二十節車廂。"
+   }
+  ]
+ },
+ {
+  "id": "polis",
+  "type": "root",
+  "group": "空間",
+  "name": "Polis-",
+  "meaning": "城市",
+  "words": [
+   {
+    "word": "politics",
+    "meaning": "政治",
+    "syn": [
+     "government"
+    ],
+    "der": [
+     "political",
+     "politician"
+    ],
+    "ant": [],
+    "example": "He is not interested in politics.",
+    "example_zh": "他對政治沒興趣。"
+   },
+   {
+    "word": "police",
+    "meaning": "警察",
+    "syn": [
+     "law enforcement"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The police arrived within minutes.",
+    "example_zh": "警察幾分鐘內就到了。"
+   },
+   {
+    "word": "metropolis",
+    "meaning": "大都會",
+    "syn": [
+     "big city"
+    ],
+    "der": [
+     "metropolitan"
+    ],
+    "ant": [
+     "village"
+    ],
+    "example": "Tokyo is a huge metropolis.",
+    "example_zh": "東京是一座龐大的都會。"
+   },
+   {
+    "word": "acropolis",
+    "meaning": "衛城",
+    "syn": [
+     "citadel"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The Acropolis stands above Athens.",
+    "example_zh": "衛城矗立在雅典上方。"
+   },
+   {
+    "word": "megalopolis",
+    "meaning": "特大都會區",
+    "syn": [
+     "conurbation"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The megalopolis stretches along the coast.",
+    "example_zh": "這個特大都會區沿著海岸延伸。"
+   }
+  ]
+ },
+ {
+  "id": "terr",
+  "type": "root",
+  "group": "空間",
+  "name": "Terr-",
+  "meaning": "地、土地",
+  "words": [
+   {
+    "word": "territory",
+    "meaning": "領土；地盤",
+    "syn": [
+     "land",
+     "region"
+    ],
+    "der": [
+     "territorial"
+    ],
+    "ant": [],
+    "example": "The island is part of the country's territory.",
+    "example_zh": "這座島是該國領土的一部分。"
+   },
+   {
+    "word": "terrain",
+    "meaning": "地形",
+    "syn": [
+     "landscape",
+     "ground"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The rough terrain slowed the hikers.",
+    "example_zh": "崎嶇的地形拖慢了登山客的速度。"
+   },
+   {
+    "word": "terrestrial",
+    "meaning": "陸地的；地球的",
+    "syn": [
+     "earthly"
+    ],
+    "der": [],
+    "ant": [
+     "aquatic"
+    ],
+    "example": "Terrestrial animals live on land.",
+    "example_zh": "陸生動物生活在陸地上。"
+   },
+   {
+    "word": "terrace",
+    "meaning": "露台；梯田",
+    "syn": [
+     "balcony",
+     "patio"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "We had dinner on the terrace.",
+    "example_zh": "我們在露台上吃晚餐。"
+   },
+   {
+    "word": "subterranean",
+    "meaning": "地下的",
+    "syn": [
+     "underground"
+    ],
+    "der": [],
+    "ant": [
+     "aboveground"
+    ],
+    "example": "A subterranean river runs beneath the city.",
+    "example_zh": "一條地下河流經城市底下。"
+   },
+   {
+    "word": "extraterrestrial",
+    "meaning": "外星的；外星生物",
+    "syn": [
+     "alien"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Some people believe in extraterrestrial life.",
+    "example_zh": "有些人相信外星生命存在。"
+   }
+  ]
+ }
+]

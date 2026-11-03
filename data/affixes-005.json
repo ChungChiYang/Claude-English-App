@@ -226,6 +226,17 @@
   "meaning": "月",
   "words": [
    {
+    "word": "lune",
+    "meaning": "月牙形",
+    "syn": [
+     "crescent"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The artist drew a lune on the poster.",
+    "example_zh": "藝術家在海報上畫了一個月牙形。"
+   },
+   {
     "word": "lunar",
     "meaning": "月亮的；農曆的",
     "syn": [],
@@ -237,32 +248,26 @@
     "example_zh": "許多國家都慶祝農曆新年。"
    },
    {
-    "word": "lunatic",
-    "meaning": "瘋狂的；荒唐的",
+    "word": "luniform",
+    "meaning": "月形的；新月形的",
     "syn": [
-     "crazy",
-     "absurd"
+     "crescent-shaped"
     ],
     "der": [],
-    "ant": [
-     "sane"
-    ],
-    "example": "It was a lunatic idea to drive through the storm.",
-    "example_zh": "冒著暴風雨開車是個荒唐的主意。"
+    "ant": [],
+    "example": "The luniform window looked like a thin moon.",
+    "example_zh": "這扇新月形的窗戶看起來像一彎細月。"
    },
    {
-    "word": "lunacy",
-    "meaning": "瘋狂；愚蠢行為",
+    "word": "semilunar",
+    "meaning": "半月形的",
     "syn": [
-     "madness",
-     "folly"
+     "half-moon"
     ],
     "der": [],
-    "ant": [
-     "sanity"
-    ],
-    "example": "It would be lunacy to ignore the warning.",
-    "example_zh": "無視這個警告簡直是瘋狂。"
+    "ant": [],
+    "example": "The garden has a semilunar pond.",
+    "example_zh": "花園裡有一座半月形的池塘。"
    }
   ]
  },

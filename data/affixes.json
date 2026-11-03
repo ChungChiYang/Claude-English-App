@@ -110,6 +110,106 @@
     ],
     "example": "The food was unfit to eat.",
     "example_zh": "這食物不適合食用。"
+   },
+   {
+    "word": "unknown",
+    "meaning": "未知的",
+    "syn": [
+     "unfamiliar",
+     "unidentified"
+    ],
+    "der": [],
+    "ant": [
+     "known",
+     "familiar"
+    ],
+    "example": "The cause of the fire is still unknown.",
+    "example_zh": "火災的原因仍然不明。"
+   },
+   {
+    "word": "unfair",
+    "meaning": "不公平的",
+    "syn": [
+     "unjust",
+     "biased"
+    ],
+    "der": [
+     "unfairly",
+     "unfairness"
+    ],
+    "ant": [
+     "fair",
+     "just"
+    ],
+    "example": "It is unfair to blame him for the mistake.",
+    "example_zh": "為這個錯誤責怪他並不公平。"
+   },
+   {
+    "word": "unusual",
+    "meaning": "不尋常的",
+    "syn": [
+     "strange",
+     "rare"
+    ],
+    "der": [
+     "unusually"
+    ],
+    "ant": [
+     "usual",
+     "common"
+    ],
+    "example": "It is unusual to see snow here.",
+    "example_zh": "在這裡看到雪很不尋常。"
+   },
+   {
+    "word": "unnecessary",
+    "meaning": "不必要的",
+    "syn": [
+     "needless"
+    ],
+    "der": [
+     "unnecessarily"
+    ],
+    "ant": [
+     "necessary",
+     "essential"
+    ],
+    "example": "Please avoid unnecessary expenses.",
+    "example_zh": "請避免不必要的開銷。"
+   },
+   {
+    "word": "uncertain",
+    "meaning": "不確定的",
+    "syn": [
+     "unsure",
+     "doubtful"
+    ],
+    "der": [
+     "uncertainty"
+    ],
+    "ant": [
+     "certain",
+     "sure"
+    ],
+    "example": "The future of the project is uncertain.",
+    "example_zh": "這項計畫的前景不確定。"
+   },
+   {
+    "word": "unexpected",
+    "meaning": "意外的",
+    "syn": [
+     "sudden",
+     "surprising"
+    ],
+    "der": [
+     "unexpectedly"
+    ],
+    "ant": [
+     "expected",
+     "predictable"
+    ],
+    "example": "We received an unexpected visit.",
+    "example_zh": "我們迎來了一位不速之客。"
    }
   ]
  },
@@ -183,6 +283,70 @@
     ],
     "example": "He is incapable of telling a lie.",
     "example_zh": "他不會說謊。"
+   },
+   {
+    "word": "incomplete",
+    "meaning": "不完整的",
+    "syn": [
+     "unfinished",
+     "partial"
+    ],
+    "der": [
+     "incompletely"
+    ],
+    "ant": [
+     "complete",
+     "whole"
+    ],
+    "example": "The form is incomplete.",
+    "example_zh": "這份表格不完整。"
+   },
+   {
+    "word": "independent",
+    "meaning": "獨立的",
+    "syn": [
+     "self-reliant",
+     "autonomous"
+    ],
+    "der": [
+     "independence",
+     "independently"
+    ],
+    "ant": [
+     "dependent"
+    ],
+    "example": "She became independent at eighteen.",
+    "example_zh": "她十八歲就獨立了。"
+   },
+   {
+    "word": "inactive",
+    "meaning": "不活動的；不活躍的",
+    "syn": [
+     "idle",
+     "dormant"
+    ],
+    "der": [
+     "inactivity"
+    ],
+    "ant": [
+     "active"
+    ],
+    "example": "The account has been inactive for a year.",
+    "example_zh": "這個帳號已經一年沒有活動。"
+   },
+   {
+    "word": "inexpensive",
+    "meaning": "便宜的",
+    "syn": [
+     "cheap",
+     "affordable"
+    ],
+    "der": [],
+    "ant": [
+     "expensive"
+    ],
+    "example": "It is an inexpensive but useful gift.",
+    "example_zh": "這是一份便宜但很實用的禮物。"
    }
   ]
  },
@@ -254,6 +418,65 @@
     ],
     "example": "The two brothers are quite dissimilar.",
     "example_zh": "這兩兄弟很不一樣。"
+   },
+   {
+    "word": "discover",
+    "meaning": "發現",
+    "syn": [
+     "find",
+     "uncover"
+    ],
+    "der": [
+     "discovery"
+    ],
+    "ant": [
+     "conceal"
+    ],
+    "example": "Columbus discovered a new route.",
+    "example_zh": "哥倫布發現了一條新航線。"
+   },
+   {
+    "word": "disconnect",
+    "meaning": "切斷；中斷",
+    "syn": [
+     "detach",
+     "separate"
+    ],
+    "der": [
+     "disconnection"
+    ],
+    "ant": [
+     "connect"
+    ],
+    "example": "Please disconnect the power cable.",
+    "example_zh": "請拔掉電源線。"
+   },
+   {
+    "word": "discount",
+    "meaning": "折扣",
+    "syn": [
+     "reduction"
+    ],
+    "der": [],
+    "ant": [
+     "surcharge"
+    ],
+    "example": "The store offers a 20% discount.",
+    "example_zh": "這家店提供八折優惠。"
+   },
+   {
+    "word": "disorder",
+    "meaning": "混亂；失調",
+    "syn": [
+     "chaos",
+     "mess"
+    ],
+    "der": [],
+    "ant": [
+     "order"
+    ],
+    "example": "The room was in complete disorder.",
+    "example_zh": "房間一片混亂。"
    }
   ]
  },

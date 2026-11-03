@@ -682,6 +682,69 @@
     ],
     "example": "Prehistoric people lived in caves.",
     "example_zh": "史前時代的人住在洞穴裡。"
+   },
+   {
+    "word": "prevent",
+    "meaning": "預防；阻止",
+    "syn": [
+     "avoid",
+     "stop"
+    ],
+    "der": [
+     "prevention",
+     "preventable"
+    ],
+    "ant": [
+     "cause",
+     "allow"
+    ],
+    "example": "Washing hands helps prevent illness.",
+    "example_zh": "洗手有助於預防疾病。"
+   },
+   {
+    "word": "previous",
+    "meaning": "先前的",
+    "syn": [
+     "earlier",
+     "prior"
+    ],
+    "der": [
+     "previously"
+    ],
+    "ant": [
+     "next",
+     "following"
+    ],
+    "example": "In the previous chapter, we discussed grammar.",
+    "example_zh": "在前一章中，我們討論了文法。"
+   },
+   {
+    "word": "precede",
+    "meaning": "在…之前",
+    "syn": [
+     "come before"
+    ],
+    "der": [
+     "precedent"
+    ],
+    "ant": [
+     "follow"
+    ],
+    "example": "A short speech preceded the dinner.",
+    "example_zh": "晚宴前有一段簡短的致詞。"
+   },
+   {
+    "word": "precaution",
+    "meaning": "預防措施",
+    "syn": [
+     "safeguard"
+    ],
+    "der": [
+     "precautionary"
+    ],
+    "ant": [],
+    "example": "Take precautions against the heat.",
+    "example_zh": "要做好防暑的措施。"
    }
   ]
  },

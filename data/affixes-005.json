@@ -1,0 +1,2040 @@
+[
+ {
+  "id": "cand",
+  "type": "root",
+  "group": "亮光",
+  "name": "Cand-",
+  "meaning": "發光、白",
+  "words": [
+   {
+    "word": "candle",
+    "meaning": "蠟燭",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "She lit a candle on the table.",
+    "example_zh": "她在桌上點了一根蠟燭。"
+   },
+   {
+    "word": "candid",
+    "meaning": "坦白的",
+    "syn": [
+     "frank",
+     "honest"
+    ],
+    "der": [
+     "candidly"
+    ],
+    "ant": [
+     "insincere"
+    ],
+    "example": "He gave a candid answer.",
+    "example_zh": "他給了一個坦率的回答。"
+   },
+   {
+    "word": "candidate",
+    "meaning": "候選人",
+    "syn": [
+     "nominee",
+     "applicant"
+    ],
+    "der": [
+     "candidacy"
+    ],
+    "ant": [],
+    "example": "Each candidate gave a short speech.",
+    "example_zh": "每位候選人都做了簡短演說。"
+   },
+   {
+    "word": "incandescent",
+    "meaning": "白熾的；發熱發光的",
+    "syn": [
+     "glowing"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "An incandescent bulb gives off warm light.",
+    "example_zh": "白熾燈泡發出溫暖的光。"
+   }
+  ]
+ },
+ {
+  "id": "flam",
+  "type": "root",
+  "group": "亮光",
+  "name": "Flam-",
+  "meaning": "火焰",
+  "words": [
+   {
+    "word": "flame",
+    "meaning": "火焰",
+    "syn": [
+     "blaze"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The flame flickered in the wind.",
+    "example_zh": "火焰在風中閃爍。"
+   },
+   {
+    "word": "flammable",
+    "meaning": "易燃的",
+    "syn": [
+     "combustible"
+    ],
+    "der": [],
+    "ant": [
+     "nonflammable",
+     "fireproof"
+    ],
+    "example": "Keep flammable liquids away from heat.",
+    "example_zh": "易燃液體要遠離熱源。"
+   },
+   {
+    "word": "inflame",
+    "meaning": "激起；激怒",
+    "syn": [
+     "provoke",
+     "arouse"
+    ],
+    "der": [],
+    "ant": [
+     "soothe"
+    ],
+    "example": "The speech inflamed the crowd.",
+    "example_zh": "這場演說激怒了群眾。"
+   },
+   {
+    "word": "flamboyant",
+    "meaning": "浮誇華麗的",
+    "syn": [
+     "showy",
+     "colorful"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He wore a flamboyant jacket to the party.",
+    "example_zh": "他穿著一件華麗的外套去參加派對。"
+   }
+  ]
+ },
+ {
+  "id": "ign",
+  "type": "root",
+  "group": "亮光",
+  "name": "Ign-",
+  "meaning": "火",
+  "words": [
+   {
+    "word": "ignite",
+    "meaning": "點燃",
+    "syn": [
+     "light",
+     "kindle"
+    ],
+    "der": [],
+    "ant": [
+     "extinguish"
+    ],
+    "example": "A spark ignited the dry grass.",
+    "example_zh": "一顆火星點燃了乾草。"
+   },
+   {
+    "word": "ignition",
+    "meaning": "點火；發動裝置",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Turn the key in the ignition.",
+    "example_zh": "轉動點火開關的鑰匙。"
+   },
+   {
+    "word": "igneous",
+    "meaning": "火成的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Granite is an igneous rock.",
+    "example_zh": "花崗岩是一種火成岩。"
+   }
+  ]
+ },
+ {
+  "id": "lumin",
+  "type": "root",
+  "group": "亮光",
+  "name": "Lumin-",
+  "meaning": "光",
+  "words": [
+   {
+    "word": "illuminate",
+    "meaning": "照亮",
+    "syn": [
+     "light up"
+    ],
+    "der": [],
+    "ant": [
+     "darken"
+    ],
+    "example": "Lanterns illuminated the street.",
+    "example_zh": "燈籠照亮了街道。"
+   },
+   {
+    "word": "luminous",
+    "meaning": "發光的",
+    "syn": [
+     "glowing",
+     "bright"
+    ],
+    "der": [],
+    "ant": [
+     "dark"
+    ],
+    "example": "The watch has a luminous dial.",
+    "example_zh": "這支手錶有夜光錶盤。"
+   },
+   {
+    "word": "luminary",
+    "meaning": "傑出人物",
+    "syn": [
+     "leading figure",
+     "celebrity"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Many luminaries attended the gala.",
+    "example_zh": "許多名人出席了這場晚會。"
+   },
+   {
+    "word": "luminosity",
+    "meaning": "亮度；光輝",
+    "syn": [
+     "brightness"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The star's luminosity changes over time.",
+    "example_zh": "這顆恆星的亮度會隨時間變化。"
+   }
+  ]
+ },
+ {
+  "id": "lun",
+  "type": "root",
+  "group": "亮光",
+  "name": "Lun-",
+  "meaning": "月",
+  "words": [
+   {
+    "word": "lunar",
+    "meaning": "月亮的；農曆的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "solar"
+    ],
+    "example": "Lunar New Year is celebrated in many countries.",
+    "example_zh": "許多國家都慶祝農曆新年。"
+   },
+   {
+    "word": "lunatic",
+    "meaning": "瘋狂的；荒唐的",
+    "syn": [
+     "crazy",
+     "absurd"
+    ],
+    "der": [],
+    "ant": [
+     "sane"
+    ],
+    "example": "It was a lunatic idea to drive through the storm.",
+    "example_zh": "冒著暴風雨開車是個荒唐的主意。"
+   },
+   {
+    "word": "lunacy",
+    "meaning": "瘋狂；愚蠢行為",
+    "syn": [
+     "madness",
+     "folly"
+    ],
+    "der": [],
+    "ant": [
+     "sanity"
+    ],
+    "example": "It would be lunacy to ignore the warning.",
+    "example_zh": "無視這個警告簡直是瘋狂。"
+   }
+  ]
+ },
+ {
+  "id": "radi",
+  "type": "root",
+  "group": "亮光",
+  "name": "Radi-",
+  "meaning": "射線、發出",
+  "words": [
+   {
+    "word": "radiate",
+    "meaning": "放射；散發",
+    "syn": [
+     "emit",
+     "give off"
+    ],
+    "der": [
+     "radiation"
+    ],
+    "ant": [],
+    "example": "The heater radiates warmth.",
+    "example_zh": "暖氣機散發出暖意。"
+   },
+   {
+    "word": "radiant",
+    "meaning": "容光煥發的；光芒四射的",
+    "syn": [
+     "glowing",
+     "bright"
+    ],
+    "der": [],
+    "ant": [
+     "dull"
+    ],
+    "example": "She looked radiant on her wedding day.",
+    "example_zh": "她在婚禮那天容光煥發。"
+   },
+   {
+    "word": "radio",
+    "meaning": "收音機；無線電",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He listens to the radio every morning.",
+    "example_zh": "他每天早上聽收音機。"
+   },
+   {
+    "word": "radius",
+    "meaning": "半徑",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The circle has a radius of five centimeters.",
+    "example_zh": "這個圓的半徑是五公分。"
+   },
+   {
+    "word": "radiation",
+    "meaning": "輻射",
+    "syn": [
+     "emission"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The satellite measures solar radiation.",
+    "example_zh": "這顆衛星測量太陽輻射。"
+   }
+  ]
+ },
+ {
+  "id": "splend",
+  "type": "root",
+  "group": "亮光",
+  "name": "Splend-",
+  "meaning": "光輝",
+  "words": [
+   {
+    "word": "splendid",
+    "meaning": "極好的；壯麗的",
+    "syn": [
+     "magnificent",
+     "excellent"
+    ],
+    "der": [
+     "splendidly"
+    ],
+    "ant": [
+     "dreadful"
+    ],
+    "example": "We had a splendid view of the mountains.",
+    "example_zh": "我們欣賞到壯麗的山景。"
+   },
+   {
+    "word": "splendor",
+    "meaning": "壯麗；輝煌",
+    "syn": [
+     "grandeur",
+     "magnificence"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The palace is known for its splendor.",
+    "example_zh": "這座宮殿以壯麗聞名。"
+   },
+   {
+    "word": "resplendent",
+    "meaning": "燦爛的；華麗的",
+    "syn": [
+     "brilliant",
+     "dazzling"
+    ],
+    "der": [],
+    "ant": [
+     "drab"
+    ],
+    "example": "The bride looked resplendent in a white gown.",
+    "example_zh": "新娘穿著白色禮服，光彩奪目。"
+   }
+  ]
+ },
+ {
+  "id": "stell",
+  "type": "root",
+  "group": "亮光",
+  "name": "Stell-",
+  "meaning": "星",
+  "words": [
+   {
+    "word": "stellar",
+    "meaning": "星星的；極好的",
+    "syn": [
+     "outstanding",
+     "excellent"
+    ],
+    "der": [],
+    "ant": [
+     "mediocre"
+    ],
+    "example": "She gave a stellar performance.",
+    "example_zh": "她的表現非常出色。"
+   },
+   {
+    "word": "constellation",
+    "meaning": "星座",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Orion is a well-known constellation.",
+    "example_zh": "獵戶座是知名的星座。"
+   },
+   {
+    "word": "interstellar",
+    "meaning": "星際的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Interstellar travel is still science fiction.",
+    "example_zh": "星際旅行仍屬於科幻。"
+   }
+  ]
+ },
+ {
+  "id": "agr",
+  "type": "root",
+  "group": "自然",
+  "name": "Agr-",
+  "meaning": "田地、農",
+  "words": [
+   {
+    "word": "agriculture",
+    "meaning": "農業",
+    "syn": [
+     "farming"
+    ],
+    "der": [
+     "agricultural"
+    ],
+    "ant": [],
+    "example": "Agriculture is important to the region's economy.",
+    "example_zh": "農業對這個地區的經濟很重要。"
+   },
+   {
+    "word": "agrarian",
+    "meaning": "農業的；土地的",
+    "syn": [
+     "rural",
+     "agricultural"
+    ],
+    "der": [],
+    "ant": [
+     "industrial"
+    ],
+    "example": "The country has an agrarian economy.",
+    "example_zh": "這個國家是農業經濟。"
+   },
+   {
+    "word": "agronomy",
+    "meaning": "農藝學",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He studied agronomy at university.",
+    "example_zh": "他在大學主修農藝學。"
+   }
+  ]
+ },
+ {
+  "id": "aqua",
+  "type": "root",
+  "group": "自然",
+  "name": "Aqua-",
+  "meaning": "水",
+  "words": [
+   {
+    "word": "aquarium",
+    "meaning": "水族館；魚缸",
+    "syn": [
+     "fish tank"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The children loved the aquarium.",
+    "example_zh": "孩子們很喜歡水族館。"
+   },
+   {
+    "word": "aquatic",
+    "meaning": "水生的；水中的",
+    "syn": [],
+    "der": [],
+    "ant": [
+     "terrestrial"
+    ],
+    "example": "Frogs are aquatic animals when young.",
+    "example_zh": "青蛙幼年時是水生動物。"
+   },
+   {
+    "word": "aqueduct",
+    "meaning": "水道橋；引水渠",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The Romans built a long aqueduct.",
+    "example_zh": "羅馬人建了一條很長的水道橋。"
+   },
+   {
+    "word": "aquaculture",
+    "meaning": "水產養殖",
+    "syn": [
+     "fish farming"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Aquaculture supplies much of the world's fish.",
+    "example_zh": "水產養殖供應了世界上大部分的魚。"
+   }
+  ]
+ },
+ {
+  "id": "avi",
+  "type": "root",
+  "group": "自然",
+  "name": "Avi-",
+  "meaning": "鳥",
+  "words": [
+   {
+    "word": "aviation",
+    "meaning": "航空",
+    "syn": [
+     "flying"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He works in the aviation industry.",
+    "example_zh": "他在航空業工作。"
+   },
+   {
+    "word": "aviary",
+    "meaning": "大型鳥舍",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The zoo has a large aviary.",
+    "example_zh": "動物園有一座大型鳥舍。"
+   },
+   {
+    "word": "aviator",
+    "meaning": "飛行員",
+    "syn": [
+     "pilot"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The aviator crossed the ocean alone.",
+    "example_zh": "這位飛行員獨自飛越大洋。"
+   },
+   {
+    "word": "avian",
+    "meaning": "鳥類的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Avian flu spreads quickly among birds.",
+    "example_zh": "禽流感在鳥類之間傳播得很快。"
+   }
+  ]
+ },
+ {
+  "id": "gran",
+  "type": "root",
+  "group": "自然",
+  "name": "Gran-",
+  "meaning": "穀物、顆粒",
+  "words": [
+   {
+    "word": "grain",
+    "meaning": "穀物；顆粒",
+    "syn": [
+     "cereal"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Rice is the main grain in Asia.",
+    "example_zh": "稻米是亞洲的主要穀物。"
+   },
+   {
+    "word": "granary",
+    "meaning": "穀倉",
+    "syn": [
+     "barn"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The granary was full after the harvest.",
+    "example_zh": "收成後穀倉堆滿了糧食。"
+   },
+   {
+    "word": "granule",
+    "meaning": "小顆粒",
+    "syn": [
+     "particle"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Each granule dissolves quickly in hot water.",
+    "example_zh": "每顆小顆粒在熱水中很快溶解。"
+   },
+   {
+    "word": "granite",
+    "meaning": "花崗岩",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The countertop is made of granite.",
+    "example_zh": "這個檯面是花崗岩做的。"
+   }
+  ]
+ },
+ {
+  "id": "flor",
+  "type": "root",
+  "group": "自然",
+  "name": "Flor-",
+  "meaning": "花",
+  "words": [
+   {
+    "word": "flower",
+    "meaning": "花",
+    "syn": [
+     "bloom"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The flower smells wonderful.",
+    "example_zh": "這朵花聞起來很香。"
+   },
+   {
+    "word": "floral",
+    "meaning": "花的；花卉圖案的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "She wore a floral dress.",
+    "example_zh": "她穿了一件花卉圖案的洋裝。"
+   },
+   {
+    "word": "florist",
+    "meaning": "花店老闆",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The florist arranged the bouquet.",
+    "example_zh": "花店老闆整理好了花束。"
+   },
+   {
+    "word": "flourish",
+    "meaning": "繁榮；茂盛",
+    "syn": [
+     "thrive",
+     "prosper"
+    ],
+    "der": [],
+    "ant": [
+     "decline"
+    ],
+    "example": "Small businesses flourished in the town.",
+    "example_zh": "小生意在小鎮上蓬勃發展。"
+   }
+  ]
+ },
+ {
+  "id": "herb",
+  "type": "root",
+  "group": "自然",
+  "name": "Herb-",
+  "meaning": "草",
+  "words": [
+   {
+    "word": "herb",
+    "meaning": "香草；草藥",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Add fresh herbs to the soup.",
+    "example_zh": "在湯裡加入新鮮香草。"
+   },
+   {
+    "word": "herbivore",
+    "meaning": "草食動物",
+    "syn": [],
+    "der": [
+     "herbivorous"
+    ],
+    "ant": [
+     "carnivore"
+    ],
+    "example": "A cow is a herbivore.",
+    "example_zh": "牛是草食動物。"
+   },
+   {
+    "word": "herbicide",
+    "meaning": "除草劑",
+    "syn": [
+     "weed killer"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The farmer sprayed herbicide on the field.",
+    "example_zh": "農夫在田裡噴灑除草劑。"
+   },
+   {
+    "word": "herbal",
+    "meaning": "草本的；草藥的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "She drinks herbal tea before bed.",
+    "example_zh": "她睡前喝草本茶。"
+   }
+  ]
+ },
+ {
+  "id": "insul",
+  "type": "root",
+  "group": "自然",
+  "name": "Insul-",
+  "meaning": "島",
+  "words": [
+   {
+    "word": "insulate",
+    "meaning": "隔絕；隔熱",
+    "syn": [
+     "isolate",
+     "protect"
+    ],
+    "der": [
+     "insulation"
+    ],
+    "ant": [],
+    "example": "Thick walls insulate the house from the cold.",
+    "example_zh": "厚牆讓房子隔絕寒冷。"
+   },
+   {
+    "word": "peninsula",
+    "meaning": "半島",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Korea is on a peninsula.",
+    "example_zh": "韓國位於半島上。"
+   },
+   {
+    "word": "insular",
+    "meaning": "島嶼的；思想狹隘的",
+    "syn": [
+     "isolated",
+     "narrow-minded"
+    ],
+    "der": [],
+    "ant": [
+     "cosmopolitan"
+    ],
+    "example": "The village has an insular culture.",
+    "example_zh": "這個村子的文化相當封閉。"
+   }
+  ]
+ },
+ {
+  "id": "mar",
+  "type": "root",
+  "group": "自然",
+  "name": "Mar-",
+  "meaning": "海",
+  "words": [
+   {
+    "word": "marine",
+    "meaning": "海洋的",
+    "syn": [
+     "maritime",
+     "nautical"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Marine life is rich around the reef.",
+    "example_zh": "礁岩周圍的海洋生物很豐富。"
+   },
+   {
+    "word": "maritime",
+    "meaning": "海事的；沿海的",
+    "syn": [
+     "marine",
+     "naval"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Taiwan has a long maritime history.",
+    "example_zh": "台灣有悠久的海洋歷史。"
+   },
+   {
+    "word": "mariner",
+    "meaning": "水手",
+    "syn": [
+     "sailor",
+     "seaman"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The old mariner told stories of storms.",
+    "example_zh": "老水手講述了關於暴風雨的故事。"
+   },
+   {
+    "word": "marina",
+    "meaning": "遊艇碼頭",
+    "syn": [
+     "harbor"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Many yachts were docked at the marina.",
+    "example_zh": "許多遊艇停靠在遊艇碼頭。"
+   }
+  ]
+ },
+ {
+  "id": "am",
+  "type": "root",
+  "group": "情感",
+  "name": "Am-",
+  "meaning": "愛",
+  "words": [
+   {
+    "word": "amiable",
+    "meaning": "和藹可親的",
+    "syn": [
+     "friendly",
+     "pleasant"
+    ],
+    "der": [
+     "amiably"
+    ],
+    "ant": [
+     "hostile"
+    ],
+    "example": "He is an amiable host.",
+    "example_zh": "他是個和藹可親的主人。"
+   },
+   {
+    "word": "amicable",
+    "meaning": "友善的",
+    "syn": [
+     "friendly",
+     "cordial"
+    ],
+    "der": [
+     "amicably"
+    ],
+    "ant": [
+     "hostile"
+    ],
+    "example": "The two sides reached an amicable agreement.",
+    "example_zh": "雙方達成了友好的協議。"
+   },
+   {
+    "word": "amateur",
+    "meaning": "業餘者；業餘的",
+    "syn": [
+     "hobbyist"
+    ],
+    "der": [],
+    "ant": [
+     "professional"
+    ],
+    "example": "She is an amateur photographer.",
+    "example_zh": "她是業餘攝影師。"
+   },
+   {
+    "word": "amorous",
+    "meaning": "多情的",
+    "syn": [
+     "romantic",
+     "loving"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The poem describes an amorous encounter.",
+    "example_zh": "這首詩描寫了一場浪漫的邂逅。"
+   }
+  ]
+ },
+ {
+  "id": "cert-cred",
+  "type": "root",
+  "group": "情感",
+  "name": "Cert-/Cred-",
+  "meaning": "相信、確定",
+  "words": [
+   {
+    "word": "certain",
+    "meaning": "確定的",
+    "syn": [
+     "sure",
+     "definite"
+    ],
+    "der": [
+     "certainty",
+     "certainly"
+    ],
+    "ant": [
+     "uncertain",
+     "doubtful"
+    ],
+    "example": "I am certain that he will come.",
+    "example_zh": "我確定他會來。"
+   },
+   {
+    "word": "certificate",
+    "meaning": "證書",
+    "syn": [
+     "diploma"
+    ],
+    "der": [
+     "certify"
+    ],
+    "ant": [],
+    "example": "She received a certificate of completion.",
+    "example_zh": "她拿到了結業證書。"
+   },
+   {
+    "word": "certify",
+    "meaning": "證明；認證",
+    "syn": [
+     "confirm",
+     "verify"
+    ],
+    "der": [
+     "certification"
+    ],
+    "ant": [],
+    "example": "The lab certifies the quality of the products.",
+    "example_zh": "這間實驗室為產品品質做認證。"
+   },
+   {
+    "word": "credit",
+    "meaning": "信用；功勞",
+    "syn": [
+     "trust",
+     "recognition"
+    ],
+    "der": [
+     "creditor"
+    ],
+    "ant": [
+     "blame"
+    ],
+    "example": "She deserves credit for the idea.",
+    "example_zh": "這個點子的功勞應歸於她。"
+   },
+   {
+    "word": "credible",
+    "meaning": "可信的",
+    "syn": [
+     "believable",
+     "reliable"
+    ],
+    "der": [
+     "credibility"
+    ],
+    "ant": [
+     "incredible",
+     "unreliable"
+    ],
+    "example": "The witness seemed credible.",
+    "example_zh": "這位證人看起來可信。"
+   },
+   {
+    "word": "incredible",
+    "meaning": "令人難以置信的",
+    "syn": [
+     "unbelievable",
+     "amazing"
+    ],
+    "der": [
+     "incredibly"
+    ],
+    "ant": [
+     "credible"
+    ],
+    "example": "They finished the project in an incredible time.",
+    "example_zh": "他們在驚人的短時間內完成了這個專案。"
+   },
+   {
+    "word": "credential",
+    "meaning": "資歷；憑證",
+    "syn": [
+     "qualification"
+    ],
+    "der": [
+     "credentials"
+    ],
+    "ant": [],
+    "example": "Her credentials impressed the committee.",
+    "example_zh": "她的資歷讓委員會印象深刻。"
+   }
+  ]
+ },
+ {
+  "id": "cite",
+  "type": "root",
+  "group": "情感",
+  "name": "Cite-",
+  "meaning": "呼叫、刺激",
+  "words": [
+   {
+    "word": "cite",
+    "meaning": "引用；傳喚",
+    "syn": [
+     "quote",
+     "mention"
+    ],
+    "der": [
+     "citation"
+    ],
+    "ant": [],
+    "example": "The author cited several studies.",
+    "example_zh": "作者引用了數項研究。"
+   },
+   {
+    "word": "recite",
+    "meaning": "背誦",
+    "syn": [
+     "repeat",
+     "recount"
+    ],
+    "der": [
+     "recital"
+    ],
+    "ant": [],
+    "example": "The children recited a poem.",
+    "example_zh": "孩子們背誦了一首詩。"
+   },
+   {
+    "word": "incite",
+    "meaning": "煽動；激起",
+    "syn": [
+     "provoke",
+     "stir up"
+    ],
+    "der": [
+     "incitement"
+    ],
+    "ant": [
+     "calm"
+    ],
+    "example": "The speech incited the crowd to protest.",
+    "example_zh": "這場演說煽動群眾抗議。"
+   },
+   {
+    "word": "excite",
+    "meaning": "使興奮",
+    "syn": [
+     "thrill",
+     "stir"
+    ],
+    "der": [
+     "excitement",
+     "exciting"
+    ],
+    "ant": [
+     "bore"
+    ],
+    "example": "The news excited everyone.",
+    "example_zh": "這個消息讓大家興奮不已。"
+   }
+  ]
+ },
+ {
+  "id": "fid",
+  "type": "root",
+  "group": "情感",
+  "name": "Fid-",
+  "meaning": "信任",
+  "words": [
+   {
+    "word": "faith",
+    "meaning": "信念；信任",
+    "syn": [
+     "trust",
+     "belief"
+    ],
+    "der": [],
+    "ant": [
+     "doubt"
+    ],
+    "example": "I have faith in my team.",
+    "example_zh": "我對我的團隊有信心。"
+   },
+   {
+    "word": "confide",
+    "meaning": "吐露（祕密）",
+    "syn": [
+     "reveal",
+     "disclose"
+    ],
+    "der": [],
+    "ant": [
+     "conceal"
+    ],
+    "example": "She confided her plans to a friend.",
+    "example_zh": "她向朋友吐露自己的計畫。"
+   },
+   {
+    "word": "confident",
+    "meaning": "有信心的",
+    "syn": [
+     "self-assured",
+     "sure"
+    ],
+    "der": [
+     "confidence"
+    ],
+    "ant": [
+     "insecure",
+     "doubtful"
+    ],
+    "example": "He felt confident before the interview.",
+    "example_zh": "面試前他覺得很有自信。"
+   },
+   {
+    "word": "fidelity",
+    "meaning": "忠誠；準確度",
+    "syn": [
+     "loyalty",
+     "faithfulness"
+    ],
+    "der": [
+     "infidelity"
+    ],
+    "ant": [
+     "disloyalty"
+    ],
+    "example": "The dog showed great fidelity to its owner.",
+    "example_zh": "這隻狗對主人非常忠誠。"
+   },
+   {
+    "word": "diffident",
+    "meaning": "缺乏自信的",
+    "syn": [
+     "shy",
+     "timid"
+    ],
+    "der": [
+     "diffidence"
+    ],
+    "ant": [
+     "confident"
+    ],
+    "example": "He was diffident about speaking in public.",
+    "example_zh": "他對公開發言缺乏自信。"
+   }
+  ]
+ },
+ {
+  "id": "grat",
+  "type": "root",
+  "group": "情感",
+  "name": "Grat-",
+  "meaning": "感謝、喜悅",
+  "words": [
+   {
+    "word": "grateful",
+    "meaning": "感激的",
+    "syn": [
+     "thankful",
+     "appreciative"
+    ],
+    "der": [
+     "gratefully"
+    ],
+    "ant": [
+     "ungrateful"
+    ],
+    "example": "I am grateful for your help.",
+    "example_zh": "我很感謝你的幫忙。"
+   },
+   {
+    "word": "gratitude",
+    "meaning": "感激",
+    "syn": [
+     "thanks",
+     "appreciation"
+    ],
+    "der": [],
+    "ant": [
+     "ingratitude"
+    ],
+    "example": "She expressed her gratitude to her teachers.",
+    "example_zh": "她向老師們表達感激。"
+   },
+   {
+    "word": "gratify",
+    "meaning": "使滿足；使高興",
+    "syn": [
+     "satisfy",
+     "please"
+    ],
+    "der": [
+     "gratification"
+    ],
+    "ant": [
+     "frustrate"
+    ],
+    "example": "It gratified him to see her succeed.",
+    "example_zh": "看到她成功讓他很欣慰。"
+   },
+   {
+    "word": "congratulate",
+    "meaning": "祝賀",
+    "syn": [
+     "celebrate"
+    ],
+    "der": [
+     "congratulation"
+    ],
+    "ant": [
+     "console"
+    ],
+    "example": "I congratulated her on her promotion.",
+    "example_zh": "我恭喜她升職。"
+   },
+   {
+    "word": "gratuity",
+    "meaning": "小費",
+    "syn": [
+     "tip"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "A gratuity is included in the bill.",
+    "example_zh": "帳單已包含小費。"
+   }
+  ]
+ },
+ {
+  "id": "mis-hate",
+  "type": "root",
+  "group": "情感",
+  "name": "Mis-/Miso-",
+  "meaning": "厭惡",
+  "words": [
+   {
+    "word": "misanthropy",
+    "meaning": "憎恨人類；厭世",
+    "syn": [
+     "hatred of humanity"
+    ],
+    "der": [
+     "misanthrope",
+     "misanthropic"
+    ],
+    "ant": [
+     "philanthropy"
+    ],
+    "example": "His misanthropy kept him away from parties.",
+    "example_zh": "他的厭世讓他遠離派對。"
+   },
+   {
+    "word": "misogamist",
+    "meaning": "厭惡婚姻的人",
+    "syn": [],
+    "der": [
+     "misogamy"
+    ],
+    "ant": [],
+    "example": "The misogamist refused to attend any weddings.",
+    "example_zh": "這位厭惡婚姻的人拒絕參加任何婚禮。"
+   },
+   {
+    "word": "misoneism",
+    "meaning": "厭惡新事物",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Misoneism makes some people resist every new technology.",
+    "example_zh": "厭惡新事物讓有些人抗拒所有新科技。"
+   },
+   {
+    "word": "misogamy",
+    "meaning": "厭惡婚姻",
+    "syn": [],
+    "der": [
+     "misogamist"
+    ],
+    "ant": [],
+    "example": "His misogamy surprised his friends.",
+    "example_zh": "他對婚姻的排斥讓朋友們很意外。"
+   }
+  ]
+ },
+ {
+  "id": "phil",
+  "type": "root",
+  "group": "情感",
+  "name": "Phil-",
+  "meaning": "愛",
+  "words": [
+   {
+    "word": "philosophy",
+    "meaning": "哲學",
+    "syn": [],
+    "der": [
+     "philosopher",
+     "philosophical"
+    ],
+    "ant": [],
+    "example": "Philosophy asks big questions about life.",
+    "example_zh": "哲學探討關於人生的大問題。"
+   },
+   {
+    "word": "philanthropy",
+    "meaning": "慈善事業",
+    "syn": [
+     "charity"
+    ],
+    "der": [
+     "philanthropist"
+    ],
+    "ant": [
+     "misanthropy"
+    ],
+    "example": "Her philanthropy funded three libraries.",
+    "example_zh": "她的慈善捐款資助了三間圖書館。"
+   },
+   {
+    "word": "philharmonic",
+    "meaning": "愛樂的；愛樂樂團",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The philharmonic orchestra performed Beethoven.",
+    "example_zh": "愛樂樂團演奏了貝多芬的作品。"
+   },
+   {
+    "word": "bibliophile",
+    "meaning": "愛書人",
+    "syn": [
+     "book lover"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He is a bibliophile with thousands of books.",
+    "example_zh": "他是個藏書數千本的愛書人。"
+   }
+  ]
+ },
+ {
+  "id": "sens",
+  "type": "root",
+  "group": "情感",
+  "name": "Sens-",
+  "meaning": "感覺",
+  "words": [
+   {
+    "word": "sense",
+    "meaning": "感覺；意義",
+    "syn": [
+     "feeling",
+     "meaning"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She has a good sense of humor.",
+    "example_zh": "她很有幽默感。"
+   },
+   {
+    "word": "sensitive",
+    "meaning": "敏感的；易受影響的",
+    "syn": [
+     "delicate",
+     "responsive"
+    ],
+    "der": [
+     "sensitivity"
+    ],
+    "ant": [
+     "insensitive"
+    ],
+    "example": "Her skin is sensitive to sunlight.",
+    "example_zh": "她的皮膚對陽光很敏感。"
+   },
+   {
+    "word": "sensible",
+    "meaning": "明智的",
+    "syn": [
+     "reasonable",
+     "practical"
+    ],
+    "der": [
+     "sensibly"
+    ],
+    "ant": [
+     "foolish"
+    ],
+    "example": "It is sensible to save some money.",
+    "example_zh": "存一點錢是明智的。"
+   },
+   {
+    "word": "sensation",
+    "meaning": "感覺；轟動",
+    "syn": [
+     "feeling",
+     "stir"
+    ],
+    "der": [
+     "sensational"
+    ],
+    "ant": [],
+    "example": "The new singer caused a sensation.",
+    "example_zh": "這位新歌手引起了轟動。"
+   },
+   {
+    "word": "sensor",
+    "meaning": "感測器",
+    "syn": [
+     "detector"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "A sensor turns on the light automatically.",
+    "example_zh": "感測器會自動開燈。"
+   },
+   {
+    "word": "sensory",
+    "meaning": "感官的",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Babies learn through sensory experience.",
+    "example_zh": "嬰兒透過感官經驗學習。"
+   },
+   {
+    "word": "sensational",
+    "meaning": "轟動的；極好的",
+    "syn": [
+     "astonishing",
+     "remarkable"
+    ],
+    "der": [],
+    "ant": [
+     "ordinary"
+    ],
+    "example": "The team gave a sensational performance.",
+    "example_zh": "這支隊伍表現極為出色。"
+   }
+  ]
+ },
+ {
+  "id": "anim",
+  "type": "root",
+  "group": "人類",
+  "name": "Anim-",
+  "meaning": "生命、心靈",
+  "words": [
+   {
+    "word": "animal",
+    "meaning": "動物",
+    "syn": [
+     "creature",
+     "beast"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The zoo has many kinds of animals.",
+    "example_zh": "動物園裡有許多種動物。"
+   },
+   {
+    "word": "animate",
+    "meaning": "使有生氣；賦予生命",
+    "syn": [
+     "enliven"
+    ],
+    "der": [
+     "animation"
+    ],
+    "ant": [
+     "deaden"
+    ],
+    "example": "The story animates the old legend.",
+    "example_zh": "這個故事讓古老的傳說重新生動起來。"
+   },
+   {
+    "word": "animation",
+    "meaning": "動畫；活力",
+    "syn": [
+     "cartoon",
+     "vitality"
+    ],
+    "der": [
+     "animator"
+    ],
+    "ant": [],
+    "example": "She works in film animation.",
+    "example_zh": "她從事電影動畫工作。"
+   },
+   {
+    "word": "unanimous",
+    "meaning": "全體一致的",
+    "syn": [
+     "united",
+     "agreed"
+    ],
+    "der": [
+     "unanimously"
+    ],
+    "ant": [
+     "divided"
+    ],
+    "example": "The vote was unanimous.",
+    "example_zh": "投票結果全體一致。"
+   },
+   {
+    "word": "animosity",
+    "meaning": "敵意",
+    "syn": [
+     "hostility",
+     "resentment"
+    ],
+    "der": [],
+    "ant": [
+     "goodwill"
+    ],
+    "example": "There was no animosity between the rivals.",
+    "example_zh": "這兩位對手之間沒有敵意。"
+   }
+  ]
+ },
+ {
+  "id": "bio",
+  "type": "root",
+  "group": "人類",
+  "name": "Bio-",
+  "meaning": "生命",
+  "words": [
+   {
+    "word": "biology",
+    "meaning": "生物學",
+    "syn": [
+     "life science"
+    ],
+    "der": [
+     "biologist",
+     "biological"
+    ],
+    "ant": [],
+    "example": "She is studying biology at university.",
+    "example_zh": "她在大學主修生物學。"
+   },
+   {
+    "word": "biography",
+    "meaning": "傳記",
+    "syn": [
+     "life story"
+    ],
+    "der": [
+     "biographer",
+     "biographical"
+    ],
+    "ant": [
+     "autobiography"
+    ],
+    "example": "He wrote a biography of Einstein.",
+    "example_zh": "他寫了一本愛因斯坦的傳記。"
+   },
+   {
+    "word": "biodiversity",
+    "meaning": "生物多樣性",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Rainforests have great biodiversity.",
+    "example_zh": "雨林有豐富的生物多樣性。"
+   },
+   {
+    "word": "biodegradable",
+    "meaning": "可生物分解的",
+    "syn": [],
+    "der": [
+     "biodegrade"
+    ],
+    "ant": [
+     "non-biodegradable"
+    ],
+    "example": "These bags are biodegradable.",
+    "example_zh": "這些袋子可以生物分解。"
+   },
+   {
+    "word": "symbiosis",
+    "meaning": "共生",
+    "syn": [
+     "mutual benefit"
+    ],
+    "der": [
+     "symbiotic"
+    ],
+    "ant": [],
+    "example": "The fish and the coral live in symbiosis.",
+    "example_zh": "魚和珊瑚共生。"
+   },
+   {
+    "word": "biosphere",
+    "meaning": "生物圈",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The biosphere includes all living things on Earth.",
+    "example_zh": "生物圈包含地球上所有的生物。"
+   }
+  ]
+ },
+ {
+  "id": "cord",
+  "type": "root",
+  "group": "人類",
+  "name": "Cord-",
+  "meaning": "心",
+  "words": [
+   {
+    "word": "cordial",
+    "meaning": "熱忱的；誠摯的",
+    "syn": [
+     "warm",
+     "friendly"
+    ],
+    "der": [
+     "cordially"
+    ],
+    "ant": [
+     "hostile"
+    ],
+    "example": "She gave us a cordial welcome.",
+    "example_zh": "她熱情地歡迎我們。"
+   },
+   {
+    "word": "accord",
+    "meaning": "一致；協議",
+    "syn": [
+     "agreement",
+     "harmony"
+    ],
+    "der": [],
+    "ant": [
+     "discord"
+    ],
+    "example": "The two countries signed an accord.",
+    "example_zh": "兩國簽署了一項協議。"
+   },
+   {
+    "word": "record",
+    "meaning": "記錄；紀錄",
+    "syn": [
+     "document",
+     "register"
+    ],
+    "der": [
+     "recorder"
+    ],
+    "ant": [
+     "erase"
+    ],
+    "example": "Please record the results in the table.",
+    "example_zh": "請把結果記錄在表格裡。"
+   },
+   {
+    "word": "discord",
+    "meaning": "不和；不協調",
+    "syn": [
+     "conflict",
+     "disagreement"
+    ],
+    "der": [],
+    "ant": [
+     "accord",
+     "harmony"
+    ],
+    "example": "Discord grew within the team.",
+    "example_zh": "團隊內部的不和逐漸加深。"
+   },
+   {
+    "word": "concord",
+    "meaning": "和諧；協定",
+    "syn": [
+     "harmony",
+     "peace"
+    ],
+    "der": [],
+    "ant": [
+     "discord"
+    ],
+    "example": "The neighbors lived in concord.",
+    "example_zh": "鄰居們和睦相處。"
+   }
+  ]
+ },
+ {
+  "id": "corp",
+  "type": "root",
+  "group": "人類",
+  "name": "Corp-",
+  "meaning": "身體",
+  "words": [
+   {
+    "word": "corpse",
+    "meaning": "屍體",
+    "syn": [
+     "body"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The detective examined the corpse.",
+    "example_zh": "偵探檢查了屍體。"
+   },
+   {
+    "word": "corporation",
+    "meaning": "公司；法人",
+    "syn": [
+     "company",
+     "firm"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He works for a large corporation.",
+    "example_zh": "他在一家大公司工作。"
+   },
+   {
+    "word": "corporate",
+    "meaning": "企業的；公司的",
+    "syn": [
+     "business",
+     "company"
+    ],
+    "der": [],
+    "ant": [
+     "individual"
+    ],
+    "example": "The corporate office is in Taipei.",
+    "example_zh": "公司總部設在台北。"
+   },
+   {
+    "word": "corps",
+    "meaning": "軍團；團體",
+    "syn": [
+     "unit",
+     "body"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The Peace Corps sends volunteers abroad.",
+    "example_zh": "和平工作團派志工到海外。"
+   },
+   {
+    "word": "incorporate",
+    "meaning": "納入；合併",
+    "syn": [
+     "include",
+     "combine"
+    ],
+    "der": [],
+    "ant": [
+     "exclude"
+    ],
+    "example": "The design incorporates traditional elements.",
+    "example_zh": "這個設計融入了傳統元素。"
+   }
+  ]
+ },
+ {
+  "id": "demo",
+  "type": "root",
+  "group": "人類",
+  "name": "Demo-",
+  "meaning": "人民",
+  "words": [
+   {
+    "word": "democracy",
+    "meaning": "民主",
+    "syn": [
+     "self-government"
+    ],
+    "der": [
+     "democratic"
+    ],
+    "ant": [
+     "dictatorship"
+    ],
+    "example": "Democracy depends on free elections.",
+    "example_zh": "民主制度有賴自由選舉。"
+   },
+   {
+    "word": "demographic",
+    "meaning": "人口統計的；人口統計資料",
+    "syn": [],
+    "der": [
+     "demography"
+    ],
+    "ant": [],
+    "example": "The demographic changes are rapid.",
+    "example_zh": "人口結構變化很快。"
+   },
+   {
+    "word": "epidemic",
+    "meaning": "流行病；流行的",
+    "syn": [
+     "outbreak"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "An epidemic can spread quickly through a city.",
+    "example_zh": "流行病可能在城市中迅速傳播。"
+   },
+   {
+    "word": "demagogue",
+    "meaning": "煽動家",
+    "syn": [
+     "agitator",
+     "rabble-rouser"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The demagogue stirred up fear among voters.",
+    "example_zh": "這位煽動家在選民之間製造恐慌。"
+   }
+  ]
+ },
+ {
+  "id": "ego",
+  "type": "root",
+  "group": "人類",
+  "name": "Ego-",
+  "meaning": "自我",
+  "words": [
+   {
+    "word": "ego",
+    "meaning": "自我；自尊心",
+    "syn": [
+     "self-image"
+    ],
+    "der": [
+     "egoism"
+    ],
+    "ant": [
+     "humility"
+    ],
+    "example": "Success inflated his ego.",
+    "example_zh": "成功讓他的自我膨脹。"
+   },
+   {
+    "word": "egotism",
+    "meaning": "自負；自我中心",
+    "syn": [
+     "vanity",
+     "conceit"
+    ],
+    "der": [],
+    "ant": [
+     "modesty"
+    ],
+    "example": "His egotism annoyed his coworkers.",
+    "example_zh": "他的自負讓同事們很反感。"
+   },
+   {
+    "word": "egocentric",
+    "meaning": "自我中心的",
+    "syn": [
+     "selfish",
+     "self-centered"
+    ],
+    "der": [],
+    "ant": [
+     "altruistic"
+    ],
+    "example": "The child was egocentric and refused to share.",
+    "example_zh": "這個孩子以自我為中心，不肯分享。"
+   }
+  ]
+ },
+ {
+  "id": "manu",
+  "type": "root",
+  "group": "人類",
+  "name": "Manu-",
+  "meaning": "手",
+  "words": [
+   {
+    "word": "manual",
+    "meaning": "手動的；手冊",
+    "syn": [
+     "handmade",
+     "handbook"
+    ],
+    "der": [
+     "manually"
+    ],
+    "ant": [
+     "automatic"
+    ],
+    "example": "Read the manual before use.",
+    "example_zh": "使用前請先閱讀手冊。"
+   },
+   {
+    "word": "manufacture",
+    "meaning": "製造",
+    "syn": [
+     "produce",
+     "make"
+    ],
+    "der": [
+     "manufacturer"
+    ],
+    "ant": [],
+    "example": "The company manufactures bicycles.",
+    "example_zh": "這家公司生產腳踏車。"
+   },
+   {
+    "word": "manuscript",
+    "meaning": "手稿",
+    "syn": [
+     "draft",
+     "text"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The author sent the manuscript to the publisher.",
+    "example_zh": "作者把手稿寄給出版社。"
+   },
+   {
+    "word": "manipulate",
+    "meaning": "操縱；巧妙處理",
+    "syn": [
+     "handle",
+     "control"
+    ],
+    "der": [
+     "manipulation"
+    ],
+    "ant": [],
+    "example": "He tried to manipulate the results.",
+    "example_zh": "他試圖操縱結果。"
+   },
+   {
+    "word": "manicure",
+    "meaning": "修指甲",
+    "syn": [
+     "nail care"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She got a manicure before the wedding.",
+    "example_zh": "她在婚禮前去修了指甲。"
+   }
+  ]
+ },
+ {
+  "id": "ment-root",
+  "type": "root",
+  "group": "人類",
+  "name": "Ment-",
+  "meaning": "心智",
+  "words": [
+   {
+    "word": "mental",
+    "meaning": "心理的；精神的",
+    "syn": [
+     "psychological",
+     "intellectual"
+    ],
+    "der": [],
+    "ant": [
+     "physical"
+    ],
+    "example": "Exercise is good for mental health.",
+    "example_zh": "運動對心理健康有益。"
+   },
+   {
+    "word": "mentality",
+    "meaning": "心態；思維方式",
+    "syn": [
+     "mindset",
+     "attitude"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "He has a winner's mentality.",
+    "example_zh": "他有贏家的心態。"
+   },
+   {
+    "word": "mention",
+    "meaning": "提到",
+    "syn": [
+     "refer to",
+     "state"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "She did not mention the price.",
+    "example_zh": "她沒有提到價格。"
+   },
+   {
+    "word": "mentor",
+    "meaning": "導師",
+    "syn": [
+     "advisor",
+     "coach"
+    ],
+    "der": [
+     "mentorship"
+    ],
+    "ant": [],
+    "example": "My mentor gave me useful advice.",
+    "example_zh": "我的導師給了我有用的建議。"
+   },
+   {
+    "word": "comment",
+    "meaning": "評論",
+    "syn": [
+     "remark",
+     "opinion"
+    ],
+    "der": [
+     "commentary"
+    ],
+    "ant": [],
+    "example": "He left a comment under the post.",
+    "example_zh": "他在貼文下留言。"
+   }
+  ]
+ }
+]

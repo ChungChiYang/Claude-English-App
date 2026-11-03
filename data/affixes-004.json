@@ -1,0 +1,624 @@
+[
+ {
+  "id": "mid-pos",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Mid-",
+  "meaning": "在中間",
+  "words": [
+   {
+    "word": "midland",
+    "meaning": "內陸地區；中部",
+    "syn": [
+     "interior"
+    ],
+    "der": [],
+    "ant": [
+     "coast"
+    ],
+    "example": "The midland counties are mostly farmland.",
+    "example_zh": "中部各郡大多是農地。"
+   },
+   {
+    "word": "middle",
+    "meaning": "中間的；中間",
+    "syn": [
+     "central",
+     "center"
+    ],
+    "der": [
+     "middleman"
+    ],
+    "ant": [],
+    "example": "She sat in the middle of the row.",
+    "example_zh": "她坐在這一排的正中間。"
+   },
+   {
+    "word": "midfield",
+    "meaning": "中場",
+    "syn": [],
+    "der": [
+     "midfielder"
+    ],
+    "ant": [],
+    "example": "He controls the midfield for the team.",
+    "example_zh": "他掌控著球隊的中場。"
+   },
+   {
+    "word": "midstream",
+    "meaning": "河流中央；半途",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The boat stopped in midstream.",
+    "example_zh": "船在河中央停了下來。"
+   },
+   {
+    "word": "midair",
+    "meaning": "半空中",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The bird caught the insect in midair.",
+    "example_zh": "鳥在半空中抓住了昆蟲。"
+   },
+   {
+    "word": "midway",
+    "meaning": "中途；半途地",
+    "syn": [
+     "halfway"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "We stopped midway between the two towns.",
+    "example_zh": "我們在兩個城鎮的中途停了下來。"
+   }
+  ]
+ },
+ {
+  "id": "centr",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Centr-",
+  "meaning": "中心",
+  "words": [
+   {
+    "word": "center",
+    "meaning": "中心",
+    "syn": [
+     "middle",
+     "core"
+    ],
+    "der": [
+     "central",
+     "centralize"
+    ],
+    "ant": [
+     "edge",
+     "periphery"
+    ],
+    "example": "The library is in the center of town.",
+    "example_zh": "圖書館位在鎮中心。"
+   },
+   {
+    "word": "central",
+    "meaning": "中心的；主要的",
+    "syn": [
+     "main",
+     "key"
+    ],
+    "der": [
+     "centrally"
+    ],
+    "ant": [
+     "peripheral",
+     "minor"
+    ],
+    "example": "The hotel has a central location.",
+    "example_zh": "這間飯店位置居中。"
+   },
+   {
+    "word": "concentrate",
+    "meaning": "集中；專心",
+    "syn": [
+     "focus"
+    ],
+    "der": [
+     "concentration"
+    ],
+    "ant": [
+     "scatter",
+     "distract"
+    ],
+    "example": "I can't concentrate with this noise.",
+    "example_zh": "有這種噪音我無法專心。"
+   },
+   {
+    "word": "eccentric",
+    "meaning": "古怪的；離心的",
+    "syn": [
+     "odd",
+     "unconventional"
+    ],
+    "der": [
+     "eccentricity"
+    ],
+    "ant": [
+     "conventional"
+    ],
+    "example": "The eccentric artist lived in a lighthouse.",
+    "example_zh": "這位古怪的藝術家住在燈塔裡。"
+   }
+  ]
+ },
+ {
+  "id": "under",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Under-",
+  "meaning": "在…下面；不足",
+  "words": [
+   {
+    "word": "understand",
+    "meaning": "理解",
+    "syn": [
+     "comprehend",
+     "grasp"
+    ],
+    "der": [
+     "understanding",
+     "understandable"
+    ],
+    "ant": [
+     "misunderstand"
+    ],
+    "example": "I understand your concern.",
+    "example_zh": "我理解你的顧慮。"
+   },
+   {
+    "word": "underground",
+    "meaning": "地下的",
+    "syn": [
+     "subterranean"
+    ],
+    "der": [],
+    "ant": [
+     "overground"
+    ],
+    "example": "The underground tunnel connects the two stations.",
+    "example_zh": "這條地下隧道連接兩個車站。"
+   },
+   {
+    "word": "underestimate",
+    "meaning": "低估",
+    "syn": [
+     "undervalue"
+    ],
+    "der": [
+     "underestimation"
+    ],
+    "ant": [
+     "overestimate"
+    ],
+    "example": "Never underestimate the power of practice.",
+    "example_zh": "千萬別低估練習的力量。"
+   },
+   {
+    "word": "underline",
+    "meaning": "在…下畫線；強調",
+    "syn": [
+     "emphasize",
+     "stress"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Underline the key words in the text.",
+    "example_zh": "把文中的關鍵字畫線標出來。"
+   },
+   {
+    "word": "undergo",
+    "meaning": "經歷；接受",
+    "syn": [
+     "experience",
+     "endure"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The bridge will undergo repairs next month.",
+    "example_zh": "這座橋下個月將進行維修。"
+   },
+   {
+    "word": "undercover",
+    "meaning": "祕密進行的；臥底的",
+    "syn": [
+     "secret",
+     "covert"
+    ],
+    "der": [],
+    "ant": [
+     "open"
+    ],
+    "example": "An undercover officer caught the thief.",
+    "example_zh": "一名臥底警察抓到了小偷。"
+   }
+  ]
+ },
+ {
+  "id": "over",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Over-",
+  "meaning": "在…上；過度",
+  "words": [
+   {
+    "word": "overcome",
+    "meaning": "克服",
+    "syn": [
+     "conquer",
+     "defeat"
+    ],
+    "der": [],
+    "ant": [
+     "surrender"
+    ],
+    "example": "She overcame her fear of speaking.",
+    "example_zh": "她克服了對演講的恐懼。"
+   },
+   {
+    "word": "overlook",
+    "meaning": "忽略；俯瞰",
+    "syn": [
+     "neglect",
+     "ignore"
+    ],
+    "der": [],
+    "ant": [
+     "notice"
+    ],
+    "example": "The hotel overlooks the harbor.",
+    "example_zh": "這間飯店俯瞰港口。"
+   },
+   {
+    "word": "overseas",
+    "meaning": "海外的；在海外",
+    "syn": [
+     "abroad"
+    ],
+    "der": [],
+    "ant": [
+     "domestic"
+    ],
+    "example": "He works for an overseas company.",
+    "example_zh": "他在一家海外公司工作。"
+   },
+   {
+    "word": "overnight",
+    "meaning": "隔夜的；一夜之間",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "We took an overnight train to the south.",
+    "example_zh": "我們搭夜車前往南部。"
+   },
+   {
+    "word": "overestimate",
+    "meaning": "高估",
+    "syn": [
+     "overrate"
+    ],
+    "der": [],
+    "ant": [
+     "underestimate"
+    ],
+    "example": "They overestimated the demand for the product.",
+    "example_zh": "他們高估了這項產品的需求。"
+   },
+   {
+    "word": "overflow",
+    "meaning": "溢出",
+    "syn": [
+     "spill over",
+     "flood"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The river overflowed after the heavy rain.",
+    "example_zh": "大雨後河水氾濫。"
+   }
+  ]
+ },
+ {
+  "id": "a-loc",
+  "type": "prefix",
+  "group": "位置",
+  "name": "A-",
+  "meaning": "在…上、處於…狀態",
+  "words": [
+   {
+    "word": "aboard",
+    "meaning": "在船（車、機）上",
+    "syn": [
+     "on board"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Welcome aboard the express train.",
+    "example_zh": "歡迎搭乘本次快車。"
+   },
+   {
+    "word": "abroad",
+    "meaning": "在國外",
+    "syn": [
+     "overseas"
+    ],
+    "der": [],
+    "ant": [
+     "at home"
+    ],
+    "example": "She studied abroad for two years.",
+    "example_zh": "她出國留學兩年。"
+   },
+   {
+    "word": "ahead",
+    "meaning": "在前面；提前",
+    "syn": [
+     "forward"
+    ],
+    "der": [],
+    "ant": [
+     "behind"
+    ],
+    "example": "Go straight ahead for two blocks.",
+    "example_zh": "直走兩個街區。"
+   },
+   {
+    "word": "asleep",
+    "meaning": "睡著的",
+    "syn": [
+     "sleeping"
+    ],
+    "der": [],
+    "ant": [
+     "awake"
+    ],
+    "example": "The baby fell asleep in the car.",
+    "example_zh": "嬰兒在車上睡著了。"
+   },
+   {
+    "word": "alive",
+    "meaning": "活著的",
+    "syn": [
+     "living"
+    ],
+    "der": [],
+    "ant": [
+     "dead"
+    ],
+    "example": "The old tree is still alive after centuries.",
+    "example_zh": "這棵老樹歷經數百年依然活著。"
+   },
+   {
+    "word": "aside",
+    "meaning": "在旁邊；撇開",
+    "syn": [
+     "apart"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "Please put your phone aside.",
+    "example_zh": "請把手機放一邊。"
+   }
+  ]
+ },
+ {
+  "id": "super",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Super-",
+  "meaning": "超越；在…之上",
+  "words": [
+   {
+    "word": "supermarket",
+    "meaning": "超級市場",
+    "syn": [
+     "grocery store"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "I bought vegetables at the supermarket.",
+    "example_zh": "我在超市買了蔬菜。"
+   },
+   {
+    "word": "superior",
+    "meaning": "較優越的",
+    "syn": [
+     "better",
+     "higher"
+    ],
+    "der": [
+     "superiority"
+    ],
+    "ant": [
+     "inferior"
+    ],
+    "example": "This brand is superior in quality.",
+    "example_zh": "這個品牌的品質較為優越。"
+   },
+   {
+    "word": "supervise",
+    "meaning": "監督",
+    "syn": [
+     "oversee",
+     "manage"
+    ],
+    "der": [
+     "supervisor",
+     "supervision"
+    ],
+    "ant": [],
+    "example": "She supervises a team of ten.",
+    "example_zh": "她管理一個十人的團隊。"
+   },
+   {
+    "word": "supernatural",
+    "meaning": "超自然的",
+    "syn": [
+     "paranormal"
+    ],
+    "der": [],
+    "ant": [
+     "natural"
+    ],
+    "example": "The film is full of supernatural events.",
+    "example_zh": "這部電影充滿超自然事件。"
+   },
+   {
+    "word": "superstar",
+    "meaning": "超級巨星",
+    "syn": [
+     "celebrity"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The singer became a superstar overnight.",
+    "example_zh": "這位歌手一夜之間成為超級巨星。"
+   },
+   {
+    "word": "superpower",
+    "meaning": "超級強國；超能力",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The two superpowers signed a trade agreement.",
+    "example_zh": "兩個超級強國簽署了貿易協議。"
+   }
+  ]
+ },
+ {
+  "id": "sub",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Sub-",
+  "meaning": "在…下；次",
+  "words": [
+   {
+    "word": "subway",
+    "meaning": "地鐵；地下道",
+    "syn": [
+     "metro",
+     "underground"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "I take the subway to work.",
+    "example_zh": "我搭地鐵上班。"
+   },
+   {
+    "word": "submarine",
+    "meaning": "潛水艇",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "The submarine dived to the ocean floor.",
+    "example_zh": "潛水艇下潛到海底。"
+   },
+   {
+    "word": "subtitle",
+    "meaning": "字幕；副標題",
+    "syn": [
+     "caption"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The movie has English subtitles.",
+    "example_zh": "這部電影有英文字幕。"
+   },
+   {
+    "word": "subtract",
+    "meaning": "減去",
+    "syn": [
+     "deduct"
+    ],
+    "der": [
+     "subtraction"
+    ],
+    "ant": [
+     "add"
+    ],
+    "example": "Subtract five from ten.",
+    "example_zh": "十減五。"
+   },
+   {
+    "word": "submit",
+    "meaning": "提交；屈服",
+    "syn": [
+     "hand in",
+     "present"
+    ],
+    "der": [
+     "submission"
+    ],
+    "ant": [
+     "withdraw"
+    ],
+    "example": "Please submit your report by Friday.",
+    "example_zh": "請在週五前提交報告。"
+   },
+   {
+    "word": "substitute",
+    "meaning": "代替；替代品",
+    "syn": [
+     "replace",
+     "alternative"
+    ],
+    "der": [
+     "substitution"
+    ],
+    "ant": [],
+    "example": "You can substitute honey for sugar.",
+    "example_zh": "你可以用蜂蜜代替糖。"
+   }
+  ]
+ },
+ {
+  "id": "exo",
+  "type": "prefix",
+  "group": "位置",
+  "name": "Exo-",
+  "meaning": "外部",
+  "words": [
+   {
+    "word": "exoskeleton",
+    "meaning": "外骨骼",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Insects have a hard exoskeleton.",
+    "example_zh": "昆蟲有堅硬的外骨骼。"
+   },
+   {
+    "word": "exotic",
+    "meaning": "異國情調的",
+    "syn": [
+     "foreign",
+     "unusual"
+    ],
+    "der": [],
+    "ant": [
+     "native"
+    ],
+    "example": "The market sells exotic fruits.",
+    "example_zh": "這個市場賣異國水果。"
+   },
+   {
+    "word": "exoplanet",
+    "meaning": "系外行星",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "Astronomers have discovered a new exoplanet.",
+    "example_zh": "天文學家發現了一顆新的系外行星。"
+   }
+  ]
+ }
+]

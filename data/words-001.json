@@ -1,6 +1,6 @@
 [
  {  "id": "w001",  "word": "reluctant",  "pos": "adj.",  "meaning": "不情願的",  "example": "She was reluctant to speak in public.",  "example_zh": "她不願意在公開場合發言。",  "topic": "生活",
- "ipa": "", "level": "", "source": "", "tags": [], "note": "be reluctant to + 動詞：不情願做某事"},
+ "ipa": "/rɪˈlʌktənt/", "level": "", "source": "", "tags": [], "note": "be reluctant to + 動詞：不情願做某事"},
  {  "id": "w002",  "word": "abandon",  "pos": "v.",  "meaning": "放棄、拋棄",  "example": "They had to abandon the car.",  "example_zh": "他們不得不棄車。",  "topic": "生活",
   "ipa": "", "level": "", "source": "", "tags": [], "note": ""},
  {  "id": "w003",  "word": "accurate",  "pos": "adj.",  "meaning": "精確的",  "example": "The report is accurate.",  "example_zh": "這份報告很精確。",  "topic": "商業" ,

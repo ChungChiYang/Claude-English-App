@@ -30,9 +30,11 @@ nav{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px s
 #toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .2s}#toast.on{opacity:1}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 .gh{font-size:13px;font-weight:700;color:var(--acc);padding:12px 0 4px}
+#tip{position:fixed;left:0;right:0;bottom:calc(68px + env(safe-area-inset-bottom));padding:0 16px;display:none;z-index:6}#tip.on{display:block}.tp{max-width:520px;margin:0 auto;box-shadow:0 6px 20px rgba(0,0,0,.28)}
 </style></head><body>
 <main id="app"><p class="m">載入中…</p></main>
 <nav aria-label="主選單"><div><a href="#/" data-n="">學習</a><a href="#/list" data-n="list">單字列表</a><a href="#/affix" data-n="affix">詞綴</a><a href="#/add" data-n="add">新增</a></div></nav>
+<div id="tip" role="dialog" aria-label="單字翻譯"></div>
 <div id="toast" role="status"></div>
 <script>
 const $=s=>document.querySelector(s),app=$('#app'),GOAL=20;
@@ -43,7 +45,7 @@ const AA=()=>{const m=A.map(a=>({...a,words:[...a.words]}));ST.get('ua',[]).forE
 const words=()=>W.concat(ST.get('uw',[])),shuf=a=>[...a].sort(()=>Math.random()-.5);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const I=d=>`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
-const ic={spk:I('<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>'),star:I('<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'),tr:I('<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-7 8M14 20l4-9 4 9M15.5 17h5"/>'),back:I('<path d="m15 5-7 7 7 7"/>'),chev:I('<path d="m9 5 7 7-7 7"/>')};
+const ic={spk:I('<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>'),star:I('<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'),tr:I('<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-7 8M14 20l4-9 4 9M15.5 17h5"/>'),back:I('<path d="m15 5-7 7 7 7"/>'),chev:I('<path d="m9 5 7 7-7 7"/>'),x:I('<path d="M6 6l12 12M18 6 6 18"/>')};
 const show=h=>{app.innerHTML=h},toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800)};
 const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.9;speechSynthesis.speak(u)}catch{}};
 const today=()=>{const l=ST.get('day',{});return l.d===new Date().toDateString()?l.n:0},bump=()=>{ST.set('day',{d:new Date().toDateString(),n:today()+1})};
@@ -83,7 +85,7 @@ const mk=()=>all?shuf(ab.flatMap(x=>one(x))).slice(0,20):shuf(one(a)).slice(0,8)
 function qv(){const q=Q.l[Q.i];if(!q)return show(`${hd('測驗結果')}<div class="c ctr"><div class="m">你的成績</div><div class="big">${Q.s} / ${Q.l.length}</div></div><div class="r"><button class="b p" data-a="again">再測一次</button><button class="b" data-a="back">返回</button></div>`);
 const d=q.pick!=null;show(`${hd(`測驗 · 第 ${Q.i+1}${Q.inf?'':' / '+Q.l.length} 題`,q.id?fb(q.id):undefined)}<div class='m' style='text-align:center'>答對 ${Q.s} / 已答 ${Q.k}</div><div class="c ctr"><div class="m">${esc(q.s)}</div><div class="big">${esc(q.p)}</div>${q.say?sp(q.say):''}</div>`+q.o.map((o,i)=>{const c=!d?'':o===q.a?'ok':i===q.pick?'bad':'';return`<button class="opt ${c}" data-a="ans" data-v="${i}" ${d?'disabled':''}><span>${esc(o)}</span>${c==='ok'?'<small>正確答案</small>':c==='bad'?'<small>你的答案</small>':''}</button>`}).join('')+(d&&q.n?`<div class="c m">例句：${esc(q.n)}</div>`:'')+`<div class="r">${Q.i>0?'<button class="b" data-a="qp">上一題</button>':''}<button class="b p" data-a="qn">${!d?'跳過':Q.inf||Q.i+1<Q.l.length?'下一題':'看結果'}</button></div>`)}
 
-const wc=(a,w)=>`<div class="c f"><div class="hd"><div><b style="font-size:22px">${esc(w.word)}</b><div style="color:var(--acc)">${esc(w.meaning)}</div></div><span style="display:flex">${sp(w.word)}${fb('aw:'+a.id+':'+w.word)}</span></div>${[['同義字',w.syn],['衍生字',w.der],['反義字',w.ant]].filter(g=>g[1]?.length).map(g=>`<div class="grp"><span class="m">${g[0]}</span>${g[1].map(x=>`<span class="t">${esc(x)}</span>`).join('')}</div>`).join('')}${exb(w.example,w.example_zh)}</div>`;
+const wc=(a,w)=>`<div class="c f"><div class="hd"><div><b style="font-size:22px">${esc(w.word)}</b><div style="color:var(--acc)">${esc(w.meaning)}</div></div><span style="display:flex">${sp(w.word)}${fb('aw:'+a.id+':'+w.word)}</span></div>${[['同義字',w.syn],['衍生字',w.der],['反義字',w.ant]].filter(g=>g[1]?.length).map(g=>`<div class="grp"><span class="m">${g[0]}</span>${g[1].map(x=>`<button class="t" data-a="gl" data-w="${esc(x)}">${esc(x)}</button>`).join('')}</div>`).join('')}${exb(w.example,w.example_zh)}</div>`;
 const cat=a=>`<a class="cat" href="#/affix/${esc(a.id)}"><span class="tile">${esc(a.name)}</span><span style="flex:1;min-width:0"><b>${esc(a.meaning)}</b><span class="m" style="display:block">${a.words.slice(0,3).map(w=>esc(w.word)).join(' · ')}</span></span><span class="m">${a.words.length} 字</span>${ic.chev}</a>`;
 const grp=L=>{const g={};L.forEach(x=>(g[x.group||'其他']=g[x.group||'其他']||[]).push(x));return Object.entries(g).map(([k,v])=>`<div class="gh">${esc(k)} · ${v.length}</div>`+v.map(cat).join('')).join('')};
 function affix(id){const ab=AA();if(id){const a=ab.find(x=>x.id===id);if(!a)return affix();return show(`${hd(a.name+' 詞綴',fb('af:'+a.id))}<div class="c ctr"><span class="t" style="background:var(--acc);color:var(--onacc);font-size:20px">${esc(a.name)}</span><div class="big" style="font-size:24px">${esc(a.meaning)}</div></div>`+a.words.map(w=>wc(a,w)).join('')+`<a class="b p" href="#/aq/${esc(a.id)}">測驗詞綴 ${esc(a.name)}</a>`)}
@@ -109,7 +111,15 @@ const aid=n=>n.toLowerCase().replace(/[^a-z0-9]/g,'')||'a'+Date.now();
 const lst=s=>(s||'').split(/[,、，]/).map(x=>x.trim()).filter(Boolean);
 const parseAW=t=>(t||'').split('\n').map(l=>l.split(/\t|\|/).map(x=>x.trim())).filter(c=>c[0]&&c[1]).map(c=>({word:c[0],meaning:c[1],syn:lst(c[2]),der:lst(c[3]),ant:lst(c[4]),example:c[5]||'',example_zh:c[6]||''}));
 function addA(arr){const u=ST.get('ua',[]);arr.forEach(a=>{const t=u.find(x=>x.id===a.id);t?t.words.push(...a.words):u.push(a)});ST.set('ua',u)}
-const ACT={tp:d=>{tp=d.v;list()},srt:()=>{srt=({topic:'abc',abc:'new',new:'topic'})[srt];list()},edw:d=>{ed={k:'w',id:d.id};atab='e';add()},eda:d=>{ed={k:'a',id:d.id};atab='e';add()},edaw:d=>{ed={k:'aw',id:d.id,i:+d.i};atab='e';add()},cancel:()=>{ed=null;atab='m';add()},
+let tcur='';
+const own=w=>{const k=w.toLowerCase(),a=words().find(x=>x.word.toLowerCase()===k);if(a)return a.meaning;for(const f of AA())for(const x of f.words)if(x.word.toLowerCase()===k)return x.meaning;return null};
+const getJ=async u=>{const c=new AbortController(),t=setTimeout(()=>c.abort(),7000);try{return await(await fetch(u,{signal:c.signal})).json()}finally{clearTimeout(t)}};
+async function gloss(w){const o=own(w);if(o)return{m:o,s:'來自你的題庫'};const c=ST.get('gl',{});if(c[w])return{m:c[w],s:'線上翻譯（已儲存，可離線看）'};
+try{const d=await getJ('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-TW&dt=t&dt=bd&q='+encodeURIComponent(w));const m=d[0].map(x=>x[0]).join('').trim(),alt=(d[1]||[]).map(e=>e[0]+' '+e[1].slice(0,3).join('、')).join('；'),r=alt||m;if(r&&m.toLowerCase()!==w.toLowerCase()){c[w]=r;ST.set('gl',c);return{m:r,s:'線上翻譯'}}}catch{}
+try{const d=await getJ('https://api.mymemory.translated.net/get?q='+encodeURIComponent(w)+'&langpair=en|zh-TW');const m=(d.responseData.translatedText||'').trim();if(m&&m.toLowerCase()!==w.toLowerCase()){c[w]=m;ST.set('gl',c);return{m,s:'線上翻譯'}}}catch{}
+return null}
+function tip(w){tcur=w;const el=$('#tip');el.innerHTML=`<div class="c tp"><div class="hd"><b style="font-size:20px">${esc(w)}</b><span style="display:flex">${sp(w)}<button class="b i" data-a="tc" aria-label="關閉">${ic.x}</button></span></div><div id="tm" class="m">查詢中…</div></div>`;el.classList.add('on');gloss(w).then(r=>{if(tcur!==w)return;$('#tm').innerHTML=r?`<div style="font-size:18px;color:var(--ink)">${esc(r.m)}</div><div class="m">${r.s}</div>`:`查不到，可能沒有網路。<a href="https://translate.google.com/?sl=en&tl=zh-TW&op=translate&text=${encodeURIComponent(w)}" target="_blank" rel="noopener" style="color:var(--acc)">改用 Google 翻譯</a>`})}
+const ACT={gl:d=>tip(d.w),tc:()=>{$('#tip').classList.remove('on');tcur=''},tp:d=>{tp=d.v;list()},srt:()=>{srt=({topic:'abc',abc:'new',new:'topic'})[srt];list()},edw:d=>{ed={k:'w',id:d.id};atab='e';add()},eda:d=>{ed={k:'a',id:d.id};atab='e';add()},edaw:d=>{ed={k:'aw',id:d.id,i:+d.i};atab='e';add()},cancel:()=>{ed=null;atab='m';add()},
 delw:d=>{if(!confirm('刪除這個單字？'))return;ST.set('uw',ST.get('uw',[]).filter(x=>x.id!==d.id));fav.delete(d.id);ST.set('fav',[...fav]);add();toast('已刪除')},
 dela:d=>{if(!confirm('刪除這個詞綴，以及它底下我新增的所有單字？'))return;ST.set('ua',ST.get('ua',[]).filter(x=>x.id!==d.id));add();toast('已刪除')},
 delaw:d=>{if(!confirm('刪除這個單字？'))return;const ua=ST.get('ua',[]),a=ua.find(x=>x.id===d.id);a.words.splice(+d.i,1);ST.set('ua',ua.filter(x=>x.words.length));add();toast('已刪除')},
@@ -127,7 +137,7 @@ document.addEventListener('submit',e=>{const f=e.target.id;if(!['fm','fa','fe'].
 if(f==='fe'){const ua=ST.get('ua',[]),u=ST.get('uw',[]);if(ed.k==='w'){Object.assign(u.find(y=>y.id===ed.id),{...o,tags:lst(o.tags)});ST.set('uw',u)}else if(ed.k==='aw'){Object.assign(ua.find(y=>y.id===ed.id).words[ed.i],{word:o.word,meaning:o.meaning,syn:lst(o.syn),der:lst(o.der),ant:lst(o.ant),example:o.example,example_zh:o.example_zh});ST.set('ua',ua)}else{Object.assign(ua.find(y=>y.id===ed.id),o);ST.set('ua',ua)}ed=null;atab='m';add();return toast('已更新')}
 if(f==='fm'){o.tags=lst(o.tags);addW([o])}else{const r=parseAW(o.lines);if(!r.length)return toast('請至少填一個單字和中文');addA([{id:aid(o.name),type:o.type,name:o.name,meaning:o.meaning,group:o.group,words:r}])}e.target.reset();toast('已儲存')});
 
-function route(){const[r,a]=(location.hash.slice(2)||'').split('/');({'':home,list,card,quiz,affix,aq,add}[r]||home)(a);document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('on',x.dataset.n===({card:'',quiz:'',aq:'affix'}[r]??r??'')));scrollTo(0,0)}
+function route(){$('#tip').classList.remove('on');const[r,a]=(location.hash.slice(2)||'').split('/');({'':home,list,card,quiz,affix,aq,add}[r]||home)(a);document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('on',x.dataset.n===({card:'',quiz:'',aq:'affix'}[r]??r??'')));scrollTo(0,0)}
 async function boot(){try{const g=async fs=>(await Promise.all(fs.map(f=>fetch('data/'+f).then(r=>r.json())))).flat();const ix=await(await fetch('data/index.json')).json();[W,A]=await Promise.all([g(ix.words),g(ix.affixes)])}catch{show('<div class="c"><b>無法載入題庫</b><p class="m">請透過 GitHub Pages 或本機伺服器開啟（直接點開檔案無法讀取 data 資料夾），並確認 data/index.json 存在。</p></div>');return}
 addEventListener('hashchange',route);route()}
 boot();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});

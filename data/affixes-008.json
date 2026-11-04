@@ -1,0 +1,1735 @@
+[
+ {
+  "id": "man-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-man",
+  "meaning": "人（…的人）",
+  "words": [
+   {
+    "word": "chairman",
+    "meaning": "主席",
+    "syn": [
+     "chair",
+     "chairperson"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The chairman opened the meeting.",
+    "example_zh": "主席宣布會議開始。"
+   },
+   {
+    "word": "spokesman",
+    "meaning": "發言人",
+    "syn": [
+     "spokesperson"
+    ],
+    "der": [],
+    "ant": [],
+    "example": "The spokesman denied the rumor.",
+    "example_zh": "發言人否認了這則傳聞。"
+   },
+   {
+    "word": "craftsman",
+    "meaning": "工匠",
+    "syn": [
+     "artisan"
+    ],
+    "der": [
+     "craftsmanship"
+    ],
+    "ant": [],
+    "example": "The craftsman carved the wood by hand.",
+    "example_zh": "工匠用手雕刻木頭。"
+   },
+   {
+    "word": "gentleman",
+    "meaning": "紳士",
+    "syn": [],
+    "der": [],
+    "ant": [],
+    "example": "He is a true gentleman.",
+    "example_zh": "他是一位真正的紳士。"
+   },
+   {
+    "word": "salesman",
+    "meaning": "業務員",
+    "syn": [
+     "seller"
+    ],
+    "der": [
+     "salesmanship"
+    ],
+    "ant": [],
+    "example": "The salesman showed us a new model.",
+    "example_zh": "業務員向我們展示了一款新型號。"
+   },
+   {
+    "word": "fisherman",
+    "meaning": "漁夫",
+    "syn": [
+     "angler"
+    ],
+    "der": [
+     "fish",
+     "fishery"
+    ],
+    "ant": [],
+    "example": "The fisherman set out before dawn.",
+    "example_zh": "漁夫在黎明前出海。"
+   }
+  ]
+ },
+ {
+  "id": "or-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-or",
+  "meaning": "人（做…的人）",
+  "words": [
+   {
+    "word": "actor",
+    "meaning": "演員",
+    "syn": [
+     "performer"
+    ],
+    "der": [
+     "act",
+     "action"
+    ],
+    "ant": [],
+    "example": "The actor won an award.",
+    "example_zh": "這位演員獲獎了。"
+   },
+   {
+    "word": "director",
+    "meaning": "導演；主管",
+    "syn": [
+     "manager",
+     "filmmaker"
+    ],
+    "der": [
+     "direct",
+     "direction"
+    ],
+    "ant": [],
+    "example": "The director thanked the crew.",
+    "example_zh": "導演感謝劇組人員。"
+   },
+   {
+    "word": "visitor",
+    "meaning": "訪客",
+    "syn": [
+     "guest"
+    ],
+    "der": [
+     "visit"
+    ],
+    "ant": [
+     "host"
+    ],
+    "example": "The museum welcomed many visitors.",
+    "example_zh": "博物館迎來許多訪客。"
+   },
+   {
+    "word": "inventor",
+    "meaning": "發明家",
+    "syn": [
+     "creator"
+    ],
+    "der": [
+     "invent",
+     "invention"
+    ],
+    "ant": [],
+    "example": "The inventor patented his design.",
+    "example_zh": "發明家為他的設計申請了專利。"
+   },
+   {
+    "word": "instructor",
+    "meaning": "講師；教練",
+    "syn": [
+     "teacher",
+     "coach"
+    ],
+    "der": [
+     "instruct",
+     "instruction"
+    ],
+    "ant": [
+     "student"
+    ],
+    "example": "The instructor explained the rules.",
+    "example_zh": "講師說明了規則。"
+   },
+   {
+    "word": "editor",
+    "meaning": "編輯",
+    "syn": [
+     "reviser"
+    ],
+    "der": [
+     "edit",
+     "edition"
+    ],
+    "ant": [],
+    "example": "The editor corrected the article.",
+    "example_zh": "編輯修正了這篇文章。"
+   },
+   {
+    "word": "investor",
+    "meaning": "投資者",
+    "syn": [
+     "backer"
+    ],
+    "der": [
+     "invest",
+     "investment"
+    ],
+    "ant": [],
+    "example": "Investors were pleased with the profits.",
+    "example_zh": "投資人對獲利感到滿意。"
+   }
+  ]
+ },
+ {
+  "id": "ist",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-ist",
+  "meaning": "人（從事…的人）",
+  "words": [
+   {
+    "word": "artist",
+    "meaning": "藝術家",
+    "syn": [
+     "painter"
+    ],
+    "der": [
+     "art",
+     "artistic"
+    ],
+    "ant": [],
+    "example": "The artist held an exhibition.",
+    "example_zh": "這位藝術家辦了一場展覽。"
+   },
+   {
+    "word": "scientist",
+    "meaning": "科學家",
+    "syn": [
+     "researcher"
+    ],
+    "der": [
+     "science",
+     "scientific"
+    ],
+    "ant": [],
+    "example": "The scientist published her findings.",
+    "example_zh": "科學家發表了她的研究成果。"
+   },
+   {
+    "word": "tourist",
+    "meaning": "觀光客",
+    "syn": [
+     "traveler",
+     "sightseer"
+    ],
+    "der": [
+     "tour",
+     "tourism"
+    ],
+    "ant": [],
+    "example": "Tourists crowded the old street.",
+    "example_zh": "觀光客擠滿了老街。"
+   },
+   {
+    "word": "pianist",
+    "meaning": "鋼琴家",
+    "syn": [],
+    "der": [
+     "piano"
+    ],
+    "ant": [],
+    "example": "The pianist played a Chopin piece.",
+    "example_zh": "鋼琴家演奏了一首蕭邦的曲子。"
+   },
+   {
+    "word": "novelist",
+    "meaning": "小說家",
+    "syn": [
+     "author"
+    ],
+    "der": [
+     "novel"
+    ],
+    "ant": [],
+    "example": "The novelist is working on a new book.",
+    "example_zh": "這位小說家正在寫新書。"
+   },
+   {
+    "word": "dentist",
+    "meaning": "牙醫",
+    "syn": [],
+    "der": [
+     "dental"
+    ],
+    "ant": [],
+    "example": "I have an appointment with the dentist.",
+    "example_zh": "我和牙醫約好了時間。"
+   },
+   {
+    "word": "specialist",
+    "meaning": "專家",
+    "syn": [
+     "expert"
+    ],
+    "der": [
+     "special",
+     "specialize"
+    ],
+    "ant": [
+     "generalist"
+    ],
+    "example": "He is a specialist in tax law.",
+    "example_zh": "他是稅法專家。"
+   }
+  ]
+ },
+ {
+  "id": "er-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-er",
+  "meaning": "人（做…的人）",
+  "words": [
+   {
+    "word": "teacher",
+    "meaning": "老師",
+    "syn": [
+     "instructor",
+     "educator"
+    ],
+    "der": [
+     "teach",
+     "teaching"
+    ],
+    "ant": [
+     "student"
+    ],
+    "example": "Our teacher is very patient.",
+    "example_zh": "我們的老師很有耐心。"
+   },
+   {
+    "word": "worker",
+    "meaning": "工人；員工",
+    "syn": [
+     "laborer",
+     "employee"
+    ],
+    "der": [
+     "work"
+    ],
+    "ant": [
+     "employer"
+    ],
+    "example": "The workers went on strike.",
+    "example_zh": "工人們罷工了。"
+   },
+   {
+    "word": "singer",
+    "meaning": "歌手",
+    "syn": [
+     "vocalist"
+    ],
+    "der": [
+     "sing",
+     "song"
+    ],
+    "ant": [],
+    "example": "The singer released a new album.",
+    "example_zh": "這位歌手發行了新專輯。"
+   },
+   {
+    "word": "driver",
+    "meaning": "司機",
+    "syn": [
+     "chauffeur"
+    ],
+    "der": [
+     "drive"
+    ],
+    "ant": [],
+    "example": "The driver stopped at the red light.",
+    "example_zh": "司機在紅燈前停下。"
+   },
+   {
+    "word": "manager",
+    "meaning": "經理",
+    "syn": [
+     "supervisor",
+     "boss"
+    ],
+    "der": [
+     "manage",
+     "management"
+    ],
+    "ant": [
+     "employee"
+    ],
+    "example": "The manager approved the plan.",
+    "example_zh": "經理批准了這項計畫。"
+   },
+   {
+    "word": "writer",
+    "meaning": "作家",
+    "syn": [
+     "author",
+     "novelist"
+    ],
+    "der": [
+     "write",
+     "writing"
+    ],
+    "ant": [],
+    "example": "The writer signed copies of her book.",
+    "example_zh": "作家為她的書簽名。"
+   },
+   {
+    "word": "employer",
+    "meaning": "雇主",
+    "syn": [
+     "boss",
+     "company"
+    ],
+    "der": [
+     "employ",
+     "employment"
+    ],
+    "ant": [
+     "employee"
+    ],
+    "example": "The employer offered a bonus.",
+    "example_zh": "雇主提供了獎金。"
+   }
+  ]
+ },
+ {
+  "id": "ar-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-ar",
+  "meaning": "人",
+  "words": [
+   {
+    "word": "liar",
+    "meaning": "說謊者",
+    "syn": [
+     "fibber"
+    ],
+    "der": [
+     "lie"
+    ],
+    "ant": [],
+    "example": "Nobody trusts a liar.",
+    "example_zh": "沒有人信任說謊的人。"
+   },
+   {
+    "word": "beggar",
+    "meaning": "乞丐",
+    "syn": [
+     "panhandler"
+    ],
+    "der": [
+     "beg"
+    ],
+    "ant": [],
+    "example": "A beggar sat by the gate.",
+    "example_zh": "一名乞丐坐在門邊。"
+   },
+   {
+    "word": "scholar",
+    "meaning": "學者",
+    "syn": [
+     "academic",
+     "researcher"
+    ],
+    "der": [
+     "scholarship",
+     "scholarly"
+    ],
+    "ant": [],
+    "example": "The scholar studied ancient texts.",
+    "example_zh": "這位學者研究古代文獻。"
+   },
+   {
+    "word": "burglar",
+    "meaning": "竊賊",
+    "syn": [
+     "thief",
+     "robber"
+    ],
+    "der": [
+     "burglary"
+    ],
+    "ant": [],
+    "example": "A burglar broke into the shop.",
+    "example_zh": "竊賊闖入了商店。"
+   }
+  ]
+ },
+ {
+  "id": "ee-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-ee",
+  "meaning": "被…的人；做…的人",
+  "words": [
+   {
+    "word": "employee",
+    "meaning": "員工",
+    "syn": [
+     "worker",
+     "staff member"
+    ],
+    "der": [
+     "employ",
+     "employer"
+    ],
+    "ant": [
+     "employer"
+    ],
+    "example": "Each employee received a bonus.",
+    "example_zh": "每位員工都拿到了獎金。"
+   },
+   {
+    "word": "trainee",
+    "meaning": "受訓者；實習生",
+    "syn": [
+     "intern",
+     "apprentice"
+    ],
+    "der": [
+     "train",
+     "trainer"
+    ],
+    "ant": [
+     "trainer"
+    ],
+    "example": "The trainee learned quickly.",
+    "example_zh": "這位實習生學得很快。"
+   },
+   {
+    "word": "refugee",
+    "meaning": "難民",
+    "syn": [
+     "exile",
+     "fugitive"
+    ],
+    "der": [
+     "refuge"
+    ],
+    "ant": [],
+    "example": "The refugees found shelter in the town.",
+    "example_zh": "難民在小鎮找到了庇護。"
+   },
+   {
+    "word": "interviewee",
+    "meaning": "受訪者",
+    "syn": [
+     "candidate"
+    ],
+    "der": [
+     "interview",
+     "interviewer"
+    ],
+    "ant": [
+     "interviewer"
+    ],
+    "example": "The interviewee answered calmly.",
+    "example_zh": "受訪者冷靜地回答。"
+   },
+   {
+    "word": "nominee",
+    "meaning": "被提名人",
+    "syn": [
+     "candidate"
+    ],
+    "der": [
+     "nominate",
+     "nomination"
+    ],
+    "ant": [],
+    "example": "The nominee thanked her supporters.",
+    "example_zh": "被提名人感謝她的支持者。"
+   },
+   {
+    "word": "absentee",
+    "meaning": "缺席者",
+    "syn": [],
+    "der": [
+     "absent",
+     "absence"
+    ],
+    "ant": [
+     "attendee"
+    ],
+    "example": "The absentees will receive the notes by email.",
+    "example_zh": "缺席的人會收到寄來的筆記。"
+   }
+  ]
+ },
+ {
+  "id": "ic-suf",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-ic",
+  "meaning": "人；…的",
+  "words": [
+   {
+    "word": "critic",
+    "meaning": "評論家",
+    "syn": [
+     "reviewer",
+     "commentator"
+    ],
+    "der": [
+     "criticize",
+     "criticism"
+    ],
+    "ant": [
+     "admirer"
+    ],
+    "example": "The critic praised the film.",
+    "example_zh": "影評稱讚了這部電影。"
+   },
+   {
+    "word": "mechanic",
+    "meaning": "技工",
+    "syn": [
+     "repairman"
+    ],
+    "der": [
+     "mechanical",
+     "mechanics"
+    ],
+    "ant": [],
+    "example": "The mechanic fixed the engine.",
+    "example_zh": "技工修好了引擎。"
+   },
+   {
+    "word": "fanatic",
+    "meaning": "狂熱者",
+    "syn": [
+     "enthusiast",
+     "zealot"
+    ],
+    "der": [
+     "fanatical",
+     "fanaticism"
+    ],
+    "ant": [],
+    "example": "He is a football fanatic.",
+    "example_zh": "他是個足球狂熱者。"
+   },
+   {
+    "word": "comic",
+    "meaning": "喜劇演員；滑稽的",
+    "syn": [
+     "comedian"
+    ],
+    "der": [
+     "comedy"
+    ],
+    "ant": [
+     "tragic"
+    ],
+    "example": "The comic made the audience laugh.",
+    "example_zh": "這位喜劇演員逗得觀眾哈哈大笑。"
+   },
+   {
+    "word": "academic",
+    "meaning": "學者；學術的",
+    "syn": [
+     "scholar",
+     "scholarly"
+    ],
+    "der": [
+     "academy"
+    ],
+    "ant": [
+     "practical"
+    ],
+    "example": "She chose an academic career.",
+    "example_zh": "她選擇了學術生涯。"
+   },
+   {
+    "word": "psychotic",
+    "meaning": "精神病的；精神病患",
+    "syn": [],
+    "der": [
+     "psychosis"
+    ],
+    "ant": [
+     "sane"
+    ],
+    "example": "The film's villain is a psychotic killer.",
+    "example_zh": "這部電影的反派是個精神失常的殺手。"
+   },
+   {
+    "word": "alcoholic",
+    "meaning": "酗酒者；含酒精的",
+    "syn": [
+     "heavy drinker"
+    ],
+    "der": [
+     "alcohol",
+     "alcoholism"
+    ],
+    "ant": [
+     "teetotaler"
+    ],
+    "example": "He joined a support group for alcoholics.",
+    "example_zh": "他加入了一個酗酒者互助團體。"
+   },
+   {
+    "word": "classic",
+    "meaning": "經典的；經典作品",
+    "syn": [
+     "timeless",
+     "standard"
+    ],
+    "der": [
+     "classical"
+    ],
+    "ant": [
+     "modern",
+     "trendy"
+    ],
+    "example": "The film is a classic.",
+    "example_zh": "這部電影是經典之作。"
+   },
+   {
+    "word": "public",
+    "meaning": "公眾的；公共的",
+    "syn": [
+     "communal",
+     "open"
+    ],
+    "der": [
+     "publicly",
+     "publicity"
+    ],
+    "ant": [
+     "private"
+    ],
+    "example": "The park is open to the public.",
+    "example_zh": "公園對大眾開放。"
+   },
+   {
+    "word": "electric",
+    "meaning": "電的；電動的",
+    "syn": [
+     "electrical"
+    ],
+    "der": [
+     "electricity",
+     "electrician"
+    ],
+    "ant": [
+     "manual"
+    ],
+    "example": "She drives an electric car.",
+    "example_zh": "她開電動車。"
+   },
+   {
+    "word": "romantic",
+    "meaning": "浪漫的",
+    "syn": [
+     "loving",
+     "sentimental"
+    ],
+    "der": [
+     "romance",
+     "romantically"
+    ],
+    "ant": [
+     "unromantic"
+    ],
+    "example": "They had a romantic dinner.",
+    "example_zh": "他們共進了一頓浪漫的晚餐。"
+   },
+   {
+    "word": "athletic",
+    "meaning": "運動的；體格健壯的",
+    "syn": [
+     "sporty",
+     "fit"
+    ],
+    "der": [
+     "athlete",
+     "athletics"
+    ],
+    "ant": [
+     "unathletic"
+    ],
+    "example": "He has an athletic build.",
+    "example_zh": "他體格健壯。"
+   }
+  ]
+ },
+ {
+  "id": "ician",
+  "type": "suffix",
+  "group": "名詞字尾：人",
+  "name": "-ician",
+  "meaning": "專家、…師",
+  "words": [
+   {
+    "word": "musician",
+    "meaning": "音樂家",
+    "syn": [
+     "performer",
+     "player"
+    ],
+    "der": [
+     "music",
+     "musical"
+    ],
+    "ant": [],
+    "example": "The musician played the violin.",
+    "example_zh": "音樂家拉了小提琴。"
+   },
+   {
+    "word": "politician",
+    "meaning": "政治人物",
+    "syn": [
+     "lawmaker"
+    ],
+    "der": [
+     "politics",
+     "political"
+    ],
+    "ant": [],
+    "example": "The politician promised lower taxes.",
+    "example_zh": "政治人物承諾降低稅負。"
+   },
+   {
+    "word": "electrician",
+    "meaning": "電工",
+    "syn": [
+     "wireman"
+    ],
+    "der": [
+     "electric",
+     "electricity"
+    ],
+    "ant": [],
+    "example": "The electrician repaired the wiring.",
+    "example_zh": "電工修好了線路。"
+   },
+   {
+    "word": "technician",
+    "meaning": "技術員",
+    "syn": [
+     "technologist"
+    ],
+    "der": [
+     "technical",
+     "technique"
+    ],
+    "ant": [],
+    "example": "A technician checked the machine.",
+    "example_zh": "技術員檢查了機器。"
+   },
+   {
+    "word": "mathematician",
+    "meaning": "數學家",
+    "syn": [],
+    "der": [
+     "mathematics",
+     "mathematical"
+    ],
+    "ant": [],
+    "example": "The mathematician solved the problem.",
+    "example_zh": "數學家解開了這個難題。"
+   },
+   {
+    "word": "magician",
+    "meaning": "魔術師",
+    "syn": [
+     "illusionist"
+    ],
+    "der": [
+     "magic",
+     "magical"
+    ],
+    "ant": [],
+    "example": "The magician pulled a rabbit from a hat.",
+    "example_zh": "魔術師從帽子裡變出一隻兔子。"
+   },
+   {
+    "word": "physician",
+    "meaning": "內科醫師",
+    "syn": [
+     "doctor"
+    ],
+    "der": [
+     "physical",
+     "physics"
+    ],
+    "ant": [],
+    "example": "The physician reviewed the test results.",
+    "example_zh": "醫師查看了檢查結果。"
+   }
+  ]
+ },
+ {
+  "id": "faction",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-faction",
+  "meaning": "狀況、行為",
+  "words": [
+   {
+    "word": "satisfaction",
+    "meaning": "滿意",
+    "syn": [
+     "contentment",
+     "fulfillment"
+    ],
+    "der": [
+     "satisfy",
+     "satisfactory"
+    ],
+    "ant": [
+     "dissatisfaction"
+    ],
+    "example": "Customer satisfaction is our priority.",
+    "example_zh": "顧客滿意是我們的首要目標。"
+   },
+   {
+    "word": "dissatisfaction",
+    "meaning": "不滿",
+    "syn": [
+     "discontent",
+     "displeasure"
+    ],
+    "der": [
+     "dissatisfy",
+     "dissatisfied"
+    ],
+    "ant": [
+     "satisfaction"
+    ],
+    "example": "The workers expressed dissatisfaction.",
+    "example_zh": "員工們表達了不滿。"
+   },
+   {
+    "word": "liquefaction",
+    "meaning": "液化",
+    "syn": [
+     "melting"
+    ],
+    "der": [
+     "liquefy",
+     "liquid"
+    ],
+    "ant": [
+     "solidification"
+    ],
+    "example": "Liquefaction turns gas into liquid.",
+    "example_zh": "液化是把氣體變成液體。"
+   },
+   {
+    "word": "stupefaction",
+    "meaning": "驚愕；茫然",
+    "syn": [
+     "astonishment",
+     "shock"
+    ],
+    "der": [
+     "stupefy"
+    ],
+    "ant": [],
+    "example": "He stared in stupefaction.",
+    "example_zh": "他驚愕地盯著前方。"
+   }
+  ]
+ },
+ {
+  "id": "dom-suf",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-dom",
+  "meaning": "狀態、領域",
+  "words": [
+   {
+    "word": "freedom",
+    "meaning": "自由",
+    "syn": [
+     "liberty",
+     "independence"
+    ],
+    "der": [
+     "free"
+    ],
+    "ant": [
+     "captivity"
+    ],
+    "example": "Freedom of speech is important.",
+    "example_zh": "言論自由很重要。"
+   },
+   {
+    "word": "kingdom",
+    "meaning": "王國",
+    "syn": [
+     "realm",
+     "monarchy"
+    ],
+    "der": [
+     "king"
+    ],
+    "ant": [
+     "republic"
+    ],
+    "example": "The kingdom was ruled by a young queen.",
+    "example_zh": "這個王國由一位年輕的女王統治。"
+   },
+   {
+    "word": "wisdom",
+    "meaning": "智慧",
+    "syn": [
+     "insight",
+     "knowledge"
+    ],
+    "der": [
+     "wise"
+    ],
+    "ant": [
+     "foolishness"
+    ],
+    "example": "Wisdom comes with experience.",
+    "example_zh": "智慧來自經驗。"
+   },
+   {
+    "word": "boredom",
+    "meaning": "無聊",
+    "syn": [
+     "tedium"
+    ],
+    "der": [
+     "bore",
+     "bored",
+     "boring"
+    ],
+    "ant": [
+     "excitement"
+    ],
+    "example": "Boredom made the children restless.",
+    "example_zh": "無聊讓孩子們坐立不安。"
+   },
+   {
+    "word": "stardom",
+    "meaning": "明星地位",
+    "syn": [
+     "fame",
+     "celebrity"
+    ],
+    "der": [
+     "star"
+    ],
+    "ant": [],
+    "example": "The actor rose to stardom quickly.",
+    "example_zh": "這位演員很快就爆紅。"
+   },
+   {
+    "word": "fandom",
+    "meaning": "粉絲圈",
+    "syn": [
+     "fan community"
+    ],
+    "der": [
+     "fan"
+    ],
+    "ant": [],
+    "example": "The fandom celebrated the album release.",
+    "example_zh": "粉絲圈慶祝專輯發行。"
+   }
+  ]
+ },
+ {
+  "id": "ance",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-ance/-ancy",
+  "meaning": "狀態、行為",
+  "words": [
+   {
+    "word": "importance",
+    "meaning": "重要性",
+    "syn": [
+     "significance"
+    ],
+    "der": [
+     "important"
+    ],
+    "ant": [
+     "insignificance"
+    ],
+    "example": "The importance of sleep is clear.",
+    "example_zh": "睡眠的重要性很明顯。"
+   },
+   {
+    "word": "performance",
+    "meaning": "表現；表演",
+    "syn": [
+     "show",
+     "achievement"
+    ],
+    "der": [
+     "perform",
+     "performer"
+    ],
+    "ant": [],
+    "example": "The performance received warm applause.",
+    "example_zh": "這場演出獲得熱烈掌聲。"
+   },
+   {
+    "word": "distance",
+    "meaning": "距離",
+    "syn": [
+     "gap",
+     "space"
+    ],
+    "der": [
+     "distant"
+    ],
+    "ant": [
+     "closeness"
+    ],
+    "example": "The distance between the towns is ten kilometers.",
+    "example_zh": "兩個城鎮相距十公里。"
+   },
+   {
+    "word": "appearance",
+    "meaning": "外表；出現",
+    "syn": [
+     "look",
+     "arrival"
+    ],
+    "der": [
+     "appear"
+    ],
+    "ant": [
+     "disappearance"
+    ],
+    "example": "Appearance is not everything.",
+    "example_zh": "外表不是一切。"
+   },
+   {
+    "word": "assistance",
+    "meaning": "協助",
+    "syn": [
+     "help",
+     "aid"
+    ],
+    "der": [
+     "assist",
+     "assistant"
+    ],
+    "ant": [
+     "hindrance"
+    ],
+    "example": "Thank you for your assistance.",
+    "example_zh": "謝謝你的協助。"
+   },
+   {
+    "word": "tolerance",
+    "meaning": "容忍；耐受力",
+    "syn": [
+     "acceptance",
+     "patience"
+    ],
+    "der": [
+     "tolerate",
+     "tolerant"
+    ],
+    "ant": [
+     "intolerance"
+    ],
+    "example": "The school promotes tolerance.",
+    "example_zh": "學校提倡包容。"
+   },
+   {
+    "word": "vacancy",
+    "meaning": "空缺；空房",
+    "syn": [
+     "opening",
+     "opportunity"
+    ],
+    "der": [
+     "vacant"
+    ],
+    "ant": [
+     "occupancy"
+    ],
+    "example": "The hotel has no vacancy tonight.",
+    "example_zh": "這間飯店今晚沒有空房。"
+   }
+  ]
+ },
+ {
+  "id": "ness-cond",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-ness",
+  "meaning": "狀態",
+  "words": [
+   {
+    "word": "business",
+    "meaning": "生意；事業",
+    "syn": [
+     "company",
+     "trade"
+    ],
+    "der": [
+     "busy"
+    ],
+    "ant": [
+     "leisure"
+    ],
+    "example": "She runs a small business.",
+    "example_zh": "她經營一家小生意。"
+   },
+   {
+    "word": "illness",
+    "meaning": "疾病",
+    "syn": [
+     "sickness",
+     "disease"
+    ],
+    "der": [
+     "ill"
+    ],
+    "ant": [
+     "health"
+    ],
+    "example": "He missed school because of illness.",
+    "example_zh": "他因為生病沒去上學。"
+   },
+   {
+    "word": "fairness",
+    "meaning": "公平",
+    "syn": [
+     "justice",
+     "equity"
+    ],
+    "der": [
+     "fair"
+    ],
+    "ant": [
+     "unfairness"
+    ],
+    "example": "The judge is known for her fairness.",
+    "example_zh": "這位法官以公正聞名。"
+   },
+   {
+    "word": "willingness",
+    "meaning": "意願",
+    "syn": [
+     "readiness",
+     "eagerness"
+    ],
+    "der": [
+     "willing"
+    ],
+    "ant": [
+     "reluctance"
+    ],
+    "example": "Thank you for your willingness to help.",
+    "example_zh": "謝謝你願意幫忙。"
+   },
+   {
+    "word": "forgiveness",
+    "meaning": "原諒",
+    "syn": [
+     "pardon",
+     "mercy"
+    ],
+    "der": [
+     "forgive"
+    ],
+    "ant": [
+     "resentment"
+    ],
+    "example": "She asked for forgiveness.",
+    "example_zh": "她請求原諒。"
+   },
+   {
+    "word": "readiness",
+    "meaning": "準備就緒",
+    "syn": [
+     "preparedness"
+    ],
+    "der": [
+     "ready"
+    ],
+    "ant": [
+     "unpreparedness"
+    ],
+    "example": "The team showed readiness for the match.",
+    "example_zh": "球隊已為比賽做好準備。"
+   },
+   {
+    "word": "usefulness",
+    "meaning": "實用性",
+    "syn": [
+     "value",
+     "utility"
+    ],
+    "der": [
+     "useful"
+    ],
+    "ant": [
+     "uselessness"
+    ],
+    "example": "The usefulness of the tool is clear.",
+    "example_zh": "這項工具的實用性很明顯。"
+   }
+  ]
+ },
+ {
+  "id": "ence-cond",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-ency/-ence",
+  "meaning": "狀態、性質",
+  "words": [
+   {
+    "word": "existence",
+    "meaning": "存在",
+    "syn": [
+     "being",
+     "reality"
+    ],
+    "der": [
+     "exist",
+     "existing"
+    ],
+    "ant": [
+     "nonexistence"
+    ],
+    "example": "No one doubts his existence.",
+    "example_zh": "沒有人懷疑他的存在。"
+   },
+   {
+    "word": "experience",
+    "meaning": "經驗；體驗",
+    "syn": [
+     "practice",
+     "background"
+    ],
+    "der": [
+     "experienced",
+     "experiential"
+    ],
+    "ant": [
+     "inexperience"
+    ],
+    "example": "She has ten years of experience.",
+    "example_zh": "她有十年的經驗。"
+   },
+   {
+    "word": "difference",
+    "meaning": "差異",
+    "syn": [
+     "gap",
+     "contrast"
+    ],
+    "der": [
+     "differ",
+     "different"
+    ],
+    "ant": [
+     "similarity"
+    ],
+    "example": "There is a big difference between them.",
+    "example_zh": "兩者之間差異很大。"
+   },
+   {
+    "word": "evidence",
+    "meaning": "證據",
+    "syn": [
+     "proof",
+     "testimony"
+    ],
+    "der": [
+     "evident",
+     "evidently"
+    ],
+    "ant": [],
+    "example": "The police found new evidence.",
+    "example_zh": "警方找到了新證據。"
+   },
+   {
+    "word": "residence",
+    "meaning": "住所；居住",
+    "syn": [
+     "home",
+     "dwelling"
+    ],
+    "der": [
+     "reside",
+     "resident"
+    ],
+    "ant": [],
+    "example": "Her residence is near the park.",
+    "example_zh": "她的住所靠近公園。"
+   },
+   {
+    "word": "consequence",
+    "meaning": "後果；重要性",
+    "syn": [
+     "result",
+     "outcome"
+    ],
+    "der": [
+     "consequent",
+     "consequently"
+    ],
+    "ant": [
+     "cause"
+    ],
+    "example": "He faced the consequences of his choice.",
+    "example_zh": "他承擔了自己選擇的後果。"
+   },
+   {
+    "word": "tendency",
+    "meaning": "傾向",
+    "syn": [
+     "inclination",
+     "trend"
+    ],
+    "der": [
+     "tend"
+    ],
+    "ant": [],
+    "example": "She has a tendency to be late.",
+    "example_zh": "她有遲到的傾向。"
+   },
+   {
+    "word": "agency",
+    "meaning": "機構；代辦處",
+    "syn": [
+     "bureau",
+     "office"
+    ],
+    "der": [
+     "agent"
+    ],
+    "ant": [],
+    "example": "The travel agency booked our flights.",
+    "example_zh": "旅行社幫我們訂了機票。"
+   }
+  ]
+ },
+ {
+  "id": "ism-cond",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-ism",
+  "meaning": "狀態、主義",
+  "words": [
+   {
+    "word": "pessimism",
+    "meaning": "悲觀",
+    "syn": [
+     "hopelessness"
+    ],
+    "der": [
+     "pessimist",
+     "pessimistic"
+    ],
+    "ant": [
+     "optimism"
+    ],
+    "example": "Her pessimism worried her friends.",
+    "example_zh": "她的悲觀讓朋友們擔心。"
+   },
+   {
+    "word": "journalism",
+    "meaning": "新聞業",
+    "syn": [
+     "reporting"
+    ],
+    "der": [
+     "journalist"
+    ],
+    "ant": [],
+    "example": "He studies journalism at university.",
+    "example_zh": "他在大學讀新聞學。"
+   },
+   {
+    "word": "nationalism",
+    "meaning": "民族主義",
+    "syn": [
+     "patriotism"
+    ],
+    "der": [
+     "nation",
+     "nationalist"
+    ],
+    "ant": [],
+    "example": "Nationalism grew in the early twentieth century.",
+    "example_zh": "民族主義在二十世紀初興起。"
+   },
+   {
+    "word": "plagiarism",
+    "meaning": "抄襲",
+    "syn": [
+     "copying",
+     "piracy"
+    ],
+    "der": [
+     "plagiarize",
+     "plagiarist"
+    ],
+    "ant": [
+     "originality"
+    ],
+    "example": "The teacher punished plagiarism.",
+    "example_zh": "老師對抄襲行為施以處罰。"
+   },
+   {
+    "word": "vandalism",
+    "meaning": "蓄意破壞",
+    "syn": [
+     "damage",
+     "sabotage"
+    ],
+    "der": [
+     "vandal"
+    ],
+    "ant": [],
+    "example": "Vandalism cost the city thousands of dollars.",
+    "example_zh": "蓄意破壞讓這座城市損失了數千美元。"
+   },
+   {
+    "word": "feminism",
+    "meaning": "女性主義",
+    "syn": [],
+    "der": [
+     "feminist"
+    ],
+    "ant": [],
+    "example": "She wrote a book about feminism.",
+    "example_zh": "她寫了一本關於女性主義的書。"
+   }
+  ]
+ },
+ {
+  "id": "ety",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-ety",
+  "meaning": "狀態、性質",
+  "words": [
+   {
+    "word": "society",
+    "meaning": "社會",
+    "syn": [
+     "community",
+     "civilization"
+    ],
+    "der": [
+     "social",
+     "sociable"
+    ],
+    "ant": [],
+    "example": "Society is changing quickly.",
+    "example_zh": "社會正在快速改變。"
+   },
+   {
+    "word": "variety",
+    "meaning": "多樣性；種類",
+    "syn": [
+     "diversity",
+     "range"
+    ],
+    "der": [
+     "vary",
+     "various"
+    ],
+    "ant": [
+     "uniformity"
+    ],
+    "example": "The shop offers a variety of teas.",
+    "example_zh": "這家店提供各式各樣的茶。"
+   },
+   {
+    "word": "safety",
+    "meaning": "安全",
+    "syn": [
+     "security",
+     "protection"
+    ],
+    "der": [
+     "safe"
+    ],
+    "ant": [
+     "danger"
+    ],
+    "example": "Safety comes first.",
+    "example_zh": "安全第一。"
+   },
+   {
+    "word": "anxiety",
+    "meaning": "焦慮",
+    "syn": [
+     "worry",
+     "unease"
+    ],
+    "der": [
+     "anxious"
+    ],
+    "ant": [
+     "calm"
+    ],
+    "example": "She felt anxiety before the exam.",
+    "example_zh": "她在考試前感到焦慮。"
+   },
+   {
+    "word": "notoriety",
+    "meaning": "惡名",
+    "syn": [
+     "infamy",
+     "disrepute"
+    ],
+    "der": [
+     "notorious"
+    ],
+    "ant": [
+     "fame"
+    ],
+    "example": "The gang gained notoriety.",
+    "example_zh": "這個幫派惡名昭彰。"
+   },
+   {
+    "word": "propriety",
+    "meaning": "禮節；得體",
+    "syn": [
+     "decorum",
+     "correctness"
+    ],
+    "der": [
+     "proper",
+     "properly"
+    ],
+    "ant": [
+     "impropriety"
+    ],
+    "example": "He behaved with propriety.",
+    "example_zh": "他舉止得體。"
+   }
+  ]
+ },
+ {
+  "id": "acy-cond",
+  "type": "suffix",
+  "group": "名詞字尾：狀況",
+  "name": "-acy",
+  "meaning": "狀態、性質",
+  "words": [
+   {
+    "word": "bureaucracy",
+    "meaning": "官僚體制",
+    "syn": [
+     "red tape"
+    ],
+    "der": [
+     "bureaucrat",
+     "bureaucratic"
+    ],
+    "ant": [],
+    "example": "Bureaucracy slows down the process.",
+    "example_zh": "官僚體制拖慢了流程。"
+   },
+   {
+    "word": "diplomacy",
+    "meaning": "外交；手腕",
+    "syn": [
+     "statecraft",
+     "tact"
+    ],
+    "der": [
+     "diplomat",
+     "diplomatic"
+    ],
+    "ant": [],
+    "example": "The crisis was solved by diplomacy.",
+    "example_zh": "這場危機靠外交手腕解決了。"
+   },
+   {
+    "word": "conspiracy",
+    "meaning": "陰謀",
+    "syn": [
+     "plot",
+     "scheme"
+    ],
+    "der": [
+     "conspire",
+     "conspirator"
+    ],
+    "ant": [],
+    "example": "Police uncovered a conspiracy.",
+    "example_zh": "警方揭發了一項陰謀。"
+   },
+   {
+    "word": "fallacy",
+    "meaning": "謬誤",
+    "syn": [
+     "misconception",
+     "error"
+    ],
+    "der": [
+     "fallacious"
+    ],
+    "ant": [
+     "truth"
+    ],
+    "example": "It is a fallacy that money guarantees happiness.",
+    "example_zh": "認為金錢保證幸福是個謬誤。"
+   },
+   {
+    "word": "supremacy",
+    "meaning": "至高無上；優勢",
+    "syn": [
+     "dominance",
+     "superiority"
+    ],
+    "der": [
+     "supreme"
+    ],
+    "ant": [
+     "inferiority"
+    ],
+    "example": "The team fought for supremacy.",
+    "example_zh": "球隊為爭奪霸主地位而戰。"
+   },
+   {
+    "word": "pharmacy",
+    "meaning": "藥局",
+    "syn": [
+     "drugstore",
+     "chemist"
+    ],
+    "der": [
+     "pharmacist"
+    ],
+    "ant": [],
+    "example": "The pharmacy opens at eight.",
+    "example_zh": "藥局八點開門。"
+   }
+  ]
+ }
+]

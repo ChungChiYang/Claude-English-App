@@ -1,0 +1,1959 @@
+[
+ {
+  "id": "ive",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-ive",
+  "meaning": "有…性質的",
+  "words": [
+   {
+    "word": "active",
+    "meaning": "活躍的",
+    "syn": [
+     "energetic",
+     "lively"
+    ],
+    "der": [
+     "act",
+     "activity"
+    ],
+    "ant": [
+     "inactive",
+     "passive"
+    ],
+    "example": "She leads an active life.",
+    "example_zh": "她過著活躍的生活。"
+   },
+   {
+    "word": "creative",
+    "meaning": "有創意的",
+    "syn": [
+     "inventive",
+     "imaginative"
+    ],
+    "der": [
+     "create",
+     "creativity"
+    ],
+    "ant": [
+     "unimaginative"
+    ],
+    "example": "He has a creative mind.",
+    "example_zh": "他很有創意。"
+   },
+   {
+    "word": "attractive",
+    "meaning": "吸引人的",
+    "syn": [
+     "appealing",
+     "charming"
+    ],
+    "der": [
+     "attract",
+     "attraction"
+    ],
+    "ant": [
+     "unattractive",
+     "repulsive"
+    ],
+    "example": "The offer is very attractive.",
+    "example_zh": "這個提議很有吸引力。"
+   },
+   {
+    "word": "expensive",
+    "meaning": "昂貴的",
+    "syn": [
+     "costly",
+     "pricey"
+    ],
+    "der": [
+     "expense"
+    ],
+    "ant": [
+     "cheap",
+     "inexpensive"
+    ],
+    "example": "The bag is too expensive.",
+    "example_zh": "這個包包太貴了。"
+   },
+   {
+    "word": "effective",
+    "meaning": "有效的",
+    "syn": [
+     "successful",
+     "efficient"
+    ],
+    "der": [
+     "effect",
+     "effectively"
+    ],
+    "ant": [
+     "ineffective"
+    ],
+    "example": "This method is effective.",
+    "example_zh": "這個方法很有效。"
+   },
+   {
+    "word": "impressive",
+    "meaning": "令人印象深刻的",
+    "syn": [
+     "remarkable",
+     "striking"
+    ],
+    "der": [
+     "impress",
+     "impression"
+    ],
+    "ant": [
+     "unimpressive"
+    ],
+    "example": "The view is impressive.",
+    "example_zh": "景色令人印象深刻。"
+   },
+   {
+    "word": "productive",
+    "meaning": "有生產力的",
+    "syn": [
+     "efficient",
+     "fruitful"
+    ],
+    "der": [
+     "produce",
+     "production"
+    ],
+    "ant": [
+     "unproductive"
+    ],
+    "example": "It was a productive meeting.",
+    "example_zh": "這是一場很有成效的會議。"
+   },
+   {
+    "word": "aggressive",
+    "meaning": "有攻擊性的；積極進取的",
+    "syn": [
+     "hostile",
+     "assertive"
+    ],
+    "der": [
+     "aggress",
+     "aggression"
+    ],
+    "ant": [
+     "peaceful",
+     "gentle"
+    ],
+    "example": "The salesman was too aggressive.",
+    "example_zh": "這位業務員太咄咄逼人。"
+   }
+  ]
+ },
+ {
+  "id": "ish-adj",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-ish",
+  "meaning": "帶有…的、像…的",
+  "words": [
+   {
+    "word": "foolish",
+    "meaning": "愚蠢的",
+    "syn": [
+     "silly",
+     "unwise"
+    ],
+    "der": [
+     "fool",
+     "foolishly"
+    ],
+    "ant": [
+     "wise",
+     "sensible"
+    ],
+    "example": "It was foolish to ignore the warning.",
+    "example_zh": "無視警告是愚蠢的。"
+   },
+   {
+    "word": "childish",
+    "meaning": "幼稚的",
+    "syn": [
+     "immature",
+     "silly"
+    ],
+    "der": [
+     "child",
+     "childhood"
+    ],
+    "ant": [
+     "mature"
+    ],
+    "example": "Stop being so childish.",
+    "example_zh": "別這麼幼稚了。"
+   },
+   {
+    "word": "selfish",
+    "meaning": "自私的",
+    "syn": [
+     "self-centered",
+     "greedy"
+    ],
+    "der": [
+     "self",
+     "selfishness"
+    ],
+    "ant": [
+     "selfless",
+     "generous"
+    ],
+    "example": "Don't be selfish; share with others.",
+    "example_zh": "別自私，要和別人分享。"
+   },
+   {
+    "word": "stylish",
+    "meaning": "時髦的",
+    "syn": [
+     "fashionable",
+     "chic"
+    ],
+    "der": [
+     "style",
+     "stylist"
+    ],
+    "ant": [
+     "unfashionable"
+    ],
+    "example": "She wore a stylish coat.",
+    "example_zh": "她穿了一件時髦的外套。"
+   },
+   {
+    "word": "reddish",
+    "meaning": "帶紅色的",
+    "syn": [
+     "pinkish"
+    ],
+    "der": [
+     "red"
+    ],
+    "ant": [
+     "bluish"
+    ],
+    "example": "The sky turned reddish at sunset.",
+    "example_zh": "日落時天空變成帶紅色。"
+   }
+  ]
+ },
+ {
+  "id": "y-suf",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-y",
+  "meaning": "充滿…的",
+  "words": [
+   {
+    "word": "sunny",
+    "meaning": "晴朗的",
+    "syn": [
+     "bright",
+     "clear"
+    ],
+    "der": [
+     "sun"
+    ],
+    "ant": [
+     "cloudy"
+    ],
+    "example": "It is a sunny day.",
+    "example_zh": "今天天氣晴朗。"
+   },
+   {
+    "word": "rainy",
+    "meaning": "下雨的",
+    "syn": [
+     "wet",
+     "showery"
+    ],
+    "der": [
+     "rain"
+    ],
+    "ant": [
+     "dry"
+    ],
+    "example": "We stayed home on the rainy day.",
+    "example_zh": "下雨天我們待在家。"
+   },
+   {
+    "word": "healthy",
+    "meaning": "健康的",
+    "syn": [
+     "fit",
+     "well"
+    ],
+    "der": [
+     "health"
+    ],
+    "ant": [
+     "unhealthy"
+    ],
+    "example": "Eat healthy food every day.",
+    "example_zh": "每天吃健康的食物。"
+   },
+   {
+    "word": "angry",
+    "meaning": "生氣的",
+    "syn": [
+     "mad",
+     "furious"
+    ],
+    "der": [
+     "anger"
+    ],
+    "ant": [
+     "calm",
+     "pleased"
+    ],
+    "example": "He was angry about the delay.",
+    "example_zh": "他對延誤感到生氣。"
+   },
+   {
+    "word": "lucky",
+    "meaning": "幸運的",
+    "syn": [
+     "fortunate"
+    ],
+    "der": [
+     "luck",
+     "luckily"
+    ],
+    "ant": [
+     "unlucky"
+    ],
+    "example": "You are lucky to be here.",
+    "example_zh": "你能在這裡真幸運。"
+   },
+   {
+    "word": "noisy",
+    "meaning": "吵鬧的",
+    "syn": [
+     "loud",
+     "rowdy"
+    ],
+    "der": [
+     "noise"
+    ],
+    "ant": [
+     "quiet"
+    ],
+    "example": "The street is noisy at night.",
+    "example_zh": "這條街晚上很吵。"
+   },
+   {
+    "word": "messy",
+    "meaning": "凌亂的",
+    "syn": [
+     "untidy",
+     "cluttered"
+    ],
+    "der": [
+     "mess"
+    ],
+    "ant": [
+     "tidy",
+     "neat"
+    ],
+    "example": "His room is always messy.",
+    "example_zh": "他的房間總是很亂。"
+   },
+   {
+    "word": "wealthy",
+    "meaning": "富有的",
+    "syn": [
+     "rich",
+     "affluent"
+    ],
+    "der": [
+     "wealth"
+    ],
+    "ant": [
+     "poor"
+    ],
+    "example": "A wealthy family owns the land.",
+    "example_zh": "一個富有的家族擁有這塊地。"
+   }
+  ]
+ },
+ {
+  "id": "ly",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-ly",
+  "meaning": "…的；像…的",
+  "words": [
+   {
+    "word": "friendly",
+    "meaning": "友善的",
+    "syn": [
+     "kind",
+     "amiable"
+    ],
+    "der": [
+     "friend",
+     "friendliness"
+    ],
+    "ant": [
+     "unfriendly",
+     "hostile"
+    ],
+    "example": "The staff were very friendly.",
+    "example_zh": "工作人員非常友善。"
+   },
+   {
+    "word": "lovely",
+    "meaning": "可愛的；美好的",
+    "syn": [
+     "charming",
+     "delightful"
+    ],
+    "der": [
+     "love"
+    ],
+    "ant": [
+     "unpleasant"
+    ],
+    "example": "What a lovely garden!",
+    "example_zh": "多麼美好的花園！"
+   },
+   {
+    "word": "lonely",
+    "meaning": "孤單的",
+    "syn": [
+     "isolated",
+     "alone"
+    ],
+    "der": [
+     "loneliness"
+    ],
+    "ant": [
+     "crowded"
+    ],
+    "example": "He felt lonely in the big city.",
+    "example_zh": "他在大城市裡感到孤單。"
+   },
+   {
+    "word": "weekly",
+    "meaning": "每週的",
+    "syn": [
+     "every week"
+    ],
+    "der": [
+     "week"
+    ],
+    "ant": [
+     "monthly"
+    ],
+    "example": "She writes a weekly column.",
+    "example_zh": "她寫每週專欄。"
+   },
+   {
+    "word": "costly",
+    "meaning": "昂貴的；代價高的",
+    "syn": [
+     "expensive"
+    ],
+    "der": [
+     "cost"
+    ],
+    "ant": [
+     "cheap"
+    ],
+    "example": "The mistake was costly.",
+    "example_zh": "這個錯誤代價高昂。"
+   },
+   {
+    "word": "likely",
+    "meaning": "可能的",
+    "syn": [
+     "probable",
+     "expected"
+    ],
+    "der": [
+     "like",
+     "likelihood"
+    ],
+    "ant": [
+     "unlikely"
+    ],
+    "example": "It is likely to rain tonight.",
+    "example_zh": "今晚很可能下雨。"
+   },
+   {
+    "word": "orderly",
+    "meaning": "整齊的；有秩序的",
+    "syn": [
+     "neat",
+     "tidy"
+    ],
+    "der": [
+     "order"
+    ],
+    "ant": [
+     "disorderly"
+    ],
+    "example": "The students formed an orderly line.",
+    "example_zh": "學生們排成整齊的隊伍。"
+   }
+  ]
+ },
+ {
+  "id": "ful",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-ful",
+  "meaning": "充滿…的",
+  "words": [
+   {
+    "word": "helpful",
+    "meaning": "有幫助的",
+    "syn": [
+     "useful",
+     "supportive"
+    ],
+    "der": [
+     "help"
+    ],
+    "ant": [
+     "unhelpful"
+    ],
+    "example": "The guide was very helpful.",
+    "example_zh": "導遊非常有幫助。"
+   },
+   {
+    "word": "careful",
+    "meaning": "小心的",
+    "syn": [
+     "cautious",
+     "attentive"
+    ],
+    "der": [
+     "care",
+     "carefully"
+    ],
+    "ant": [
+     "careless"
+    ],
+    "example": "Be careful on the stairs.",
+    "example_zh": "上樓梯要小心。"
+   },
+   {
+    "word": "beautiful",
+    "meaning": "美麗的",
+    "syn": [
+     "lovely",
+     "gorgeous"
+    ],
+    "der": [
+     "beauty",
+     "beautify"
+    ],
+    "ant": [
+     "ugly"
+    ],
+    "example": "The sunset was beautiful.",
+    "example_zh": "夕陽很美。"
+   },
+   {
+    "word": "useful",
+    "meaning": "有用的",
+    "syn": [
+     "helpful",
+     "practical"
+    ],
+    "der": [
+     "use",
+     "usefulness"
+    ],
+    "ant": [
+     "useless"
+    ],
+    "example": "This app is very useful.",
+    "example_zh": "這個應用程式非常有用。"
+   },
+   {
+    "word": "successful",
+    "meaning": "成功的",
+    "syn": [
+     "prosperous",
+     "effective"
+    ],
+    "der": [
+     "success",
+     "succeed"
+    ],
+    "ant": [
+     "unsuccessful"
+    ],
+    "example": "She is a successful businesswoman.",
+    "example_zh": "她是一位成功的女企業家。"
+   },
+   {
+    "word": "powerful",
+    "meaning": "強大的",
+    "syn": [
+     "strong",
+     "mighty"
+    ],
+    "der": [
+     "power"
+    ],
+    "ant": [
+     "powerless",
+     "weak"
+    ],
+    "example": "The engine is powerful.",
+    "example_zh": "這具引擎動力強大。"
+   },
+   {
+    "word": "peaceful",
+    "meaning": "和平的；平靜的",
+    "syn": [
+     "calm",
+     "quiet"
+    ],
+    "der": [
+     "peace",
+     "peacefully"
+    ],
+    "ant": [
+     "violent",
+     "noisy"
+    ],
+    "example": "The lake is peaceful at dawn.",
+    "example_zh": "黎明時的湖面很平靜。"
+   },
+   {
+    "word": "wonderful",
+    "meaning": "很棒的",
+    "syn": [
+     "marvelous",
+     "great"
+    ],
+    "der": [
+     "wonder"
+    ],
+    "ant": [
+     "terrible"
+    ],
+    "example": "We had a wonderful trip.",
+    "example_zh": "我們度過了一趟很棒的旅行。"
+   }
+  ]
+ },
+ {
+  "id": "ious",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-ious/-itious",
+  "meaning": "有…性質的",
+  "words": [
+   {
+    "word": "delicious",
+    "meaning": "美味的",
+    "syn": [
+     "tasty",
+     "delectable"
+    ],
+    "der": [
+     "delicacy"
+    ],
+    "ant": [
+     "tasteless"
+    ],
+    "example": "The soup is delicious.",
+    "example_zh": "這碗湯很美味。"
+   },
+   {
+    "word": "serious",
+    "meaning": "嚴肅的；嚴重的",
+    "syn": [
+     "grave",
+     "solemn"
+    ],
+    "der": [
+     "seriously",
+     "seriousness"
+    ],
+    "ant": [
+     "trivial",
+     "playful"
+    ],
+    "example": "This is a serious problem.",
+    "example_zh": "這是個嚴重的問題。"
+   },
+   {
+    "word": "cautious",
+    "meaning": "謹慎的",
+    "syn": [
+     "careful",
+     "wary"
+    ],
+    "der": [
+     "caution",
+     "cautiously"
+    ],
+    "ant": [
+     "reckless"
+    ],
+    "example": "Be cautious when crossing the road.",
+    "example_zh": "過馬路要謹慎。"
+   },
+   {
+    "word": "curious",
+    "meaning": "好奇的",
+    "syn": [
+     "inquisitive",
+     "interested"
+    ],
+    "der": [
+     "curiosity"
+    ],
+    "ant": [
+     "indifferent"
+    ],
+    "example": "The children were curious about the animals.",
+    "example_zh": "孩子們對動物很好奇。"
+   },
+   {
+    "word": "nutritious",
+    "meaning": "有營養的",
+    "syn": [
+     "nourishing",
+     "healthy"
+    ],
+    "der": [
+     "nutrition",
+     "nutrient"
+    ],
+    "ant": [
+     "unhealthy"
+    ],
+    "example": "Vegetables are nutritious.",
+    "example_zh": "蔬菜很有營養。"
+   },
+   {
+    "word": "suspicious",
+    "meaning": "可疑的",
+    "syn": [
+     "doubtful",
+     "distrustful"
+    ],
+    "der": [
+     "suspect",
+     "suspicion"
+    ],
+    "ant": [
+     "trusting"
+    ],
+    "example": "He found the package suspicious.",
+    "example_zh": "他覺得那個包裹很可疑。"
+   },
+   {
+    "word": "superstitious",
+    "meaning": "迷信的",
+    "syn": [
+     "irrational"
+    ],
+    "der": [
+     "superstition"
+    ],
+    "ant": [
+     "rational"
+    ],
+    "example": "Some people are superstitious about the number four.",
+    "example_zh": "有些人對數字四很迷信。"
+   }
+  ]
+ },
+ {
+  "id": "itive",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-itive",
+  "meaning": "有…傾向的",
+  "words": [
+   {
+    "word": "positive",
+    "meaning": "正面的；肯定的",
+    "syn": [
+     "optimistic",
+     "affirmative"
+    ],
+    "der": [
+     "positively"
+    ],
+    "ant": [
+     "negative"
+    ],
+    "example": "She has a positive attitude.",
+    "example_zh": "她態度積極正面。"
+   },
+   {
+    "word": "negative",
+    "meaning": "負面的；否定的",
+    "syn": [
+     "pessimistic",
+     "unfavorable"
+    ],
+    "der": [
+     "negatively"
+    ],
+    "ant": [
+     "positive"
+    ],
+    "example": "The review was negative.",
+    "example_zh": "這則評論是負面的。"
+   },
+   {
+    "word": "competitive",
+    "meaning": "競爭的；好強的",
+    "syn": [
+     "ambitious",
+     "rival"
+    ],
+    "der": [
+     "compete",
+     "competition"
+    ],
+    "ant": [
+     "cooperative"
+    ],
+    "example": "The job market is very competitive.",
+    "example_zh": "就業市場競爭非常激烈。"
+   },
+   {
+    "word": "intuitive",
+    "meaning": "直覺的",
+    "syn": [
+     "instinctive"
+    ],
+    "der": [
+     "intuition",
+     "intuitively"
+    ],
+    "ant": [
+     "logical"
+    ],
+    "example": "The interface is intuitive.",
+    "example_zh": "這個介面很直覺。"
+   },
+   {
+    "word": "primitive",
+    "meaning": "原始的",
+    "syn": [
+     "ancient",
+     "crude"
+    ],
+    "der": [
+     "primitively"
+    ],
+    "ant": [
+     "advanced",
+     "modern"
+    ],
+    "example": "Primitive tools were made of stone.",
+    "example_zh": "原始工具是石頭做的。"
+   },
+   {
+    "word": "definitive",
+    "meaning": "決定性的；最終的",
+    "syn": [
+     "final",
+     "conclusive"
+    ],
+    "der": [
+     "define",
+     "definitively"
+    ],
+    "ant": [
+     "tentative"
+    ],
+    "example": "The court gave a definitive answer.",
+    "example_zh": "法院給出了最終的答覆。"
+   }
+  ]
+ },
+ {
+  "id": "able",
+  "type": "suffix",
+  "group": "形容詞字尾",
+  "name": "-able/-ible",
+  "meaning": "能夠…的、可…的",
+  "words": [
+   {
+    "word": "available",
+    "meaning": "可得的；有空的",
+    "syn": [
+     "accessible",
+     "free"
+    ],
+    "der": [
+     "avail",
+     "availability"
+    ],
+    "ant": [
+     "unavailable"
+    ],
+    "example": "Tickets are available online.",
+    "example_zh": "票可以在網路上買到。"
+   },
+   {
+    "word": "comfortable",
+    "meaning": "舒適的",
+    "syn": [
+     "cozy",
+     "relaxing"
+    ],
+    "der": [
+     "comfort",
+     "comfortably"
+    ],
+    "ant": [
+     "uncomfortable"
+    ],
+    "example": "The sofa is very comfortable.",
+    "example_zh": "這張沙發非常舒適。"
+   },
+   {
+    "word": "reliable",
+    "meaning": "可靠的",
+    "syn": [
+     "dependable",
+     "trustworthy"
+    ],
+    "der": [
+     "rely",
+     "reliability"
+    ],
+    "ant": [
+     "unreliable"
+    ],
+    "example": "He is a reliable partner.",
+    "example_zh": "他是個可靠的夥伴。"
+   },
+   {
+    "word": "reasonable",
+    "meaning": "合理的",
+    "syn": [
+     "sensible",
+     "fair"
+    ],
+    "der": [
+     "reason",
+     "reasonably"
+    ],
+    "ant": [
+     "unreasonable"
+    ],
+    "example": "The price is reasonable.",
+    "example_zh": "價格很合理。"
+   },
+   {
+    "word": "acceptable",
+    "meaning": "可接受的",
+    "syn": [
+     "satisfactory",
+     "adequate"
+    ],
+    "der": [
+     "accept",
+     "acceptance"
+    ],
+    "ant": [
+     "unacceptable"
+    ],
+    "example": "This level of noise is not acceptable.",
+    "example_zh": "這種噪音程度是不可接受的。"
+   },
+   {
+    "word": "affordable",
+    "meaning": "負擔得起的",
+    "syn": [
+     "inexpensive",
+     "cheap"
+    ],
+    "der": [
+     "afford"
+    ],
+    "ant": [
+     "unaffordable"
+    ],
+    "example": "The shop sells affordable clothes.",
+    "example_zh": "這家店賣的衣服價格親民。"
+   },
+   {
+    "word": "valuable",
+    "meaning": "有價值的",
+    "syn": [
+     "precious",
+     "worthwhile"
+    ],
+    "der": [
+     "value"
+    ],
+    "ant": [
+     "worthless"
+    ],
+    "example": "Time is more valuable than money.",
+    "example_zh": "時間比金錢更寶貴。"
+   },
+   {
+    "word": "portable",
+    "meaning": "可攜帶的",
+    "syn": [
+     "mobile",
+     "handy"
+    ],
+    "der": [
+     "port",
+     "portability"
+    ],
+    "ant": [
+     "fixed"
+    ],
+    "example": "I bought a portable charger.",
+    "example_zh": "我買了一個行動電源。"
+   }
+  ]
+ },
+ {
+  "id": "ate",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-ate",
+  "meaning": "使…；成為",
+  "words": [
+   {
+    "word": "create",
+    "meaning": "創造",
+    "syn": [
+     "make",
+     "produce"
+    ],
+    "der": [
+     "creation",
+     "creative"
+    ],
+    "ant": [
+     "destroy"
+    ],
+    "example": "The artist created a new style.",
+    "example_zh": "這位藝術家創造了一種新風格。"
+   },
+   {
+    "word": "celebrate",
+    "meaning": "慶祝",
+    "syn": [
+     "commemorate",
+     "rejoice"
+    ],
+    "der": [
+     "celebration"
+    ],
+    "ant": [
+     "mourn"
+    ],
+    "example": "We celebrated her birthday.",
+    "example_zh": "我們慶祝了她的生日。"
+   },
+   {
+    "word": "estimate",
+    "meaning": "估計",
+    "syn": [
+     "calculate",
+     "guess"
+    ],
+    "der": [
+     "estimation"
+    ],
+    "ant": [],
+    "example": "The cost is estimated at ten thousand dollars.",
+    "example_zh": "費用估計為一萬元。"
+   },
+   {
+    "word": "operate",
+    "meaning": "操作；運作",
+    "syn": [
+     "run",
+     "function"
+    ],
+    "der": [
+     "operation",
+     "operator"
+    ],
+    "ant": [],
+    "example": "The machine operates quietly.",
+    "example_zh": "這部機器運轉得很安靜。"
+   },
+   {
+    "word": "participate",
+    "meaning": "參加",
+    "syn": [
+     "take part",
+     "join"
+    ],
+    "der": [
+     "participation",
+     "participant"
+    ],
+    "ant": [
+     "abstain"
+    ],
+    "example": "Everyone may participate in the contest.",
+    "example_zh": "每個人都可以參加比賽。"
+   },
+   {
+    "word": "generate",
+    "meaning": "產生",
+    "syn": [
+     "produce",
+     "create"
+    ],
+    "der": [
+     "generation",
+     "generator"
+    ],
+    "ant": [],
+    "example": "Wind turbines generate electricity.",
+    "example_zh": "風力發電機產生電力。"
+   },
+   {
+    "word": "motivate",
+    "meaning": "激勵",
+    "syn": [
+     "inspire",
+     "encourage"
+    ],
+    "der": [
+     "motivation",
+     "motivated"
+    ],
+    "ant": [
+     "discourage"
+    ],
+    "example": "A good teacher motivates students.",
+    "example_zh": "好老師會激勵學生。"
+   }
+  ]
+ },
+ {
+  "id": "en",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-en",
+  "meaning": "使…變得",
+  "words": [
+   {
+    "word": "shorten",
+    "meaning": "縮短",
+    "syn": [
+     "cut",
+     "reduce"
+    ],
+    "der": [
+     "short"
+    ],
+    "ant": [
+     "lengthen"
+    ],
+    "example": "They shortened the meeting.",
+    "example_zh": "他們縮短了會議時間。"
+   },
+   {
+    "word": "sharpen",
+    "meaning": "使鋒利；加強",
+    "syn": [
+     "hone",
+     "whet"
+    ],
+    "der": [
+     "sharp"
+    ],
+    "ant": [
+     "dull"
+    ],
+    "example": "He sharpened the knife.",
+    "example_zh": "他把刀磨利了。"
+   },
+   {
+    "word": "tighten",
+    "meaning": "縮緊；加強",
+    "syn": [
+     "fasten",
+     "tauten"
+    ],
+    "der": [
+     "tight"
+    ],
+    "ant": [
+     "loosen"
+    ],
+    "example": "Tighten the screw.",
+    "example_zh": "把螺絲鎖緊。"
+   },
+   {
+    "word": "brighten",
+    "meaning": "使明亮",
+    "syn": [
+     "illuminate",
+     "lighten"
+    ],
+    "der": [
+     "bright"
+    ],
+    "ant": [
+     "dim"
+    ],
+    "example": "The lamps brightened the room.",
+    "example_zh": "燈讓房間亮了起來。"
+   },
+   {
+    "word": "soften",
+    "meaning": "使柔軟；緩和",
+    "syn": [
+     "ease",
+     "moderate"
+    ],
+    "der": [
+     "soft"
+    ],
+    "ant": [
+     "harden"
+    ],
+    "example": "Heat softens the butter.",
+    "example_zh": "熱會讓奶油變軟。"
+   },
+   {
+    "word": "loosen",
+    "meaning": "鬆開",
+    "syn": [
+     "slacken",
+     "relax"
+    ],
+    "der": [
+     "loose"
+    ],
+    "ant": [
+     "tighten"
+    ],
+    "example": "He loosened his tie.",
+    "example_zh": "他鬆開了領帶。"
+   },
+   {
+    "word": "awaken",
+    "meaning": "喚醒；覺醒",
+    "syn": [
+     "wake",
+     "rouse"
+    ],
+    "der": [
+     "awake"
+    ],
+    "ant": [
+     "lull"
+    ],
+    "example": "The alarm awakened everyone.",
+    "example_zh": "鬧鐘把大家吵醒了。"
+   }
+  ]
+ },
+ {
+  "id": "ize",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-ize",
+  "meaning": "使…化",
+  "words": [
+   {
+    "word": "recognize",
+    "meaning": "認出；承認",
+    "syn": [
+     "identify",
+     "acknowledge"
+    ],
+    "der": [
+     "recognition"
+    ],
+    "ant": [
+     "ignore"
+    ],
+    "example": "I recognized her voice.",
+    "example_zh": "我認出了她的聲音。"
+   },
+   {
+    "word": "memorize",
+    "meaning": "背誦；記住",
+    "syn": [
+     "learn by heart"
+    ],
+    "der": [
+     "memory",
+     "memorization"
+    ],
+    "ant": [
+     "forget"
+    ],
+    "example": "Students memorize new words daily.",
+    "example_zh": "學生每天背新單字。"
+   },
+   {
+    "word": "summarize",
+    "meaning": "總結",
+    "syn": [
+     "sum up",
+     "outline"
+    ],
+    "der": [
+     "summary"
+    ],
+    "ant": [
+     "expand"
+    ],
+    "example": "Please summarize the article.",
+    "example_zh": "請總結這篇文章。"
+   },
+   {
+    "word": "apologize",
+    "meaning": "道歉",
+    "syn": [
+     "say sorry"
+    ],
+    "der": [
+     "apology"
+    ],
+    "ant": [
+     "blame"
+    ],
+    "example": "He apologized for being late.",
+    "example_zh": "他為遲到道歉。"
+   },
+   {
+    "word": "criticize",
+    "meaning": "批評",
+    "syn": [
+     "condemn",
+     "censure"
+    ],
+    "der": [
+     "critic",
+     "criticism"
+    ],
+    "ant": [
+     "praise"
+    ],
+    "example": "Don't criticize without reason.",
+    "example_zh": "不要無緣無故批評。"
+   },
+   {
+    "word": "modernize",
+    "meaning": "使現代化",
+    "syn": [
+     "update",
+     "renovate"
+    ],
+    "der": [
+     "modern",
+     "modernization"
+    ],
+    "ant": [],
+    "example": "The city plans to modernize its railways.",
+    "example_zh": "這座城市計畫讓鐵路現代化。"
+   },
+   {
+    "word": "specialize",
+    "meaning": "專攻；專門從事",
+    "syn": [
+     "focus",
+     "concentrate"
+    ],
+    "der": [
+     "special",
+     "specialist"
+    ],
+    "ant": [
+     "generalize"
+    ],
+    "example": "She specializes in children's books.",
+    "example_zh": "她專門寫兒童書。"
+   }
+  ]
+ },
+ {
+  "id": "ise",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-ise",
+  "meaning": "使…化（英式拼法）",
+  "words": [
+   {
+    "word": "advertise",
+    "meaning": "刊登廣告；宣傳",
+    "syn": [
+     "promote",
+     "publicize"
+    ],
+    "der": [
+     "advertisement",
+     "advertiser"
+    ],
+    "ant": [],
+    "example": "The company advertised the product on TV.",
+    "example_zh": "公司在電視上宣傳這項產品。"
+   },
+   {
+    "word": "exercise",
+    "meaning": "運動；練習",
+    "syn": [
+     "train",
+     "practice"
+    ],
+    "der": [
+     "exerciser"
+    ],
+    "ant": [],
+    "example": "I exercise every morning.",
+    "example_zh": "我每天早上運動。"
+   },
+   {
+    "word": "surprise",
+    "meaning": "使驚訝",
+    "syn": [
+     "astonish",
+     "amaze"
+    ],
+    "der": [
+     "surprising",
+     "surprised"
+    ],
+    "ant": [
+     "bore"
+    ],
+    "example": "The news surprised everyone.",
+    "example_zh": "這個消息讓大家吃驚。"
+   },
+   {
+    "word": "revise",
+    "meaning": "修訂；複習",
+    "syn": [
+     "edit",
+     "review"
+    ],
+    "der": [
+     "revision"
+    ],
+    "ant": [],
+    "example": "Please revise your essay.",
+    "example_zh": "請修改你的文章。"
+   },
+   {
+    "word": "improvise",
+    "meaning": "即興創作",
+    "syn": [
+     "ad-lib",
+     "invent"
+    ],
+    "der": [
+     "improvisation"
+    ],
+    "ant": [
+     "plan"
+    ],
+    "example": "The band improvised a solo.",
+    "example_zh": "樂團即興演奏了一段獨奏。"
+   },
+   {
+    "word": "organise",
+    "meaning": "組織（英式拼法）",
+    "syn": [
+     "arrange",
+     "coordinate"
+    ],
+    "der": [
+     "organisation"
+    ],
+    "ant": [
+     "disorganise"
+    ],
+    "example": "They organised a charity event.",
+    "example_zh": "他們籌辦了一場慈善活動。"
+   },
+   {
+    "word": "realise",
+    "meaning": "領悟（英式拼法）",
+    "syn": [
+     "understand",
+     "grasp"
+    ],
+    "der": [
+     "realisation"
+    ],
+    "ant": [
+     "overlook"
+    ],
+    "example": "I realised my mistake too late.",
+    "example_zh": "我太晚才意識到自己的錯誤。"
+   }
+  ]
+ },
+ {
+  "id": "ify",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-ify",
+  "meaning": "使…化",
+  "words": [
+   {
+    "word": "simplify",
+    "meaning": "簡化",
+    "syn": [
+     "streamline",
+     "clarify"
+    ],
+    "der": [
+     "simple",
+     "simplification"
+    ],
+    "ant": [
+     "complicate"
+    ],
+    "example": "Try to simplify the instructions.",
+    "example_zh": "請試著簡化說明。"
+   },
+   {
+    "word": "clarify",
+    "meaning": "澄清",
+    "syn": [
+     "explain",
+     "clear up"
+    ],
+    "der": [
+     "clear",
+     "clarification"
+    ],
+    "ant": [
+     "confuse"
+    ],
+    "example": "Could you clarify your point?",
+    "example_zh": "你能澄清一下你的觀點嗎？"
+   },
+   {
+    "word": "identify",
+    "meaning": "辨認；確認",
+    "syn": [
+     "recognize",
+     "pinpoint"
+    ],
+    "der": [
+     "identity",
+     "identification"
+    ],
+    "ant": [
+     "misidentify"
+    ],
+    "example": "Can you identify the problem?",
+    "example_zh": "你能找出問題所在嗎？"
+   },
+   {
+    "word": "justify",
+    "meaning": "證明…合理",
+    "syn": [
+     "defend",
+     "explain"
+    ],
+    "der": [
+     "just",
+     "justification"
+    ],
+    "ant": [
+     "condemn"
+    ],
+    "example": "How can you justify this decision?",
+    "example_zh": "你如何證明這個決定是合理的？"
+   },
+   {
+    "word": "classify",
+    "meaning": "分類",
+    "syn": [
+     "categorize",
+     "sort"
+    ],
+    "der": [
+     "class",
+     "classification"
+    ],
+    "ant": [
+     "mix"
+    ],
+    "example": "The books are classified by subject.",
+    "example_zh": "這些書按主題分類。"
+   },
+   {
+    "word": "notify",
+    "meaning": "通知",
+    "syn": [
+     "inform",
+     "tell"
+    ],
+    "der": [
+     "notice",
+     "notification"
+    ],
+    "ant": [
+     "conceal"
+    ],
+    "example": "Please notify me of any changes.",
+    "example_zh": "如有任何變動請通知我。"
+   },
+   {
+    "word": "verify",
+    "meaning": "查證",
+    "syn": [
+     "confirm",
+     "check"
+    ],
+    "der": [
+     "verification"
+    ],
+    "ant": [
+     "refute"
+    ],
+    "example": "The bank must verify your identity.",
+    "example_zh": "銀行必須確認你的身分。"
+   }
+  ]
+ },
+ {
+  "id": "le",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-le",
+  "meaning": "反覆的動作",
+  "words": [
+   {
+    "word": "sparkle",
+    "meaning": "閃爍",
+    "syn": [
+     "glitter",
+     "shine"
+    ],
+    "der": [
+     "spark",
+     "sparkling"
+    ],
+    "ant": [],
+    "example": "The diamonds sparkled in the light.",
+    "example_zh": "鑽石在光線下閃閃發光。"
+   },
+   {
+    "word": "crumble",
+    "meaning": "碎裂；崩潰",
+    "syn": [
+     "disintegrate",
+     "collapse"
+    ],
+    "der": [
+     "crumb"
+    ],
+    "ant": [
+     "hold together"
+    ],
+    "example": "The old wall began to crumble.",
+    "example_zh": "舊牆開始崩塌。"
+   },
+   {
+    "word": "giggle",
+    "meaning": "咯咯笑",
+    "syn": [
+     "chuckle",
+     "titter"
+    ],
+    "der": [
+     "giggly"
+    ],
+    "ant": [
+     "weep"
+    ],
+    "example": "The children giggled at the joke.",
+    "example_zh": "孩子們被笑話逗得咯咯笑。"
+   },
+   {
+    "word": "nibble",
+    "meaning": "小口咬",
+    "syn": [
+     "nip",
+     "munch"
+    ],
+    "der": [
+     "nibbler"
+    ],
+    "ant": [],
+    "example": "The rabbit nibbled the carrot.",
+    "example_zh": "兔子小口啃著胡蘿蔔。"
+   },
+   {
+    "word": "wrinkle",
+    "meaning": "起皺",
+    "syn": [
+     "crease",
+     "crumple"
+    ],
+    "der": [
+     "wrinkly"
+    ],
+    "ant": [
+     "smooth"
+    ],
+    "example": "Linen wrinkles easily.",
+    "example_zh": "亞麻很容易起皺。"
+   },
+   {
+    "word": "struggle",
+    "meaning": "掙扎；奮鬥",
+    "syn": [
+     "fight",
+     "strive"
+    ],
+    "der": [
+     "struggler"
+    ],
+    "ant": [
+     "surrender"
+    ],
+    "example": "She struggled to open the heavy door.",
+    "example_zh": "她費力地想打開那扇沉重的門。"
+   },
+   {
+    "word": "cuddle",
+    "meaning": "擁抱；依偎",
+    "syn": [
+     "hug",
+     "snuggle"
+    ],
+    "der": [
+     "cuddly"
+    ],
+    "ant": [],
+    "example": "She cuddled the puppy on her lap.",
+    "example_zh": "她把小狗抱在腿上依偎著。"
+   },
+   {
+    "word": "tremble",
+    "meaning": "顫抖",
+    "syn": [
+     "shake",
+     "shiver"
+    ],
+    "der": [
+     "trembling"
+    ],
+    "ant": [
+     "steady"
+    ],
+    "example": "His hands trembled with excitement.",
+    "example_zh": "他興奮得雙手發抖。"
+   },
+   {
+    "word": "sniffle",
+    "meaning": "抽鼻子；吸鼻涕",
+    "syn": [
+     "sniff",
+     "snivel"
+    ],
+    "der": [
+     "sniffles"
+    ],
+    "ant": [],
+    "example": "She sniffled quietly during the sad movie.",
+    "example_zh": "她在悲傷的電影裡輕輕吸著鼻子。"
+   },
+   {
+    "word": "handle",
+    "meaning": "處理；操控",
+    "syn": [
+     "manage",
+     "deal with"
+    ],
+    "der": [
+     "handler",
+     "handling"
+    ],
+    "ant": [
+     "mishandle"
+    ],
+    "example": "She can handle pressure well.",
+    "example_zh": "她很能承受壓力。"
+   },
+   {
+    "word": "settle",
+    "meaning": "解決；安頓",
+    "syn": [
+     "resolve",
+     "settle down"
+    ],
+    "der": [
+     "settlement",
+     "settler"
+    ],
+    "ant": [
+     "unsettle"
+    ],
+    "example": "They settled the argument quickly.",
+    "example_zh": "他們很快就解決了爭執。"
+   },
+   {
+    "word": "whistle",
+    "meaning": "吹口哨；哨子",
+    "syn": [
+     "pipe"
+    ],
+    "der": [
+     "whistler"
+    ],
+    "ant": [],
+    "example": "He whistled while he worked.",
+    "example_zh": "他邊工作邊吹口哨。"
+   },
+   {
+    "word": "tickle",
+    "meaning": "搔癢；逗樂",
+    "syn": [
+     "tease",
+     "amuse"
+    ],
+    "der": [
+     "ticklish"
+    ],
+    "ant": [],
+    "example": "The feather tickled her nose.",
+    "example_zh": "羽毛搔得她鼻子發癢。"
+   }
+  ]
+ },
+ {
+  "id": "ish-verb",
+  "type": "suffix",
+  "group": "動詞字尾",
+  "name": "-ish",
+  "meaning": "做、使…",
+  "words": [
+   {
+    "word": "finish",
+    "meaning": "完成",
+    "syn": [
+     "complete",
+     "end"
+    ],
+    "der": [
+     "finished"
+    ],
+    "ant": [
+     "start",
+     "begin"
+    ],
+    "example": "I finished my homework early.",
+    "example_zh": "我提早完成了作業。"
+   },
+   {
+    "word": "punish",
+    "meaning": "懲罰",
+    "syn": [
+     "penalize",
+     "discipline"
+    ],
+    "der": [
+     "punishment"
+    ],
+    "ant": [
+     "reward"
+    ],
+    "example": "Parents should not punish without explaining.",
+    "example_zh": "父母不該不解釋就處罰。"
+   },
+   {
+    "word": "establish",
+    "meaning": "建立",
+    "syn": [
+     "found",
+     "set up"
+    ],
+    "der": [
+     "establishment"
+    ],
+    "ant": [
+     "abolish"
+    ],
+    "example": "The school was established in 1950.",
+    "example_zh": "這所學校創立於一九五〇年。"
+   },
+   {
+    "word": "publish",
+    "meaning": "出版；發表",
+    "syn": [
+     "issue",
+     "print"
+    ],
+    "der": [
+     "publisher",
+     "publication"
+    ],
+    "ant": [],
+    "example": "The company publishes children's books.",
+    "example_zh": "這家公司出版兒童書。"
+   },
+   {
+    "word": "accomplish",
+    "meaning": "完成；達成",
+    "syn": [
+     "achieve",
+     "complete"
+    ],
+    "der": [
+     "accomplishment"
+    ],
+    "ant": [
+     "fail"
+    ],
+    "example": "She accomplished her goal.",
+    "example_zh": "她達成了目標。"
+   },
+   {
+    "word": "polish",
+    "meaning": "擦亮；潤飾",
+    "syn": [
+     "shine",
+     "buff"
+    ],
+    "der": [
+     "polished"
+    ],
+    "ant": [
+     "dull"
+    ],
+    "example": "He polished his shoes.",
+    "example_zh": "他擦亮了他的鞋子。"
+   },
+   {
+    "word": "cherish",
+    "meaning": "珍惜",
+    "syn": [
+     "treasure",
+     "value"
+    ],
+    "der": [
+     "cherished"
+    ],
+    "ant": [
+     "neglect"
+    ],
+    "example": "Cherish the time with your family.",
+    "example_zh": "珍惜與家人相處的時光。"
+   }
+  ]
+ }
+]

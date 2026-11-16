@@ -22,6 +22,7 @@
 {"en":"By evening, they had finished the first stage of the project.","zh":"到了傍晚，他們已經完成了專案的第一階段。"},
 {"en":"Tom realized that teamwork is the key to success.","zh":"湯姆體會到團隊合作是成功的關鍵。"}],
 "vocab":[{"word":"manager","pos":"n.","meaning":"經理"},{"word":"eliminate","pos":"v.","meaning":"消除"},{"word":"efficiency","pos":"n.","meaning":"效率"},{"word":"fluctuate","pos":"v.","meaning":"波動"},{"word":"budget","pos":"n.","meaning":"預算"},{"word":"teamwork","pos":"n.","meaning":"團隊合作"}]},
+
 {"id":"s003","title":"A Summer Trip to the Sea","title_zh":"夏日海島之旅","level":"A2","topic":"旅遊",
 "sentences":[
 {"en":"Last summer, Anna and her little brother traveled to a small island.","zh":"去年夏天，安娜和她的弟弟去一座小島旅行。"},
@@ -31,11 +32,11 @@
 {"en":"Her little brother was nervous about swimming, but Anna encouraged him.","zh":"她的弟弟對游泳感到緊張，但安娜鼓勵他。"},
 {"en":"In the evening, they watched a splendid sunset together.","zh":"傍晚，他們一起欣賞了壯麗的夕陽。"},
 {"en":"Anna said that she would never forget that peaceful day.","zh":"安娜說她永遠不會忘記那個平靜的日子。"}],
-"vocab":[{"word":"ferry","pos":"n.","meaning":"渡輪"},{"word":"calm","pos":"adj.","meaning":"平靜的"},{"word":"encouraged","pos":"v.","meaning":"鼓勵（encourage 的過去式）"},{"word":"splendid","pos":"adj.","meaning":"壯麗的；極好的"},{"word":"peaceful","pos":"adj.","meaning":"和平的；平靜的"}]}
+"vocab":[{"word":"ferry","pos":"n.","meaning":"渡輪"},{"word":"calm","pos":"adj.","meaning":"平靜的"},{"word":"encouraged","pos":"v.","meaning":"鼓勵（encourage 的過去式）"},{"word":"splendid","pos":"adj.","meaning":"壯麗的；極好的"},{"word":"peaceful","pos":"adj.","meaning":"和平的；平靜的"}]},
 
 
 
-  {
+{
     "id": "s004",
     "title": "A Busy Morning at the Airport",
     "title_zh": "機場的忙碌早晨",
@@ -57,7 +58,7 @@
       { "word": "accommodation", "pos": "n.", "meaning": "住宿、住處" },
       { "word": "boarding", "pos": "n.", "meaning": "登機、上船" }
     ]
-  },
+},
   {
     "id": "s005",
     "title": "Meeting the Project Deadline",
@@ -149,7 +150,7 @@
       { "word": "reserve", "pos": "v.", "meaning": "預約、保留" },
       { "word": "appreciate", "pos": "v.", "meaning": "感謝、欣賞" }
     ]
-  }
+  },
 
   {
     "id": "s009",

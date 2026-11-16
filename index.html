@@ -31,6 +31,7 @@ nav{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px s
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 .gh{font-size:13px;font-weight:700;color:var(--acc);padding:12px 0 4px}
 #tip{position:fixed;left:0;right:0;bottom:calc(68px + env(safe-area-inset-bottom));padding:0 16px;display:none;z-index:6}#tip.on{display:block}.tp{max-width:520px;margin:0 auto;box-shadow:0 8px 24px rgba(0,0,0,.35);background:var(--acc);color:var(--onacc)}.tp .m{color:inherit;opacity:.9}.tp .b{color:inherit}.tp a{color:inherit;text-decoration:underline}.si{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.ln{padding:10px 12px;border-radius:12px;opacity:.5;margin-top:6px}.ln.on{opacity:1;background:var(--chip)}.blind .ln:not(.on){filter:blur(7px)}.lc{display:flex;flex-direction:column}
 </style></head><body>
 <main id="app"><p class="m">載入中…</p></main>
 <nav aria-label="主選單"><div><a href="#/" data-n="">學習</a><a href="#/list" data-n="list">單字列表</a><a href="#/affix" data-n="affix">詞綴</a><a href="#/add" data-n="add">新增</a></div></nav>
@@ -45,7 +46,7 @@ const AA=()=>{const m=A.map(a=>({...a,words:[...a.words]}));ST.get('ua',[]).forE
 const words=()=>W.concat(ST.get('uw',[])),shuf=a=>[...a].sort(()=>Math.random()-.5);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const I=d=>`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
-const ic={spk:I('<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>'),star:I('<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'),tr:I('<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-7 8M14 20l4-9 4 9M15.5 17h5"/>'),back:I('<path d="m15 5-7 7 7 7"/>'),chev:I('<path d="m9 5 7 7-7 7"/>'),x:I('<path d="M6 6l12 12M18 6 6 18"/>')};
+const ic={spk:I('<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>'),star:I('<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'),tr:I('<path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-7 8M14 20l4-9 4 9M15.5 17h5"/>'),back:I('<path d="m15 5-7 7 7 7"/>'),chev:I('<path d="m9 5 7 7-7 7"/>'),x:I('<path d="M6 6l12 12M18 6 6 18"/>'),play:I('<path d="M8 5v14l11-7z"/>'),pause:I('<path d="M8 5v14M16 5v14"/>'),prev:I('<path d="M6 5v14M18 5 9 12l9 7z"/>'),next:I('<path d="M18 5v14M6 5l9 7-9 7z"/>')};
 const show=h=>{app.innerHTML=h},toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800)};
 const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.9;speechSynthesis.speak(u)}catch{}};
 const today=()=>{const l=ST.get('day',{});return l.d===new Date().toDateString()?l.n:0},bump=()=>{ST.set('day',{d:new Date().toDateString(),n:today()+1})};
@@ -58,6 +59,7 @@ const exb=(e,z)=>e?`<div class="ex"><div class="et">${esc(e)}</div><div class="r
 function home(){const n=today(),w=words();show(`<div><p class="m" style="margin:0">學習</p><h1>今天學什麼？</h1></div>
 <div class="c"><div class="hd"><b>今日進度</b><span class="m">${n} / ${GOAL}</span></div><div class="bar"><i style="width:${Math.min(100,n/GOAL*100)}%"></i></div></div>
 <div class="c f"><div><b style="font-size:20px">單字題庫</b><div class="m">共 ${w.length} 字　翻卡・例句・語音・測驗</div></div><div class="r"><a class="b p" href="#/card">開始翻卡</a><a class="b" href="#/list">單字列表</a></div><div class="r"><a class="b" href="#/quiz/all">隨機測驗</a><a class="b" href="#/tq">依主題測驗</a></div></div>
+<div class="c f"><div><b style="font-size:20px">英聽學習</b><div class="m">自動朗讀單字、例句與翻譯，像老師一樣一路播下去</div></div><a class="b p" href="#/listen">開始英聽</a></div>
 <div class="c f"><b style="font-size:20px">依主題翻卡學習</b><div class="grp">${topics().map(t=>`<a class="t" style="text-decoration:none" href="#/card/t~${encodeURIComponent(t[0])}">${esc(t[0])} ${t[1]}</a>`).join('')}</div></div>
 <div class="c f"><div><b style="font-size:20px">字首字尾庫</b><div class="m">共 ${AA().length} 個詞綴　衍生字・反義字・測驗</div></div><div class="r"><a class="b p" href="#/affix">瀏覽詞綴分類</a><a class="b" href="#/aq/all">測驗詞綴（全部）</a></div></div>
 <div class="r"><button class="b" data-a="gofav">我的收藏 ${favN()}</button><a class="b" href="#/add">新增單字</a></div>`)}
@@ -70,7 +72,7 @@ show(`${hd(`單字列表 · 共 ${all.length} 字`)}${seg([['both','中英對照
 <input id="sq" type="search" class="si" placeholder="搜尋單字、中文或主題" value="${esc(sq)}" aria-label="搜尋單字" autocomplete="off">
 <div class="hd"><div class="r" style="flex:none">${ch('flt','all',`全部 ${all.length}`,flt==='all')}${ch('flt','fav',`收藏 ${favN()}`,flt==='fav')}</div><button class="b" style="min-height:40px" data-a="srt">排序：${L[srt]}</button></div>
 <div class="grp" style="flex-wrap:nowrap;overflow-x:auto">${ch('tp','all','全部主題',tp==='all')}${T.map(t=>ch('tp',t[0],`${esc(t[0])} ${t[1]}`,tp===t[0])).join('')}</div>
-${tp!=='all'?`<div class="r"><a class="b" href="#/card/t~${encodeURIComponent(tp)}">主題翻卡</a><a class="b p" href="#/quiz/t~${encodeURIComponent(tp)}">測驗這個主題</a></div>`:''}
+${tp!=='all'?`<div class="r"><a class="b" href="#/card/t~${encodeURIComponent(tp)}">主題翻卡</a><a class="b p" href="#/quiz/t~${encodeURIComponent(tp)}">測驗這個主題</a><a class="b" href="#/listen/t~${encodeURIComponent(tp)}">主題英聽</a></div>`:''}
 ${mode==='hide'?'<div class="m">點選單字即可顯示中文，再點一次收起</div>':''}
 <div class="c lst ${mode==='hide'?'hide':''}" id="wl">${listBody()}</div>`)}
 function tq(){const T=topics();show(`${hd('依主題測驗')}<div class="c m">選一個主題，從該主題的單字中隨機出題，可以一直練習。</div>`+(T.map(t=>`<a class="cat" href="#/quiz/t~${encodeURIComponent(t[0])}"><b style="flex:1">${esc(t[0])}</b><span class="m">${t[1]} 字</span>${ic.chev}</a>`).join('')||'<div class="c m">還沒有單字。</div>'))}
@@ -98,8 +100,8 @@ if(k){const ma=ab.filter(a=>a.name.toLowerCase().includes(k)||(a.meaning||'').in
 return(ma.length?`<div class="gh">詞綴 · ${ma.length}</div>`+ma.map(cat).join(''):'')+(mw.length?`<div class="gh">單字 · ${mw.length}${mw.length>30?'（顯示前 30 個）':''}</div>`+mw.slice(0,30).map(g=>`<div class="m">${esc(g[0].name)}　${esc(g[0].meaning)}</div>`+wc(g[0],g[1])).join(''):'')||'<div class="c m">找不到符合的詞綴或單字。</div>'}
 if(atype==='fav'){const fa=ab.filter(x=>fav.has('af:'+x.id)),fw=ab.map(a=>[a,a.words.filter(w=>fav.has('aw:'+a.id+':'+w.word))]).filter(g=>g[1].length);return(fa.length?'<div class="gh">收藏的詞綴</div>'+fa.map(cat).join(''):'')+fw.map(g=>`<div class="gh">${esc(g[0].name)} · ${esc(g[0].meaning)}</div>`+g[1].map(w=>wc(g[0],w)).join('')).join('')||'<div class="c m">還沒有收藏。在詞綴、單字或測驗畫面點星號就會加入這裡。</div>'}
 return grp(ab.filter(x=>x.type===atype))||'<div class="c m">這個分類還沒有詞綴。把資料加進 data/affixes 的 JSON，或到「新增」頁新增。</div>'}
-function affix(id){const ab=AA();if(id){const a=ab.find(x=>x.id===id);if(!a)return affix();return show(`${hd(a.name+' 詞綴',fb('af:'+a.id))}<div class="c ctr"><span class="t" style="background:var(--acc);color:var(--onacc);font-size:20px">${esc(a.name)}</span><div class="big" style="font-size:24px">${esc(a.meaning)}</div></div>`+a.words.map(w=>wc(a,w)).join('')+`<a class="b p" href="#/aq/${esc(a.id)}">測驗詞綴 ${esc(a.name)}</a>`)}
-show(`<h1>字首字尾庫</h1>${seg(Object.entries(AT),atype,'atype')}<input id="sqa" type="search" class="si" placeholder="搜尋詞綴或單字（中英文都可以）" value="${esc(sqa)}" aria-label="搜尋詞綴" autocomplete="off"><a class="b p" href="#/aq/all">測驗詞綴（全部）</a><div id="ab" style="display:flex;flex-direction:column;gap:14px">${affBody()}</div>`)}
+function affix(id){const ab=AA();if(id){const a=ab.find(x=>x.id===id);if(!a)return affix();return show(`${hd(a.name+' 詞綴',fb('af:'+a.id))}<div class="c ctr"><span class="t" style="background:var(--acc);color:var(--onacc);font-size:20px">${esc(a.name)}</span><div class="big" style="font-size:24px">${esc(a.meaning)}</div></div>`+a.words.map(w=>wc(a,w)).join('')+`<div class="r"><a class="b p" href="#/aq/${esc(a.id)}">測驗詞綴 ${esc(a.name)}</a><a class="b" href="#/listen/aff~${esc(a.id)}">英聽這個詞綴</a></div>`)}
+show(`<h1>字首字尾庫</h1>${seg(Object.entries(AT),atype,'atype')}<input id="sqa" type="search" class="si" placeholder="搜尋詞綴或單字（中英文都可以）" value="${esc(sqa)}" aria-label="搜尋詞綴" autocomplete="off"><div class="r"><a class="b p" href="#/aq/all">測驗詞綴（全部）</a><a class="b" href="#/listen/affall">英聽全部詞綴</a></div><div id="ab" style="display:flex;flex-direction:column;gap:14px">${affBody()}</div>`)}
 
 const bt=(a,l,at,bad)=>`<button class="b" style="min-height:40px${bad?';color:var(--bad)':''}" data-a="${a}" ${at}>${l}</button>`;
 const rowM=(t,m,b)=>`<div class="row"><div style="flex:1;min-width:0"><b>${esc(t)}</b><span class="mn" style="color:var(--mut)">${esc(m)}</span></div>${b}</div>`;
@@ -126,7 +128,66 @@ try{const d=await getJ('https://translate.googleapis.com/translate_a/single?clie
 try{const d=await getJ('https://api.mymemory.translated.net/get?q='+encodeURIComponent(w)+'&langpair=en|zh-TW');const m=(d.responseData.translatedText||'').trim();if(m&&m.toLowerCase()!==w.toLowerCase()){c[w]=m;ST.set('gl',c);return{m,s:'線上翻譯'}}}catch{}
 return null}
 function tip(w){tcur=w;const el=$('#tip');el.innerHTML=`<div class="c tp"><div class="hd"><b style="font-size:20px">${esc(w)}</b><span style="display:flex">${sp(w)}<button class="b i" data-a="tc" aria-label="關閉">${ic.x}</button></span></div><div id="tm" class="m">查詢中…</div></div>`;el.classList.add('on');gloss(w).then(r=>{if(tcur!==w)return;$('#tm').innerHTML=r?`<div style="font-size:18px;line-height:1.5">${esc(r.m)}</div><div class="m">${r.s}</div>`:`查不到，可能沒有網路。<a href="https://translate.google.com/?sl=en&tl=zh-TW&op=translate&text=${encodeURIComponent(w)}" target="_blank" rel="noopener">改用 Google 翻譯</a>`})}
-const ACT={hint:()=>{const q=Q.l[Q.i],e=$('#hn');if(e&&q){e.textContent=q.pm||'';e.style.display='block'}},gl:d=>tip(d.w),tc:()=>{$('#tip').classList.remove('on');tcur=''},tp:d=>{tp=d.v;list()},srt:()=>{srt=({topic:'abc',abc:'new',new:'topic'})[srt];list()},edw:d=>{ed={k:'w',id:d.id};atab='e';add()},eda:d=>{ed={k:'a',id:d.id};atab='e';add()},edaw:d=>{ed={k:'aw',id:d.id,i:+d.i};atab='e';add()},cancel:()=>{ed=null;atab='m';add()},
+const LDEF={parts:{w:1,m:1,e:1,z:1,r:0},rate:.9,gap:1,shadow:0,rep:1,shuffle:0,loop:1,timer:0,blind:0};
+let LS={...LDEF,...ST.get('lset',{})},L=null,WL=null;
+const lsave=()=>ST.set('lset',LS),LDELAY=[600,1200,2200],sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const cz=s=>(s||'').replace(/（[^）]*）|\([^)]*\)/g,'').replace(/[；;]/g,'，');
+function vz(l){try{const v=speechSynthesis.getVoices();return v.find(x=>x.lang.replace('_','-')===l)||v.find(x=>x.lang.toLowerCase().startsWith(l.slice(0,2)))}catch{}}
+function say1(t,l,r){return new Promise(res=>{try{const u=new SpeechSynthesisUtterance(t);u.lang=l;u.rate=r;const v=vz(l);if(v)u.voice=v;const t0=Date.now();u.onend=u.onerror=()=>res(Date.now()-t0);setTimeout(()=>res(Date.now()-t0),15000);speechSynthesis.speak(u)}catch{res(0)}})}
+async function lwake(on){try{if(on){if(!WL&&navigator.wakeLock){WL=await navigator.wakeLock.request('screen');WL.addEventListener('release',()=>{WL=null})}}else if(WL){await WL.release();WL=null}}catch{}}
+const ltitle=a=>a==='fav'?'收藏的單字':a.startsWith('t~')?'主題：'+a.slice(2):a==='affall'?'全部詞綴單字':a==='afffav'?'收藏的詞綴單字':a.startsWith('aff~')?((AA().find(x=>x.id===a.slice(4))||{}).name||'')+' 詞綴':'全部單字';
+function lbuild(a){const ab=AA(),ai=f=>f.words.map(w=>({id:'aw:'+f.id+':'+w.word,w,tag:f.name}));
+if(a==='fav')return words().filter(x=>fav.has(x.id)).map(x=>({id:x.id,w:x,tag:TP(x)}));
+if(a.startsWith('t~')){const t=a.slice(2);return words().filter(x=>TP(x)===t).map(x=>({id:x.id,w:x,tag:t}))}
+if(a==='affall')return ab.flatMap(ai);
+if(a==='afffav')return ab.flatMap(ai).filter(x=>fav.has(x.id));
+if(a.startsWith('aff~')){const f=ab.find(x=>x.id===a.slice(4));return f?ai(f):[]}
+return words().map(x=>({id:x.id,w:x,tag:TP(x)}))}
+function lpick(){const T=topics(),afw=AA().flatMap(a=>a.words.map(w=>'aw:'+a.id+':'+w.word)),row=(h,t,n)=>`<a class="cat" href="#/listen/${h}"><b style="flex:1">${t}</b><span class="m">${n} 字</span>${ic.chev}</a>`;
+show(`${hd('英聽學習')}<div class="c m">自動朗讀：單字 → 中文意思 → 例句 → 例句翻譯，然後接著下一個。先選範圍：</div>${row('all','全部單字',words().length)}${row('fav','收藏的單字',favN())}<div class="gh">依主題</div>${T.map(t=>row('t~'+encodeURIComponent(t[0]),esc(t[0]),t[1])).join('')}<div class="gh">詞綴單字</div>${row('affall','全部詞綴單字',afw.length)}${row('afffav','收藏的詞綴單字',afw.filter(i=>fav.has(i)).length)}<div class="m">想聽單一個詞綴：到「詞綴」頁點進該詞綴，按「英聽這個詞綴」。</div>`)}
+function listen(a){a=a?decodeURIComponent(a):'';if(!a)return lpick();L={src:a,items:lbuild(a),i:0,playing:false,run:0,seg:-1,until:0};if(LS.shuffle)L.items=shuf(L.items);lv()}
+function lsteps(it){const w=it.w,P=LS.parts,S=[],en='en-US',zh='zh-TW';
+if(P.w&&w.word)for(let i=0;i<LS.rep;i++)S.push({k:0,t:w.word,l:en});
+if(P.m&&w.meaning)S.push({k:1,t:cz(w.meaning),l:zh});
+if(P.e&&w.example)S.push({k:2,t:w.example,l:en});
+if(P.z&&w.example_zh)S.push({k:3,t:cz(w.example_zh),l:zh});
+if(P.r){const a=[];if(w.syn?.length)a.push('Synonyms: '+w.syn.join(', '));if(w.ant?.length)a.push('Opposites: '+w.ant.join(', '));if(a.length)S.push({k:4,t:a.join('. '),l:en})}
+return S}
+function hl(k){document.querySelectorAll('.ln').forEach(e=>e.classList.toggle('on',e.dataset.k===String(k)))}
+function lupd(){const b=$('#lpl');if(b)b.innerHTML=L.playing?ic.pause+' 暫停':ic.play+' 播放'}
+function lstop(){L.playing=false;L.run++;try{speechSynthesis.cancel()}catch{}lwake(false)}
+function lgo(d){const was=L.playing;lstop();L.i=(L.i+d+L.items.length)%L.items.length;lv();if(was)lplay()}
+async function lplay(){if(L.playing||!L.items.length)return;if(!('speechSynthesis'in window))return toast('這個瀏覽器不支援語音朗讀');L.playing=true;const my=++L.run;L.until=LS.timer?Date.now()+LS.timer*60000:0;lwake(true);lupd();
+while(L.playing&&L.run===my){const it=L.items[L.i],S=lsteps(it);if(!S.length){toast('請至少開啟一項播放內容');break}
+for(const st of S){if(!(L.playing&&L.run===my))return;L.seg=st.k;hl(st.k);const ms=await say1(st.t,st.l,st.l==='en-US'?LS.rate:Math.min(1.2,LS.rate+.1));if(!(L.playing&&L.run===my))return;await sleep(LS.shadow&&st.l==='en-US'&&st.k!==4?ms*1.1+300:LDELAY[LS.gap])}
+bump();L.seg=-1;
+if(L.until&&Date.now()>L.until){toast('定時時間到，已停止播放');break}
+if(L.i<L.items.length-1)L.i++;else if(LS.loop){if(LS.shuffle)L.items=shuf(L.items);L.i=0}else{toast('已播放完畢');break}
+lv();await sleep(LDELAY[LS.gap]+200)}
+if(L.run===my){L.playing=false;lwake(false);lupd()}}
+function lv(){const it=L.items[L.i];if(!it)return show(`${hd('英聽模式')}<div class="c m">這個範圍還沒有內容可以播放。</div>`);const w=it.w,P=LS.parts,rel=P.r&&(w.syn?.length||w.ant?.length);
+const tg=(a,v,l,on)=>`<button class="t" data-a="${a}" data-v="${v}" aria-pressed="${!!on}">${l}</button>`;
+show(`${hd('英聽 · '+ltitle(L.src),fb(it.id))}
+<div class="m" style="text-align:center">第 ${L.i+1} / ${L.items.length} 個　${esc(it.tag||'')}</div>
+<div class="c lc${LS.blind?' blind':''}"><div class="ln" data-k="0" style="text-align:center"><div style="font-size:34px;font-weight:700;word-break:break-word">${esc(w.word)}</div><div class="m">${esc(w.pos||'')}${w.ipa?' · '+esc(w.ipa):''}</div></div>
+<div class="ln" data-k="1" style="text-align:center;font-size:22px;color:var(--acc)">${esc(w.meaning)}</div>
+${w.example?`<div class="ln" data-k="2" style="font-size:18px;line-height:1.6">${esc(w.example)}</div>`:''}
+${w.example_zh?`<div class="ln m" data-k="3" style="font-size:16px;line-height:1.6">${esc(w.example_zh)}</div>`:''}
+${rel?`<div class="ln m" data-k="4">${w.syn?.length?'同義字：'+esc(w.syn.join(', '))+'　':''}${w.ant?.length?'反義字：'+esc(w.ant.join(', ')):''}</div>`:''}</div>
+<div class="r"><button class="b" data-a="lgp" aria-label="上一個">${ic.prev}</button><button class="b p" style="flex:3" id="lpl" data-a="lt">${L.playing?ic.pause+' 暫停':ic.play+' 播放'}</button><button class="b" data-a="lgn" aria-label="下一個">${ic.next}</button></div>
+<div class="c f"><b>播放內容</b><div class="grp">${tg('lpart','w','單字',P.w)}${tg('lpart','m','中文意思',P.m)}${tg('lpart','e','例句',P.e)}${tg('lpart','z','例句翻譯',P.z)}${tg('lpart','r','同反義字',P.r)}</div>
+<b>語速</b>${seg([[0.7,'慢'],[0.9,'中'],[1.1,'快']],LS.rate,'lrate')}
+<b>停頓長度</b>${seg([[0,'短'],[1,'中'],[2,'長']],LS.gap,'lgap')}
+<b>單字重複次數</b>${seg([[1,'1 次'],[2,'2 次'],[3,'3 次']],LS.rep,'lrep')}
+<b>定時停止</b>${seg([[0,'不設定'],[15,'15 分'],[30,'30 分'],[60,'60 分']],LS.timer,'ltimer')}
+<div class="grp">${tg('lopt','shadow','跟讀停頓',LS.shadow)}${tg('lopt','blind','純聽（模糊文字）',LS.blind)}${tg('lopt','shuffle','隨機順序',LS.shuffle)}${tg('lopt','loop','循環播放',LS.loop)}</div>
+<div class="m">${LS.shadow?'跟讀停頓：每個英文句子播完後，會安靜等你跟著唸一遍。':''}畫面需保持開啟，鎖屏後瀏覽器會停止朗讀。</div></div>`);hl(L.seg)}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&L&&L.playing)lwake(true)});
+const ACT={lt:()=>{L.playing?lstop():lplay();lupd()},lgp:()=>lgo(-1),lgn:()=>lgo(1),
+lpart:d=>{LS.parts[d.v]=LS.parts[d.v]?0:1;lsave();lv()},lrate:d=>{LS.rate=+d.v;lsave();lv()},lgap:d=>{LS.gap=+d.v;lsave();lv()},lrep:d=>{LS.rep=+d.v;lsave();lv()},
+ltimer:d=>{LS.timer=+d.v;L.until=LS.timer&&L.playing?Date.now()+LS.timer*60000:0;lsave();lv()},
+lopt:d=>{LS[d.v]=LS[d.v]?0:1;lsave();if(d.v==='shuffle'){const was=L.playing;lstop();L.items=LS.shuffle?shuf(L.items):lbuild(L.src);L.i=0;lv();if(was)lplay()}else lv()},
+hint:()=>{const q=Q.l[Q.i],e=$('#hn');if(e&&q){e.textContent=q.pm||'';e.style.display='block'}},gl:d=>tip(d.w),tc:()=>{$('#tip').classList.remove('on');tcur=''},tp:d=>{tp=d.v;list()},srt:()=>{srt=({topic:'abc',abc:'new',new:'topic'})[srt];list()},edw:d=>{ed={k:'w',id:d.id};atab='e';add()},eda:d=>{ed={k:'a',id:d.id};atab='e';add()},edaw:d=>{ed={k:'aw',id:d.id,i:+d.i};atab='e';add()},cancel:()=>{ed=null;atab='m';add()},
 delw:d=>{if(!confirm('刪除這個單字？'))return;ST.set('uw',ST.get('uw',[]).filter(x=>x.id!==d.id));fav.delete(d.id);ST.set('fav',[...fav]);add();toast('已刪除')},
 dela:d=>{if(!confirm('刪除這個詞綴，以及它底下我新增的所有單字？'))return;ST.set('ua',ST.get('ua',[]).filter(x=>x.id!==d.id));add();toast('已刪除')},
 delaw:d=>{if(!confirm('刪除這個單字？'))return;const ua=ST.get('ua',[]),a=ua.find(x=>x.id===d.id);a.words.splice(+d.i,1);ST.set('ua',ua.filter(x=>x.words.length));add();toast('已刪除')},
@@ -145,7 +206,7 @@ document.addEventListener('submit',e=>{const f=e.target.id;if(!['fm','fa','fe'].
 if(f==='fe'){const ua=ST.get('ua',[]),u=ST.get('uw',[]);if(ed.k==='w'){Object.assign(u.find(y=>y.id===ed.id),{...o,tags:lst(o.tags)});ST.set('uw',u)}else if(ed.k==='aw'){Object.assign(ua.find(y=>y.id===ed.id).words[ed.i],{word:o.word,meaning:o.meaning,syn:lst(o.syn),der:lst(o.der),ant:lst(o.ant),example:o.example,example_zh:o.example_zh});ST.set('ua',ua)}else{Object.assign(ua.find(y=>y.id===ed.id),o);ST.set('ua',ua)}ed=null;atab='m';add();return toast('已更新')}
 if(f==='fm'){o.tags=lst(o.tags);addW([o])}else{const r=parseAW(o.lines);if(!r.length)return toast('請至少填一個單字和中文');addA([{id:aid(o.name),type:o.type,name:o.name,meaning:o.meaning,group:o.group,words:r}])}e.target.reset();toast('已儲存')});
 
-function route(){$('#tip').classList.remove('on');const[r,a]=(location.hash.slice(2)||'').split('/');({'':home,list,card,quiz,affix,aq,add,tq}[r]||home)(a);document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('on',x.dataset.n===({card:'',quiz:'',tq:'',aq:'affix'}[r]??r??'')));scrollTo(0,0)}
+function route(){if(L)lstop();$('#tip').classList.remove('on');const[r,a]=(location.hash.slice(2)||'').split('/');({'':home,list,card,quiz,affix,aq,add,tq,listen}[r]||home)(a);document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('on',x.dataset.n===({card:'',quiz:'',tq:'',listen:'',aq:'affix'}[r]??r??'')));scrollTo(0,0)}
 async function boot(){try{const g=async fs=>(await Promise.all(fs.map(f=>fetch('data/'+f).then(r=>r.json())))).flat();const ix=await(await fetch('data/index.json')).json();[W,A]=await Promise.all([g(ix.words),g(ix.affixes)])}catch{show('<div class="c"><b>無法載入題庫</b><p class="m">請透過 GitHub Pages 或本機伺服器開啟（直接點開檔案無法讀取 data 資料夾），並確認 data/index.json 存在。</p></div>');return}
 addEventListener('hashchange',route);route()}
 boot();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});

@@ -1,0 +1,35 @@
+[
+{"id":"s001","title":"The Lost Wallet","title_zh":"遺失的錢包","level":"A2","topic":"生活",
+"sentences":[
+{"en":"Mia found a wallet on the bus.","zh":"米雅在公車上撿到一個錢包。"},
+{"en":"Inside were some money and an ID card.","zh":"裡面有一些錢和一張身分證。"},
+{"en":"She was reluctant to keep it, so she decided to find the owner.","zh":"她不願意把它留下來，所以決定找到失主。"},
+{"en":"The card showed an address, but it was not accurate.","zh":"證件上有一個地址，但並不準確。"},
+{"en":"Mia did not abandon the plan and went to the police station.","zh":"米雅沒有放棄這個計畫，而是去了警察局。"},
+{"en":"An officer helped her call the owner.","zh":"一位警察幫她聯絡失主。"},
+{"en":"An hour later, a young man ran in, out of breath.","zh":"一小時後，一位年輕男子氣喘吁吁地跑進來。"},
+{"en":"He was grateful and thanked her again and again.","zh":"他非常感激，一再向她道謝。"},
+{"en":"Mia smiled and said that honesty brings its own benefit.","zh":"米雅微笑著說，誠實本身就會帶來好處。"}],
+"vocab":[{"word":"reluctant","pos":"adj.","meaning":"不情願的"},{"word":"accurate","pos":"adj.","meaning":"精確的"},{"word":"abandon","pos":"v.","meaning":"放棄；拋棄"},{"word":"grateful","pos":"adj.","meaning":"感激的"},{"word":"benefit","pos":"n.","meaning":"益處；好處"}]},
+{"id":"s002","title":"A Busy Day at Work","title_zh":"忙碌的一天","level":"B1","topic":"商業",
+"sentences":[
+{"en":"Tom works for a small company in Taipei.","zh":"湯姆在台北一家小公司工作。"},
+{"en":"This morning, the manager announced a new project.","zh":"今天早上，經理宣布了一項新專案。"},
+{"en":"The goal was to eliminate waste and improve efficiency.","zh":"目標是消除浪費並提升效率。"},
+{"en":"Tom felt anxious because the schedule was tight.","zh":"湯姆感到焦慮，因為時程很緊。"},
+{"en":"The price of materials continued to fluctuate, so the budget was uncertain.","zh":"材料價格持續波動，所以預算並不確定。"},
+{"en":"His team shared ideas and made a clear plan.","zh":"他的團隊分享想法，擬定了一個清楚的計畫。"},
+{"en":"By evening, they had finished the first stage of the project.","zh":"到了傍晚，他們已經完成了專案的第一階段。"},
+{"en":"Tom realized that teamwork is the key to success.","zh":"湯姆體會到團隊合作是成功的關鍵。"}],
+"vocab":[{"word":"manager","pos":"n.","meaning":"經理"},{"word":"eliminate","pos":"v.","meaning":"消除"},{"word":"efficiency","pos":"n.","meaning":"效率"},{"word":"fluctuate","pos":"v.","meaning":"波動"},{"word":"budget","pos":"n.","meaning":"預算"},{"word":"teamwork","pos":"n.","meaning":"團隊合作"}]},
+{"id":"s003","title":"A Summer Trip to the Sea","title_zh":"夏日海島之旅","level":"A2","topic":"旅遊",
+"sentences":[
+{"en":"Last summer, Anna and her little brother traveled to a small island.","zh":"去年夏天，安娜和她的弟弟去一座小島旅行。"},
+{"en":"They took an overnight train and then a ferry.","zh":"他們先搭夜車，再搭渡輪。"},
+{"en":"The sea was calm, and the sky was clear.","zh":"海面很平靜，天空很晴朗。"},
+{"en":"Near the rocks, they saw colorful fish in the water.","zh":"在岩石附近，他們看見水裡有五顏六色的魚。"},
+{"en":"Her little brother was nervous about swimming, but Anna encouraged him.","zh":"她的弟弟對游泳感到緊張，但安娜鼓勵他。"},
+{"en":"In the evening, they watched a splendid sunset together.","zh":"傍晚，他們一起欣賞了壯麗的夕陽。"},
+{"en":"Anna said that she would never forget that peaceful day.","zh":"安娜說她永遠不會忘記那個平靜的日子。"}],
+"vocab":[{"word":"ferry","pos":"n.","meaning":"渡輪"},{"word":"calm","pos":"adj.","meaning":"平靜的"},{"word":"encouraged","pos":"v.","meaning":"鼓勵（encourage 的過去式）"},{"word":"splendid","pos":"adj.","meaning":"壯麗的；極好的"},{"word":"peaceful","pos":"adj.","meaning":"和平的；平靜的"}]}
+]

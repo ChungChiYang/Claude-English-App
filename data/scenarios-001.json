@@ -209,5 +209,175 @@
     {"en": "dual-source", "zh": "雙源供應（第二供應商）"},
     {"en": "mitigate", "zh": "減輕、降低（風險或影響）"}
   ]
-}
+},
+
+  {
+    "id": "c09",
+    "stage": "詢價與報價 RFQ",
+    "title": "BOM Cost Optimization & RFQ",
+    "title_zh": "BOM 成本優化與報價討論",
+    "goal_zh": "客戶覺得報價太高，你要從硬體架構、PCB 層數與替代料的角度提出 Cost-down 方案並說明取捨。",
+    "lines": [
+      {"w": "C", "en": "Your initial quote is about fifteen percent higher than our target price. How can we bring the BOM cost down?", "zh": "你們最初的報價比我們的目標價高出約15%。我們要怎麼把 BOM 成本降下來？"},
+      {"w": "E", "en": "The main cost drivers are the switch silicon and the twelve-layer PCB stack-up.", "zh": "主要的成本驅動因素是交換器主晶片和12層板的 PCB 疊構。"},
+      {"w": "C", "en": "Can we reduce the PCB from twelve layers to ten layers to save cost?", "zh": "我們可以把 PCB 從12層降到10層來節省成本嗎？"},
+      {"w": "E", "en": "If we go with a ten-layer stack-up, we might face crosstalk issues on the 25G SerDes traces.", "zh": "如果我們採用10層疊構，25G SerDes 走線可能會面臨串擾問題。"},
+      {"w": "C", "en": "What else can we do without compromising signal integrity?", "zh": "在不犧牲訊號完整性的前提下，我們還能怎麼做？"},
+      {"w": "E", "en": "We can switch to a domestic second-source DC-DC converter and optimize the heatsink extrusion. That saves roughly eight percent.", "zh": "我們可以改用台系第二供應商的直流轉換器，並優化擠型散熱片。這樣大約能省下8%。"}
+    ],
+    "phrases": [
+      {"en": "The main cost driver is the switch silicon.", "zh": "主要的成本來源是交換器主晶片。"},
+      {"en": "We cannot compromise signal integrity.", "zh": "我們不能犧牲訊號完整性。"},
+      {"en": "Here is our cost-down proposal.", "zh": "這是我們的降本提案。"},
+      {"en": "That will save roughly eight percent on the BOM.", "zh": "這大概能省下8%的 BOM 成本。"}
+    ],
+    "terms": [
+      {"en": "RFQ", "say": "R-F-Q", "tts": "R F Q", "zh": "報價請求（Request for Quotation）"},
+      {"en": "BOM", "say": "B-O-M", "tts": "B O M", "zh": "物料清單（Bill of Materials）"},
+      {"en": "stack-up", "zh": "PCB 疊構（層數與介電層排列）"},
+      {"en": "crosstalk", "zh": "串擾（相鄰訊號線的電磁干擾）"},
+      {"en": "SerDes", "say": "Ser-Des", "tts": "Ser Des", "zh": "串列器/解串器（高速傳輸介面）"}
+    ]
+  },
+  {
+    "id": "c10",
+    "stage": "架構規格 Architecture",
+    "title": "PoE Power Budget & Surge Protection",
+    "title_zh": "PoE 供電預算與雷擊突波防護",
+    "goal_zh": "討論 PoE++ (802.3bt) 交換機的總供電瓦數分配、電源效率與戶外雷擊突波防護設計。",
+    "lines": [
+      {"w": "C", "en": "We need all twenty-four ports to support 802.3bt PoE, delivering up to 60 watts per port.", "zh": "我們需要全部24個埠都支援 802.3bt PoE，每埠最高提供60瓦。"},
+      {"w": "E", "en": "If all ports run at full load simultaneously, you would need over 1,440 watts just for PoE.", "zh": "如果所有埠同時滿載運作，光 PoE 就需要超過1,440瓦。"},
+      {"w": "C", "en": "Actually, our typical deployment only uses fifty percent of the total PoE budget at any given time.", "zh": "其實，我們典型的部署在任何時候只會用到總 PoE 預算的50%。"},
+      {"w": "E", "en": "In that case, we can use an 800-watt PSU and implement dynamic power allocation in the PSE controller.", "zh": "這樣的話，我們可以使用800瓦的電源供應器，並在 PSE 控制器中實作動態功率分配。"},
+      {"w": "C", "en": "Sounds good. Also, since this switch will be installed near outdoor cameras, how is the surge protection?", "zh": "聽起來不錯。另外，因為這台交換器會裝在戶外攝影機附近，突波防護做得如何？"},
+      {"w": "E", "en": "We designed a two-stage surge protection circuit using GDTs and TVS arrays to pass 6kV lightning surge tests.", "zh": "我們使用氣體放電管和 TVS 陣列設計了兩級突波保護電路，以通過 6kV 雷擊突波測試。"}
+    ],
+    "phrases": [
+      {"en": "What is the total PoE power budget?", "zh": "總 PoE 供電預算是多少？"},
+      {"en": "It supports dynamic power allocation.", "zh": "它支援動態功率分配。"},
+      {"en": "We designed a two-stage surge protection circuit.", "zh": "我們設計了兩級突波保護電路。"},
+      {"en": "It can withstand up to 6kV surge.", "zh": "它可以承受高達 6kV 的突波。"}
+    ],
+    "terms": [
+      {"en": "PoE", "say": "P-O-E", "tts": "P O E", "zh": "乙太網路供電（Power over Ethernet）"},
+      {"en": "PSE", "say": "P-S-E", "tts": "P S E", "zh": "供電端設備（Power Sourcing Equipment）"},
+      {"en": "PSU", "say": "P-S-U", "tts": "P S U", "zh": "電源供應器（Power Supply Unit）"},
+      {"en": "GDT", "say": "G-D-T", "tts": "G D T", "zh": "氣體放電管（Gas Discharge Tube）"},
+      {"en": "lightning surge", "zh": "雷擊突波"}
+    ]
+  },
+  {
+    "id": "c11",
+    "stage": "設計驗證 DVT",
+    "title": "High-Speed Signal Integrity & Eye Diagram",
+    "title_zh": "高速訊號完整性與眼圖除錯",
+    "goal_zh": "在 DVT 階段用高頻寬示波器量測 25G/100G 眼圖時發現眼高不足，與客戶或晶片廠討論調校參數。",
+    "lines": [
+      {"w": "C", "en": "We checked the DVT test report, and the 25G eye diagram on port 25 looks slightly closed.", "zh": "我們看了 DVT 測試報告，第25埠的 25G 眼圖看起來有點閉合。"},
+      {"w": "E", "en": "Yes, we noticed high-frequency attenuation because the trace length on that port is seven inches.", "zh": "是的，我們注意到高頻衰減，因為該埠的走線長度達到7英吋。"},
+      {"w": "C", "en": "Do we need to spin a new PCB using lower-loss laminate material like Megtron 6?", "zh": "我們需要改版 PCB，換成像 Megtron 6 這種低損耗板材嗎？"},
+      {"w": "E", "en": "Not necessarily. We are currently tuning the TX equalization settings, specifically the pre-emphasis and post-cursor taps.", "zh": "不一定。我們目前正在調整發送端的等化器設定，特別是預加重和後游標抽頭。"},
+      {"w": "C", "en": "Has that improved the bit error rate?", "zh": "這樣有改善位元錯誤率嗎？"},
+      {"w": "E", "en": "Yes, after tuning the SerDes parameters, the eye height opened up by thirty percent, and we achieved error-free transmission.", "zh": "有的，調整 SerDes 參數後，眼高張開了30%，而且達到了無誤碼傳輸。"}
+    ],
+    "phrases": [
+      {"en": "The eye diagram looks slightly closed.", "zh": "眼圖看起來有點閉合。"},
+      {"en": "We noticed high-frequency attenuation.", "zh": "我們注意到高頻衰減。"},
+      {"en": "We are tuning the TX equalization settings.", "zh": "我們正在調整發送端等化器設定。"},
+      {"en": "We achieved error-free transmission.", "zh": "我們達到了無誤碼傳輸。"}
+    ],
+    "terms": [
+      {"en": "eye diagram", "zh": "眼圖（評估高速訊號品質的圖形）"},
+      {"en": "attenuation", "zh": "訊號衰減"},
+      {"en": "pre-emphasis", "zh": "預加重（補償高頻損耗的技術）"},
+      {"en": "BER", "say": "B-E-R", "tts": "B E R", "zh": "位元錯誤率（Bit Error Rate）"},
+      {"en": "spin a board", "zh": "PCB 改版（重新投板）"}
+    ]
+  },
+  {
+    "id": "c12",
+    "stage": "設計驗證 DVT",
+    "title": "Thermal Performance vs. Acoustic Noise",
+    "title_zh": "散熱效能與風扇噪音權衡",
+    "goal_zh": "針對企業辦公室使用的交換機，客戶抱怨風扇轉速太吵，你要解釋溫度曲線與風扇轉速（PWM）的調整空間。",
+    "lines": [
+      {"w": "C", "en": "Since this switch will be deployed in an open office, the acoustic noise at 58 dBA is too loud.", "zh": "因為這台交換器會部署在開放式辦公室，58 dBA 的噪音實在太吵了。"},
+      {"w": "E", "en": "At 25 degrees ambient, the fans were running at seventy percent duty cycle because of a conservative fan curve.", "zh": "在室溫25度下，因為風扇曲線設定比較保守，風扇當時以70%的佔空比運轉。"},
+      {"w": "C", "en": "Can we lower the minimum fan speed to keep the noise under 45 dBA?", "zh": "我們可以降低最低風扇轉速，把噪音控制在 45 dBA 以下嗎？"},
+      {"w": "E", "en": "We can adjust the PWM fan table so it runs at thirty percent duty cycle at room temperature.", "zh": "我們可以調整 PWM 風扇轉速表，讓它在室溫下以30%佔空比運轉。"},
+      {"w": "C", "en": "Will the optical transceivers overheat if we slow down the airflow?", "zh": "如果減慢氣流，光收發模組會過熱嗎？"},
+      {"w": "E", "en": "We placed a thermal sensor near the SFP cage. If the case temperature exceeds 65 degrees, the fans will ramp up automatically.", "zh": "我們在 SFP 鐵殼附近放了一顆溫度感測器。如果外殼溫度超過65度，風扇會自動拉高轉速。"}
+    ],
+    "phrases": [
+      {"en": "The acoustic noise is too loud for an office environment.", "zh": "這噪音對辦公室環境來說太大了。"},
+      {"en": "We can adjust the PWM fan curve.", "zh": "我們可以調整 PWM 風扇曲線。"},
+      {"en": "The fans will ramp up automatically.", "zh": "風扇會自動拉高轉速。"},
+      {"en": "Let's check the transceiver case temperature.", "zh": "我們來確認光模組的外殼溫度。"}
+    ],
+    "terms": [
+      {"en": "acoustic noise", "zh": "聲學噪音"},
+      {"en": "duty cycle", "zh": "佔空比（PWM 控制轉速的百分比）"},
+      {"en": "fan curve", "zh": "風扇轉速曲線"},
+      {"en": "optical transceiver", "zh": "光收發模組"},
+      {"en": "airflow", "zh": "氣流、風道"}
+    ]
+  },
+  {
+    "id": "c13",
+    "stage": "生產驗證 PVT",
+    "title": "PVT Pilot Run & Soldering Yield",
+    "title_zh": "PVT 試產與 SMT 焊接良率檢討",
+    "goal_zh": "進入工廠 PVT 小量試產時，發現 BGA 封裝晶片出現空焊或錫球短路，與工廠端（CM）及客戶討論解決方案。",
+    "lines": [
+      {"w": "C", "en": "How did the PVT pilot run of 100 units go at the factory yesterday?", "zh": "昨天工廠100台的 PVT 試產進行得如何？"},
+      {"w": "E", "en": "The first-pass yield was ninety-four percent. Six units failed the boundary-scan test.", "zh": "首次通過良率是94%。有六台沒有通過邊界掃描測試。"},
+      {"w": "C", "en": "What caused the failures on those six boards?", "zh": "那六片板子失效的原因是什麼？"},
+      {"w": "E", "en": "X-ray inspection showed cold solder joints and head-in-pillow defects under the main BGA chip.", "zh": "X光檢測顯示主 BGA 晶片下方有冷焊和枕頭效應（HIP）缺陷。"},
+      {"w": "C", "en": "Is that a PCB pad design issue or an SMT reflow profile problem?", "zh": "那是 PCB 焊墊設計問題，還是 SMT 迴焊爐溫曲線的問題？"},
+      {"w": "E", "en": "It is a reflow profile issue caused by board warpage. We are adjusting the soak zone temperature and updating the stencil aperture.", "zh": "這是板彎引起的迴焊曲線問題。我們正在調整恆溫區溫度，並修改鋼板開孔。"}
+    ],
+    "phrases": [
+      {"en": "The first-pass yield was ninety-four percent.", "zh": "首次通過良率（FPY）是94%。"},
+      {"en": "X-ray inspection showed cold solder joints.", "zh": "X光檢測顯示有冷焊現象。"},
+      {"en": "We need to fine-tune the reflow profile.", "zh": "我們需要微調迴焊爐溫曲線。"},
+      {"en": "We will modify the stencil aperture.", "zh": "我們會修改鋼板開孔。"}
+    ],
+    "terms": [
+      {"en": "PVT", "say": "P-V-T", "tts": "P V T", "zh": "生產驗證測試（Production Validation Test）"},
+      {"en": "FPY", "say": "F-P-Y", "tts": "F P Y", "zh": "首次通過良率（First-Pass Yield）"},
+      {"en": "BGA", "say": "B-G-A", "tts": "B G A", "zh": "球柵陣列封裝"},
+      {"en": "cold solder joint", "zh": "冷焊（焊接不良）"},
+      {"en": "reflow profile", "zh": "迴焊爐溫度曲線"}
+    ]
+  },
+  {
+    "id": "c14",
+    "stage": "量產移交 MP",
+    "title": "ATE Test Fixture & MP Handoff",
+    "title_zh": "自動化測試治具與量產移交",
+    "goal_zh": "RD 準備將案子移交給產線進入正式量產（MP），討論產線測試時間（Cycle Time）與功能測試治具（FCT）的覆蓋率。",
+    "lines": [
+      {"w": "C", "en": "Are we ready to sign off on the PVT phase and move into mass production next month?", "zh": "我們準備好簽核 PVT 階段，並在下個月進入量產了嗎？"},
+      {"w": "E", "en": "Almost. We are just optimizing the functional test script on the ATE fixture to reduce the test cycle time.", "zh": "快好了。我們正在優化自動化測試設備（ATE）治具上的功能測試腳本，以縮短測試週期時間。"},
+      {"w": "C", "en": "How long does it take to test one switch right now?", "zh": "現在測試一台交換器需要多長時間？"},
+      {"w": "E", "en": "Currently it takes twelve minutes per unit, mostly because of the snake traffic test across all 24 ports.", "zh": "目前每台需要12分鐘，主要是因為要對所有24個埠跑蛇形封包流量測試。"},
+      {"w": "C", "en": "Twelve minutes is too slow for our target monthly volume. Can you cut it down to seven minutes?", "zh": "12分鐘對我們的月產量目標來說太慢了。你們能縮短到7分鐘嗎？"},
+      {"w": "E", "en": "Yes, we can run the LED visual check and EEPROM programming in parallel, which will bring it down to six and a half minutes.", "zh": "可以，我們可以並行執行 LED 視覺檢查和 EEPROM 燒錄，這樣能降到六分半鐘。"}
+    ],
+    "phrases": [
+      {"en": "Are we ready to move into mass production?", "zh": "我們準備好進入量產了嗎？"},
+      {"en": "We need to reduce the test cycle time.", "zh": "我們需要縮短測試週期時間。"},
+      {"en": "We can run these tests in parallel.", "zh": "我們可以並行執行這些測試。"},
+      {"en": "The test coverage meets our quality standard.", "zh": "測試覆蓋率符合我們的品質標準。"}
+    ],
+    "terms": [
+      {"en": "MP", "say": "M-P", "tts": "M P", "zh": "正式量產（Mass Production）"},
+      {"en": "ATE", "say": "A-T-E", "tts": "A T E", "zh": "自動化測試設備（Automated Test Equipment）"},
+      {"en": "cycle time", "zh": "週期時間（單台測試或生產耗時）"},
+      {"en": "snake test", "zh": "蛇形測試（將交換機各埠串接互打封包的測試法）"},
+      {"en": "test coverage", "zh": "測試覆蓋率"}
+    ]
+  }
+
 ]

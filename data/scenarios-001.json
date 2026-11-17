@@ -64,5 +64,150 @@
 {"en":"BOM","say":"B-O-M","tts":"B O M","zh":"物料清單（Bill of Materials）"},
 {"en":"PO","say":"P-O","tts":"P O","zh":"採購單（Purchase Order）"},
 {"en":"MOQ","say":"M-O-Q","tts":"M O Q","zh":"最小訂購量（Minimum Order Quantity）"},
-{"en":"expedite","zh":"加速；趕單"}]}
+{"en":"expedite","zh":"加速；趕單"}]},
+
+{
+  "id": "c04",
+  "stage": "設計審查 Review",
+  "title": "Schematic and Layout Review",
+  "title_zh": "電路圖與佈線審查會議",
+  "goal_zh": "與客戶或內部團隊討論交換機的原理圖與 PCB layout 檢討，處理高速訊號與電源雜訊問題。",
+  "lines": [
+    {"w": "C", "en": "Let's review the layout of the 10G differential pairs. Did you keep the trace length matching within five mils?", "zh": "我們來檢閱10G差動對的佈線。你們有把走線長度匹配控制在5 mil以內嗎？"},
+    {"w": "E", "en": "Yes, we followed the routing guideline for the 10G SFP+ lanes, and the insertion loss is within our simulation budget.", "zh": "有的，我們遵循了10G SFP+通道的走線指南，插入損失在我們的模擬預算內。"},
+    {"w": "C", "en": "What about the power plane split near the PHY chip? Are there any reference plane discontinuities?", "zh": "那PHY晶片附近的電源平面分割呢？有沒有參考平面不連續的問題？"},
+    {"w": "E", "en": "We used a solid ground plane underneath the high-speed traces, and we added stitching capacitors across the split.", "zh": "我們在高速走線下方使用了完整的接地平面，並在分割處跨接了縫合電容。"},
+    {"w": "C", "en": "I see some thermal vias under the main switch chip. Are they sufficient for heat dissipation?", "zh": "我看到主交換晶片下方有一些散熱導孔。這些對散熱足夠嗎？"},
+    {"w": "E", "en": "Thermal simulation shows the junction temperature stays below 105 degrees Celsius under full load, which meets the spec.", "zh": "熱模擬顯示在滿載下，接面溫度保持在攝氏105度以下，符合規格。"}
+  ],
+  "phrases": [
+    {"en": "Did you follow the routing guideline?", "zh": "你們有遵循佈線指南嗎？"},
+    {"en": "Are there any reference plane discontinuities?", "zh": "有沒有參考平面不連續的問題？"},
+    {"en": "That meets our thermal budget.", "zh": "這符合我們的熱預算。"},
+    {"en": "We need to add more stitching vias.", "zh": "我們需要增加更多縫合孔。"}
+  ],
+  "terms": [
+    {"en": "differential pair", "zh": "差動對（高速訊號線）"},
+    {"en": "insertion loss", "zh": "插入損失"},
+    {"en": "reference plane", "zh": "參考平面（地平面/電源平面）"},
+    {"en": "stitching capacitor", "zh": "跨接縫合電容"},
+    {"en": "junction temperature", "zh": "接面溫度（晶片內部溫度）"}
+  ]
+},
+
+{
+  "id": "c05",
+  "stage": "樣品試產 Bring-up",
+  "title": "First Board Bring-up Status",
+  "title_zh": "首板上電測試狀況",
+  "goal_zh": "向主管或客戶報告 EVT 首板上電（Bring-up）的進度與遇到的硬體異常。",
+  "lines": [
+    {"w": "C", "en": "What is the status of the EVT board bring-up? Did the board pass power-on sequencing?", "zh": "EVT板子上電測試的狀況如何？板子通過開機上電時序了嗎？"},
+    {"w": "E", "en": "The 3.3V and 1.2V rails came up normally, but the 0.85V core voltage rail failed to start.", "zh": "3.3V和1.2V電源軌正常升起，但0.85V核心電壓軌無法啟動。"},
+    {"w": "C", "en": "Did you check the Power-Good signal from the PMIC?", "zh": "你有檢查PMIC的電源良好（Power-Good）信號嗎？"},
+    {"w": "E", "en": "Yes. The PMIC detected an over-current protection trigger, and it shut down automatically.", "zh": "有的。PMIC檢測到過電流保護觸發，然後自動關閉了。"},
+    {"w": "C", "en": "Could it be a short circuit on the board or a layout issue?", "zh": "會是板子短路還是佈線問題？"},
+    {"w": "E", "en": "I checked with a multimeter, and the resistance on the 0.85V rail is unusually low. We are inspecting it under the microscope.", "zh": "我用三用電表量測過，0.85V電源軌的電阻異常低。我們正在用顯微鏡檢查。"}
+  ],
+  "phrases": [
+    {"en": "The power rail failed to start.", "zh": "電源軌無法啟動。"},
+    {"en": "Did it trigger over-current protection?", "zh": "它觸發過電流保護了嗎？"},
+    {"en": "The resistance is unusually low.", "zh": "電阻異常地低。"},
+    {"en": "We are debugging the hardware issue.", "zh": "我們正在除錯這個硬體問題。"}
+  ],
+  "terms": [
+    {"en": "power-on sequence", "zh": "上電時序"},
+    {"en": "power rail", "zh": "電源軌"},
+    {"en": "PMIC", "say": "P-M-I-C", "tts": "P M I C", "zh": "電源管理積體電路"},
+    {"en": "over-current protection (OCP)", "zh": "過電流保護"},
+    {"en": "short circuit", "zh": "短路"}
+  ]
+},
+
+{
+  "id": "c06",
+  "stage": "測試驗證 Validation",
+  "title": "EMC and Burn-in Test Results",
+  "title_zh": "EMC 與燒機測試結果",
+  "goal_zh": "匯報交換機在 EMC 實驗室的測試表現，以及環境溫度與燒機測試（Burn-in）的結案狀況。",
+  "lines": [
+    {"w": "C", "en": "How did the switch perform in the EMC chamber yesterday?", "zh": "交換機昨天在電磁相容（EMC）實驗室表現如何？"},
+    {"w": "E", "en": "We passed the radiated emission test with a six dB margin, but we had a slight issue with electrostatic discharge.", "zh": "我們以 6 dB 的餘裕通過輻射發射測試，但在靜電放電（ESD）上遇到一點小問題。"},
+    {"w": "C", "en": "What kind of issue? Did it reboot during the ESD test?", "zh": "什麼樣的問題？它在靜電測試期間重啟了嗎？"},
+    {"w": "E", "en": "Yes, at eight kilovolts air discharge, the CPU reset. We suspect the reset trace picked up coupling noise.", "zh": "對，在8千伏特空氣放電時，CPU重置了。我們懷疑重置走線接收到了耦合雜訊。"},
+    {"w": "C", "en": "How are you going to fix it? Will it delay the schedule?", "zh": "你們打算怎麼修復？這會延誤時程嗎？"},
+    {"w": "E", "en": "We will add a damping resistor and a filtering capacitor near the reset pin. It won't delay our schedule.", "zh": "我們會在重置接腳附近加一顆阻尼電阻和濾波電容。這不會延誤我們的時程。"}
+  ],
+  "phrases": [
+    {"en": "We passed the test with a good margin.", "zh": "我們以很好的餘裕通過了測試。"},
+    {"en": "It failed at high temperature.", "zh": "它在高溫下失效了。"},
+    {"en": "We suspect coupling noise is the cause.", "zh": "我們懷疑耦合雜訊是原因。"},
+    {"en": "This fix will not impact the schedule.", "zh": "這個修復不會影響時程。"}
+  ],
+  "terms": [
+    {"en": "EMC", "say": "E-M-C", "tts": "E M C", "zh": "電磁相容性測試"},
+    {"en": "radiated emission", "zh": "輻射發射"},
+    {"en": "ESD", "say": "E-S-D", "tts": "E S-D", "zh": "靜電放電測試"},
+    {"en": "burn-in test", "zh": "燒機測試（老化測試）"},
+    {"en": "margin", "zh": "餘裕（測試結果與極限值的差距）"}
+  ]
+},
+
+{
+  "id": "c07",
+  "stage": "異常分析 FA",
+  "title": "Root Cause Analysis (RCA)",
+  "title_zh": "根本原因分析報告",
+  "goal_zh": "針對生產線或客戶端回報的硬體故障，說明失效分析（FA）結果與糾正預防措施。",
+  "lines": [
+    {"w": "C", "en": "Can you explain why the Ethernet PHY chip burned out on three units during testing?", "zh": "你可以解釋為什麼有三台測試機的乙太網路PHY晶片燒毀嗎？"},
+    {"w": "E", "en": "After performing root cause analysis, we found that the magnetic component breakdown caused a voltage surge on the TX/RX lines.", "zh": "經過根本原因分析，我們發現磁性元件故障導致收發線路上產生電壓突波。"},
+    {"w": "C", "en": "Was it a design flaw or a supplier quality issue?", "zh": "這是設計缺陷還是供應商品質問題？"},
+    {"w": "E", "en": "It was a component batch issue. The isolation voltage of the transformer from vendor A did not meet the datasheet spec.", "zh": "這是零件批次問題。A供應商的變壓器隔離電壓不符合規格書規範。"},
+    {"w": "C", "en": "What is our corrective action plan?", "zh": "我們的糾正措施計畫是什麼？"},
+    {"w": "E", "en": "We are replacing the vendor, adding a transient voltage suppressor (TVS) diode, and issuing an 8D report by tomorrow.", "zh": "我們正在更換供應商，增加瞬態電壓抑制（TVS）二極體，並將在明天發布 8D 報告。"}
+  ],
+  "phrases": [
+    {"en": "We found the root cause of the failure.", "zh": "我們找到了失效的根本原因。"},
+    {"en": "This is a batch-related quality issue.", "zh": "這是與批次有關的品質問題。"},
+    {"en": "We need to update the BOM and vendor list.", "zh": "我们需要更新BOM表和供應商名單。"},
+    {"en": "We will issue an 8D report shortly.", "zh": "我們很快會發布8D報告。"}
+  ],
+  "terms": [
+    {"en": "root cause analysis (RCA)", "zh": "根本原因分析"},
+    {"en": "failure analysis (FA)", "zh": "失效分析"},
+    {"en": "voltage surge", "zh": "電壓突波"},
+    {"en": "TVS diode", "zh": "瞬態電壓抑制二極體"},
+    {"en": "8D report", "zh": "8D 報告（問題解決報告）"}
+  ]
+},
+
+{
+  "id": "c08",
+  "stage": "設計變更 ECN",
+  "title": "ECN and Schedule Delay Communication",
+  "title_zh": "設計變更與交期延誤溝通",
+  "goal_zh": "因零組件停產（EOL）或改版需要發布 ECN，並向客戶解釋交期影響與應對方案。",
+  "lines": [
+    {"w": "C", "en": "I received your ECN notification. Why do we need to change the clock generator IC at this stage?", "zh": "我收到了你們的 ECN 通知。為什麼我們在這個階段需要更換時脈產生器 IC？"},
+    {"w": "E", "en": "The original IC vendor announced an end-of-life notice, so we must switch to a pin-compatible alternative.", "zh": "原廠 IC 供應商發布了產品終止（EOL）通知，所以我們必須切換到相容接腳的替代料。"},
+    {"w": "C", "en": "Will this change require a re-layout and push back our production schedule?", "zh": "這項變更會需要重新 Layout 並推遲我們的生產時程嗎？"},
+    {"w": "E", "en": "The alternative IC has a slightly different jitter performance, so we need two weeks for validation.", "zh": "替代 IC 的抖動效能略有不同，所以我們需要兩週時間進行驗證。"},
+    {"w": "C", "en": "Two weeks delay is unacceptable for our product launch date.", "zh": "延誤兩週對我們的產品上市日期來說是無法接受的。"},
+    {"w": "E", "en": "To mitigate the delay, we can arrange dual-source verification and run tests in parallel. We will minimize the impact.", "zh": "為了減緩延誤，我們可以安排雙料源驗證並行測試。我們會將影響降到最低。"}
+  ],
+  "phrases": [
+    {"en": "The component is facing an end-of-life issue.", "zh": "該零件正面臨產品終止（停產）問題。"},
+    {"en": "We need to implement an ECN.", "zh": "我們需要執行工程變更通知（ECN）。"},
+    {"en": "This will impact our production schedule.", "zh": "這將影響我們的生產時程。"},
+    {"en": "We are taking steps to mitigate the delay.", "zh": "我們正在採取措施以減緩延誤。"}
+  ],
+  "terms": [
+    {"en": "ECN (Engineering Change Notice)", "zh": "工程變更通知"},
+    {"en": "EOL (End of Life)", "zh": "產品生命週期終止（停產）"},
+    {"en": "jitter", "zh": "時脈抖動"},
+    {"en": "dual-source", "zh": "雙源供應（第二供應商）"},
+    {"en": "mitigate", "zh": "減輕、降低（風險或影響）"}
+  ]
+}
 ]

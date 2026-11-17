@@ -1,0 +1,68 @@
+[
+{"id":"c01","stage":"開案 Kickoff","title":"Project Kickoff Call","title_zh":"專案開案會議","goal_zh":"你是硬體窗口，和客戶確認專案目標與時程，並承諾會後提供時程與風險清單。",
+"lines":[
+{"w":"C","en":"Thanks for joining the kickoff call. Let's start with the project goal and the timeline.","zh":"謝謝你參加開案會議。我們先從專案目標和時程開始。"},
+{"w":"E","en":"Sure. Our goal is to deliver a 24-port 10G managed switch, and we plan to start the engineering sample build in eight weeks.","zh":"好的。我們的目標是交付一台24埠10G的網管型交換器，預計八週後開始工程樣品試產。"},
+{"w":"C","en":"Eight weeks is a bit tight for us. Can you pull it in by two weeks?","zh":"八週對我們有點趕。你們可以提前兩週嗎？"},
+{"w":"E","en":"I understand your concern. We need to confirm the component lead times first, and I will give you a clear answer by Friday.","zh":"我了解你的顧慮。我們需要先確認零件交期，我會在週五前給你明確答覆。"},
+{"w":"C","en":"Who will be the main contact for hardware issues?","zh":"硬體問題的主要窗口是誰？"},
+{"w":"E","en":"I will be your single point of contact, and my manager will join the weekly meeting.","zh":"我會擔任你們的單一窗口，我的主管會參加每週會議。"},
+{"w":"C","en":"Great. Please send us the project schedule and the risk list after the call.","zh":"太好了。會後請寄給我們專案時程和風險清單。"},
+{"w":"E","en":"No problem. I will send the draft schedule and the risk list by the end of the day tomorrow.","zh":"沒問題。我會在明天下班前寄出時程草稿和風險清單。"}],
+"phrases":[
+{"en":"Let me confirm that I understand correctly.","zh":"讓我確認我的理解是否正確。"},
+{"en":"That is a bit tight for us.","zh":"這對我們來說有點趕。"},
+{"en":"I will get back to you by Friday.","zh":"我會在週五前回覆你。"},
+{"en":"Could you clarify the requirement?","zh":"你可以說明一下這項需求嗎？"},
+{"en":"I will follow up by email.","zh":"我會用電子郵件跟進。"}],
+"terms":[
+{"en":"kickoff","zh":"開案；啟動會議"},
+{"en":"milestone","zh":"里程碑"},
+{"en":"single point of contact","zh":"單一窗口"},
+{"en":"lead time","zh":"交期（備料、生產所需時間）"},
+{"en":"EVT","say":"E-V-T","tts":"E V T","zh":"工程驗證階段（Engineering Validation Test）"}]},
+{"id":"c02","stage":"規格討論 Spec","title":"Discussing the Specification","title_zh":"討論產品規格","goal_zh":"客戶提出埠數、電源與溫度需求，你要確認、說明可行性與影響，並承諾回覆時間。",
+"lines":[
+{"w":"C","en":"We need 24 ports of 10G SFP plus and four 100G uplink ports.","zh":"我們需要24個10G SFP+埠，以及四個100G上行埠。"},
+{"w":"E","en":"Understood. For the uplinks, do you prefer QSFP28 ports?","zh":"了解。上行埠的部分，你們偏好QSFP28埠嗎？"},
+{"w":"C","en":"Yes, QSFP28. Also, we want redundant power supplies and hot-swappable fans.","zh":"對，QSFP28。我們也要備援電源供應器和可熱插拔的風扇。"},
+{"w":"E","en":"That is feasible. With redundant power supplies, the maximum power consumption will be around 300 watts.","zh":"那是可行的。有備援電源的話，最大功耗大約在300瓦左右。"},
+{"w":"C","en":"What is the operating temperature range?","zh":"工作溫度範圍是多少？"},
+{"w":"E","en":"The standard range is zero to forty degrees Celsius. If you need an extended range, we must change some components.","zh":"標準範圍是攝氏0到40度。如果你們需要更寬的範圍，我們必須更換一些零件。"},
+{"w":"C","en":"We need it to work up to fifty-five degrees. Can you support that?","zh":"我們需要它能在最高55度下運作。你們能支援嗎？"},
+{"w":"E","en":"Let me check with the thermal team, and I will send you a feasibility report next week.","zh":"我跟散熱團隊確認一下，下週寄給你可行性報告。"}],
+"phrases":[
+{"en":"Is that a hard requirement or a nice-to-have?","zh":"那是硬性需求，還是有更好？"},
+{"en":"That is feasible, but it will impact the cost.","zh":"那是可行的，但會影響成本。"},
+{"en":"Let me check with the team.","zh":"讓我跟團隊確認一下。"},
+{"en":"Could you share the detailed specification?","zh":"你可以提供詳細規格嗎？"},
+{"en":"We can support that with some design changes.","zh":"我們可以透過一些設計變更來支援。"}],
+"terms":[
+{"en":"SFP+","say":"S-F-P plus","tts":"S F P plus","zh":"10G 光纖／銅線模組介面"},
+{"en":"QSFP28","say":"Q-S-F-P twenty-eight","tts":"Q S F P twenty eight","zh":"100G 模組介面"},
+{"en":"redundant power supply","zh":"備援電源供應器"},
+{"en":"hot-swappable","zh":"可熱插拔的"},
+{"en":"feasibility report","zh":"可行性報告"}]},
+{"id":"c03","stage":"價格與交期 Price & Lead Time","title":"Quotation and Lead Time","title_zh":"談報價與交期","goal_zh":"客戶詢問報價、折扣與交期，你要說明價格依據，提出條件，並說明需要和公司內部確認。",
+"lines":[
+{"w":"C","en":"Before we place the order, we need your quotation for one thousand units.","zh":"下單前，我們需要你們一千台的報價。"},
+{"w":"E","en":"Sure. The unit price is based on the current BOM cost, and it includes one year of warranty.","zh":"好的。單價是依據目前的BOM成本計算，並且包含一年保固。"},
+{"w":"C","en":"The price is higher than we expected. Is there room for a discount?","zh":"價格比我們預期的高。還有折扣空間嗎？"},
+{"w":"E","en":"If you can commit to five thousand units a year, we may be able to offer a better price.","zh":"如果你們能承諾一年五千台，我們也許能提供更好的價格。"},
+{"w":"C","en":"What about the lead time after we place a purchase order?","zh":"下採購單之後的交期是多久？"},
+{"w":"E","en":"The standard lead time is twelve weeks, because the switch chip has a long lead time.","zh":"標準交期是十二週，因為交換器晶片的交期很長。"},
+{"w":"C","en":"Can you ship the first batch earlier, say in eight weeks?","zh":"你們可以提早出第一批貨嗎，比如八週內？"},
+{"w":"E","en":"We can try to expedite part of the order, but I need to confirm with our supply chain team first.","zh":"我們可以試著加速部分訂單，但我需要先和供應鏈團隊確認。"}],
+"phrases":[
+{"en":"That is outside my authority. I will check with my manager.","zh":"這超出我的權限，我會和主管確認。"},
+{"en":"We can offer a volume discount.","zh":"我們可以提供量大折扣。"},
+{"en":"The lead time depends on component availability.","zh":"交期取決於零件的供貨狀況。"},
+{"en":"Could you share your forecast?","zh":"你可以提供你們的預測量嗎？"},
+{"en":"We need to confirm the minimum order quantity.","zh":"我們需要確認最小訂購量。"}],
+"terms":[
+{"en":"quotation","zh":"報價單"},
+{"en":"BOM","say":"B-O-M","tts":"B O M","zh":"物料清單（Bill of Materials）"},
+{"en":"PO","say":"P-O","tts":"P O","zh":"採購單（Purchase Order）"},
+{"en":"MOQ","say":"M-O-Q","tts":"M O Q","zh":"最小訂購量（Minimum Order Quantity）"},
+{"en":"expedite","zh":"加速；趕單"}]}
+]

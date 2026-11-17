@@ -378,6 +378,1475 @@
       {"en": "snake test", "zh": "蛇形測試（將交換機各埠串接互打封包的測試法）"},
       {"en": "test coverage", "zh": "測試覆蓋率"}
     ]
+  },
+  
+  {
+    "id": "c15",
+    "stage": "跨部門除錯 Cross-functional",
+    "title": "Debugging MDIO/I2C Register with Firmware Team",
+    "title_zh": "與韌體團隊追查 MDIO/I2C 暫存器異常",
+    "goal_zh": "交換機開機後 PHY 晶片無法回應，硬體與韌體工程師共同用示波器與邏輯分析儀追查 I2C/MDIO 通訊失敗原因。",
+    "lines": [
+      {"w": "C", "en": "The firmware team reported that we cannot read the PHY register via the MDIO interface during boot-up.", "zh": "韌體團隊回報說，開機時無法透過 MDIO 介面讀取 PHY 晶片暫存器。"},
+      {"w": "E", "en": "I checked the hardware schematic. The pull-up resistors on the MDC and MDIO lines are 2.2 kilohms, which matches the spec.", "zh": "我有檢查硬體電路圖。MDC 和 MDIO 線上的提升電阻是 2.2 kΩ，符合規格。"},
+      {"w": "C", "en": "Could it be a slave address conflict on the bus since we have multiple switch chips?", "zh": "會不會是因為我們有顆交換晶片，導致匯流排上的從屬地址衝突？"},
+      {"w": "E", "en": "Let's check the strap pins on the PHY chip. If the hardware strapping resistor is floating, it might pick up a wrong address.", "zh": "我們來檢查 PHY 晶片上的硬體設定腳（strap pin）。如果硬體設定電阻懸空，可能會抓到錯誤的地址。"},
+      {"w": "C", "en": "I am capturing the waveform with a logic analyzer right now. The ACK bit is missing on the ninth clock cycle.", "zh": "我現在正在用邏輯分析儀擷取波形。第九個時鐘週期缺少了 ACK（應答）位元。"},
+      {"w": "E", "en": "That indicates a communication NACK. Let's verify if the VDDIO power rail for the management interface is fully stable when the transaction starts.", "zh": "這代表通訊未應答。我們來確認當傳輸開始時，管理介面的 VDDIO 電源軌是否完全穩定。"}
+    ],
+    "phrases": [
+      {"en": "We cannot read the register via the MDIO interface.", "zh": "我們無法透過 MDIO 介面讀取暫存器。"},
+      {"en": "Let's check the strap pins on the chip.", "zh": "我們來檢查晶片上的設定腳。"},
+      {"en": "I am capturing the waveform with a logic analyzer.", "zh": "我正在用邏輯分析儀擷取波形。"},
+      {"en": "That indicates a communication failure.", "zh": "這代表通訊失敗。"}
+    ],
+    "terms": [
+      {"en": "MDIO", "say": "M-D-I-O", "tts": "M D I O", "zh": "管理資料輸入輸出介面"},
+      {"en": "pull-up resistor", "zh": "提升電阻"},
+      {"en": "strap pin", "zh": "硬體配置腳（開機時決定晶片模式的接腳）"},
+      {"en": "logic analyzer", "zh": "邏輯分析儀"},
+      {"en": "NACK", "say": "N-ack", "tts": "N ack", "zh": "無應答（Not Acknowledged）"}
+    ]
+  },
+  {
+    "id": "c16",
+    "stage": "機構干涉 Mechanical",
+    "title": "Heatsink Clearance & Mechanical Interference",
+    "title_zh": "散熱片高度與機構干涉檢討",
+    "goal_zh": "DVT 階段發現交換機主晶片的大型擠型散熱片與機殼上蓋發生干涉，與機構工程師開會協調修改方案。",
+    "lines": [
+      {"w": "C", "en": "The mechanical team found a clearance issue. The heatsink fins on the main switch silicon are touching the top cover.", "zh": "機構團隊發現有間距干涉問題。主交換晶片上的散熱片鰭片碰到機殼上蓋了。"},
+      {"w": "E", "en": "We designed the tall fins to maximize surface area for thermal dissipation under full load.", "zh": "我們設計高鰭片是為了在滿載下將散熱面積最大化。"},
+      {"w": "C", "en": "Unfortunately, due to the chassis tolerance stack-up, there is a zero-millimeter clearance gap.", "zh": "不幸的是，由於機箱公差累積，現在完全沒有間距空隙了。"},
+      {"w": "E", "en": "Can we machine down the fin height by two millimeters and use a higher-conductivity thermal pad?", "zh": "我們可以把鰭片高度車削掉兩毫米，並改用導熱係數更高的導熱墊嗎？"},
+      {"w": "C", "en": "That would work, but we need to re-run the thermal simulation to ensure the junction temperature stays safe.", "zh": "這樣可行，但我們需要重新跑熱模擬，以確保接面溫度保持安全。"},
+      {"w": "E", "en": "I will coordinate with the thermal engineer today and update the 3D STEP model by tomorrow morning.", "zh": "我今天會和散熱工程師協調，並在明天早上前更新 3D STEP 模型。"}
+    ],
+    "phrases": [
+      {"en": "We have a mechanical clearance issue.", "zh": "我們遇到了機構間距干涉問題。"},
+      {"en": "The heatsink is touching the top cover.", "zh": "散熱片碰到上蓋了。"},
+      {"en": "We need to re-run the thermal simulation.", "zh": "我們需要重新執行熱模擬。"},
+      {"en": "I will update the 3D model by tomorrow.", "zh": "我會在明天前更新 3D 模型。"}
+    ],
+    "terms": [
+      {"en": "clearance", "zh": "間距、淨空距離"},
+      {"en": "tolerance stack-up", "zh": "公差累積"},
+      {"en": "thermal pad", "zh": "導熱墊"},
+      {"en": "fin height", "zh": "散熱鰭片高度"},
+      {"en": "STEP model", "say": "S-T-E-P model", "tts": "S T E P model", "zh": "3D 機械 CAD 檔案格式"}
+    ]
+  },
+  {
+    "id": "c17",
+    "stage": "安規認證 Compliance",
+    "title": "Safety & Compliance Testing (UL/CE)",
+    "title_zh": "安規與法規認證卡關（UL/CE）",
+    "goal_zh": "交換機在外部實驗室進行 UL/CE 安規測試時，未通過高壓絕緣耐壓測試（Hipot Test），需緊急修改電路與安規距離。",
+    "lines": [
+      {"w": "C", "en": "We received bad news from the safety lab. The switch failed the dielectric withstand voltage test during UL certification.", "zh": "我們收到安規實驗室的壞消息。交換機在 UL 認證期間未通過介質耐壓測試。"},
+      {"w": "E", "en": "Where did the flashover occur? Was it across the AC input barrier or the Ethernet isolation transformers?", "zh": "閃絡現象發生在哪裡？是在交流輸入隔離障壁，還是乙太網路隔離變壓器？"},
+      {"w": "C", "en": "It broke down between the primary side and secondary side near the power supply module.", "zh": "它在電源模組附近的一次側和二次側之間發生崩潰。"},
+      {"w": "E", "en": "Let's check the creepage and clearance distances on the PCB layout. Did we maintain the mandatory 6.4 millimeters?", "zh": "我們來檢查 PCB 佈線上的爬電距離和空間距離。我們有保持規定的 6.4 毫米嗎？"},
+      {"w": "C", "en": "The slot cut-out between the transformer pins was too narrow, failing the pollution degree requirement.", "zh": "變壓器接腳之間的開槽太窄，不符合汙染等級的要求。"},
+      {"w": "E", "en": "We will immediately route a isolation slot on the PCB and apply insulating Mylar tape as a temporary fix.", "zh": "我們會在 PCB 上立刻洗出一道隔離槽，並貼上絕緣麥拉膠帶作為臨時修復。"}
+    ],
+    "phrases": [
+      {"en": "The switch failed the dielectric withstand test.", "zh": "交換機未通過介質耐壓測試。"},
+      {"en": "Where did the flashover occur?", "zh": "閃絡是在哪裡發生的？"},
+      {"en": "We need to check creepage and clearance distances.", "zh": "我们需要檢查爬電距離與空間距離。"},
+      {"en": "We will apply insulating Mylar tape.", "zh": "我們會貼上絕緣麥拉膠帶。"}
+    ],
+    "terms": [
+      {"en": "hipot test", "say": "Hi-pot test", "tts": "Hi pot test", "zh": "高壓耐壓測試（High Potential Test）"},
+      {"en": "flashover", "zh": "閃絡、電弧擊穿"},
+      {"en": "creepage distance", "zh": "爬電距離（沿絕緣表面的最短距離）"},
+      {"en": "clearance distance", "zh": "空間距離（空氣中的最短直線距離）"},
+      {"en": "Mylar tape", "zh": "麥拉膠帶（絕緣膠帶）"}
+    ]
+  },
+  {
+    "id": "c18",
+    "stage": "原廠支援 Vendor FAE",
+    "title": "Escalating Silicon Issue to Chip Vendor FAE",
+    "title_zh": "向晶片原廠 FAE 升級申訴硬體異常",
+    "goal_zh": "遇到無法透過軟體或常規除錯解決的晶片內部硬體 Bug，與原廠應用工程師（FAE）召開視訊會議要求技術支援。",
+    "lines": [
+      {"w": "C", "en": "We have escalated this packet-drop issue to the switch silicon vendor, and their FAE is joining our call today.", "zh": "我們已經把這個掉包問題升級給交換晶片原廠，他們的 FAE 今天會加入我們的會議。"},
+      {"w": "E", "en": "Thanks for joining. We observed random packet corruption on port 12 when running jumbo frames at 9KB.", "zh": "謝謝加入。我們在跑 9KB 巨型封包時，發現第 12 埠有隨機的封包毀損。"},
+      {"w": "F", "en": "Thanks for the logs. Have you checked if your MACsec or flow control settings conflict with the internal buffer threshold?", "zh": "謝謝提供日誌。你們有檢查 MACsec 或流量控制設定是否與內部緩衝區閾值衝突嗎？"},
+      {"w": "E", "en": "We disabled flow control, but the CRC error counter on that port keeps incrementing under heavy traffic.", "zh": "我們已經關閉流量控制了，但在重度流量下，該埠的 CRC 錯誤計數器仍然持續增加。"},
+      {"w": "F", "en": "That looks like an undocumented errata in the switch ASIC revision A1. Let me check with our internal design team.", "zh": "這看起來像是交換器 ASIC A1 版本中未記載的晶片瑕疵。我跟我們的內部設計團隊確認一下。"},
+      {"w": "E", "en": "Is there a register workaround or a patch we can apply in the bootloader right away?", "zh": "有沒有我們可以立刻在開機載入程式中套用的暫存器工作arounds（變通方法）或修補程式？"}
+    ],
+    "phrases": [
+      {"en": "We have escalated this issue to the vendor.", "zh": "我們已經把這個問題升級給原廠了。"},
+      {"en": "The error counter keeps incrementing.", "zh": "錯誤計數器持續增加。"},
+      {"en": "Is there a register workaround available?", "zh": "有沒有可用的暫存器變通方法？"},
+      {"en": "Please provide an updated SDK patch.", "zh": "請提供更新的 SDK 修補程式。"}
+    ],
+    "terms": [
+      {"en": "FAE", "say": "F-A-E", "tts": "F A E", "zh": "現場應用工程師（Field Application Engineer）"},
+      {"en": "jumbo frame", "zh": "巨型封包（大於標準 1500 位元組的乙太網路封包）"},
+      {"en": "CRC error", "zh": "循環冗餘檢查錯誤（資料傳輸毀損）"},
+      {"en": "errata", "say": "er-ra-ta", "tts": "er ra ta", "zh": "晶片設計瑕疵/勘誤表"},
+      {"en": "workaround", "zh": "變通方法、暫時解決方案"}
+    ]
+  },
+
+  {
+    "id": "c19",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Addressing High Power Consumption & Thermal Concerns",
+    "title_zh": "回應客戶對高功耗與過熱的疑慮",
+    "goal_zh": "客戶在實機測試時發現交換機表面溫度較高，質疑是否會影響長期可靠度，你要以專業數據釋疑。",
+    "lines": [
+      {"w": "C", "en": "We noticed that the top chassis surface temperature reaches nearly 55 degrees Celsius under full load. Is this safe for long-term deployment?", "zh": "我們注意到在滿載下，機箱上蓋表面溫度接近攝氏55度。這對長期部署安全嗎？"},
+      {"w": "E", "en": "I understand your concern. The exterior casing is designed to act as a secondary heatsink, so a higher touch temperature is expected.", "zh": "我了解您的顧慮。外殼被設計成次要散熱片，所以摸起來溫度較高是預期中的。"},
+      {"w": "C", "en": "Our safety regulations state that user-accessible metal enclosures should not exceed 50 degrees.", "zh": "我們的安規規定，使用者可觸及的金屬外殼溫度不得超過50度。"},
+      {"w": "E", "en": "That is a valid point. While the metal shell is 55 degrees, the internal core components like the CPU and switch silicon are well within their thermal margins.", "zh": "這點說得沒錯。雖然金屬外殼是55度，但內部的核心元件（如CPU和交換晶片）的熱餘裕都非常安全。"},
+      {"w": "C", "en": "Can we add a warning label on the rear panel or optimize the fan curve to bring the shell temperature down?", "zh": "我們可以在背板上貼警示標籤，或是優化風扇曲線把外殼溫度降下來嗎？"},
+      {"w": "E", "en": "We can tweak the PWM table to increase airflow slightly at high ambient temperatures, which will drop the casing temperature by three degrees.", "zh": "我們可以微調 PWM 參數在室溫偏高時稍微加大風流，這樣可以讓外殼溫度下降3度。"}
+    ],
+    "phrases": [
+      {"en": "I understand your concern about thermal performance.", "zh": "我理解您對散熱效能的顧慮。"},
+      {"en": "The internal components are within their thermal limits.", "zh": "內部元件都在其溫度限制之內。"},
+      {"en": "We can optimize the fan curve to lower the temperature.", "zh": "我們可以優化風扇曲線來降低溫度。"},
+      {"en": "This is within acceptable safety limits.", "zh": "這在可接受的安全範圍內。"}
+    ],
+    "terms": [
+      {"en": "surface temperature", "zh": "表面溫度"},
+      {"en": "touch temperature", "zh": "觸摸溫度（人手接觸的溫度限值）"},
+      {"en": "thermal margin", "zh": "熱餘裕（實際溫度與極限溫度的差距）"},
+      {"en": "warning label", "zh": "警示標籤"},
+      {"en": "ambient temperature", "zh": "環境溫度"}
+    ]
+  },
+  {
+    "id": "c20",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Resolving Third-Party SFP Module Interoperability Issue",
+    "title_zh": "解決第三方光收發模組相容性疑慮",
+    "goal_zh": "客戶抱怨插上他們自購的第三方 SFP+ 光模組時無法抓到 Link，懷疑是硬體設計限制了相容性。",
+    "lines": [
+      {"w": "C", "en": "We tried inserting our legacy 10G SFP+ transceivers from vendor B, but the port status LED remains off.", "zh": "我們嘗試插入舊款 B 供應商的 10G SFP+ 光模組，但連接埠狀態 LED 燈一直熄滅。"},
+      {"w": "E", "en": "Did you check if those modules use standard EEPROM mapping according to the SFP MSA specification?", "zh": "你們有檢查那些模組是否遵循 SFP MSA 規範使用標準的 EEPROM 對應嗎？"},
+      {"w": "C", "en": "They work fine on your competitor's switch, so the issue must be on your hardware port design.", "zh": "它們在你們競爭對手的交換機上運作正常，所以問題一定出在你們的硬體連接埠設計上。"},
+      {"w": "E", "en": "Actually, some third-party modules have strict power-supply current requirements or use non-standard vendor identification bytes in their EEPROM.", "zh": "事實上，有些第三方模組對電源供應電流有嚴格要求，或是在 EEPROM 中使用了非標準的廠商識別位元組。"},
+      {"w": "C", "en": "How can we make it work? Our deployment relies heavily on those modules.", "zh": "我們要怎麼讓它動起來？我們的佈署高度依賴那些模組。"},
+      {"w": "E", "en": "We can release a firmware patch to disable the strict vendor-lock check and adjust the LOS signal threshold in the register.", "zh": "我們可以釋放韌體修補程式，停用嚴格的廠商鎖定檢查，並調整暫存器中的遺失訊號（LOS）閾值。"}
+    ],
+    "phrases": [
+      {"en": "The port status LED remains off.", "zh": "連接埠狀態燈保持熄滅。"},
+      {"en": "This is related to third-party module compatibility.", "zh": "這與第三方模組相容性有關。"},
+      {"en": "We can release a firmware patch to fix this.", "zh": "我們可以釋放韌體修補程式來修復這點。"},
+      {"en": "Let's check the EEPROM data structure.", "zh": "我們來檢查 EEPROM 資料結構。"}
+    ],
+    "terms": [
+      {"en": "interoperability", "zh": "互通性、相容性"},
+      {"en": "MSA (Multi-Source Agreement)", "zh": "多源協議（光模組與介面標準規範）"},
+      {"en": "vendor lock", "zh": "廠商鎖定（僅允許特定品牌模組的機制）"},
+      {"en": "LOS (Loss of Signal)", "zh": "信號丟失檢測"},
+      {"en": "transceiver", "zh": "光收發器、模組"}
+    ]
+  },
+  {
+    "id": "c21",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Explaining Lead Time Extension & Component Shortage",
+    "title_zh": "向客戶解釋交期延長與零件短缺",
+    "goal_zh": "因全球半導體缺料或特定網通晶片交期拉長，你需要向客戶解釋交期延誤並提出緩解方案。",
+    "lines": [
+      {"w": "C", "en": "I saw your updated delivery schedule. Why is the mass production shipment pushed back by four weeks?", "zh": "我看到了你們更新的交貨時程。為什麼量產出貨被推遲了四週？"},
+      {"w": "E", "en": "We regret to inform you that our Ethernet PHY chip supplier has extended their lead time from twenty weeks to thirty-six weeks.", "zh": "我們很遺憾地通知您，我們的乙太網路 PHY 晶片供應商將交期從20週延長到了36週。"},
+      {"w": "C", "en": "This delay severely impacts our network deployment plan for the upcoming quarter.", "zh": "這個延誤嚴重影響了我們下一季的網路佈署計畫。"},
+      {"w": "E", "en": "We completely understand your situation. Our procurement team is actively securing broker stock and exploring drop-in pin-compatible alternatives.", "zh": "我們完全理解您的處境。我們的採購團隊正在積極尋找現貨市場（broker stock），並探索隨插即用、接腳相容的替代料。"},
+      {"w": "C", "en": "If we switch to an alternative component, how long will it take to validate it?", "zh": "如果我們切換到替代零件，驗證它需要多久時間？"},
+      {"w": "E", "en": "We can complete the electrical and stress testing within two weeks. We will prioritize this to minimize your impact.", "zh": "我們可以在兩週內完成電氣與應力測試。我們會優先處理這項以將您的影響降到最低。"}
+    ],
+    "phrases": [
+      {"en": "We regret to inform you of the schedule delay.", "zh": "我們很遺憾地向您通知時程延誤。"},
+      {"en": "The supplier has extended the lead time.", "zh": "供應商已經延長了交期。"},
+      {"en": "We are exploring alternative components.", "zh": "我們正在尋找替代零件。"},
+      {"en": "We will prioritize this validation process.", "zh": "我們會優先進行這項驗證流程。"}
+    ],
+    "terms": [
+      {"en": "lead time extension", "zh": "交期延長"},
+      {"en": "component shortage", "zh": "零件短缺、缺料"},
+      {"en": "broker stock", "zh": "經銷商現貨、散裝市場現貨"},
+      {"en": "drop-in alternative", "zh": "直接替換料（不需改電路即可替換）"},
+      {"en": "procurement", "zh": "採購部門、採購流程"}
+    ]
+  },
+  {
+    "id": "c22",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Answering Regulatory & Certification Inquiries",
+    "title_zh": "回覆客戶關於安規與環保認證的詢問",
+    "goal_zh": "客戶在投標政府或電信商標案時，要求提供完整的資安與環保合規證明（RoHS、Reach、NDAA），你需說明現狀。",
+    "lines": [
+      {"w": "C", "en": "Does this switch comply with the NDAA Section 889 requirements regarding supply chain components?", "zh": "這台交換機符合 NDAA（國防授權法案）第889條關於供應鏈零件的要求嗎？"},
+      {"w": "E", "en": "Yes. All active semiconductors, memory chips, and power management ICs are sourced from NDAA-compliant vendors.", "zh": "是的。所有主動式半導體、記憶體晶片和電源管理 IC 都源自符合 NDAA 規範的供應商。"},
+      {"w": "C", "en": "What about hazardous substance compliance? Do you have the latest RoHS and REACH test reports?", "zh": "那有害物質合規性呢？你們有最新的 RoHS 和 REACH 測試報告嗎？"},
+      {"w": "E", "en": "All materials comply with RoHS 3.0 and REACH regulations. We collected full material declarations from every tier-one supplier.", "zh": "所有材料都符合 RoHS 3.0 和 REACH 法規。我們已從所有一階供應商收集了完整的材料宣告書。"},
+      {"w": "C", "en": "Can you provide a formal certificate of compliance for our bidding document by tomorrow?", "zh": "你們能在明天前提供正式的合規證明書給我們的投標文件嗎？"},
+      {"w": "E", "en": "No problem. I will ask our quality assurance team to compile the compliance package and email it to you this afternoon.", "zh": "沒問題。我會請品保團隊整理合規資料包，並在今天下午寄給您。"}
+    ],
+    "phrases": [
+      {"en": "Does this product comply with NDAA regulations?", "zh": "這項產品符合 NDAA 法規嗎？"},
+      {"en": "We have full material declarations available.", "zh": "我們備有完整的材料宣告書。"},
+      {"en": "I will request the compliance report from QA.", "zh": "我會向品保部門索取合規報告。"},
+      {"en": "All components are sourced from approved vendors.", "zh": "所有零件都源自核准的供應商。"}
+    ],
+    "terms": [
+      {"en": "NDAA", "say": "N-D-A-A", "tts": "N D A A", "zh": "美國國防授權法案（限制特定供應鏈晶片）"},
+      {"en": "RoHS", "say": "Ro-H-S", "tts": "Ro H S", "zh": "危害物質限制指令（環保認證）"},
+      {"en": "REACH", "say": "Reach", "tts": "Reach", "zh": "化學品註冊、評估、授權與限制法規"},
+      {"en": "material declaration", "zh": "材料宣告書（證明無毒無害）"},
+      {"en": "certificate of compliance (CoC)", "zh": "合規證明書"}
+    ]
+  },
+
+  {
+    "id": "c23",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Redundant Power Failover & MTBF Reliability",
+    "title_zh": "備援電源切換延遲與可靠度（MTBF）疑慮",
+    "goal_zh": "電信商客戶擔心其中一顆電源供應器（PSU）故障時，切換過程會導致交換機瞬間重啟或掉包，你要從硬體 OR-ing 電路與保持時間解釋。",
+    "lines": [
+      {"w": "C", "en": "Our data center requires zero packet loss during a power supply failover. Will the switch reboot if one PSU suddenly dies?", "zh": "我們的資料中心要求電源備援切換時零掉包。如果其中一顆電源供應器突然掛掉，交換機會重啟嗎？"},
+      {"w": "E", "en": "No, it will not reboot. We implemented an active OR-ing MOSFET circuit on the 12-volt main power rail for seamless load sharing.", "zh": "不會重啟。我們在12伏特主電源軌上設計了主動式 OR-ing MOSFET 電路，以實現無縫負載均分。"},
+      {"w": "C", "en": "What is the holdup time of the PSU if there is a brief AC mains dip?", "zh": "如果市電交流電出現短暫壓降，電源供應器的維持時間（Holdup time）有多長？"},
+      {"w": "E", "en": "The bulk capacitors provide at least twenty milliseconds of holdup time at full load, which is well above the standard ATX spec.", "zh": "大容量電容在滿載下可提供至少20毫秒的維持時間，遠高於標準 ATX 規範。"},
+      {"w": "C", "en": "Also, what is the estimated MTBF for this hardware platform at forty degrees ambient?", "zh": "另外，這個硬體平台在環境溫度40度下的預估平均無故障時間（MTBF）是多少？"},
+      {"w": "E", "en": "Based on our Telcordia SR-332 calculation, the system MTBF is over 350,000 hours, excluding the replaceable fan trays.", "zh": "根據我們的 Telcordia SR-332 計算，系統 MTBF 超過35萬小時（不含可替換風扇模組）。"}
+    ],
+    "phrases": [
+      {"en": "It supports seamless power failover with zero packet loss.", "zh": "它支援零掉包的無縫電源備援切換。"},
+      {"en": "We implemented an active OR-ing circuit for load sharing.", "zh": "我們實作了主動式 OR-ing 電路來進行負載均分。"},
+      {"en": "The holdup time is well above the industry standard.", "zh": "維持時間遠高於業界標準。"},
+      {"en": "We calculated the MTBF based on Telcordia standards.", "zh": "我們根據 Telcordia 標準計算了平均無故障時間。"}
+    ],
+    "terms": [
+      {"en": "failover", "zh": "故障切換、備援切換"},
+      {"en": "OR-ing circuit", "zh": "或閘隔離電路（防止備援電源互相倒灌的電路）"},
+      {"en": "load sharing", "zh": "負載均分（多顆電源平均分攤電流）"},
+      {"en": "holdup time", "zh": "電源維持時間（斷電後電容能撐住輸出的時間）"},
+      {"en": "MTBF", "say": "M-T-B-F", "tts": "M T B F", "zh": "平均無故障時間（Mean Time Between Failures）"}
+    ]
+  },
+  {
+    "id": "c24",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Cold Boot Issue in Sub-Zero Environments",
+    "title_zh": "工業級交換機低溫冷啟動疑慮",
+    "goal_zh": "客戶要在寒冷地區的戶外機櫃部署交換機，擔心零下40度時系統無法順利冷啟動，你要說明低溫元件選型與啟動策略。",
+    "lines": [
+      {"w": "C", "en": "We are deploying these industrial switches in northern Canada where winter temperatures drop to minus forty degrees. Can it cold boot reliably?", "zh": "我們要在加拿大北部部署這些工業級交換器，冬天溫度會降到零下40度。它能可靠地冷啟動嗎？"},
+      {"w": "E", "en": "Yes, all active components, including the switch silicon, DDR4 memory, and eMMC flash, are industrial-grade rated from minus forty to eighty-five degrees.", "zh": "可以，所有主動元件，包括交換晶片、DDR4 記憶體和 eMMC 快閃記憶體，都是額定零下40度到85度的工業級規格。"},
+      {"w": "C", "en": "What about the electrolytic capacitors on the power board? Their ESR increases drastically at sub-zero temperatures.", "zh": "那電源板上的電解電容呢？它們的等效串聯電阻（ESR）在零度以下會急劇增加。"},
+      {"w": "E", "en": "We completely avoided liquid electrolytic capacitors and used conductive polymer solid capacitors instead to ensure low ESR at minus forty.", "zh": "我們完全避開了液態電解電容，改用導電高分子固態電容，以確保在零下40度時仍維持低 ESR。"},
+      {"w": "C", "en": "Have you verified the cold soak test in your environmental chamber?", "zh": "你們有在環境試驗箱中驗證過低溫浸置測試嗎？"},
+      {"w": "E", "en": "Yes, we soaked the unit at minus forty degrees for twelve hours unpowered, and it booted up cleanly on the first try.", "zh": "有的，我們讓機器在無通電狀態下於零下40度靜置了12小時，第一次通電就順利開機完成。"}
+    ],
+    "phrases": [
+      {"en": "All components are industrial-grade rated.", "zh": "所有零件皆為工業級規格。"},
+      {"en": "We used solid capacitors to ensure low ESR at low temperatures.", "zh": "我們使用固態電容以確保低溫下的低等效串聯電阻。"},
+      {"en": "We completed a twelve-hour cold soak test.", "zh": "我們完成了12小時的低溫浸置測試。"},
+      {"en": "The system booted up cleanly on the first try.", "zh": "系統在第一次嘗試時就順利開機。"}
+    ],
+    "terms": [
+      {"en": "cold boot", "zh": "冷啟動（完全斷電冷卻後的開機）"},
+      {"en": "ESR", "say": "E-S-R", "tts": "E S R", "zh": "等效串聯電阻（Equivalent Series Resistance）"},
+      {"en": "solid capacitor", "zh": "固態電容"},
+      {"en": "cold soak test", "zh": "低溫浸置測試（在極低溫下靜置後測試開機）"},
+      {"en": "environmental chamber", "zh": "恆溫恆濕環境試驗箱"}
+    ]
+  },
+  {
+    "id": "c25",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Handling High Field RMA Rate & Port Failure",
+    "title_zh": "回應客戶對現場高返修率（RMA）的質疑",
+    "goal_zh": "客戶反映某批出貨到現場的交換機出現銅纜埠（RJ45）無故斷線的 RMA 客訴，你要說明初步隔離措施與分析時程。",
+    "lines": [
+      {"w": "C", "en": "We have seen a spike in field RMA returns from last month's batch. About two percent of the units lost link on ports 1 through 8.", "zh": "我們發現上個月那批貨的現場 RMA 返修率激增。大約有2%的機器在第1到第8埠失去連線。"},
+      {"w": "E", "en": "We take this very seriously. Have you shipped any of the failed units back to our facility for failure analysis yet?", "zh": "我們非常重視這件事。你們已經把任何故障機寄回我們工廠做失效分析了嗎？"},
+      {"w": "C", "en": "Yes, three units are in transit via air freight. Noticeably, ports 1 to 8 are all driven by the same octal-PHY chip.", "zh": "是的，有三台正透過空運寄回。值得注意的是，第1到第8埠都是由同一顆八埠 PHY 晶片驅動的。"},
+      {"w": "E", "en": "That is a crucial clue. It could be a cold solder joint on that specific PHY BGA package or an ESD damage issue during installation.", "zh": "這是個關鍵線索。可能是那顆特定 PHY 晶片 BGA 封裝的冷焊，或是安裝過程中的靜電放電（ESD）損壞。"},
+      {"w": "C", "en": "Our management is asking if we need to halt deployment of the remaining inventory.", "zh": "我們管理層在問，是否需要暫停部署剩餘的庫存？"},
+      {"w": "E", "en": "Please hold deployment for forty-eight hours. Once the units arrive tomorrow, we will run X-ray and decapsulation analysis and give you a containment plan.", "zh": "請先暫緩部署48小時。明天機台一到，我們會立刻進行 X 光與開蓋（Decap）分析，並提供圍堵計畫給您。"}
+    ],
+    "phrases": [
+      {"en": "We have seen a spike in field RMA returns.", "zh": "我們發現現場 RMA 返修率激增。"},
+      {"en": "We take this quality issue very seriously.", "zh": "我們非常重視這個品質問題。"},
+      {"en": "That is a crucial clue for our investigation.", "zh": "這對我們的調查是個關鍵線索。"},
+      {"en": "We will provide a containment plan within forty-eight hours.", "zh": "我們會在48小時內提供圍堵計畫。"}
+    ],
+    "terms": [
+      {"en": "RMA", "say": "R-M-A", "tts": "R M A", "zh": "退貨授權／產品返修（Return Merchandise Authorization）"},
+      {"en": "octal-PHY", "say": "octal P-H-Y", "tts": "octal P H Y", "zh": "八埠實體層收發器晶片"},
+      {"en": "decap (decapsulation)", "zh": "晶片開蓋分析（用酸液腐蝕封裝以檢查內部晶圓燒毀點）"},
+      {"en": "containment plan", "zh": "圍堵計畫（防止不良品繼續擴散的緊急措施）"},
+      {"en": "in transit", "zh": "在運送途中"}
+    ]
+  },
+  {
+    "id": "c26",
+    "stage": "客戶疑慮應對 Customer Inquiry",
+    "title": "Hardware Security & TPM 2.0 Implementation",
+    "title_zh": "回應客戶對硬體資安與防篡改的疑慮",
+    "goal_zh": "金融與政府客戶要求交換機具備硬體級安全啟動（Secure Boot）與防拆機偵測，你要說明主機板上的 TPM 晶片與硬體寫入保護設計。",
+    "lines": [
+      {"w": "C", "en": "For our financial network deployment, how does your hardware prevent unauthorized firmware tampering?", "zh": "針對我們的金融網路部署，你們的硬體如何防止未經授權的韌體篡改？"},
+      {"w": "E", "en": "We integrated a discrete TPM 2.0 security chip on the motherboard connected via the SPI bus to support hardware root-of-trust.", "zh": "我們在主機板上整合了一顆獨立的 TPM 2.0 安全晶片，透過 SPI 匯流排連接，以支援硬體信任根。"},
+      {"w": "C", "en": "What if someone gains physical access to the switch and tries to flash the SPI boot flash directly?", "zh": "如果有人取得交換機的實體接觸權，並試圖直接燒錄 SPI 開機快閃記憶體怎麼辦？"},
+      {"w": "E", "en": "The primary boot flash has a hardware write-protect pin controlled by a CPLD, which locks the bootloader sector during normal operation.", "zh": "主開機快閃記憶體有一個由 CPLD 控制的硬體寫入保護接腳，在正常運作期間會鎖定開機載入程式磁區。"},
+      {"w": "C", "en": "Do you also support chassis intrusion detection if someone opens the top cover?", "zh": "如果有人打開上蓋，你們也支援機箱入侵偵測嗎？"},
+      {"w": "E", "en": "Yes, there is a mechanical tamper switch inside the chassis tied to a battery-backed RTC register that logs the exact intrusion timestamp.", "zh": "有的，機箱內部有一個機械式防拆開關，連接到有電池備援的 RTC 暫存器，會記錄確切的入侵時間戳記。"}
+    ],
+    "phrases": [
+      {"en": "We integrated a discrete TPM 2.0 chip on the board.", "zh": "我們在板子上整合了一顆獨立的 TPM 2.0 晶片。"},
+      {"en": "It supports hardware root-of-trust and secure boot.", "zh": "它支援硬體信任根與安全啟動。"},
+      {"en": "The flash memory is protected by a hardware write-protect pin.", "zh": "快閃記憶體受硬體寫入保護接腳保護。"},
+      {"en": "The chassis has a built-in tamper detection switch.", "zh": "機箱內建防拆偵測開關。"}
+    ],
+    "terms": [
+      {"en": "TPM", "say": "T-P-M", "tts": "T P M", "zh": "信賴平台模組（Trusted Platform Module，硬體加密晶片）"},
+      {"en": "root-of-trust", "zh": "信任根（硬體安全啟動的基礎）"},
+      {"en": "CPLD", "say": "C-P-L-D", "tts": "C P L D", "zh": "複雜可程式邏輯裝置"},
+      {"en": "write-protect", "zh": "寫入保護（防止資料被覆寫）"},
+      {"en": "tamper switch", "zh": "防拆開關（偵測機殼是否被非法開啟）"}
+    ]
+  },
+
+  {
+    "id": "c27",
+    "stage": "客戶規格疑慮 Spec Inquiry",
+    "title": "Unspecified Layer 3 Routing Performance & Table Size",
+    "title_zh": "客戶對 Layer 3 路由效能與轉發表容量的疑慮",
+    "goal_zh": "客戶在審查規格書時，質疑交換機的 L3 路由表容量（ARP/IPv4/IPv6 MAC table size）是否足以應對大型企業網域的擴展。",
+    "lines": [
+      {"w": "C", "en": "According to the spec sheet, the IPv4 host route table size is capped at 4,000 entries. Will this be a bottleneck for our campus network expansion?", "zh": "根據規格書，IPv4 主機路由表容量上限是 4,000 筆。這會成為我們校園網路擴展的瓶頸嗎？"},
+      {"w": "E", "en": "That limit applies to the direct hardware LPM table. However, the switch silicon also supports a flexible table manager that can reallocate buffer space.", "zh": "這個限制適用於硬體 LPM 轉發表。不過，交換晶片也支援靈活的表管理器，可以重新配置緩衝區空間。"},
+      {"w": "C", "en": "Can we dynamically re-partition the ternary content-addressable memory so it holds more IPv6 routes instead?", "zh": "我們可以動態重新分割三態內容定址記憶體（TCAM），讓它改為容納更多 IPv6 路由嗎？"},
+      {"w": "E", "en": "Yes, we can adjust the profile configuration via the CLI to shift memory allocation, trading off IPv4 entries for IPv6.", "zh": "可以，我們透過命令列介面調整設定檔來轉移記憶體配置，以 IPv4 條目換取 IPv6 條目。"},
+      {"w": "C", "en": "What is the maximum throughput drop when enabling full ACL filtering and L3 routing simultaneously?", "zh": "同時啟用完整 ACL 過濾和 L3 路由時，最大吞吐量會下降多少？"},
+      {"w": "E", "en": "With wire-speed ACL rules enabled in the hardware pipeline, there is zero throughput drop; line-rate forwarding is fully maintained.", "zh": "在硬體管線中啟用線速 ACL 規則時，吞吐量完全不會下降；線速轉發功能完全保持不變。"}
+    ],
+    "phrases": [
+      {"en": "Will this table size be a bottleneck for your network?", "zh": "這個表格大小會成為你們網路的瓶頸嗎？"},
+      {"en": "We can reallocate buffer space via the CLI.", "zh": "我們可以透過命令列重新分配緩衝區空間。"},
+      {"en": "It maintains full line-rate forwarding performance.", "zh": "它能維持完整的線速轉發效能。"},
+      {"en": "Let's check the hardware table allocation profile.", "zh": "我們來檢查硬體表格配置設定檔。"}
+    ],
+    "terms": [
+      {"en": "LPM (Longest Prefix Match)", "zh": "最長前綴匹配（路由查找機制）"},
+      {"en": "TCAM", "say": "T-C-A-M", "tts": "T C A M", "zh": "三態內容定址記憶體（用於高速 ACL 與路由查表）"},
+      {"en": "throughput", "zh": "吞吐量"},
+      {"en": "line-rate", "zh": "線速（網路介面滿載不掉包的轉發能力）"},
+      {"en": "ACL (Access Control List)", "zh": "存取控制列表"}
+    ]
+  },
+  {
+    "id": "c28",
+    "stage": "客戶規格疑慮 Spec Inquiry",
+    "title": "Custom Enclosure Branding & Front-to-Back Airflow",
+    "title_zh": "客戶對機箱客製化外觀與前後對吹風道的疑問",
+    "goal_zh": "客戶希望將交換機面板改為他們的企業識別色（CI），並堅持採用資料中心常用的「前進後出（Front-to-Back）」風道設計。",
+    "lines": [
+      {"w": "C", "en": "We need the front bezel color to match our corporate blue branding, and the airflow must be front-to-back for our hot-aisle containment.", "zh": "我們需要前面板顏色符合我們的企業藍色識別，且風道必須是前進後出，以配合我們的熱通道封閉。"},
+      {"w": "E", "en": "We can apply a custom paint finish or anodized coloring to the front panel, which adds one week to the sample lead time.", "zh": "我們可以對前面板進行客製化烤漆或陽極處理，這會讓樣品交期增加一週。"},
+      {"w": "C", "en": "What about the fan modules? Do you support modular, hot-swappable fan trays with reverse airflow direction?", "zh": "那風扇模組呢？你們支援具備反向風流的可熱插拔模組化風扇托盤嗎？"},
+      {"w": "E", "en": "Yes, we designed an interchangeable fan tray mechanism. You can easily swap between front-to-back and back-to-front by changing the fan module SKU.", "zh": "是的，我們設計了可互換的風扇托盤機構。透過更換風扇模組料號，就可以在前進後出與後進前出之間輕鬆切換。"},
+      {"w": "C", "en": "Will reversing the airflow affect the thermal dissipation efficiency of the main switch silicon?", "zh": "反轉風道會影響主交換晶片的散熱效率嗎？"},
+      {"w": "E", "en": "Thermal simulation shows less than a two-degree variance, provided the chassis rear exhaust is unobstructed.", "zh": "熱模擬顯示溫差小於兩度，前提是機箱後方排氣口沒有被阻擋。"}
+    ],
+    "phrases": [
+      {"en": "We can customize the front bezel color.", "zh": "我們可以客製化前面板顏色。h"},
+      {"en": "It supports hot-swappable fan trays with reverse airflow.", "zh": "它支援具備反向風流的可熱插拔風扇托盤。"},
+      {"en": "The thermal variance is within two degrees.", "zh": "溫差在兩度之內。"},
+      {"en": "Let's review the mechanical customization options.", "zh": "我們來檢視機構客製化選項。"}
+    ],
+    "terms": [
+      {"en": "front bezel", "zh": "前面板裝飾框"},
+      {"en": "front-to-back airflow", "zh": "前進後出風道（資料中心標準散熱方向）"},
+      {"en": "hot-aisle containment", "zh": "熱通道封閉（機房冷熱隔離技術）"},
+      {"en": "fan tray", "zh": "風扇托盤（整合多顆風扇的模組）"},
+      {"en": "anodized coloring", "zh": "陽極處理著色"}
+    ]
+  },
+  {
+    "id": "c29",
+    "stage": "客戶規格疑慮 Spec Inquiry",
+    "title": "Time-Sensitive Networking (TSN) & PTP Precision",
+    "title_zh": "客戶對時效性網路（TSN）與 PTP 精準度的規格質疑",
+    "goal_zh": "工業自動化客戶要求交換機支援高精準度的時間同步（IEEE 1588v2 PTP），質疑硬體時間戳記的抖動表現。",
+    "lines": [
+      {"w": "C", "en": "Our industrial automation application requires sub-microsecond clock synchronization across all ports using IEEE 1588 PTP.", "zh": "我們的工業自動化應用要求透過 IEEE 1588 PTP 在所有埠上達到次微秒級的時鐘同步。"},
+      {"w": "E", "en": "Our switch silicon integrates a dedicated hardware timestamp unit at the MAC layer, achieving sub-10 nanosecond accuracy.", "zh": "我們的交換晶片在 MAC 層整合了專屬硬體時間戳記單元，可達到 10 奈秒以下的精準度。"},
+      {"w": "C", "en": "Does it support hardware-based transparent clock and boundary clock modes simultaneously?", "zh": "它支援硬體式透明時鐘和邊界時鐘模式同時運作嗎？"},
+      {"w": "E", "en": "Yes, both modes are handled directly by the internal packet processor without CPU intervention to avoid software jitter.", "zh": "是的，這兩種模式都由內部封包處理器直接處理，無需 CPU 介入，以避免軟體抖動。"},
+      {"w": "C", "en": "What is the maximum timestamp jitter under full duplex 10G traffic load?", "zh": "在全雙工 10G 流量負載下，最大時間戳記抖動是多少？"},
+      {"w": "E", "en": "Even under full line-rate traffic stress, the measured timestamp jitter remains well within plus or minus five nanoseconds.", "zh": "即使在全線速流量壓力下，測得的時間戳記抖動依然保持在正負 5 奈秒以內。"}
+    ],
+    "phrases": [
+      {"en": "It achieves sub-10 nanosecond time synchronization accuracy.", "zh": "它能達到小於 10 奈秒的時間同步精準度。"},
+      {"en": "Hardware timestamps are handled without CPU intervention.", "zh": "硬體時間戳記在沒有 CPU 介入的情況下處理。h"},
+      {"en": "The timestamp jitter remains within strict limits.", "zh": "時間戳記抖動保持在嚴格的限制內。"},
+      {"en": "It fully supports IEEE 1588v2 PTP standards.", "zh": "它完全支援 IEEE 1588v2 PTP 標準。"}
+    ],
+    "terms": [
+      {"en": "TSN (Time-Sensitive Networking)", "zh": "時效性網路（工業用高即時乙太網路標準）"},
+      {"en": "IEEE 1588v2 PTP", "zh": "精確時間協定（網路高精度對時標準）"},
+      {"en": "transparent clock", "zh": "透明時鐘（修正網路設備傳輸延遲的時間同步模式）"},
+      {"en": "boundary clock", "zh": "邊界時鐘"},
+      {"en": "hardware timestamp", "zh": "硬體時間戳記（在實體層或 MAC 層打上的精確時間標籤）"}
+    ]
+  },
+  {
+    "id": "c30",
+    "stage": "客戶規格疑慮 Spec Inquiry",
+    "title": "Open Network Install Environment (ONIE) & SONiC Support",
+    "title_zh": "客戶對白牌交換機 ONIE 與 SONiC 支援的規格詢問",
+    "goal_zh": "雲端資料中心客戶詢問交換機是否支援開放網路安裝環境（ONIE）與 SONiC 網路作業系統，以便進行開源二次開發。",
+    "lines": [
+      {"w": "C", "en": "We are migrating our data center infrastructure to open networking. Does your hardware support ONIE and SONiC OS installation?", "zh": "我們正在將資料中心基礎設施遷移到開放網路。你們的硬體支援 ONIE 和 SONiC 作業系統安裝嗎？"},
+      {"w": "E", "en": "Yes, our hardware platform comes pre-loaded with ONIE in the SPI NOR flash, allowing network-based OS provisioning.", "zh": "是的，我們的硬體平台在 SPI NOR 快閃記憶體中預先載入了 ONIE，允許進行網路基礎的作業系統佈建。"},
+      {"w": "C", "en": "What about the SAI abstraction layer? Is it fully compatible with the community-released SONiC packages?", "zh": "那 SAI 抽象層呢？它完全相容於社群釋出的 SONiC 套件嗎？"},
+      {"w": "E", "en": "We provide a fully validated SAI driver package optimized for our switch ASIC, ensuring smooth switching abstraction.", "zh": "我們提供針對交換 ASIC 優化的完整驗證 SAI 驅動程式包，確保平順的交換抽象化。"},
+      {"w": "C", "en": "Can we access the I2C sensors and temperature monitors directly from the Linux user space in SONiC?", "zh": "我們可以在 SONiC 的 Linux 使用者空間中直接存取 I2C 感測器和溫度監控器嗎？"},
+      {"w": "E", "en": "Yes, we supply a standard platform daemon and sysfs drivers that map all thermal sensors and LED controllers directly into Linux.", "zh": "可以，我們提供標準平台 daemon 與 sysfs 驅動程式，將所有散熱感測器與 LED 控制器直接對應到 Linux 中。"}
+    ],
+    "phrases": [
+      {"en": "The hardware comes pre-loaded with ONIE.", "zh": "硬體預先載入了 ONIE。"},
+      {"en": "It is fully compatible with community SONiC releases.", "zh": "它完全相容於社群釋出的 SONiC 版本。"},
+      {"en": "We provide a validated SAI driver package.", "zh": "我們提供經過驗證的 SAI 驅動程式包。h"},
+      {"en": "All sensors are mapped into the Linux user space.", "zh": "所有感測器皆對應至 Linux 使用者空間。"}
+    ],
+    "terms": [
+      {"en": "ONIE", "say": "O-N-I-E", "tts": "O N I E", "zh": "開放網路安裝環境（白牌交換機開機引導軟體）"},
+      {"en": "SONiC", "say": "SON-i-C", "tts": "SON i C", "zh": "微軟開源雲端網路作業系統"},
+      {"en": "SAI", "say": "S-A-I", "tts": "S A I", "zh": "交換器抽象介面（Switch Abstraction Interface）"},
+      {"en": "sysfs", "say": "sys-F-S", "tts": "sys F S", "zh": "Linux 核心檔案系統（用於暴露裝置驅動屬性）"},
+      {"en": "daemon", "zh": "背景服務常駐程式"}
+    ]
+  },
+
+  {
+    "id": "c31",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Clarifying Power Input & Redundancy Definitions",
+    "title_zh": "主動釐清電源輸入規格與備援定義",
+    "goal_zh": "客戶在規格書只寫了「支援雙電源」，你要主動追問是 AC 還是 DC、輸入電壓範圍，以及是否需要支援 AC/DC 混插。",
+    "lines": [
+      {"w": "E", "en": "In your RFP document, it mentions dual redundant power supplies. Could you clarify whether you need AC input, 48-volt DC input, or both?", "zh": "在你們的 RFP 文件中提到雙備援電源供應器。請問可以釐清一下，你們需要的是 AC 輸入、48V DC 輸入，還是兩者都要？"},
+      {"w": "C", "en": "Our telecom customers mostly use minus 48V DC, while enterprise sites use standard 110V or 220V AC.", "zh": "我們的電信客戶大多使用負 48V DC，而企業站點則使用標準的 110V 或 220V AC。"},
+      {"w": "E", "en": "Understood. Do your field technicians ever mix one AC PSU and one DC PSU in the same switch chassis simultaneously?", "zh": "了解。你們的現場技術人員會同時在同一台交換器機箱裡混插一顆 AC 電源和一顆 DC 電源嗎？"},
+      {"w": "C", "en": "Yes, that happens during site power upgrades. Does that cause any hardware issues?", "zh": "會的，在站點電力升級期間會發生這種情況。這會造成任何硬體問題嗎？"},
+      {"w": "E", "en": "If mixed-mode operation is required, we must design isolated secondary OR-ing circuits and strict ground isolation to prevent ground loops.", "zh": "如果需要混插運作，我們就必須設計隔離式二次側 OR-ing 電路與嚴格的接地隔離，以防止接地迴路。"},
+      {"w": "C", "en": "Good catch. Let's make mixed AC/DC redundancy a mandatory requirement in the spec.", "zh": "問得好。我們把 AC/DC 混插備援列為規格書中的強制需求吧。"}
+    ],
+    "phrases": [
+      {"en": "Could you clarify whether you need AC or DC input?", "zh": "請問可以釐清一下你們需要 AC 還是 DC 輸入嗎？"},
+      {"en": "Do you require mixed-mode PSU operation?", "zh": "你們需要電源供應器支援混插模式運作嗎？"},
+      {"en": "We need to prevent potential ground loops.", "zh": "我們需要防止潛在的接地迴路。"},
+      {"en": "Let's define this clearly in the spec sheet.", "zh": "我們在規格書中把這點明確定義清楚。"}
+    ],
+    "terms": [
+      {"en": "mixed-mode redundancy", "zh": "混插備援（AC 與 DC 電源模組同時並聯供電）"},
+      {"en": "ground loop", "zh": "接地迴路（不同接地電位造成的干擾電流）"},
+      {"en": "ground isolation", "zh": "接地隔離"},
+      {"en": "boundary condition", "zh": "邊界條件（系統運作的極限與前提假設）"},
+      {"en": "mandatory requirement", "zh": "強制性需求"}
+    ]
+  },
+  {
+    "id": "c32",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Questioning Shallow Chassis Depth vs. Thermal Limits",
+    "title_zh": "針對淺機箱深度與高密度埠數的散熱提問",
+    "goal_zh": "客戶要求在 1U 高度、僅 300mm 深的淺機箱內塞入 48 埠 25G 與 8 埠 100G，你要主動質疑散熱空間與光模組功耗限制。",
+    "lines": [
+      {"w": "E", "en": "We noticed you requested a 300-millimeter shallow-depth chassis for 48 ports of 25G and 8 ports of 100G. What type of optical transceivers will you plug into the 100G ports?", "zh": "我們注意到你們要求用 300 毫米的淺機箱容納 48 個 25G 埠和 8 個 100G 埠。請問你們會在 100G 埠插哪種類型的光收發模組？"},
+      {"w": "C", "en": "Mostly short-reach SR4 modules, and occasionally 10-kilometer LR4 transceivers.", "zh": "主要是短距離的 SR4 模組，偶爾會用 10 公里的 LR4 光模組。"},
+      {"w": "E", "en": "LR4 modules typically consume up to 4.5 watts each. In a 300mm shallow chassis, space for heatsink fins and airflow impedance is very tight.", "zh": "LR4 模組通常每顆功耗高達 4.5 瓦。在 300 毫米的淺機箱裡，留給散熱鰭片和風阻的空間非常吃緊。"},
+      {"w": "C", "en": "Are you saying all eight 100G ports cannot run LR4 modules simultaneously at 45 degrees ambient?", "zh": "你是說在環境溫度 45 度下，這八個 100G 埠無法同時跑 LR4 模組嗎？"},
+      {"w": "E", "en": "Correct, unless we use higher-RPM dual-rotor fans, which will increase acoustic noise. Would your deployment site accept higher fan noise, or should we cap the transceiver power class?", "zh": "沒錯，除非我們改用更高轉速的雙轉子風扇，但這會增加噪音。請問你們的部署現場能接受較高的風扇噪音，還是我們應該限制光模組的功耗等級？"},
+      {"w": "C", "en": "It will be installed in an unmanned telecom cabinet, so fan noise is not an issue. Go ahead with the high-airflow fans.", "zh": "它會裝在無人電信機櫃裡，所以風扇噪音不是問題。就用高風量風扇吧。"}
+    ],
+    "phrases": [
+      {"en": "What type of optical transceivers will you deploy?", "zh": "你們會部署哪種類型的光收發模組？"},
+      {"en": "Space for airflow impedance is very tight.", "zh": "風道與風阻的空間非常吃緊。"},
+      {"en": "Would your site accept higher acoustic noise?", "zh": "你們的現場能接受較高的風扇噪音嗎？"},
+      {"en": "Should we cap the transceiver power class?", "zh": "我們應該限制光模組的功耗等級嗎？"}
+    ],
+    "terms": [
+      {"en": "shallow-depth chassis", "zh": "淺機箱（深度較短的機櫃設備，常見於電信邊緣機房）"},
+      {"en": "airflow impedance", "zh": "風阻（氣流通過機箱內部元件時受到的阻力）"},
+      {"en": "dual-rotor fan", "zh": "雙轉子風扇（高風壓散熱風扇）"},
+      {"en": "power class", "zh": "功耗等級（光模組的瓦數分級標準）"},
+      {"en": "unmanned cabinet", "zh": "無人機櫃"}
+    ]
+  },
+  {
+    "id": "c33",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Probing Acceptance Test Criteria & Traffic Profile",
+    "title_zh": "反問客戶驗收測試標準與封包流量模型",
+    "goal_zh": "為避免日後驗收起爭議，你要主動向客戶確認 DVT/PVT 的測試條件，包含 RFC 2544 封包大小、測試時間與環境溫度。",
+    "lines": [
+      {"w": "E", "en": "Before we finalize the DVT test plan, could you share your exact acceptance criteria for the RFC 2544 throughput test?", "zh": "在我們定案 DVT 測試計畫之前，請問可以提供你們針對 RFC 2544 吞吐量測試的確切驗收標準嗎？"},
+      {"w": "C", "en": "We expect zero packet loss across standard frame sizes from 64 bytes up to 1518 bytes.", "zh": "我們預期從 64 位元組到 1518 位元組的標準封包大小都要達到零掉包。"},
+      {"w": "E", "en": "Got it. What about IMIX traffic profiles or 9KB jumbo frames? And how long should each frame-size test run?", "zh": "收到。那混合封包流量（IMIX）或 9KB 巨型封包呢？而且每個封包大小的測試應該跑多久？"},
+      {"w": "C", "en": "Please include 9KB jumbo frames, and run each test iteration for at least five minutes.", "zh": "請把 9KB 巨型封包納入，而且每次測試迭代至少跑五分鐘。"},
+      {"w": "E", "en": "Also, should we run this full line-rate traffic test inside the thermal chamber at your maximum rated ambient temperature of 50 degrees?", "zh": "另外，我們是否應該在溫箱內、以你們最高額定環境溫度 50 度來執行這項全線速流量測試？"},
+      {"w": "C", "en": "Yes, passing zero packet loss at 50 degrees Celsius will be our sign-off condition for DVT.", "zh": "是的，在攝氏 50 度下通過零掉包測試，將是我們 DVT 簽核的條件。"}
+    ],
+    "phrases": [
+      {"en": "Could you share your exact acceptance criteria?", "zh": "請問可以提供你們的確切驗收標準嗎？"},
+      {"en": "How long should each test iteration run?", "zh": "每次測試迭代應該執行多久？"},
+      {"en": "Should we run this test at maximum ambient temperature?", "zh": "我們應該在最高環境溫度下執行這項測試嗎？"},
+      {"en": "What is your sign-off condition for DVT?", "zh": "你們對 DVT 的簽核條件是什麼？"}
+    ],
+    "terms": [
+      {"en": "acceptance criteria", "zh": "驗收標準"},
+      {"en": "RFC 2544", "say": "R-F-C twenty-five forty-four", "tts": "R F C twenty five forty four", "zh": "網路設備效能基準測試標準（測吞吐量、延遲、掉包率）"},
+      {"en": "IMIX (Internet Mix)", "say": "I-Mix", "tts": "I Mix", "zh": "網際網路混合封包流量模型（模擬真實大小封包比例）"},
+      {"en": "frame size", "zh": "訊框大小、封包大小"},
+      {"en": "sign-off condition", "zh": "簽核條件（專案階段過關的必要門檻）"}
+    ]
+  },
+  {
+    "id": "c34",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Asking About Field Grounding & Surge Environment",
+    "title_zh": "追問客戶現場接地品質與戶外雷擊環境",
+    "goal_zh": "客戶要把交換機裝在基地台或路邊機箱，你要主動追問現場的接地電阻品質與戶外線纜長度，以決定突波保護電路等級。",
+    "lines": [
+      {"w": "E", "en": "Since this switch connects to outdoor PoE access points, how long are the outdoor Cat6A cable runs, and are they shielded?", "zh": "因為這台交換器會連接到戶外 PoE 無線基地台，請問戶外 Cat6A 網路線有多長，而且有屏蔽層嗎？"},
+      {"w": "C", "en": "The cable runs are up to eighty meters along metal poles, and we use shielded STP cables.", "zh": "網路線沿著金屬電線桿走線，最長達 80 公尺，而且我們使用屏蔽雙絞線（STP）。"},
+      {"w": "E", "en": "With 80-meter outdoor runs on metal poles, induced lightning surges can be severe. What is the earth grounding condition at those sites?", "zh": "在金屬桿上走 80 公尺的戶外線，感應雷擊突波會非常劇烈。請問那些站點的大地接地條件如何？"},
+      {"w": "C", "en": "To be honest, some remote sites have poor grounding with earth resistance over ten ohms.", "zh": "老實說，有些偏遠站點的接地不良，接地電阻超過 10 歐姆。"},
+      {"w": "E", "en": "If the chassis earth ground is floating or high-impedance, standard surge protection won't shunt the energy effectively. Do we need to upgrade the RJ45 ports to 10kV surge protection?", "zh": "如果機箱大地接地浮接或阻抗過高，標準突波保護就無法有效分流能量。我們需要把 RJ45 埠升級到 10kV 突波保護嗎？"},
+      {"w": "C", "en": "Yes, please quote the 10kV surge protection option. That will save us huge maintenance costs in the field.", "zh": "是的，請報價 10kV 突波保護選項。這會幫我們省下龐大的現場維護成本。"}
+    ],
+    "phrases": [
+      {"en": "How long are the outdoor cable runs?", "zh": "戶外網路線的走線長度有多長？"},
+      {"en": "What is the earth grounding condition at the site?", "zh": "現場的大地接地條件如何？"},
+      {"en": "Standard protection won't shunt the surge energy effectively.", "zh": "標準保護電路無法有效分流突波能量。"},
+      {"en": "Do we need to upgrade to 10kV surge protection?", "zh": "我們需要升級到 10kV 突波保護嗎？"}
+    ],
+    "terms": [
+      {"en": "STP (Shielded Twisted Pair)", "say": "S-T-P", "tts": "S T P", "zh": "屏蔽雙絞線"},
+      {"en": "induced surge", "zh": "感應突波（雷擊在鄰近線纜產生的感應高壓）"},
+      {"en": "earth resistance", "zh": "接地電阻（越小代表接地導通越良好）"},
+      {"en": "shunt", "zh": "分流、旁路（將突波大電流導向大地）"},
+      {"en": "floating ground", "zh": "浮接（未與大地建立可靠低阻抗連接）"}
+    ]
+  },
+
+  {
+    "id": "c35",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Clarifying Custom Firmware Compilation & Toolchain Version",
+    "title_zh": "主動釐清客戶自研 Code 的編譯工具鏈版本",
+    "goal_zh": "客戶要自己編譯 SONiC 或 Linux 核心，你要主動向客戶確認他們使用的 GCC 版本、SDK 版本與核心架構，避免編譯出來的 Bin 檔在我們的硬體上跑飛（Kernel Panic）。",
+    "lines": [
+      {"w": "E", "en": "Since your software team is compiling a custom Linux kernel and SDK for this switch, what exact GCC compiler version and toolchain are you using?", "zh": "既然你們的軟體團隊要為這台交換機編譯自訂的 Linux 核心與 SDK，請問你們使用的是哪一個確切的 GCC 編譯器版本與工具鏈？"},
+      {"w": "C", "en": "We are using GCC 11.2 bundled with the standard cross-compilation toolchain provided by the switch silicon vendor.", "zh": "我們使用的是交換晶片原廠提供的標準交叉編譯工具鏈中所包內含的 GCC 11.2。"},
+      {"w": "E", "en": "Please ensure you also patch our board-specific device tree source (DTS) files into your kernel tree before building, otherwise the I2C bus and PHY interrupt pins won't map correctly.", "zh": "請確保在建置之前，也將我們針對這塊板子特製的裝置樹原始碼（DTS）檔案打進你們的核心樹中，否則 I2C 匯流排和 PHY 中斷接腳將無法正確對應。"},
+      {"w": "C", "en": "Good point. Do you provide a automated build script or a Docker container to guarantee our compilation environment matches yours?", "zh": "說得好。你們有提供自動化建置腳本或 Docker 容器，來保證我們的編譯環境跟你們的一致嗎？"},
+      {"w": "E", "en": "Yes, we provide a pre-configured Ubuntu 22.04 Docker image that contains all required dependencies, header files, and the verified SDK package.", "zh": "有的，我們提供一個預先設定好的 Ubuntu 22.04 Docker 映像檔，裡面包含了所有必要的相依套件、標頭檔與經過驗證的 SDK 套件。"},
+      {"w": "C", "en": "That will save us days of debugging environment mismatches. Please share the Docker container download link.", "zh": "那會幫我們省下好幾天除錯環境不匹配的時間。請分享一下 Docker 容器的下載連結。"}
+    ],
+    "phrases": [
+      {"en": "What exact compiler version and toolchain are you using?", "zh": "你們使用的是哪一個確切的編譯器版本與工具鏈？"},
+      {"en": "Please patch our device tree source into your kernel.", "zh": "請將我們的裝置樹原始碼打進你們的核心中。"},
+      {"en": "Do you provide a Docker container for compilation?", "zh": "你們有提供用於編譯的 Docker 容器嗎？"},
+      {"en": "This prevents environment mismatch issues.", "zh": "這能防止環境不匹配的問題。"}
+    ],
+    "terms": [
+      {"en": "toolchain", "zh": "工具鏈（用於交叉編譯程式碼的一套軟體工具集合）"},
+      {"en": "device tree (DTS)", "zh": "裝置樹（描述硬體板子周邊配置的文字描述檔）"},
+      {"en": "kernel panic", "zh": "核心恐慌（Linux 核心遇到嚴重錯誤時的當機狀態）"},
+      {"en": "cross-compilation", "zh": "交叉編譯（在x86電腦上編譯出能在ARM或其他架構晶片執行的程式）"},
+      {"en": "Docker container", "zh": "容器化環境"}
+    ]
+  },
+  {
+    "id": "c36",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Defining SOP for Image Flashing & Recovery via U-Boot",
+    "title_zh": "主動釐清透過 U-Boot 燒錄映像檔與救援 SOP",
+    "goal_zh": "客戶在機台驗證自研 Code 時經常刷到斷電變磚，你要主動與客戶確認 U-Boot 救援 SOP、TFTP 伺服器設定與串列埠（UART）除錯線接法。",
+    "lines": [
+      {"w": "E", "en": "When your engineers load your custom binary images onto the switch during verification, how do you plan to flash them? Will you use ONIE or the U-Boot console?", "zh": "當你們的工程師在驗證期間將自訂二進位映像檔載入交換機時，你們打算如何燒錄？會使用 ONIE 還是 U-Boot 主控台？"},
+      {"w": "C", "en": "Our team prefers using TFTP and the U-Boot bootloader prompt via the serial console interface.", "zh": "我們團隊偏好透過序列主控台介面使用 TFTP 和 U-Boot 開機載入程式提示字元來燒錄。"},
+      {"w": "E", "en": "Make sure your hardware technicians connect a USB-to-UART debug cable to the correct header, and set your local TFTP server IP to 192.168.1.100.", "zh": "請確保你們的硬體技術人員將 USB 轉 UART 除錯線接到正確的針腳上，並將你們的本地 TFTP 伺服器 IP 設為 192.168.1.100。"},
+      {"w": "C", "en": "What if a developer accidentally overwrites the U-Boot environment or bricks the board during flashing?", "zh": "如果開發者在燒錄時不小心覆蓋了 U-Boot 環境變數或把板子刷成磚頭該怎麼辦？"},
+      {"w": "E", "en": "We reserved a hardware SPI recovery header and added a dual-image fallback mechanism in the NOR flash. You can switch the boot bank via a physical jumper.", "zh": "我們在 NOR 快閃記憶體中保留了硬體 SPI 救援接腳，並加入了雙映像檔備援機制。你可以透過實體跳線切換開機區段。"},
+      {"w": "C", "en": "That hardware recovery fallback is a lifesaver. Please include that recovery procedure clearly in the SOP document.", "zh": "這個硬體救援備援機制簡直救命。請把這個救援程序清楚寫在 SOP 文件中。"}
+    ],
+    "phrases": [
+      {"en": "How do you plan to flash the binary images?", "zh": "你們打算如何燒錄二進位映像檔？"},
+      {"en": "Connect your debug cable to the correct serial header.", "zh": "將你們的除錯線接到正確的序列針腳。h"},
+      {"en": "What is the recovery procedure if the board bricks?", "zh": "如果板子刷成磚頭，救援程序是什麼？"},
+      {"en": "We implemented a dual-image fallback mechanism.", "zh": "我們實作了雙映像檔備援機制。"}
+    ],
+    "terms": [
+      {"en": "U-Boot", "zh": "通用開機載入程式（嵌入式系統常用開機引導軟體）"},
+      {"en": "TFTP (Trivial File Transfer Protocol)", "zh": "簡易檔案傳輸協定（常用於區網內載入核心映像檔）"},
+      {"en": "serial console", "zh": "序列主控台（透過 RS232/UART 監看開機 log 與下指令的介面）"},
+      {"en": "brick", "zh": "變磚（韌體刷壞導致系統完全無法開機）"},
+      {"en": "boot bank", "zh": "開機區段（儲存韌體映像檔的 Flash 磁區分割）"}
+    ]
+  },
+  {
+    "id": "c37",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Establishing Log Collection & Crash Dump Procedure for Custom Code",
+    "title_zh": "建立自研 Code 異常時的 Log 收集與 Crash Dump SOP",
+    "goal_zh": "客戶自己寫的 daemon 或驅動程式在機台跑一跑當機，你要主動與客戶定義如何抓取核心崩潰傾印（Crash Dump）與內核日誌（Kernel Log）。",
+    "lines": [
+      {"w": "E", "en": "When your custom application crashes on our hardware during stress testing, how will your software team collect diagnostic logs?", "zh": "當你們的自訂應用程式在壓力測試期間於我們的硬體上當機時，你們的軟體團隊要如何收集診斷日誌？"},
+      {"w": "C", "en": "We usually check `/var/log/messages` or run `dmesg` via SSH.", "zh": "我們通常透過 SSH 檢查 `/var/log/messages` 或執行 `dmesg`。"},
+      {"w": "E", "en": "If the kernel panics or the network driver hangs completely, SSH won't be accessible. You must keep the serial debug port logging active to a host PC using `minicom` or `Tera Term` with timestamp enabled.", "zh": "如果核心恐慌或網路驅動程式完全掛掉，SSH 就連不上。你們必須使用啟用時間戳記的 `minicom` 或 `Tera Term`，保持序列除錯埠持續記錄日誌到主機 PC。"},
+      {"w": "C", "en": "Can we configure netconsole to stream kernel panic logs directly to a remote syslog server over the management port?", "zh": "我們可以透過管理埠設定 netconsole，將核心恐慌日誌直接串流到遠端系統日誌伺服器嗎？"},
+      {"w": "E", "en": "Yes, you can configure the bootargs in U-Boot to enable netconsole. However, for low-level hardware faults, serial log is still the source of truth.", "zh": "可以，你們可以在 U-Boot 中設定 bootargs 來啟用 netconsole。不過針對底層硬體錯誤，序列日誌仍然是最真實的依據。"},
+      {"w": "C", "en": "Understood. We will update our internal testing SOP to mandate serial logging for all bug reports.", "zh": "了解。我們會更新內部的測試 SOP，規定所有問題回報都必須附上序列日誌。"}
+    ],
+    "phrases": [
+      {"en": "How will your team collect diagnostic logs when it crashes?", "zh": "當它當機時，你們團隊要如何收集診斷日誌？"},
+      {"en": "Keep the serial debug port logging active.", "zh": "保持序列除錯埠持續記錄日誌。"},
+      {"en": "For low-level faults, serial log is the source of truth.", "zh": "針對底層錯誤，序列日誌是最真實的依據。"},
+      {"en": "Please include timestamps in your debug logs.", "zh": "請在除錯日誌中包含時間戳記。"}
+    ],
+    "terms": [
+      {"en": "crash dump", "zh": "當機傾印（系統崩潰時記憶體內容的快照）"},
+      {"en": "dmesg", "zh": "顯示 Linux 核心環形緩衝區日誌的指令"},
+      {"en": "netconsole", "zh": "網路核心日誌（透過 UDP 將 kernel log 傳到遠端）"},
+      {"en": "bootargs", "zh": "開機參數（傳遞給 Linux 核心的啟動設定變數）"},
+      {"en": "source of truth", "zh": "唯一真相來源、最可靠的依據"}
+    ]
+  },
+  {
+    "id": "c38",
+    "stage": "主動釐清規格 Spec Clarification",
+    "title": "Verifying Custom SFP/QSFP Transceiver EEPROM Compatibility SOP",
+    "title_zh": "釐清客戶自購光模組 EEPROM 驗證與白名單載入 SOP",
+    "goal_zh": "客戶打算使用自己採購的非原廠光模組，你要主動提供 SOP 讓他們將模組的 EEPROM 內容傾印出來，並在系統中解鎖或加入白名單。",
+    "lines": [
+      {"w": "E", "en": "We noticed you plan to use third-party optical transceivers instead of our vendor-qualified list. Do you have the script to dump their EEPROM data?", "zh": "我們注意到你們計畫使用非原廠合格清單的第三方光模組。你們有腳本可以傾印它們的 EEPROM 資料嗎？"},
+      {"w": "C", "en": "Not yet. Is there a command in your CLI to read the SFP I2C address space and check the checksum?", "zh": "還沒有。你們的命令列介面中有指令可以讀取 SFP I2C 位址空間並檢查檢驗和嗎？"},
+      {"w": "E", "en": "Yes, you can run `show system optics port [id] eeprom raw` or use `i2cdump` in the Linux shell. If the vendor OUI bytes don't match, the driver will reject it by default.", "zh": "有的，你們可以在 Linux Shell 中執行 `show system optics port [id] eeprom raw` 或使用 `i2cdump`。如果廠商 OUI 位元組不匹配，驅動程式預設會拒絕它。"},
+      {"w": "C", "en": "How can our software team whitelist our custom transceivers without recompiling the entire network OS image?", "zh": "我們的軟體團隊要如何在不重新編譯整個網路作業系統映像檔的情況下，將我們的自訂光模組加入白名單？"},
+      {"w": "E", "en": "You can modify the JSON configuration file located at `/etc/sfp_whitelist.json` and restart the optics daemon. We will provide a sample script.", "zh": "你們可以修改位於 `/etc/sfp_whitelist.json` 的 JSON 設定檔並重新啟動光學常駐程式。我們會提供範例腳本。"},
+      {"w": "C", "en": "That's very flexible. Please document this whitelist override procedure in the verification SOP.", "zh": "這非常有彈性。請將這個白名單覆寫程序記錄在驗證 SOP 中。"}
+    ],
+    "phrases": [
+      {"en": "Do you have a script to dump the EEPROM data?", "zh": "你們有腳本可以傾印 EEPROM 資料嗎？"},
+      {"en": "The driver will reject unknown transceivers by default.", "zh": "驅動程式預設會拒絕未知的光模組。h"},
+      {"en": "How can we whitelist our custom transceivers?", "zh": "我們要如何將自訂光模組加入白名單？"},
+      {"en": "We will provide a sample configuration script.", "zh": "我們會提供範例設定腳本。"}
+    ],
+    "terms": [
+      {"en": "EEPROM", "say": "E-E-P-R-O-M", "tts": "E E P R O M", "zh": "電子抹除式可複寫唯讀記憶體（儲存光模組參數）"},
+      {"en": "OUI", "say": "O-U-I", "tts": "O U I", "zh": "組織唯一識別碼（網卡或模組廠商代碼）"},
+      {"en": "checksum", "zh": "檢驗和（用於檢查資料是否損毀的校驗值）"},
+      {"en": "whitelist", "zh": "白名單（允許通行的清單機制）"},
+      {"en": "I2C address space", "zh": "I2C 位址空間"}
+    ]
+  },
+
+  {
+    "id": "c39",
+    "stage": "介面訊號除錯 Interface Debug",
+    "title": "PCIe Gen4 Link Training Failure & AC Coupling Caps",
+    "title_zh": "PCIe Gen4 鏈路訓練失敗與交流交連電容配置",
+    "goal_zh": "交換機內部管理 CPU 與交換晶片之間的 PCIe Gen4 介面無法順利建立 Link，硬體工程師與 FAE 用示波器追查阻抗匹配與交連電容問題。",
+    "lines": [
+      {"w": "C", "en": "The CPU cannot detect the switch ASIC over the PCIe Gen4 bus during bootup. The link training keeps failing.", "zh": "開機時 CPU 無法透過 PCIe Gen4 匯流排偵測到交換晶片。鏈路訓練（Link Training）不斷失敗。"},
+      {"w": "E", "en": "I checked the PCIe layout. We placed the 100-nF AC coupling capacitors on the TX differential pairs as required by the spec.", "zh": "我有檢查 PCIe 佈線。我們按照規範在 TX 差動對上放置了 100 nF 的交流交連電容。"},
+      {"w": "C", "en": "Did you measure the common-mode voltage and the differential impedance across the connector?", "zh": "你們有量測過跨越連接器的共模電壓和差動阻抗嗎？"},
+      {"w": "E", "en": "Using TDR, the differential impedance measures 88 ohms, which is slightly lower than the 100-ohm target due to pad capacitance.", "zh": "使用時域反射儀（TDR）量測，差動阻抗為 88 歐姆，因為焊墊電容的關係，比 100 歐姆的目標值略低。"},
+      {"w": "C", "en": "That impedance discontinuity causes signal reflections during Gen4 equalization phases. What about the reference clock jitter?", "zh": "這個阻抗不連續會在 Gen4 等化階段造成訊號反射。那參考時脈的抖動狀況呢？"},
+      {"w": "E", "en": "The 100MHz HCSL differential clock phase jitter is well within 0.5 picoseconds, so the clock source is clean.", "zh": "100MHz HCSL 差動時脈的相位抖動在 0.5 皮秒以內，所以時脈源是很乾淨的。"}
+    ],
+    "phrases": [
+      {"en": "The PCIe link training keeps failing during bootup.", "zh": "PCIe 鏈路訓練在開機時持續失敗。"},
+      {"en": "We placed AC coupling capacitors on the differential pairs.", "zh": "我們在差動對上放置了交流交連電容。"},
+      {"en": "That impedance discontinuity causes signal reflections.", "zh": "該阻抗不連續會造成訊號反射。"},
+      {"en": "Let's check the differential impedance using TDR.", "zh": "我們用 TDR 來檢查差動阻抗。"}
+    ],
+    "terms": [
+      {"en": "link training", "zh": "鏈路訓練（PCIe 雙方交涉速度與訊號參數的過程）"},
+      {"en": "AC coupling capacitor", "zh": "交流交連電容（阻隔直流分量的串聯電容）"},
+      {"en": "TDR (Time-Domain Reflectometer)", "zh": "時域反射儀（用於量測阻抗不連續與走線長度的儀器）"},
+      {"en": "impedance discontinuity", "zh": "阻抗不連續"},
+      {"en": "HCSL", "say": "H-C-S-L", "tts": "H C S L", "zh": "高速電流導向邏輯（常見於 PCIe 時脈訊號準位）"}
+    ]
+  },
+  {
+    "id": "c40",
+    "stage": "介面訊號除錯 Interface Debug",
+    "title": "I2C / MDIO Bus Hang & Voltage Level Mismatch",
+    "title_zh": "I2C / MDIO 匯流排當機與電壓準位不匹配",
+    "goal_zh": "系統運行中突然無法透過 I2C 讀取 SFP 模組的 EEPROM，硬體工程師用示波器抓波形，發現 SCL/SDA 準位拉不上去。",
+    "lines": [
+      {"w": "C", "en": "We are getting I2C bus timeout errors when trying to read multiple temperature sensors and SFP EEPROMs simultaneously.", "zh": "當我們嘗試同時讀取多個溫度感測器和 SFP EEPROM 時，遇到了 I2C 匯流排逾時錯誤。"},
+      {"w": "E", "en": "I probed the SCL and SDA lines with an oscilloscope. The rise time is excessively slow, and the high-level voltage barely reaches 2.1 volts.", "zh": "我用示波器探測了 SCL 和 SDA 線。訊號上升時間過慢，且高準位電壓勉強達到 2.1 伏特。"},
+      {"w": "C", "en": "Is there a voltage translation mismatch between the 3.3V microcontroller and the 1.8V switch management power rail?", "zh": "是 3.3V 微控制器與 1.8V 交換機管理電源軌之間存在電壓准位轉換不匹配嗎？"},
+      {"w": "E", "en": "Exactly. The pull-up resistors on the 3.3V side are driving into a 1.8V clamp diode inside the slave chip, pulling the bus down.", "zh": "沒錯。3.3V 端的提升電容正驅動著從屬晶片內部的 1.8V 箝位二極體，把匯流排拉低了。"},
+      {"w": "C", "en": "Do we need to add a bi-directional voltage level translator IC on the board?", "zh": "我們需要在板子上加一顆雙向電壓准位轉換 IC 嗎？"},
+      {"w": "E", "en": "Yes, we will patch in a dual-supply channel translator and swap the pull-up resistors to match the 1.8V bus standard.", "zh": "是的，我們會加焊一顆雙電源通道轉換器，並更換提升電容以符合 1.8V 匯流排標準。"}
+    ],
+    "phrases": [
+      {"en": "We are encountering I2C bus timeout errors.", "zh": "我們遇到了 I2C 匯流排逾時錯誤。"},
+      {"en": "The rise time of the signal is excessively slow.", "zh": "訊號的上升時間過慢。"},
+      {"en": "There is a voltage level mismatch on the bus.", "zh": "匯流排上存在電壓準位不匹配的問題。"},
+      {"en": "We need to add a bi-directional level translator.", "zh": "我們需要增加一顆雙向准位轉換器。"}
+    ],
+    "terms": [
+      {"en": "rise time", "zh": "上升時間（訊號從 10% 爬升到 90% 的時間）"},
+      {"en": "pull-up resistor", "zh": "提升電阻"},
+      {"en": "level translator", "zh": "准位轉換 IC（轉換不同工作電壓的介面訊號）"},
+      {"en": "bus timeout", "zh": "匯流排逾時"},
+      {"en": "clamp diode", "zh": "箝位二極體（保護輸入接腳不超過電源壓力的保護電路）"}
+    ]
+  },
+  {
+    "id": "c41",
+    "stage": "介面訊號除錯 Interface Debug",
+    "title": "25G SerDes High Bit Error Rate & Tap Optimization",
+    "title_zh": "25G SerDes 高誤碼率與等化器 Tap 參數優化",
+    "goal_zh": "在高溫測試下，25G 乙太網路連接埠開始出現隨機封包掉包，與晶片原廠合作調整 SerDes 的 TX/RX 等化器參數。",
+    "lines": [
+      {"w": "C", "en": "Port 12 is reporting intermittent link flaps and high bit error rates when running 25G traffic at 55 degrees ambient.", "zh": "第 12 埠在 55 度環境下跑 25G 流量時，回報間歇性鏈路閃爍與高位元錯誤率。"},
+      {"w": "E", "en": "We checked the real-time eye monitor inside the switch ASIC. The inner eye width has shrunk due to temperature-induced insertion loss.", "zh": "我們檢查了交換晶片內部的即時眼圖監控器。由於溫度引起的插入損失，內眼寬度已經縮小了。"},
+      {"w": "C", "en": "Can we adjust the receiver continuous time linear equalizer settings to compensate for the high-frequency loss?", "zh": "我們可以調整接收端的連續時間線性等化器設定，來補償高頻損耗嗎？"},
+      {"w": "E", "en": "Yes, we increased the CTLE peaking gain and optimized the decision feedback equalizer tap weights in the SDK.", "zh": "可以，我們在 SDK 中調高了 CTLE 峰值增益，並優化了決策回饋等化器的 Tap 權重。"},
+      {"w": "C", "en": "Did that clear up the error counter?", "zh": "這樣有清除錯誤計數器嗎？"},
+      {"w": "E", "en": "After applying the new SerDes profile, the BER dropped below 10 to the minus 15, achieving rock-solid transmission.", "zh": "套用新的 SerDes 設定檔後，誤碼率降到 10 的負 15 次方以下，達到了極度穩固的傳輸。"}
+    ],
+    "phrases": [
+      {"en": "The port is reporting intermittent link flaps.", "zh": "連接埠回報了間歇性鏈路閃爍。h"},
+      {"en": "We observed an inner eye width shrinkage.", "zh": "我們觀察到內眼寬度縮小。"},
+      {"en": "Let's adjust the CTLE and DFE settings.", "zh": "我們來調整 CTLE 與 DFE 設定。"},
+      {"en": "The bit error rate dropped significantly.", "zh": "位元錯誤率顯著下降。"}
+    ],
+    "terms": [
+      {"en": "SerDes", "say": "Ser-Des", "tts": "Ser Des", "zh": "串列器/解串器（高速介面核心）"},
+      {"en": "CTLE", "say": "C-T-L-E", "tts": "C T L E", "zh": "連續時間線性等化器（補償高頻衰減）"},
+      {"en": "DFE", "say": "D-F-E", "tts": "D F E", "zh": "決策回饋等化器（消除符號間干擾）"},
+      {"en": "link flap", "zh": "鏈路閃爍（網路連線不斷上下起伏）"},
+      {"en": "eye monitor", "zh": "晶片內建眼圖監控單元"}
+    ]
+  },
+  {
+    "id": "c42",
+    "stage": "介面訊號除錯 Interface Debug",
+    "title": "Reference Clock Phase Noise & Ethernet PHY Synchronization",
+    "title_zh": "參考時脈相位雜訊與乙太網路 PHY 同步異常",
+    "goal_zh": "交換機上的 10G 銅纜 PHY 經常無法抓到對端 Link，經量測發現是晶體振盪器（Oscillator）相位雜訊過大導致 PLL 鎖定失敗。",
+    "lines": [
+      {"w": "C", "en": "The 10G copper PHYs on ports 1 to 4 fail to establish link with certain legacy switches.", "zh": "第 1 到 4 埠的 10G 銅纜 PHY 無法與某些舊款交換機建立連線。"},
+      {"w": "E", "en": "We checked the 156.25 MHz differential crystal oscillator output with a spectrum analyzer. The phase noise at 10 kHz offset is exceeding the spec.", "zh": "我們用頻譜分析儀檢查了 156.25 MHz 差動晶體振盪器輸出。在 10 kHz 偏移處的相位雜訊超過了規格。"},
+      {"w": "C", "en": "Could that poor phase noise be causing the internal phase-locked loop to unlock?", "zh": "該不良的相位雜訊會導致內部鎖相迴路（PLL）失鎖嗎？"},
+      {"w": "E", "en": "Exactly. The recovered clock jitter exceeds the PHY receiver tolerance, causing continuous framing errors.", "zh": "沒錯。復原後的時脈抖動超過了 PHY 接收器的容忍度，導致持續的訊框錯誤。"},
+      {"w": "C", "en": "What is our corrective action?", "zh": "我們的糾正措施是什麼？"},
+      {"w": "E", "en": "We are replacing the current low-cost oscillator with an ultra-low phase noise jitter-attenuator clock source from vendor A.", "zh": "我們正在將目前的低成本振盪器，替換為 A 供應商的超低相位雜訊抖動衰減時脈源。"}
+    ],
+    "phrases": [
+      {"en": "The PHY fails to establish link with legacy switches.", "zh": "PHY 無法與舊款交換機建立連線。"},
+      {"en": "The phase noise is exceeding the manufacturer spec.", "zh": "相位雜訊超過了原廠規格。"},
+      {"en": "This causes the internal phase-locked loop to unlock.", "zh": "這會導致內部鎖相迴路失鎖。"},
+      {"en": "We need to replace the crystal oscillator.", "zh": "我們需要更換晶體振盪器。"}
+    ],
+    "terms": [
+      {"en": "phase noise", "zh": "相位雜訊（評估時脈訊號頻域純淨度的指標）"},
+      {"en": "PLL (Phase-Locked Loop)", "zh": "鎖相迴路（用於產生內部高頻時脈的電路）"},
+      {"en": "crystal oscillator", "zh": "石英晶體振盪器"},
+      {"en": "jitter attenuator", "zh": "抖動衰減器（清理時脈雜訊的專用晶片）"},
+      {"en": "receiver tolerance", "zh": "接收器容忍度"}
+    ]
+  },
+
+  {
+    "id": "c43",
+    "stage": "外部實驗室安規 Safety",
+    "title": "UL/IEC 62368-1 Safety Certification & Temperature Rise Test",
+    "title_zh": "UL/IEC 62368-1 安規認證與溫升測試卡關",
+    "goal_zh": "交換機送至外部安規實驗室進行 IEC 62368-1 認證時，在異常過載與最高環境溫度下的元件溫升測試（Temperature Rise Test）超標，需與安規工程師討論修改。",
+    "lines": [
+      {"w": "C", "en": "We received the preliminary safety test report from the UL lab. The switch failed the abnormal component overload test because the PoE controller junction temperature exceeded the 120-degree limit.", "zh": "我們收到了來自 UL 實驗室的初步安規測試報告。交換機未能通過異常零件過載測試，因為 PoE 控制器的接面溫度超過了 120 度的極限。"},
+      {"w": "E", "en": "Did the test run at the maximum rated ambient temperature of 50 degrees Celsius with all 24 PoE ports delivering full 30 watts?", "zh": "測試是在最高額定環境溫度 50 度、且所有 24 個 PoE 埠都輸出滿載 30 瓦的情況下跑的嗎？"},
+      {"w": "C", "en": "Yes, and under single-fault condition where one power FET is artificially shorted, the printed circuit board temperature near the power entry rose sharply.", "zh": "是的，而且在其中一顆功率 FET 被人為短路的單一故障條件下，電源入口附近的印刷電路板溫度急劇上升。"},
+      {"w": "E", "en": "That makes sense. We relied on a copper polygon pour for heat dissipation, but it lacks direct thermal contact with the chassis bottom.", "zh": "這很合理。我們原本依賴銅箔鋪地來散熱，但它缺乏與機箱底部的直接熱接觸。"},
+      {"w": "C", "en": "The safety auditor requires us to add a thermal fuse or redesign the copper layout before issuing the CB certificate.", "zh": "安規稽核員要求我們在發放 CB 證書之前，必須增加溫度保險絲或重新設計銅箔佈局。"},
+      {"w": "E", "en": "We will add a 130-degree thermal cutoff fuse right beside the power FET and optimize the internal thermal pad to pass the re-test next week.", "zh": "我們將在功率 FET 旁直接增加一顆 130 度溫度切斷保險絲，並優化內部導熱墊，以通過下週的重測。"}
+    ],
+    "phrases": [
+      {"en": "The switch failed the component overload test.", "zh": "交換機未通過零件過載測試。"},
+      {"en": "The junction temperature exceeded the regulatory limit.", "zh": "接面溫度超過了法規極限。h"},
+      {"en": "This is tested under single-fault conditions.", "zh": "這是根據單一故障條件進行測試的。"},
+      {"en": "We need to add a thermal fuse to pass the certification.", "zh": "我们需要增加溫度保險絲才能通過認證。"}
+    ],
+    "terms": [
+      {"en": "IEC 62368-1", "zh": "音視頻、資通訊科技設備安全標準（現行主流安規規範）"},
+      {"en": "temperature rise test", "zh": "溫升測試（驗證設備在極端環境下的最高發熱量）"},
+      {"en": "single-fault condition", "zh": "單一故障條件（安規測試規定模擬任一零件失效時不能起火或觸電）"},
+      {"en": "CB certificate", "zh": "CB 認證（國際電工委員會體系的全球通用安規證書）"},
+      {"en": "thermal cutoff fuse", "zh": "溫度保險絲（超過特定溫度就會永久斷開的安全元件）"}
+    ]
+  },
+  {
+    "id": "c44",
+    "stage": "外部實驗室 EMC",
+    "title": "Radiated Emissions Failure & Shielding Gasket Optimization",
+    "title_zh": "輻射發射（RE）測試超標與導電襯墊優化",
+    "goal_zh": "交換機在半電波暗室（SAC）進行 FCC/CE 輻射發射（Radiated Emissions）測試時，在 250 MHz 與 500 MHz 頻段超標（Over Limit），需緊急對策。",
+    "lines": [
+      {"w": "C", "en": "The switch failed the FCC Class A radiated emissions test yesterday. We saw a 6 dB emission spike around 250 MHz and its harmonics.", "zh": "交換機昨天未能通過 FCC A 級輻射發射測試。我們在 250 MHz 及其諧波附近看到了 6 dB 的發射突波。"},
+      {"w": "E", "en": "That frequency corresponds to our internal 125 MHz Ethernet reference clock and its second harmonic. Is the leakage coming from the chassis seams?", "zh": "該頻率對應到我們內部的 125 MHz 乙太網路參考時脈及其二次諧波。洩漏是從機箱接縫處出來的嗎？"},
+      {"w": "C", "en": "Using a near-field magnetic probe, we found high-frequency electromagnetic leakage escaping right through the gap between the front panel and the sheet metal cover.", "zh": "使用近場磁場探棒，我們發現高頻電磁洩漏正是從前面板與金屬外殼上蓋之間的縫隙逃逸出來的。"},
+      {"w": "E", "en": "The painted finish on the mating surfaces must be blocking electrical continuity. Did we apply conductive EMI gaskets along the inner bezel?", "zh": "接觸面上的烤漆一定阻斷了電氣連續性。我們有在內框沿線貼上導電 EMI 襯墊嗎？"},
+      {"w": "C", "en": "We used standard foam tape instead of conductive fabric gaskets, so the Faraday cage effect is incomplete.", "zh": "我們用了標準泡棉膠帶而非導電布襯墊，所以法拉第籠效應不完整。"},
+      {"w": "E", "en": "Let's replace it immediately with a nickel-copper conductive gasket and scrape off the paint at the grounding screw locations.", "zh": "我們立刻將其更換為鎳銅導電襯墊，並在接地螺絲位置刮除烤漆。"}
+    ],
+    "phrases": [
+      {"en": "We saw an emission spike around 250 MHz.", "zh": "我們在 250 MHz 附近看到發射突波。"},
+      {"en": "Electromagnetic leakage is escaping through the chassis gap.", "zh": "電磁洩漏正從機箱縫隙逃逸出來。h"},
+      {"en": "The Faraday cage effect is incomplete.", "zh": "法拉第籠效應不完整。"},
+      {"en": "We need to apply conductive EMI gaskets.", "zh": "我們需要貼上導電 EMI 襯墊。"}
+    ],
+    "terms": [
+      {"en": "radiated emissions (RE)", "zh": "輻射發射測試（測量設備對外發散的電磁波強度）"},
+      {"en": "harmonic", "zh": "諧波（基頻整數倍的高頻雜訊頻率）"},
+      {"en": "near-field probe", "zh": "近場探棒（用於尋找電路板或機箱電磁洩漏點的工具）"},
+      {"en": "EMI gasket", "zh": "電磁干擾導電襯墊（用於封鎖機箱縫隙洩漏的導電材料）"},
+      {"en": "Faraday cage", "zh": "法拉第籠（利用金屬導體阻絕電磁場的屏蔽原理）"}
+    ]
+  },
+  {
+    "id": "c45",
+    "stage": "環境耐候測 ENV",
+    "title": "High Vibration & Shock Testing (ISTA / IEC 60068)",
+    "title_zh": "震動與衝擊環境耐候測試（車載/運輸震動）",
+    "goal_zh": "交換機送至環境實驗室進行隨機震動與機械衝擊測試（Random Vibration & Mechanical Shock）時，內部大型散熱片發生共振鬆脫。",
+    "lines": [
+      {"w": "C", "en": "During the ISTK transportation random vibration test, the heavy extrusion heatsink on the switch chip loosened up and sheared off one mounting screw.", "zh": "在 ISTA 運輸隨機震動測試期間，交換晶片上的重型擠型散熱片鬆動了，並剪斷了一顆固定螺絲。"},
+      {"w": "E", "en": "That is unexpected. We calculated the G-force tolerance, but we didn't account for the resonant frequency amplification under 50 Hz sweep.", "zh": "這出乎意料。我們計算了 G 力耐受度，但沒有將 50 Hz 掃描下的共振頻率放大計算在內。"},
+      {"w": "C", "en": "The vibration table showed a severe harmonic resonance right at 42 Hz, matching the natural frequency of the cantilever heatsink structure.", "zh": "震動台顯示在 42 Hz 剛好出現嚴重的諧振，剛好對應到懸臂式散熱片結構的自然頻率。"},
+      {"w": "E", "en": "To prevent mechanical failure, we should add mechanical corner support anchors and use spring washers with thread-locking fluid.", "zh": "為了防止機械失效，我們應該增加機械角落支撐錨點，並使用附帶螺紋固定劑的彈簧華司。"},
+      {"w": "C", "en": "Will that shift the resonant frequency out of the standard transportation profile?", "zh": "這樣能把共振頻率移出標準運輸輪廓之外嗎？"},
+      {"w": "E", "en": "Yes, stiffening the mounting points will push the natural frequency above 120 Hz, well clear of the vibration test spectrum.", "zh": "可以，加固固定點會把自然頻率推高到 120 Hz 以上，完全避開震動測試頻譜。"}
+    ],
+    "phrases": [
+      {"en": "The heavy heatsink loosened up during the vibration test.", "zh": "重型散熱片在震動測試中鬆脫了。"},
+      {"en": "We didn't account for the resonant frequency amplification.", "zh": "我們沒有將共振頻率放大計算在內。"},
+      {"en": "We need to use thread-locking fluid and spring washers.", "zh": "我們需要使用螺紋固定劑與彈簧華司。h"},
+      {"en": "This will shift the natural frequency out of the spectrum.", "zh": "這會將自然頻率移出頻譜之外。"}
+    ],
+    "terms": [
+      {"en": "random vibration test", "zh": "隨機震動測試（模擬貨運車輛或飛機運輸的顛簸環境）"},
+      {"en": "resonant frequency", "zh": "共振頻率（結構最容易產生強烈震動放大的特定頻率）"},
+      {"en": "cantilever", "zh": "懸臂結構（一端固定、另一端懸空的受力結構）"},
+      {"en": "thread-locking fluid (Loctite)", "zh": "螺紋固定劑（俗稱螺絲膠，防止螺絲因震動鬆脫）"},
+      {"en": "mechanical shock", "zh": "機械衝擊測試（模擬摔落或瞬間撞擊的耐受力）"}
+    ]
+  },
+  {
+    "id": "c46",
+    "stage": "專案排程與送測管理 Schedule",
+    "title": "Managing External Lab Certification Schedule & Milestones",
+    "title_zh": "外部實驗室認證排程與專案里程碑管理",
+    "goal_zh": "因為實驗室排程滿載且前面幾項 EMC 測試未一次過關，專案經理與硬體負責人開會重新評估 EVT/DVT 里程碑與上市時程（Time-to-Market）。",
+    "lines": [
+      {"w": "C", "en": "Since our radiated emissions and safety tests failed on the first pass, we need two extra weeks in the EMC chamber for debugging and re-testing.", "zh": "既然我們的輻射發射和安規測試在第一次沒有過關，我們需要在 EMC 暗室多花兩週時間來除錯與重測。h"},
+      {"w": "E", "en": "That pushes our DVT sign-off date right into the holiday season, which will delay the pilot run at the factory by a month.", "zh": "這會把我們的 DVT 簽核日期直接推遲到假期季節，這會讓工廠的試產延誤一個月。"},
+      {"w": "C", "en": "Can we run the environmental temperature testing in parallel at an alternative lab while you fix the EMI gasket issue here?", "zh": "當你在這裡修復 EMI 襯墊問題時，我們可以在替代實驗室並行執行環境溫度測試嗎？"},
+      {"w": "E", "en": "Yes, we have a backup prototype board available. I can ship board number two to the environmental lab tomorrow morning.", "zh": "可以，我們手邊有一張備用的原型板。我可以在明天早上將第二號板子寄到環境實驗室。h"},
+      {"w": "C", "en": "Great. That parallel execution will recover one week of the schedule delay. What about the final customer audit date?", "zh": "太好了。這種並行執行可以挽回一週的時程延誤。那最終的客戶稽核日期呢？"},
+      {"w": "E", "en": "If we pass the re-test by next Friday, we can still hit the original customer sample delivery milestone without slipping mass production.", "zh": "如果我們在下週五前通過重測，我們依然可以達成原本的客戶樣品交付里程碑，而不會延誤量產。"}
+    ],
+    "phrases": [
+      {"en": "We need extra time in the EMC chamber for debugging.", "zh": "我們需要在 EMC 暗室花額外時間除錯。"},
+      {"en": "This will delay our pilot run schedule.", "zh": "這會延誤我們的試產時程。"},
+      {"en": "We can run these tests in parallel at an alternative lab.", "zh": "我們可以在替代實驗室並行執行這些測試。"},
+      {"en": "We can recover one week of the schedule delay.", "zh": "我們可以挽回一週的時程延誤。"}
+    ],
+    "terms": [
+      {"en": "pilot run", "zh": "試產（小規模產線試驗，驗證製造良率）"},
+      {"en": "parallel execution", "zh": "並行執行（同時進行多項任務以縮短總時程）"},
+      {"en": "sign-off date", "zh": "階段簽核日（確認該階段達標並往下推進的日期）"},
+      {"en": "time-to-market (TTM)", "zh": "產品上市時間（產品從研發到進入市場的速度）"},
+      {"en": "backup prototype", "zh": "備用原型板"}
+    ]
+  },
+
+  {
+    "id": "c47",
+    "stage": "PCB Layout 審查 Layout Review",
+    "title": "PCB Layout Review: Differential Pair Routing & Reference Planes",
+    "title_zh": "PCB 佈線審查：差動對走線與參考平面完整性",
+    "goal_zh": "在 Layout Review 會議中，與 SI/PI 團隊或客戶討論 10G/25G 高速訊號的走線換層、參考平面分割與抗地彈跳設計。",
+    "lines": [
+      {"w": "C", "en": "Let's review the final PCB layout for the 25G SerDes lanes. Did you maintain a solid ground reference plane underneath all high-speed traces?", "zh": "我們來檢閱 25G SerDes 通道的最終 PCB 佈線。你們在所有高速走線下方都有維持完整的接地參考平面嗎？"},
+      {"w": "E", "en": "Yes, we routed them on layer 3, sandwiched between two continuous ground planes on layer 2 and layer 4.", "zh": "有的，我們將它們佈在第 3 層，夾在第 2 層和第 4 層兩個連續的接地平面之間。"},
+      {"w": "C", "en": "What about the reference plane voids when crossing the power split between 3.3V and 1.8V?", "zh": "當跨越 3.3V 和 1.8V 的電源分割區時，參考平面有空隙（void）的問題嗎？"},
+      {"w": "E", "en": "We ensured that no high-speed traces cross any split. Where layer transitions were unavoidable, we placed stitching capacitors right next to the via transition.", "zh": "我們確保沒有高速走線跨越任何分割區。在無法避免換層的地方，我們在導孔轉換處旁邊放置了縫合電容。"},
+      {"w": "C", "en": "Did you check the anti-pad clearance around the mounting holes and connector pins to prevent accidental shorting?", "zh": "你們有檢查固定孔和連接器接腳周圍的隔離孔空隙，以防止意外短路嗎？"},
+      {"w": "E", "en": "All anti-pad clearances comply with the 20-mil spacing rule, and we verified the minimum distance with the fabrication house.", "zh": "所有隔離孔空隙都符合 20 mil 的間距規則，我們也與製造廠確認過最小距離。"}
+    ],
+    "phrases": [
+      {"en": "Did you maintain a solid ground reference plane?", "zh": "你們有維持完整的接地參考平面嗎？"},
+      {"en": "Ensure no high-speed traces cross any power split.", "zh": "確保沒有高速走線跨越任何電源分割區。"},
+      {"en": "We placed stitching capacitors near the via transition.", "zh": "我們在導孔轉換處附近放置了縫合電容。"},
+      {"en": "Let's check the anti-pad clearance on the layout.", "zh": "我們來檢查佈線上的隔離孔空隙。"}
+    ],
+    "terms": [
+      {"en": "anti-pad", "zh": "隔離孔空隙（焊墊與周圍銅皮的距離）"},
+      {"en": "return current path", "zh": "回流路徑（高速訊號回流的電流通道）"},
+      {"en": "stitching via", "zh": "縫合孔（連接不同地平面的金屬導孔）"},
+      {"en": "layer stack-up", "zh": "PCB 疊構"},
+      {"en": "impedance control", "zh": "阻抗控制"}
+    ]
+  },
+  {
+    "id": "c48",
+    "stage": "專案時程與投板 Schedule & Milestone",
+    "title": "Schedule Management & PCB Tape-Out Milestone",
+    "title_zh": "專案時程管理與 PCB 完稿投板（Tape-out）里程碑",
+    "goal_zh": "因 Layout 修正與 SI 檢討導致進度落後，硬體工程師與專案經理（PM）開會評估趕工計畫與 Tape-out 死線。",
+    "lines": [
+      {"w": "C", "en": "According to the project tracking sheet, the schematic and layout sign-off is delayed by four days. Will this push back our PCB tape-out date?", "zh": "根據專案追蹤表，原理圖與佈線簽核已經延誤了四天。這會推遲我們的 PCB 投板日期嗎？"},
+      {"w": "E", "en": "The delay was caused by an extra iteration of power integrity simulation for the 0.85V core rail.", "zh": "延誤是由於對 0.85V 核心電源軌進行了額外一次的電源完整性模擬所造成的。"},
+      {"w": "C", "en": "Can we compress the layout review cycle or work through the weekend to recover the schedule?", "zh": "我們可以壓縮佈線審查週期或加班過週末來追回進度嗎？"},
+      {"w": "E", "en": "Our layout engineer can finish the final DRC check by Thursday noon if we hold a joint review tonight.", "zh": "如果我们今晚開聯合審查會，我們的 Layout 工程師可以在週四中午前完成最終的 DRC 檢查。"},
+      {"w": "C", "en": "That gives us a very tight window. If we miss Thursday's deadline, the board fabrication will miss the pre-holiday shipping batch.", "zh": "這給了我們非常緊迫的時間。如果我們錯過了週四的死線，板子製造就會趕不上連假前的出貨批次。"},
+      {"w": "E", "en": "Understood. I will expedite the internal checklist and make sure we submit the Gerber files to the CM by Thursday 3 PM.", "zh": "了解。我會加快內部檢查表流程，確保我們在週四下午 3 點前將 Gerber 檔案提交給代工廠。"}
+    ],
+    "phrases": [
+      {"en": "The sign-off schedule is delayed by four days.", "zh": "簽核時程已經延誤了四天。"},
+      {"en": "Can we compress the review cycle?", "zh": "我們可以壓縮審查週期嗎？"},
+      {"en": "We are on a very tight window for tape-out.", "zh": "我們的投板時間非常緊迫。h"},
+      {"en": "I will expedite the internal checklist submission.", "zh": "我會加速內部檢查表提交。"}
+    ],
+    "terms": [
+      {"en": "tape-out", "zh": "投板、完稿送洗（將 Gerber 檔案送交 PCB 廠製作）"},
+      {"en": "DRC (Design Rule Check)", "zh": "設計規則檢查（自動檢查佈線是否違反間距與寬度規範）"},
+      {"en": "Gerber file", "zh": "Gerber 檔案（PCB 製造標準光繪檔案格式）"},
+      {"en": "critical path", "zh": "關鍵路徑（決定整個專案最短完成時間的任務序列）"},
+      {"en": "sign-off", "zh": "階段簽核"}
+    ]
+  },
+  {
+    "id": "c49",
+    "stage": "模擬驗證 Simulation",
+    "title": "Pre-layout vs Post-layout Simulation Correlation Review",
+    "title_zh": "佈線前與佈線後模擬結果比對檢討",
+    "goal_zh": "檢視佈線完成後的 Post-layout 模擬結果與預期差異，討論寄生電感與串擾是否超標。",
+    "lines": [
+      {"w": "C", "en": "We compared the post-layout simulation results with our original pre-layout expectations. Did the 10G differential insertion loss degrade significantly?", "zh": "我們將佈線後的模擬結果與原本佈線前的預期進行了比較。10G 差動插入損失有顯著惡化嗎？"},
+      {"w": "E", "en": "Post-layout extraction shows an extra 1.2 dB loss at 5 GHz, mainly due to the serpentine routing around the via obstacles.", "zh": "佈線後萃取顯示在 5 GHz 時多了 1.2 dB 的損失，主要是因為繞過導孔障礙物而進行的蛇形走線所致。"},
+      {"w": "C", "en": "Is the crosstalk between adjacent RX/TX pairs still within our specified noise budget?", "zh": "相鄰接收與發送對之間的串擾仍在我們指定的雜訊預算內嗎？"},
+      {"w": "E", "en": "The worst-case far-end crosstalk is minus 38 dB, which meets our signal integrity design rule.", "zh": "最壞情況下的遠端串擾為負 38 dB，符合我們的信號完整性設計規則。"},
+      {"w": "C", "en": "That's a relief. What about the eye height and jitter numbers after extracting the actual parasitics?", "zh": "那就放心了。萃取出實際寄生參數後的眼高和抖動數字如何？"},
+      {"w": "E", "en": "The simulated eye height is 180 millivolts, providing sufficient timing margin for the receiver to recover data reliably.", "zh": "模擬的眼高為 180 毫伏，為接收器可靠地恢復資料提供了充足的時間餘裕。"}
+    ],
+    "phrases": [
+      {"en": "We compared post-layout and pre-layout simulation results.", "zh": "我們比較了佈線後與佈線前的模擬結果。"},
+      {"en": "The insertion loss degraded due to serpentine routing.", "zh": "插入損失因蛇形走線而惡化。"},
+      {"en": "Is the crosstalk within our specified noise budget?", "zh": "串擾在我們指定的雜訊預算內嗎？"},
+      {"en": "The extracted parasitics meet our design rules.", "zh": "萃取出的寄生參數符合我們的設計規則。"}
+    ],
+    "terms": [
+      {"en": "post-layout simulation", "zh": "佈線後模擬（根據實際繞線與佈局萃取寄生參數後進行的模擬）"},
+      {"en": "parasitic inductance", "zh": "寄生電感"},
+      {"en": "fext (far-end crosstalk)", "zh": "遠端串擾"},
+      {"en": "serpentine routing", "zh": "蛇形走線（為了等長而繞的蛇形路徑）"},
+      {"en": "correlation", "zh": "相關性、吻合度"}
+    ]
+  },
+  {
+    "id": "c50",
+    "stage": "設計審查結案 Review Sign-off",
+    "title": "Formal Design Review Sign-off & Action Item Closure",
+    "title_zh": "正式設計審查結案與待辦事項（Action Items）確認",
+    "goal_zh": "進行最終的 Schematics 與 Layout Design Review 結案會議，確認所有 Open Issues 與 Action Items 皆已閉環。",
+    "lines": [
+      {"w": "C", "en": "Today is our formal design review sign-off meeting. Let's go through the open action items from last week's schematic and layout review.", "zh": "今天是我們的正式設計審查結案會議。我們來過一遍上週原理圖與佈線審查中遺留的待辦事項。"},
+      {"w": "E", "en": "All twelve open technical issues have been addressed, including the pull-up resistor adjustment on the I2C bus and the thermal pad redesign.", "zh": "所有 12 項未決技術問題都已解決，包括 I2C 匯流排上的提升電阻調整以及導熱墊重新設計。"},
+      {"w": "C", "en": "Have the updated schematic pages and the final layout Gerber files been checked into our enterprise configuration management system?", "zh": "更新後的原理圖頁面和最終佈線 Gerber 檔案都已經簽入我們的企業組態管理系統了嗎？h"},
+      {"w": "E", "en": "Yes, everything is checked in under project release tag v1.0, and the checksum has been verified by our QA lead.", "zh": "是的，所有東西都已在專案釋出標籤 v1.0 下簽入，且校驗和已通過我們品保主管的驗證。"},
+      {"w": "C", "en": "Great. Are there any lingering risks or unmitigated items before we give final management approval?", "zh": "太好了。在我們給予最後的管理層批准之前，還有任何揮之不去的風險或未減輕的項目嗎？h"},
+      {"w": "E", "en": "No major risks remaining. We are fully prepared to sign off and authorize the fabrication house to start manufacturing.", "zh": "沒有剩餘的主要風險。我們已完全準備好簽核並授權製造廠開始生產。"}
+    ],
+    "phrases": [
+      {"en": "Let's review the open action items.", "zh": "我們來檢視未完成的待辦事項。"},
+      {"en": "All technical issues have been addressed.", "zh": "所有技術問題都已解決。"},
+      {"en": "Have the final files been checked into the system?", "zh": "最終檔案都已經簽入系統了嗎？"},
+      {"en": "We are ready to sign off on the design.", "zh": "我們準備好對設計進行簽核了。"}
+    ],
+    "terms": [
+      {"en": "action item", "zh": "待辦事項、交辦任務"},
+      {"en": "open issue", "zh": "未決問題、待解決項目"},
+      {"en": "configuration management", "zh": "組態管理（版本控制與檔案管理系統）"},
+      {"en": "release tag", "zh": "版本釋出標籤"},
+      {"en": "mitigate", "zh": "減輕、降低（風險）"}
+    ]
+  },
+
+  {
+    "id": "c51",
+    "stage": "供應商變更 Second-source",
+    "title": "Evaluating Second-Source Active and Passive Components",
+    "title_zh": "評估主被動替代料（Second-source）與規格差異",
+    "goal_zh": "原廠零件面臨 EOL 或交期拉長，RD 需評估二線供應商（Second-source）替代料的電氣特性、溫度係數與封裝相容性。",
+    "lines": [
+      {"w": "C", "en": "Our primary DC-DC controller is out of stock with a 40-week lead time. Can we qualify the second-source alternative from vendor B?", "zh": "我們主要的 DC-DC 控制器大缺料，交期要 40 週。我們可以認證 B 供應商的第二源替代料嗎？"},
+      {"w": "E", "en": "We reviewed the datasheet. While the pinout is compatible, vendor B's switching frequency is 800 kHz compared to our original 600 kHz.", "zh": "我們檢視了規格書。雖然接腳相容，但 B 供應商的切換頻率是 800 kHz，而我們原本的是 600 kHz。"},
+      {"w": "C", "en": "Will that higher switching frequency impact our output ripple voltage or inductor core saturation?", "zh": "較高的切換頻率會影響我們的輸出漣波電壓或電感鐵芯飽和嗎？"},
+      {"w": "E", "en": "It shifts the LC filter resonant peak. We need to recalculate the output capacitor ESR and check if the inductor core loss increases at 800 kHz.", "zh": "這會轉移 LC 濾波器的諧振峰值。我们需要重新計算輸出電容的 ESR，並檢查在 800 kHz 下電感鐵芯損耗是否會增加。"},
+      {"w": "C", "en": "Have you tested it on the evaluation board yet?", "zh": "你們在評估板上測試過了嗎？h"},
+      {"w": "E", "en": "We are soldering the alternative IC onto a prototype board today. We will run thermal and transient response tests tomorrow morning.", "zh": "我們今天會把替代 IC 焊到原型板上。我們會在明天早上執行熱與暫態響應測試。"}
+    ],
+    "phrases": [
+      {"en": "Can we qualify the second-source alternative?", "zh": "我們可以認證第二源替代料嗎？"},
+      {"en": "The pinout is compatible, but the frequency differs.", "zh": "接腳相容，但頻率不同。"},
+      {"en": "This shift affects the LC filter resonant peak.", "zh": "這種偏移會影響 LC 濾波器的諧振峰值。"},
+      {"en": "We need to run transient response tests.", "zh": "我們需要執行暫態響應測試。"}
+    ],
+    "terms": [
+      {"en": "second-source", "zh": "第二供應商、替代料源"},
+      {"en": "switching frequency", "zh": "切換頻率（電源晶片開關的頻率）"},
+      {"en": "core saturation", "zh": "磁芯飽和（電感電流過大導致失去電感特性）"},
+      {"en": "transient response", "zh": "暫態響應（負載突變時電源電壓的穩定能力）"},
+      {"en": "pinout", "zh": "接腳定義、引腳排列"}
+    ]
+  },
+  {
+    "id": "c52",
+    "stage": "軟硬體協同 SW/HW Integration",
+    "title": "Resolving Register Map and Bit Field Discrepancy",
+    "title_zh": "解決軟硬體暫存器對應表與位元定義衝突",
+    "goal_zh": "韌體工程師反映透過驅動程式寫入 MAC/PHY 暫存器時行為異常，硬體工程師與其開會比對原廠 ASIC 暫存器手冊。",
+    "lines": [
+      {"w": "C", "en": "The software team is reporting that our custom PHY initialization script fails because writing to the configuration register returns an invalid ACK.", "zh": "軟體團隊回報說我們的自訂 PHY 初始化腳本失敗了，因為寫入設定暫存器時回傳了無效的 ACK。"},
+      {"w": "E", "en": "Let's check the register map. Which bit field are you modifying in the management address space?", "zh": "我們來檢查暫存器對應表。你們在管理位址空間中修改了哪一個位元欄位？h"},
+      {"w": "C", "en": "We are writing a 1 to bit 14 for the software reset, but the ASIC data sheet says bit 15 is the reserved bit.", "zh": "我們針對軟體重置將第 14 位元寫為 1，但 ASIC 規格書說第 15 位元是保留位元。"},
+      {"w": "E", "en": "Ah, that's a typo in the early release datasheet. The latest errata update shifted all control bits down by one position in revision A2.", "zh": "啊，那是早期版本規格書中的排版錯誤。最新的勘誤表更新在 A2 版本中將所有控制位元向下移動了一位。"},
+      {"w": "C", "en": "No wonder our mask and shift operations were offset. We need to update the SDK header file immediately.", "zh": "難怪我們的遮罩與位移運作偏移了。我們需要立即更新 SDK 標頭檔。"},
+      {"w": "E", "en": "I will send you the corrected C structure definitions and bit mask macros right after this meeting.", "zh": "我會在會議結束後立刻寄給你們修正後的 C 結構定義與位元遮罩巨集。"}
+    ],
+    "phrases": [
+      {"en": "The initialization script fails on write operations.", "zh": "初始化腳本在寫入運作時失敗。"},
+      {"en": "Which bit field are you modifying in the register?", "zh": "你們在暫存器中修改了哪一個位元欄位？"},
+      {"en": "That is a typo in the early release datasheet.", "zh": "那是早期版本規格書中的排版錯誤。"},
+      {"en": "We need to update the SDK header file.", "zh": "我們需要更新 SDK 標頭檔。"}
+    ],
+    "terms": [
+      {"en": "register map", "zh": "暫存器對應表（晶片內部暫存器的地址與功能清單）"},
+      {"en": "bit field", "zh": "位元欄位（暫存器中具備特定功能的特定幾個位元）"},
+      {"en": "bit mask", "zh": "位元遮罩（用於萃取或修改特定位元的邏輯運算工具）"},
+      {"en": "header file", "zh": "標頭檔（C/C++ 中定義巨集與資料結構的檔案）"},
+      {"en": "errata update", "zh": "晶片勘誤更新公告"}
+    ]
+  },
+  {
+    "id": "c53",
+    "stage": "量產與製程 Manufacturing / ECN",
+    "title": "Addressing SMT Solder Joint Defect & Implementing ECN",
+    "title_zh": "解決 SMT 銲接缺陷與發布工程變更通知（ECN）",
+    "goal_zh": "工廠量產時回報某顆體積較大的被動元件常因熱應力產生微裂紋（Micro-crack），RD 需修改焊pad並發布 ECN。",
+    "lines": [
+      {"w": "C", "en": "The contract manufacturer reported a 0.5% defect rate on capacitor C120 due to micro-cracking during the high-temperature solder reflow.", "zh": "代工廠回報電容 C120 在高溫迴焊期間因微裂紋產生了 0.5% 的不良率。"},
+      {"w": "E", "en": "Is C120 located close to the board edge where mechanical stress during panel depaneling is highest?", "zh": "C120 是否靠近板邊？在拼板分割（分板）期間板邊的機械應力最高。"},
+      {"w": "C", "en": "Yes, exactly. Also, the current land pattern uses oversized pads that cause uneven cooling rates.", "zh": "完全正確。而且目前的焊墊圖案使用了過大的焊墊，導致冷卻速率不均。h"},
+      {"w": "E", "en": "We should redesign the IPC footprint to reduce the pad length and add a flexible-termination capacitor type to absorb thermal expansion stress.", "zh": "我們應該重新設計 IPC 焊點尺寸以縮短焊墊長度，並改用具備彈性端點的電容類型來吸收熱膨脹應力。"},
+      {"w": "C", "en": "Do we need to issue an official ECN to the assembly plant before running the next batch?", "zh": "在跑下一批次之前，我们需要向組裝廠發布正式的 ECN 嗎？"},
+      {"w": "E", "en": "Yes, I will draft the ECN document today, specifying the BOM change and the new PCB layout gerber modification.", "zh": "是的，我今天會草擬 ECN 文件，明確指出 BOM 變更與新的 PCB 佈線 Gerber 修改。"}
+    ],
+    "phrases": [
+      {"en": "We noticed a defect rate spike during reflow.", "zh": "我們注意到迴焊期間不良率激增。"},
+      {"en": "The component is located close to the board edge.", "zh": "該零件位於靠近板邊的位置。"},
+      {"en": "We need to redesign the land pattern.", "zh": "我們需要重新設計焊點圖案。"},
+      {"en": "I will draft the ECN document today.", "zh": "我今天會草擬 ECN 文件。"}
+    ],
+    "terms": [
+      {"en": "micro-crack", "zh": "微裂紋（肉眼難以察覺的焊點或陶瓷電容裂痕）"},
+      {"en": "depaneling", "zh": "分板、拼板分割（將多合一的大 PCB 切割成單片）"},
+      {"en": "land pattern (footprint)", "zh": "焊點圖案、零件庫佔位尺寸"},
+      {"en": "flexible-termination", "zh": "彈性端點（抗應力電容設計）"},
+      {"en": "assembly plant", "zh": "組裝廠、代工廠（CM）"}
+    ]
+  },
+  {
+    "id": "c54",
+    "stage": "售後客訴 Field Issue / Post-Mortem",
+    "title": "Analyzing Field Crash Dump and Kernel Oops Analysis",
+    "title_zh": "分析客戶現場當機核心傾印（Crash Dump）與 核心異常",
+    "goal_zh": "客戶現場回報交換機每隔幾天會偶發性重新開機，RD 與軟體工程師透過遠端下載的 Crash Dump 分析記憶體崩潰原因。",
+    "lines": [
+      {"w": "C", "en": "A customer site reported random spontaneous reboots on our core switch after running continuously for seventy-two hours.", "zh": "某個客戶現場回報我們的核心交換機在連續運轉 72 小時後，發生隨機自主重啟。"},
+      {"w": "E", "en": "Did the system generate a kernel core dump or a stack trace log before the reboot occurred?", "zh": "在重啟發生之前，系統有產生核心傾印（core dump）或堆疊追蹤日誌嗎？"},
+      {"w": "C", "en": "Yes, we retrieved the crash dump via remote management. The stack trace points to a null pointer dereference inside our proprietary ASIC kernel module.", "zh": "有的，我們透過遠端管理抓到了當機傾印。堆疊追蹤指向我們專屬 ASIC 核心模組內部的空指標取值錯誤。"},
+      {"w": "E", "en": "That means the pointer was freed during a previous exception but was accessed again by the interrupt handler.", "zh": "這代表指標在之前的例外狀況中被釋放了，但卻被中斷處理常式再次存取。"},
+      {"w": "C", "en": "Is it related to a race condition under heavy multicast traffic?", "zh": "這跟重度群播流量下的競態條件（Race Condition）有關嗎？h"},
+      {"w": "E", "en": "Highly likely. We need to add a spinlock synchronization mechanism inside the interrupt routine to prevent simultaneous memory access.", "zh": "極有可能。我們需要在中斷常式內部加入自旋鎖同步機制，以防止同時存取記憶體。"}
+    ],
+    "phrases": [
+      {"en": "The system reported random spontaneous reboots.", "zh": "系統回報了隨機自主重啟。"},
+      {"en": "Did the system generate a core dump?", "zh": "系統有產生核心傾印嗎？"},
+      {"en": "The stack trace points to a null pointer dereference.", "zh": "堆疊追蹤指向空指標取值錯誤。"},
+      {"en": "We need to add a spinlock synchronization mechanism.", "zh": "我們需要加入自旋鎖同步機制。"}
+    ],
+    "terms": [
+      {"en": "crash dump", "zh": "當機傾印（系統崩潰時的記憶體快照）"},
+      {"en": "stack trace", "zh": "堆疊追蹤（當機時程式執行的函數呼叫路徑記錄）"},
+      {"en": "null pointer dereference", "zh": "空指標取值錯誤（常見的程式碼記憶體崩潰主因）"},
+      {"en": "race condition", "zh": "競態條件（多執行緒同時存取相同資源造成的衝突）"},
+      {"en": "spinlock", "zh": "自旋鎖（多核心系統中防止並行存取的鎖機制）"}
+    ]
+  },
+
+  {
+    "id": "c55",
+    "stage": "產線量產監控 Production Status",
+    "title": "Line Stoppage Due to Component Shortage & Material Shortage",
+    "title_zh": "因關鍵零件短缺導致產線停線危機",
+    "goal_zh": "代工廠（CM）緊急回報某顆關鍵電源晶片短缺，導致 SMT 產線面臨斷線危機，硬體工程師與採購、產線主管開會商討替代料上線時程。",
+    "lines": [
+      {"w": "C", "en": "The assembly plant just informed us that the SMT line will run out of the primary power management ICs by tomorrow afternoon, halting production.", "zh": "組裝廠剛通知我們，SMT 產線明下午就會用完主要的電源管理 IC，導致生產停擺。"},
+      {"w": "E", "en": "What happened to the scheduled shipment from the distributor? Didn't they promise a lot delivery this week?", "zh": "經銷商預定的出貨怎麼了？他們不是答應這週會交貨嗎？"},
+      {"w": "C", "en": "The supplier delayed the batch due to a fab capacity bottleneck. We are currently facing a total material shortage on this item.", "zh": "供應商因為晶圓廠產能瓶頸延誤了這批貨。我們目前正面臨該項目的全面缺料。"},
+      {"w": "E", "en": "Can we immediately pull in the second-source IC we qualified last month and authorize the CM to substitute it on the line?", "zh": "我們能立刻調用上個月認證好的第二源 IC，並授權代工廠在線上直接替換嗎？"},
+      {"w": "C", "en": "The alternate IC is approved, but the CM needs a formal engineering deviation sign-off before modifying the pick-and-place program.", "zh": "替代 IC 已獲批准，但代工廠在修改貼片機程式之前，需要正式的工程特採簽核。"},
+      {"w": "E", "en": "I will issue the engineering deviation request right now and get manager approval within the hour to prevent line stoppage.", "zh": "我現在就會發布工程特採申請，並在一個小時內取得主管批准，以防止產線停線。"}
+    ],
+    "phrases": [
+      {"en": "The production line is facing a material shortage.", "zh": "產線正面臨缺料危機。"},
+      {"en": "The supplier delayed the shipment batch.", "zh": "供應商延誤了出貨批次。"},
+      {"en": "We need an engineering deviation sign-off.", "zh": "我们需要工程特採簽核。"},
+      {"en": "We must prevent a complete line stoppage.", "zh": "我們必須防止產線完全停擺。"}
+    ],
+    "terms": [
+      {"en": "line stoppage", "zh": "產線停線、停工"},
+      {"en": "material shortage", "zh": "缺料、物料短缺"},
+      {"en": "engineering deviation", "zh": "工程特採、設計偏離授權（暫時允許特殊規格或替代料生產）"},
+      {"en": "pick-and-place", "zh": "貼片機（SMT 自動置件機）"},
+      {"en": "distributor", "zh": "授權經銷商、代理商"}
+    ]
+  },
+  {
+    "id": "c56",
+    "stage": "產線交期與延期 Schedule & Delay",
+    "title": "Addressing MP Schedule Delay and Recovery Plan",
+    "title_zh": "量產交期延期與產能趕工計畫（Recovery Plan）",
+    "goal_zh": "因為前期的測試異常與補料延遲，導致首批量產交期延誤一週，客戶要求提出趕工與產能追趕計畫。",
+    "lines": [
+      {"w": "C", "en": "Because of the recent rework and component delay, our initial mass production delivery date is pushed back by seven days.", "zh": "由於最近的重工與零件延遲，我們最初的量產交貨日期被推遲了七天。"},
+      {"w": "E", "en": "I understand the impact. We are working closely with the factory floor to recover the schedule.", "zh": "我理解這個影響。我們正與廠房緊密合作以追回時程。"},
+      {"w": "C", "en": "Our customer is threatening to charge delayed penalties if we miss their scheduled deployment window.", "zh": "如果我們錯過了預定的佈署窗口，我們的客戶正威脅要處以延誤罰款。"},
+      {"w": "E", "en": "To mitigate this delay, we negotiated with the CM to add an extra weekend shift and run dual SMT lines simultaneously.", "zh": "為了減輕這個延誤，我們與代工廠協商增加額外的週末班次，並同時運行雙 SMT 產線。"},
+      {"w": "C", "en": "Will running dual lines introduce any new assembly quality risks or solder bridging issues?", "zh": "雙線並行運作會引入任何新的組裝品質風險或錫橋短路問題嗎？h"},
+      {"w": "E", "en": "We assigned our on-site QA engineer to monitor the first 500 units closely. The initial inspection results show stable quality.", "zh": "我們指派了駐廠品保工程師嚴密監控前 500 台。初步檢驗結果顯示品質穩定。"}
+    ],
+    "phrases": [
+      {"en": "The production delivery date is pushed back by seven days.", "zh": "生產交貨日期被推遲了七天。h"},
+      {"en": "We need to execute a schedule recovery plan.", "zh": "我們需要執行時程趕工計畫。"},
+      {"en": "We arranged extra weekend shifts at the factory.", "zh": "我們在工廠安排了額外的週末班次。"},
+      {"en": "The initial inspection results show stable quality.", "zh": "初步檢驗結果顯示品質穩定。"}
+    ],
+    "terms": [
+      {"en": "recovery plan", "zh": "趕工計畫、追趕進度方案"},
+      {"en": "delayed penalty", "zh": "延誤罰款、違約金"},
+      {"en": "factory floor", "zh": "廠房、產線現場"},
+      {"en": "dual lines", "zh": "雙線生產"},
+      {"en": "on-site QA", "zh": "駐廠品保人員"}
+    ]
+  },
+  {
+    "id": "c57",
+    "stage": "產線品質異常 Quality Anomaly",
+    "title": "Handling Assembly Quality Anomaly and Stop-Ship Decision",
+    "title_zh": "產線組裝品質異常與暫停出貨（Stop-Ship）決議",
+    "goal_zh": "在成品包裝前的最終檢驗（FQC）發現部分交換機的網路埠接觸不良，RD 與品保主管開會決定是否發布暫停出貨令。",
+    "lines": [
+      {"w": "C", "en": "During final quality control inspection, we detected intermittent contact failures on port 8 across several packaged units.", "zh": "在最終品保檢驗期間，我們在多台已包裝的機器上檢測到第 8 埠有間歇性接觸不良。"},
+      {"w": "E", "en": "Have we isolated whether this defect is batch-related or caused by improper connector insertion during assembly?", "zh": "我們是否已經隔離出這個缺陷是與批次有關，還是組裝時不當插入連接器所造成的？"},
+      {"w": "C", "en": "X-ray analysis shows slight deformation in the internal spring pins of the RJ45 connector on this specific batch.", "zh": "X 光分析顯示此特定批次的 RJ45 連接器內部彈片有輕微變形。"},
+      {"w": "E", "en": "We must issue an immediate stop-ship order for all finished goods currently in the warehouse.", "zh": "我們必須對目前在倉庫中的所有成品發布立即暫停出貨令。"},
+      {"w": "C", "en": "How many units are affected, and what is our containment and sorting action?", "zh": "有多少台受影響？我們的圍堵與篩選動作是什麼？"},
+      {"w": "E", "en": "About 1,200 units are quarantined. We will sort and re-test every single board using an automated fixture by tomorrow morning.", "zh": "大約有 1,200 台被隔離。我們將在明天早上前使用自動化治具篩選並重測每一張板子。"}
+    ],
+    "phrases": [
+      {"en": "We detected intermittent contact failures during FQC.", "zh": "我們在成品檢驗時檢測到間歇性接觸不良。"},
+      {"en": "We must issue an immediate stop-ship order.", "zh": "我們必須發布立即暫停出貨令。"},
+      {"en": "The defective units are currently quarantined.", "zh": "不良品目前已被隔離。"},
+      {"en": "We will sort and re-test every single board.", "zh": "我們會篩選並重測每一張板子。"}
+    ],
+    "terms": [
+      {"en": "stop-ship order", "zh": "暫停出貨令（發現重大品質異常時緊急攔截出貨的指令）"},
+      {"en": "FQC (Final Quality Control)", "zh": "成品最終品保檢驗"},
+      {"en": "quarantine", "zh": "隔離區、隔離待檢（將有問題的產品集中封存）"},
+      {"en": "sorting", "zh": "篩選、挑選（全檢以分出良品與不良品）"},
+      {"en": "spring pin", "zh": "彈片、金手指彈片"}
+    ]
+  },
+  {
+    "id": "c58",
+    "stage": "量產良率檢討 Yield Review",
+    "title": "Daily MP Yield Rate Review and Burn-In Failure Analysis",
+    "title_zh": "每日量產良率檢討與老化測試（Burn-In）失效分析",
+    "goal_zh": "量產初期召開每日良率檢討會，針對燒機測試（Burn-in Test）中偏高的不良率進行根因追查與產線改善。",
+    "lines": [
+      {"w": "C", "en": "Let's review the daily production yield report. Today's first-pass yield dropped to eighty-eight percent, which is below our ninety-five percent target.", "zh": "我們來檢閱每日產量良率報告。今天的首次通過良率降至 88%，低於我們 95% 的目標。h"},
+      {"w": "E", "en": "What was the main failure category during the burn-in chamber testing?", "zh": "在燒機試驗箱測試期間的主要失效類別是什麼？"},
+      {"w": "C", "en": "Most failures occurred during the high-temperature stress phase, where units experienced thermal shutdown due to power supply tripping.", "zh": "大多數失效發生在高溫應力階段，機器因電源供應器跳脫而發生熱關機。"},
+      {"w": "E", "en": "Could it be a marginal component in the over-temperature protection circuit of the PSU batch?", "zh": "會不會是電源供應器批次中過溫保護電路裡的邊際零件造成的？"},
+      {"w": "C", "en": "We sampled three failed power supplies, and testing showed the thermistor tolerance was out of spec.", "zh": "我們抽樣了三顆故障的電源供應器，測試顯示熱敏電阻的公差超出規格。h"},
+      {"w": "E", "en": "I will contact the PSU vendor to audit their component sorting process and replace the defective batch immediately.", "zh": "我會聯繫電源供應商稽核他們的零件篩選流程，並立即更換不良批次。"}
+    ],
+    "phrases": [
+      {"en": "The first-pass yield dropped below our target.", "zh": "首次通過良率降到我們的目標以下。"},
+      {"en": "What was the main failure category today?", "zh": "今天的 主要失效類別是什麼？"},
+      {"en": "Units experienced thermal shutdown during testing.", "zh": "機器在測試期間發生熱關機。"},
+      {"en": "We sampled three failed power supplies for analysis.", "zh": "我們抽樣了三顆故障電源供應器進行分析。"}
+    ],
+    "terms": [
+      {"en": "yield rate", "zh": "良率（合格產品佔總產量的比例）"},
+      {"en": "burn-in test", "zh": "燒機測試、老化測試"},
+      {"en": "thermal shutdown", "zh": "熱關機（晶片或電源因過熱觸發保護機制而自動關閉）"},
+      {"en": "thermistor", "zh": "熱敏電阻（隨溫度改變電阻值的感測元件）"},
+      {"en": "sampling", "zh": "抽樣檢驗"}
+    ]
+  },
+
+  {
+    "id": "c59",
+    "stage": "供應鏈去中化 Supply Chain De-risking",
+    "title": "Replacing Chinese-Sourced Components for Trade Compliance",
+    "title_zh": "為符合貿易合規與去中化要求替換中國製零組件",
+    "goal_zh": "歐美客戶稽核時要求所有外銷網通設備必須排除來自中國大陸的晶片與被動元件，硬體研發與採購需清查 BOM 並尋找非中國替代料。",
+    "lines": [
+      {"w": "C", "en": "Our legal and compliance team requires that all active semiconductors and magnetics used in this switch must be non-Chinese sourced to meet new trade regulations.", "zh": "我們的法務與合規團隊要求，這台交換機所使用的所有主動式半導體與磁性元件必須源自非中國地區，以符合新的貿易法規。"},
+      {"w": "E", "en": "I understand. We are currently auditing the BOM line by line to identify any components manufactured or packaged in mainland China facilities.", "zh": "我明白。我們目前正逐行審查 BOM 表，以識別任何在中國大陸廠區製造或封裝的零組件。"},
+      {"w": "C", "en": "What about the Ethernet isolation transformers and common-mode chokes? Their current vendors have main factories in Shenzhen.", "zh": "那乙太網路隔離變壓器和共模扼流圈呢？它們目前的供應商在大陸深圳有主力工廠。"},
+      {"w": "E", "en": "We are already qualifying alternative transformers from Taiwanese and Thai vendors who have production lines outside of China.", "zh": "我們已經在認證總部設在台灣、且在大陸境外擁有產線的替代變壓器供應商。"},
+      {"w": "C", "en": "Will replacing those magnetics affect the insertion loss or return loss performance at 10G speeds?", "zh": "替換這些磁性元件會影響 10G 速度下的插入損失或回波損失效能嗎？"},
+      {"w": "E", "en": "We will run full signal integrity verification on the prototype board as soon as the non-Chinese samples arrive next week.", "zh": "我們會在下週非中國樣品到達後，立即在原型板上執行完整的信號完整性驗證。"}
+    ],
+    "phrases": [
+      {"en": "All components must be non-Chinese sourced.", "zh": "所有零件必須源自非中國地區。"},
+      {"en": "We are auditing the BOM line by line.", "zh": "我們正在逐行審查 BOM 表。"},
+      {"en": "We need to find alternative vendors outside of China.", "zh": "我们需要尋找中國境外的替代供應商。"},
+      {"en": "This is required to meet trade compliance regulations.", "zh": "這是為了符合貿易合規法規所要求的。"}
+    ],
+    "terms": [
+      {"en": "non-Chinese sourced", "zh": "非中國料、非中國大陸採購與製造"},
+      {"en": "trade compliance", "zh": "貿易合規、貿易法規遵循"},
+      {"en": "origin of material", "zh": "物料產地證明"},
+      {"en": "common-mode choke", "zh": "共模扼流圈（用於過濾網通訊號雜訊的磁性元件）"},
+      {"en": "magnetics", "zh": "磁性元件（如變壓器、網路濾波器等）"}
+    ]
+  },
+  {
+    "id": "c60",
+    "stage": "供應鏈去中化 Supply Chain De-risking",
+    "title": "Qualifying Non-Chinese Active ICs and Second-Source Strategy",
+    "title_zh": "認證非中國主動 IC 與第二供應商（2nd Source）策略",
+    "goal_zh": "為了降低地緣政治風險與供應鏈中斷疑慮，RD 評估將主晶片周邊的電源管理與介面 IC 從陸廠轉為美系或台系二線供應商。",
+    "lines": [
+      {"w": "C", "en": "Given the ongoing geopolitical supply chain risks, management wants us to introduce a non-Chinese second-source IC for the clock buffer.", "zh": "鑑於持續的地緣政治供應鏈風險，管理層希望我們為時脈緩衝器引入非中國的第二供應商 IC。"},
+      {"w": "E", "en": "We identified a pin-compatible clock buffer from a US-based semiconductor maker, but its package footprint is slightly larger.", "zh": "我們從一家美系半導體製造商找到一顆接腳相容的時脈緩衝器，但它的封裝尺寸稍微大一點。"},
+      {"w": "C", "en": "Will changing the package require a layout revision on the dense main board?", "zh": "更換封裝需要在密集的的主板上進行 Layout 改版嗎？"},
+      {"w": "E", "en": "Fortunately, we reserved extra clearance around that footprint during the initial design review, so we can route both footprints with minor tweaks.", "zh": "幸運的是，我们在初期的設計審查中在该焊點周圍保留了額外的間距，所以我們透過微調就能相容這兩種封裝。"},
+      {"w": "C", "en": "That's fantastic foresight. How long will the electrical and environmental qualification take?", "zh": "這真是極具前瞻性的預留。電氣與環境認證需要多久時間？h"},
+      {"w": "E", "en": "We will complete the bench characterization and thermal stress testing within two weeks to support the dual-sourcing strategy.", "zh": "我們將在兩週內完成實驗室特性測試與熱應力測試，以支援雙供應商策略。"}
+    ],
+    "phrases": [
+      {"en": "Management wants us to introduce a second-source IC.", "zh": "管理層希望我們引入第二供應商 IC。"},
+      {"en": "We identified a pin-compatible alternative.", "zh": "我們找到了一顆接腳相容的替代料。"},
+      {"en": "We reserved extra clearance during the initial design.", "zh": "我們在初期的設計中保留了額外的間距。h"},
+      {"en": "This supports our dual-sourcing strategy.", "zh": "這支援了我們的雙源採購策略。"}
+    ],
+    "terms": [
+      {"en": "second-source (2nd source)", "zh": "第二供應商、替代料源"},
+      {"en": "dual-sourcing strategy", "zh": "雙源採購策略（避免單一供應商斷鏈的風險管理機制）"},
+      {"en": "clock buffer", "zh": "時脈緩衝器（分配與放大時脈訊號的晶片）"},
+      {"en": "bench characterization", "zh": "實驗室特性驗證（在工作台上對晶片效能進行量測與評估）"},
+      {"en": "geopolitical risk", "zh": "地緣政治風險"}
+    ]
+  },
+  {
+    "id": "c61",
+    "stage": "供應鏈去中化 Supply Chain De-risking",
+    "title": "PCB Laminate Material Replacement for Regional Sourcing",
+    "title_zh": "為符合在地採購與去中化規範替換 PCB 板材",
+    "goal_zh": "客戶質疑原 PCB 銅箔基板（CCL）供應商在大陸廠區生產有地緣風險，要求將板材轉移至台灣或東南亞廠區生產的料號。",
+    "lines": [
+      {"w": "C", "en": "The end customer raised a concern regarding our PCB copper-clad laminate material. They request that the base material must be produced outside of mainland China.", "zh": "終端客戶對我們的 PCB 銅箔基板材料提出了疑慮。他們要求基板材料必須在大陸境外生產。"},
+      {"w": "E", "en": "We currently use standard Megtron 4 laminate from supplier X, whose primary coating plants are located in East China.", "zh": "我們目前使用 X 供應商的標準 Megtron 4 板材，其主要的塗布工廠位於華東地區。"},
+      {"w": "C", "en": "Can our PCB fabricator switch to an equivalent low-loss laminate produced by their Taiwan or Thailand manufacturing sites?", "zh": "我們的 PCB 製造商可以切換成由其台灣或泰國製造基地生產的同等低損耗板材嗎？"},
+      {"w": "E", "en": "Yes, we can switch to the Taiwan-produced equivalent series. However, the dielectric constant (Dk) differs slightly by 0.05.", "zh": "可以，我們可以切換成台灣生產的同等系列。不過，介電常數（Dk）有 0.05 的微小差異。"},
+      {"w": "C", "en": "Will that 0.05 Dk variation impact our controlled impedance calculations for the 25G differential pairs?", "zh": "那 0.05 的 Dk 差異會影響我們針對 25G 差動對的控制阻抗計算嗎？"},
+      {"w": "E", "en": "We will ask the PCB vendor to re-run the stack-up simulation, and our layout engineer will adjust the trace width by 0.5 mil to compensate.", "zh": "我們會請 PCB 廠商重新跑疊構模擬，而我們的 Layout 工程師會將走線寬度調整 0.5 mil 來補償。"}
+    ],
+    "phrases": [
+      {"en": "The customer requests material produced outside of China.", "zh": "客戶要求在中國境外生產的材料。"},
+      {"en": "Can we switch to an equivalent laminate produced in Taiwan?", "zh": "我們可以切換成台灣生產的同等板材嗎？"},
+      {"en": "The dielectric constant differs slightly.", "zh": "介電常數有微小的差異。"},
+      {"en": "We need to adjust the trace width to compensate.", "zh": "我們需要調整走線寬度來進行補償。"}
+    ],
+    "terms": [
+      {"en": "CCL (Copper-Clad Laminate)", "zh": "銅箔基板（製作 PCB 的核心基材）"},
+      {"en": "dielectric constant (Dk)", "zh": "介電常數（影響高速訊號傳輸速度與阻抗的重要參數）"},
+      {"en": "regional sourcing", "zh": "區域化採購、在地採購"},
+      {"en": "fabrication site", "zh": "製造廠址、生產基地"},
+      {"en": "equivalent series", "zh": "同等級系列替代料"}
+    ]
+  },
+  {
+    "id": "c62",
+    "stage": "供應鏈去中化 Supply Chain De-risking",
+    "title": "Firmware and Driver Adjustments After Non-Chinese IC Substitution",
+    "title_zh": "更換非中國替代 IC 後的韌體與驅動程式調整",
+    "goal_zh": "將原本的陸製 PHY 晶片替換為歐美非中國替代料後，發現暫存器偏移量與中斷腳位定義不同，軟硬體團隊需緊急聯手修改驅動。",
+    "lines": [
+      {"w": "C", "en": "Now that we have soldered the non-Chinese alternative PHY chip onto the Bring-up board, the firmware team reports that link negotiation fails.", "zh": "既然我們已經把非中國替代 PHY 晶片焊到 Bring-up 板子上，韌體團隊回報說連線協商失敗了。"},
+      {"w": "E", "en": "I checked with a logic analyzer. The alternative IC uses a different register address offset for the auto-negotiation control bit.", "zh": "我用邏輯分析儀檢查了。這顆替代 IC 針對自動協商控制位元使用了不同的暫存器位址偏移量。"},
+      {"w": "C", "en": "Is that the only discrepancy, or are the interrupt polarity and PHY address strapping pins also different?", "zh": "那是唯一的差異嗎，還是中斷極性和 PHY 地址設定腳也有所不同？"},
+      {"w": "E", "en": "The interrupt output is active-high on this new IC, whereas our original design expected active-low, so the kernel misses the interrupt trigger.", "zh": "這顆新 IC 的中斷輸出是高準位有效，而我們原本的設計預期是低準位有效，所以核心漏掉了中斷觸發。"},
+      {"w": "C", "en": "How quickly can the software team patch the device tree and driver initialization code?", "zh": "軟體團隊多快能修補裝置樹和驅動程式初始化程式碼？"},
+      {"w": "E", "en": "They are updating the device tree source right now, and we will flash the updated kernel image to test it this afternoon.", "zh": "他們現在正在更新裝置樹原始碼，我們會在今天下午刷入更新後的内核映像檔來測試。"}
+    ],
+    "phrases": [
+      {"en": "The alternative IC uses a different register offset.", "zh": "替代 IC 使用了不同的暫存器偏移量。"},
+      {"en": "The interrupt polarity is different on this chip.", "zh": "這顆晶片的中斷極性不同。h"},
+      {"en": "The software team is patching the device tree.", "zh": "軟體團隊正在修補裝置樹。"},
+      {"en": "We need to test the updated kernel image.", "zh": "我们需要測試更新後的内核映像檔。"}
+    ],
+    "terms": [
+      {"en": "auto-negotiation", "zh": "自動協商（網路連接埠雙方自動確認速率與雙工模式的機制）"},
+      {"en": "interrupt polarity", "zh": "中斷極性（高電位有效或低電位有效）"},
+      {"en": "register offset", "zh": "暫存器偏移量"},
+      {"en": "driver patch", "zh": "驅動程式修補程式"},
+      {"en": "alternative IC", "zh": "替代晶片"}
+    ]
+  },
+
+  {
+    "id": "c63",
+    "stage": "商業與工程費用 NRE & Cost",
+    "title": "Negotiating NRE Charges for Custom Hardware Revisions",
+    "title_zh": "針對客製化硬體改版協商工程開發費（NRE）",
+    "goal_zh": "客戶在 DVT 後期臨時提出要更改面板 LED 排列與增加一顆監控晶片，硬體工程師需向客戶說明這超出原規格範圍，需要追加 NRE 費用與重開模具費用。",
+    "lines": [
+      {"w": "C", "en": "Can we move the system status LEDs to the left side of the front bezel and add a dedicated hardware watchdog timer IC before PVT?", "zh": "我們可以在 PVT 之前，把系統狀態 LED 移到前面板左側，並增加一顆專屬硬體看門狗計時器 IC 嗎？"},
+      {"w": "E", "en": "Adding a watchdog IC and relocating the LEDs requires a major PCB re-layout and modifying the sheet metal stamping tooling.", "zh": "增加看門狗 IC 並重新定位 LED 需要進行重大的 PCB 重新佈線，以及修改鈑金沖壓模具。"},
+      {"w": "C", "en": "Will this change be covered under our existing development contract?", "zh": "這項變更會涵蓋在我們現有的開發合約中嗎？"},
+      {"w": "E", "en": "Since this is a late-stage scope creep beyond the frozen specification, we will need to charge an additional NRE fee and tooling modification cost.", "zh": "由於這是超出已凍結規格的後期需求蔓延，我們將需要收取額外的非重複性工程（NRE）費用以及模具修改成本。"},
+      {"w": "C", "en": "How much will the NRE charge be, and how long will the tooling modification take?", "zh": "NRE 費用會是多少？模具修改需要多長時間？"},
+      {"w": "E", "en": "Our PM will send a formal quote by tomorrow, and the mechanical tooling modification typically takes three weeks.", "zh": "我們的專案經理明天會寄出正式報價單，而機構模具修改通常需要三週時間。"}
+    ],
+    "phrases": [
+      {"en": "This requires a major PCB re-layout and tooling modification.", "zh": "這需要重大的 PCB 重新佈線與模具修改。"},
+      {"en": "This is a late-stage scope creep beyond the frozen spec.", "zh": "這是超出已凍結規格的後期需求蔓延。"},
+      {"en": "We will need to charge an additional NRE fee.", "zh": "我們將需要收取額外的 NRE 工程費用。"},
+      {"en": "Our PM will send a formal quote by tomorrow.", "zh": "我們的專案經理明天會寄出正式報價單。"}
+    ],
+    "terms": [
+      {"en": "NRE (Non-Recurring Engineering)", "say": "N-R-E", "tts": "N R E", "zh": "非重複性工程費用（一次性的研發與開模成本）"},
+      {"en": "scope creep", "zh": "需求蔓延（專案進行中客戶不斷追加額外功能的現象）"},
+      {"en": "frozen spec", "zh": "已凍結規格（雙方簽字確認不再隨意更改的規格書）"},
+      {"en": "watchdog timer (WDT)", "zh": "看門狗計時器（當系統當機時自動發送重置訊號的硬體電路）"},
+      {"en": "stamping tooling", "zh": "沖壓模具（製作金屬機殼的模具）"}
+    ]
+  },
+  {
+    "id": "c64",
+    "stage": "綠色法規與能效 Power Efficiency",
+    "title": "Meeting Energy Efficiency Regulations (ErP / 80 PLUS)",
+    "title_zh": "滿足歐盟能源相關產品指令（ErP）與電源轉換效率要求",
+    "goal_zh": "歐洲電信客戶要求交換機必須符合歐盟 ErP 待機功耗規範與 80 PLUS 白金級電源效率，硬體工程師需說明輕載效率優化方案。",
+    "lines": [
+      {"w": "C", "en": "For our European market rollout, the switch must comply with the EU ErP Lot 26 directive regarding network standby power consumption.", "zh": "針對我們的歐洲市場上市，這台交換機必須符合歐盟 ErP Lot 26 指令關於網路待機功耗的規定。"},
+      {"w": "E", "en": "We measured the idle power draw with all ports linked down, and it currently sits at 18 watts, which is slightly above the directive threshold.", "zh": "我們量測了所有埠斷線狀態下的閒置功耗，目前為 18 瓦，略高於指令閾值。"},
+      {"w": "C", "en": "How can we lower the light-load power consumption without sacrificing wake-up response time?", "zh": "我們要如何在不犧牲喚醒反應時間的情況下，降低輕載功耗？"},
+      {"w": "E", "en": "We can enable Energy-Efficient Ethernet (IEEE 802.3az) on the PHY chips and configure the main DC-DC converters to enter pulse-skipping mode at light loads.", "zh": "我們可以在 PHY 晶片上啟用節能乙太網路（IEEE 802.3az），並設定主 DC-DC 轉換器在輕載時進入脈衝跳躍模式。"},
+      {"w": "C", "en": "What about the AC-DC power supply efficiency at twenty percent load?", "zh": "那 AC-DC 電源供應器在 20% 負載下的轉換效率呢？"},
+      {"w": "E", "en": "We selected an 80 PLUS Platinum certified PSU module that maintains over ninety percent efficiency even down to twenty percent load.", "zh": "我們選用了 80 PLUS 白金級認證的電源模組，即使在低至 20% 負載下也能維持超過 90% 的轉換效率。"}
+    ],
+    "phrases": [
+      {"en": "The switch must comply with EU ErP standby power directives.", "zh": "交換機必須符合歐盟 ErP 待機功耗指令。"},
+      {"en": "We can enable Energy-Efficient Ethernet on the PHY chips.", "zh": "我們可以在 PHY 晶片上啟用節能乙太網路。"},
+      {"en": "The DC-DC converter enters pulse-skipping mode at light loads.", "zh": "DC-DC 轉換器在輕載時會進入脈衝跳躍模式。"},
+      {"en": "The PSU maintains over ninety percent efficiency.", "zh": "電源供應器維持超過 90% 的效率。"}
+    ],
+    "terms": [
+      {"en": "ErP (Energy-related Products)", "say": "E-r-P", "tts": "E r P", "zh": "歐盟能源相關產品生態設計指令"},
+      {"en": "EEE (Energy-Efficient Ethernet)", "say": "triple E", "tts": "triple E", "zh": "節能乙太網路（IEEE 802.3az，無流量時自動進入低功耗休眠）"},
+      {"en": "pulse-skipping mode (PSM)", "zh": "脈衝跳躍模式（電源晶片在輕載時減少開關次數以省電的技術）"},
+      {"en": "standby power", "zh": "待機功耗"},
+      {"en": "80 PLUS Platinum", "zh": "80 PLUS 白金級電源效率認證"}
+    ]
+  },
+  {
+    "id": "c65",
+    "stage": "高可用性與升級 High Availability",
+    "title": "Supporting In-Service Software Upgrade (ISSU) & Hitless Reset",
+    "title_zh": "支援不斷線軟體升級（ISSU）與硬體無衝擊重置",
+    "goal_zh": "核心骨幹網客戶要求升級交換機韌體或 CPLD 時不能中斷封包轉發，硬體工程師需解釋「不中斷轉發（Hitless Reset）」的電路設計。",
+    "lines": [
+      {"w": "C", "en": "Our enterprise customers require In-Service Software Upgrade (ISSU). When the control plane CPU reboots during an OS upgrade, will data plane traffic drop?", "zh": "我們的企業客戶要求不斷線軟體升級（ISSU）。當控制平面的 CPU 在作業系統升級期間重啟時，資料平面的流量會中斷嗎？"},
+      {"w": "E", "en": "No, data plane traffic will continue forwarding uninterrupted because our hardware supports hitless warm reboot.", "zh": "不會，資料平面流量會持續不間斷地轉發，因為我們的硬體支援無衝擊熱重啟。"},
+      {"w": "C", "en": "How do you prevent the hardware reset tree from pulsing the switch ASIC and PHY chips when the CPU resets?", "zh": "當 CPU 重置時，你們如何防止硬體重置樹向交換晶片和 PHY 晶片發送重置脈衝？"},
+      {"w": "E", "en": "We routed the CPU warm-reset signal through a programmable CPLD. During an ISSU event, the CPLD masks the reset output to the packet forwarding chips.", "zh": "我們將 CPU 熱重置訊號透過可程式化 CPLD 繞線。在 ISSU 事件期間，CPLD 會遮罩對封包轉發晶片的重置輸出。"},
+      {"w": "C", "en": "What about the optical transceiver enable pins? Will the lasers turn off momentarily?", "zh": "那光收發模組的致能接腳呢？雷射會短暫關閉嗎？"},
+      {"w": "E", "en": "The TX_DISABLE pins are latched by an external I2C GPIO expander with state retention, ensuring the optical links stay up continuously.", "zh": "TX_DISABLE 接腳由具備狀態保持功能的外部 I2C GPIO 擴展器鎖存，確保光纖鏈路持續保持連線。"}
+    ],
+    "phrases": [
+      {"en": "Data plane traffic continues forwarding uninterrupted.", "zh": "資料平面流量持續不間斷地轉發。"},
+      {"en": "Our hardware supports hitless warm reboot.", "zh": "我們的硬體支援無衝擊熱重啟。"},
+      {"en": "The CPLD masks the reset output during an upgrade.", "zh": "CPLD 在升級期間會遮罩重置輸出。"},
+      {"en": "The transceiver pins are latched with state retention.", "zh": "光模組接腳透過狀態保持功能鎖存。"}
+    ],
+    "terms": [
+      {"en": "ISSU (In-Service Software Upgrade)", "say": "I-S-S-U", "tts": "I S S U", "zh": "不斷線軟體升級（升級系統時網路服務不中斷）"},
+      {"en": "hitless reboot", "zh": "無衝擊重啟（控制晶片重開機但資料轉發不停擺）"},
+      {"en": "control plane vs. data plane", "zh": "控制平面（CPU 處理路由協定）與資料平面（ASIC 高速轉發封包）"},
+      {"en": "reset tree", "zh": "重置訊號樹（整張主機板的重置訊號分配架構）"},
+      {"en": "state retention", "zh": "狀態保持（在重啟過程中維持原本接腳電位不變的功能）"}
+    ]
+  },
+  {
+    "id": "c66",
+    "stage": "產品生命週期終止 EOL & LTB",
+    "title": "Managing Component End-of-Life (EOL) & Last-Time Buy (LTB)",
+    "title_zh": "處理關鍵晶片停產（EOL）與最後下單（LTB）評估",
+    "goal_zh": "產品已量產三年，突然收到原廠通知某顆介面晶片即將停產（EOL），硬體工程師與採購、客戶開會決定最後一次下單（LTB）數量或啟動改版。",
+    "lines": [
+      {"w": "C", "en": "We received an official Product Discontinuance Notice from the vendor for the DDR4 memory chips used on this switch. The Last-Time Buy deadline is next month.", "zh": "我們收到了供應商針對這台交換機所使用的 DDR4 記憶體晶片發布的正式產品停產通知。最後下單（LTB）截止日期在下個月。"},
+      {"w": "E", "en": "How many years of product longevity and RMA spare parts coverage did we commit to our enterprise customers?", "zh": "我們向企業客戶承諾了幾年的產品生命週期與 RMA 備品保固覆蓋？"},
+      {"w": "C", "en": "We promised five years of continuous supply and an additional two years of RMA field support.", "zh": "我們承諾了五年的持續供貨，外加兩年的現場 RMA 支援。"},
+      {"w": "E", "en": "If we place a Last-Time Buy order to cover seven years of demand, we must consider the moisture sensitivity level (MSL) and warehouse shelf-life limits.", "zh": "如果我們下最後一筆訂單來涵蓋七年的需求，我們必須考慮濕度敏感等級（MSL）以及倉庫保存期限的限制。"},
+      {"w": "C", "en": "Should we buy out the remaining inventory, or is it better to qualify a newer density DDR4 chip and issue a minor BOM revision?", "zh": "我們應該買斷剩餘庫存，還是認證一顆較新容量的 DDR4 晶片並發布小幅 BOM 改版比較好？"},
+      {"w": "E", "en": "Qualifying a drop-in replacement from our approved vendor list is much safer than storing dry-packed ICs for seven years. Let's start the validation immediately.", "zh": "從我們核准的供應商名單中認證一顆直接替換料，比將乾燥包裝的 IC 存放七年要安全得多。我們立刻開始驗證吧。"}
+    ],
+    "phrases": [
+      {"en": "We received a Product Discontinuance Notice from the vendor.", "zh": "我們收到了供應商發布的正式產品停產通知。"},
+      {"en": "The Last-Time Buy deadline is next month.", "zh": "最後下單（LTB）截止日期在下個月。"},
+      {"en": "We must consider warehouse shelf-life and MSL limits.", "zh": "我們必須考慮倉庫保存期限與濕度敏感等級限制。"},
+      {"en": "Qualifying a drop-in replacement is safer than long-term storage.", "zh": "認證一顆直接替換料比長期儲存庫存安全得多。"}
+    ],
+    "terms": [
+      {"en": "LTB (Last-Time Buy)", "say": "L-T-B", "tts": "L T B", "zh": "最後一次下單（零件停產前最後一次採購囤貨的機會）"},
+      {"en": "PDN (Product Discontinuance Notice)", "say": "P-D-N", "tts": "P D N", "zh": "產品停產通知書"},
+      {"en": "MSL (Moisture Sensitivity Level)", "say": "M-S-L", "tts": "M S L", "zh": "濕度敏感等級（決定晶片拆封後在空氣中暴露多久會受潮爆米花的標準）"},
+      {"en": "shelf-life", "zh": "保存期限（電子零件在倉庫存放而不影響焊接品質的最長時間）"},
+      {"en": "longevity", "zh": "產品生命週期長度、長效供貨期"}
+    ]
   }
 
 ]
